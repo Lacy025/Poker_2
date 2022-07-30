@@ -1,6 +1,7 @@
 package rs.baci.Poker_2;
 
 import java.awt.Component;
+import java.io.Serial;
 
 import javax.swing.JLabel;
 
@@ -9,6 +10,7 @@ public class Karta1 extends JLabel {
 	/**
 	 * 
 	 */
+	@Serial
 	private static final long serialVersionUID = 1L;
 	
 	public static Component card1 = new JLabel();
@@ -16,7 +18,7 @@ public class Karta1 extends JLabel {
 	Karta1() {
 	
 	if (MyFrame.n1==0) {Karta1.card1=MyFrame.Jlabel0;MyFrame.karta1=0;MyFrame.boja1=0;}
-	if (MyFrame.n1==1) {Karta1.card1=MyFrame.Jlabel1;MyFrame.karta1=1;MyFrame.boja1=1;}
+	if (MyFrame.n1==1) {Karta1.card1=MyFrame.Jlabel1;MyFrame.karta1=14;MyFrame.boja1=1;}
 	if (MyFrame.n1==2) {Karta1.card1=MyFrame.Jlabel2;MyFrame.karta1=2;MyFrame.boja1=1;}
 	if (MyFrame.n1==3) {Karta1.card1=MyFrame.Jlabel3;MyFrame.karta1=3;MyFrame.boja1=1;}
 	if (MyFrame.n1==4) {Karta1.card1=MyFrame.Jlabel4;MyFrame.karta1=4;MyFrame.boja1=1;}
@@ -29,7 +31,7 @@ public class Karta1 extends JLabel {
 	if (MyFrame.n1==11) {Karta1.card1=MyFrame.Jlabel11;MyFrame.karta1=11;MyFrame.boja1=1;}
 	if (MyFrame.n1==12) {Karta1.card1=MyFrame.Jlabel12;MyFrame.karta1=12;MyFrame.boja1=1;}
 	if (MyFrame.n1==13) {Karta1.card1=MyFrame.Jlabel13;MyFrame.karta1=13;MyFrame.boja1=1;}
-	if (MyFrame.n1==14) {Karta1.card1=MyFrame.Jlabel14;MyFrame.karta1=1;MyFrame.boja1=2;}
+	if (MyFrame.n1==14) {Karta1.card1=MyFrame.Jlabel14;MyFrame.karta1=14;MyFrame.boja1=2;}
 	if (MyFrame.n1==15) {Karta1.card1=MyFrame.Jlabel15;MyFrame.karta1=2;MyFrame.boja1=2;}
 	if (MyFrame.n1==16) {Karta1.card1=MyFrame.Jlabel16;MyFrame.karta1=3;MyFrame.boja1=2;}
 	if (MyFrame.n1==17) {Karta1.card1=MyFrame.Jlabel17;MyFrame.karta1=4;MyFrame.boja1=2;}
@@ -42,7 +44,7 @@ public class Karta1 extends JLabel {
 	if (MyFrame.n1==24) {Karta1.card1=MyFrame.Jlabel24;MyFrame.karta1=11;MyFrame.boja1=2;}
 	if (MyFrame.n1==25) {Karta1.card1=MyFrame.Jlabel25;MyFrame.karta1=12;MyFrame.boja1=2;}
 	if (MyFrame.n1==26) {Karta1.card1=MyFrame.Jlabel26;MyFrame.karta1=13;MyFrame.boja1=2;}
-	if (MyFrame.n1==27) {Karta1.card1=MyFrame.Jlabel27;MyFrame.karta1=1;MyFrame.boja1=3;}
+	if (MyFrame.n1==27) {Karta1.card1=MyFrame.Jlabel27;MyFrame.karta1=14;MyFrame.boja1=3;}
 	if (MyFrame.n1==28) {Karta1.card1=MyFrame.Jlabel28;MyFrame.karta1=2;MyFrame.boja1=3;}
 	if (MyFrame.n1==29) {Karta1.card1=MyFrame.Jlabel29;MyFrame.karta1=3;MyFrame.boja1=3;}
 	if (MyFrame.n1==30) {Karta1.card1=MyFrame.Jlabel30;MyFrame.karta1=4;MyFrame.boja1=3;}
@@ -55,7 +57,7 @@ public class Karta1 extends JLabel {
 	if (MyFrame.n1==37) {Karta1.card1=MyFrame.Jlabel37;MyFrame.karta1=11;MyFrame.boja1=3;}
 	if (MyFrame.n1==38) {Karta1.card1=MyFrame.Jlabel38;MyFrame.karta1=12;MyFrame.boja1=3;}
 	if (MyFrame.n1==39) {Karta1.card1=MyFrame.Jlabel39;MyFrame.karta1=13;MyFrame.boja1=3;}
-	if (MyFrame.n1==40) {Karta1.card1=MyFrame.Jlabel40;MyFrame.karta1=1;MyFrame.boja1=4;}
+	if (MyFrame.n1==40) {Karta1.card1=MyFrame.Jlabel40;MyFrame.karta1=14;MyFrame.boja1=4;}
 	if (MyFrame.n1==41) {Karta1.card1=MyFrame.Jlabel41;MyFrame.karta1=2;MyFrame.boja1=4;}
 	if (MyFrame.n1==42) {Karta1.card1=MyFrame.Jlabel42;MyFrame.karta1=3;MyFrame.boja1=4;}
 	if (MyFrame.n1==43) {Karta1.card1=MyFrame.Jlabel43;MyFrame.karta1=4;MyFrame.boja1=4;}

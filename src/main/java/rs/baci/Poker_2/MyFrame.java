@@ -37,22 +37,22 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 	static int kr;
 	static int cr;
 	public int uu = 1;
-	public int ul = 1;
+	public static int ul = 1;
 	public int ah = 1;
 	
-	public int dx0 = 1200;
-	public int dx1 = 1223;
-	public int dx2 = 1223;
-	public int dx3 = 1246;
-	public int dx4 = 1246;
-	public int dx5 = 1269;
-	public int dx6 = 1269;
-	public int dx7 = 1269;
-	public int dx8 = 1269;
-	public int dx9 = 1269;
+	public static int dx0 = 1200;
+	public static int dx1 = 1223;
+	public static int dx2 = 1223;
+	public static int dx3 = 1246;
+	public static int dx4 = 1246;
+	public static int dx5 = 1269;
+	public static int dx6 = 1269;
+	public static int dx7 = 1269;
+	public static int dx8 = 1269;
+	public static int dx9 = 1269;
 	
 	public static int jk = 60000;
-	static int delj;
+	public static int delj;
 	
 	public static int n1;
 	public static int n2;
@@ -87,82 +87,82 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		}
 	}
 
-	static ImageIcon iconK1 = new ImageIcon(loadImage("resources/53.png"));
+	static ImageIcon iconK1 = new ImageIcon(Objects.requireNonNull(loadImage("resources/53.png")));
 	public static final Component JlabelK1 = new JLabel(iconK1);
-	static ImageIcon iconK2 = new ImageIcon(loadImage("resources/53.png"));
+	static ImageIcon iconK2 = new ImageIcon(Objects.requireNonNull(loadImage("resources/53.png")));
 	public static final Component JlabelK2 = new JLabel(iconK2);
-	static ImageIcon iconK3 = new ImageIcon(loadImage("resources/53.png"));
+	static ImageIcon iconK3 = new ImageIcon(Objects.requireNonNull(loadImage("resources/53.png")));
 	public static final Component JlabelK3 = new JLabel(iconK3);
-	static ImageIcon iconK4 = new ImageIcon(loadImage("resources/53.png"));
+	static ImageIcon iconK4 = new ImageIcon(Objects.requireNonNull(loadImage("resources/53.png")));
 	public static final Component JlabelK4 = new JLabel(iconK4);
-	static ImageIcon iconK5 = new ImageIcon(loadImage("resources/53.png"));
+	static ImageIcon iconK5 = new ImageIcon(Objects.requireNonNull(loadImage("resources/53.png")));
 	public static final Component JlabelK5 = new JLabel(iconK5);
-	static ImageIcon iconJ1 = new ImageIcon(loadImage("resources/0.png"));
+	static ImageIcon iconJ1 = new ImageIcon(Objects.requireNonNull(loadImage("resources/0.png")));
 	private static final Component JlabelJ1 = new JLabel(iconJ1);
-	static ImageIcon iconJ2 = new ImageIcon(loadImage("resources/0.png"));
+	static ImageIcon iconJ2 = new ImageIcon(Objects.requireNonNull(loadImage("resources/0.png")));
 	private static final Component JlabelJ2 = new JLabel(iconJ2);
-	static ImageIcon iconJ3 = new ImageIcon(loadImage("resources/0.png"));
+	static ImageIcon iconJ3 = new ImageIcon(Objects.requireNonNull(loadImage("resources/0.png")));
 	private static final Component JlabelJ3 = new JLabel(iconJ3);
-	static ImageIcon iconJ4 = new ImageIcon(loadImage("resources/0.png"));
+	static ImageIcon iconJ4 = new ImageIcon(Objects.requireNonNull(loadImage("resources/0.png")));
 	private static final Component JlabelJ4 = new JLabel(iconJ4);
-	static ImageIcon iconJ5 = new ImageIcon(loadImage("resources/0.png"));
+	static ImageIcon iconJ5 = new ImageIcon(Objects.requireNonNull(loadImage("resources/0.png")));
 	private static final Component JlabelJ5 = new JLabel(iconJ5);
 
-	static ImageIcon icon0 = new ImageIcon(loadImage("resources/0.png"));
-	static ImageIcon icon1 = new ImageIcon(loadImage("resources/1.png"));
-	static ImageIcon icon2 = new ImageIcon(loadImage("resources/2.png"));
-	static ImageIcon icon3 = new ImageIcon(loadImage("resources/3.png"));
-	static ImageIcon icon4 = new ImageIcon(loadImage("resources/4.png"));
-	static ImageIcon icon5 = new ImageIcon(loadImage("resources/5.png"));
-	static ImageIcon icon6 = new ImageIcon(loadImage("resources/6.png"));
-	static ImageIcon icon7 = new ImageIcon(loadImage("resources/7.png"));
-	static ImageIcon icon8 = new ImageIcon(loadImage("resources/8.png"));
-	static ImageIcon icon9 = new ImageIcon(loadImage("resources/9.png"));
-	static ImageIcon icon10 = new ImageIcon(loadImage("resources/10.png"));
-	static ImageIcon icon11 = new ImageIcon(loadImage("resources/11.png"));
-	static ImageIcon icon12 = new ImageIcon(loadImage("resources/12.png"));
-	static ImageIcon icon13 = new ImageIcon(loadImage("resources/13.png"));
-	static ImageIcon icon14 = new ImageIcon(loadImage("resources/14.png"));
-	static ImageIcon icon15 = new ImageIcon(loadImage("resources/15.png"));
-	static ImageIcon icon16 = new ImageIcon(loadImage("resources/16.png"));
-	static ImageIcon icon17 = new ImageIcon(loadImage("resources/17.png"));
-	static ImageIcon icon18 = new ImageIcon(loadImage("resources/18.png"));
-	static ImageIcon icon19 = new ImageIcon(loadImage("resources/19.png"));
-	static ImageIcon icon20 = new ImageIcon(loadImage("resources/20.png"));
-	static ImageIcon icon21 = new ImageIcon(loadImage("resources/21.png"));
-	static ImageIcon icon22 = new ImageIcon(loadImage("resources/22.png"));
-	static ImageIcon icon23 = new ImageIcon(loadImage("resources/23.png"));
-	static ImageIcon icon24 = new ImageIcon(loadImage("resources/24.png"));
-	static ImageIcon icon25 = new ImageIcon(loadImage("resources/25.png"));
-	static ImageIcon icon26 = new ImageIcon(loadImage("resources/26.png"));
-	static ImageIcon icon27 = new ImageIcon(loadImage("resources/27.png"));
-	static ImageIcon icon28 = new ImageIcon(loadImage("resources/28.png"));
-	static ImageIcon icon29 = new ImageIcon(loadImage("resources/29.png"));
-	static ImageIcon icon30 = new ImageIcon(loadImage("resources/30.png"));
-	static ImageIcon icon31 = new ImageIcon(loadImage("resources/31.png"));
-	static ImageIcon icon32 = new ImageIcon(loadImage("resources/32.png"));
-	static ImageIcon icon33 = new ImageIcon(loadImage("resources/33.png"));
-	static ImageIcon icon34 = new ImageIcon(loadImage("resources/34.png"));
-	static ImageIcon icon35 = new ImageIcon(loadImage("resources/35.png"));
-	static ImageIcon icon36 = new ImageIcon(loadImage("resources/36.png"));
-	static ImageIcon icon37 = new ImageIcon(loadImage("resources/37.png"));
-	static ImageIcon icon38 = new ImageIcon(loadImage("resources/38.png"));
-	static ImageIcon icon39 = new ImageIcon(loadImage("resources/39.png"));
-	static ImageIcon icon40 = new ImageIcon(loadImage("resources/40.png"));
-	static ImageIcon icon41 = new ImageIcon(loadImage("resources/41.png"));
-	static ImageIcon icon42 = new ImageIcon(loadImage("resources/42.png"));
-	static ImageIcon icon43 = new ImageIcon(loadImage("resources/43.png"));
-	static ImageIcon icon44 = new ImageIcon(loadImage("resources/44.png"));
-	static ImageIcon icon45 = new ImageIcon(loadImage("resources/45.png"));
-	static ImageIcon icon46 = new ImageIcon(loadImage("resources/46.png"));
-	static ImageIcon icon47 = new ImageIcon(loadImage("resources/47.png"));
-	static ImageIcon icon48 = new ImageIcon(loadImage("resources/48.png"));
-	static ImageIcon icon49 = new ImageIcon(loadImage("resources/49.png"));
-	static ImageIcon icon50 = new ImageIcon(loadImage("resources/50.png"));
-	static ImageIcon icon51 = new ImageIcon(loadImage("resources/51.png"));
-	static ImageIcon icon52 = new ImageIcon(loadImage("resources/52.png"));
-	
-	protected static Component Jlabel0 = new JLabel(icon0);
+	static ImageIcon icon0 = new ImageIcon(Objects.requireNonNull(loadImage("resources/0.png")));
+	static ImageIcon icon1 = new ImageIcon(Objects.requireNonNull(loadImage("resources/1.png")));
+	static ImageIcon icon2 = new ImageIcon(Objects.requireNonNull(loadImage("resources/2.png")));
+	static ImageIcon icon3 = new ImageIcon(Objects.requireNonNull(loadImage("resources/3.png")));
+	static ImageIcon icon4 = new ImageIcon(Objects.requireNonNull(loadImage("resources/4.png")));
+	static ImageIcon icon5 = new ImageIcon(Objects.requireNonNull(loadImage("resources/5.png")));
+	static ImageIcon icon6 = new ImageIcon(Objects.requireNonNull(loadImage("resources/6.png")));
+	static ImageIcon icon7 = new ImageIcon(Objects.requireNonNull(loadImage("resources/7.png")));
+	static ImageIcon icon8 = new ImageIcon(Objects.requireNonNull(loadImage("resources/8.png")));
+	static ImageIcon icon9 = new ImageIcon(Objects.requireNonNull(loadImage("resources/9.png")));
+	static ImageIcon icon10 = new ImageIcon(Objects.requireNonNull(loadImage("resources/10.png")));
+	static ImageIcon icon11 = new ImageIcon(Objects.requireNonNull(loadImage("resources/11.png")));
+	static ImageIcon icon12 = new ImageIcon(Objects.requireNonNull(loadImage("resources/12.png")));
+	static ImageIcon icon13 = new ImageIcon(Objects.requireNonNull(loadImage("resources/13.png")));
+	static ImageIcon icon14 = new ImageIcon(Objects.requireNonNull(loadImage("resources/14.png")));
+	static ImageIcon icon15 = new ImageIcon(Objects.requireNonNull(loadImage("resources/15.png")));
+	static ImageIcon icon16 = new ImageIcon(Objects.requireNonNull(loadImage("resources/16.png")));
+	static ImageIcon icon17 = new ImageIcon(Objects.requireNonNull(loadImage("resources/17.png")));
+	static ImageIcon icon18 = new ImageIcon(Objects.requireNonNull(loadImage("resources/18.png")));
+	static ImageIcon icon19 = new ImageIcon(Objects.requireNonNull(loadImage("resources/19.png")));
+	static ImageIcon icon20 = new ImageIcon(Objects.requireNonNull(loadImage("resources/20.png")));
+	static ImageIcon icon21 = new ImageIcon(Objects.requireNonNull(loadImage("resources/21.png")));
+	static ImageIcon icon22 = new ImageIcon(Objects.requireNonNull(loadImage("resources/22.png")));
+	static ImageIcon icon23 = new ImageIcon(Objects.requireNonNull(loadImage("resources/23.png")));
+	static ImageIcon icon24 = new ImageIcon(Objects.requireNonNull(loadImage("resources/24.png")));
+	static ImageIcon icon25 = new ImageIcon(Objects.requireNonNull(loadImage("resources/25.png")));
+	static ImageIcon icon26 = new ImageIcon(Objects.requireNonNull(loadImage("resources/26.png")));
+	static ImageIcon icon27 = new ImageIcon(Objects.requireNonNull(loadImage("resources/27.png")));
+	static ImageIcon icon28 = new ImageIcon(Objects.requireNonNull(loadImage("resources/28.png")));
+	static ImageIcon icon29 = new ImageIcon(Objects.requireNonNull(loadImage("resources/29.png")));
+	static ImageIcon icon30 = new ImageIcon(Objects.requireNonNull(loadImage("resources/30.png")));
+	static ImageIcon icon31 = new ImageIcon(Objects.requireNonNull(loadImage("resources/31.png")));
+	static ImageIcon icon32 = new ImageIcon(Objects.requireNonNull(loadImage("resources/32.png")));
+	static ImageIcon icon33 = new ImageIcon(Objects.requireNonNull(loadImage("resources/33.png")));
+	static ImageIcon icon34 = new ImageIcon(Objects.requireNonNull(loadImage("resources/34.png")));
+	static ImageIcon icon35 = new ImageIcon(Objects.requireNonNull(loadImage("resources/35.png")));
+	static ImageIcon icon36 = new ImageIcon(Objects.requireNonNull(loadImage("resources/36.png")));
+	static ImageIcon icon37 = new ImageIcon(Objects.requireNonNull(loadImage("resources/37.png")));
+	static ImageIcon icon38 = new ImageIcon(Objects.requireNonNull(loadImage("resources/38.png")));
+	static ImageIcon icon39 = new ImageIcon(Objects.requireNonNull(loadImage("resources/39.png")));
+	static ImageIcon icon40 = new ImageIcon(Objects.requireNonNull(loadImage("resources/40.png")));
+	static ImageIcon icon41 = new ImageIcon(Objects.requireNonNull(loadImage("resources/41.png")));
+	static ImageIcon icon42 = new ImageIcon(Objects.requireNonNull(loadImage("resources/42.png")));
+	static ImageIcon icon43 = new ImageIcon(Objects.requireNonNull(loadImage("resources/43.png")));
+	static ImageIcon icon44 = new ImageIcon(Objects.requireNonNull(loadImage("resources/44.png")));
+	static ImageIcon icon45 = new ImageIcon(Objects.requireNonNull(loadImage("resources/45.png")));
+	static ImageIcon icon46 = new ImageIcon(Objects.requireNonNull(loadImage("resources/46.png")));
+	static ImageIcon icon47 = new ImageIcon(Objects.requireNonNull(loadImage("resources/47.png")));
+	static ImageIcon icon48 = new ImageIcon(Objects.requireNonNull(loadImage("resources/48.png")));
+	static ImageIcon icon49 = new ImageIcon(Objects.requireNonNull(loadImage("resources/49.png")));
+	static ImageIcon icon50 = new ImageIcon(Objects.requireNonNull(loadImage("resources/50.png")));
+	static ImageIcon icon51 = new ImageIcon(Objects.requireNonNull(loadImage("resources/51.png")));
+	static ImageIcon icon52 = new ImageIcon(Objects.requireNonNull(loadImage("resources/52.png")));
+
+	public static Component Jlabel0 = new JLabel(icon0);
 	protected static Component Jlabel1 = new JLabel(icon1);
 	protected static Component Jlabel2 = new JLabel(icon2);
 	protected static Component Jlabel3 = new JLabel(icon3);
@@ -246,32 +246,32 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		JlabelL.setVisible(true);
 		JlabelR.setVisible(false);
 		
-		label0.setBounds(0,0,1300,40);
-		label1.setBounds(0,32,500,40);
-		label2.setBounds(0,64,500,40);
-		label3.setBounds(0,96,500,40);
-		label4.setBounds(0,128,500,40);
-		label5.setBounds(0,160,500,40);
-		label6.setBounds(0,196,500,40);
-		label7.setBounds(0,228,500,40);
-		label8.setBounds(0,260,500,40);
-		label9.setBounds(0,292,500,40);
+		label0.setBounds(0,L0,1300,40);
+		label1.setBounds(0,L1,500,40);
+		label2.setBounds(0,L2,500,40);
+		label3.setBounds(0,L3,500,40);
+		label4.setBounds(0,L4,500,40);
+		label5.setBounds(0,L5,500,40);
+		label6.setBounds(0,L6,500,40);
+		label7.setBounds(0,L7,500,40);
+		label8.setBounds(0,L8,500,40);
+		label9.setBounds(0,L9,500,40);
 		label10.setBounds(1640,32,500,40);
 		label11.setBounds(1660,160,500,40);
 		
 		Jlabelah.setBounds(1620,292,500,40);
 		Jlabelcr.setBounds(1670,64,500,50);
 		Jlabelul.setBounds(1690,192,500,40);
-		Jlabeld0.setBounds(dx0,0,120,40);
-		Jlabeld1.setBounds(dx1,32,120,40);
-		Jlabeld2.setBounds(dx2,64,120,40);
-		Jlabeld3.setBounds(dx3,96,120,40);
-		Jlabeld4.setBounds(dx4,128,120,40);
-		Jlabeld5.setBounds(dx5,160,120,40);
-		Jlabeld6.setBounds(dx6,192,120,40);
-		Jlabeld7.setBounds(dx7,224,120,40);
-		Jlabeld8.setBounds(dx8,256,120,40);
-		Jlabeld9.setBounds(dx9,288,120,40);
+		Jlabeld0.setBounds(dx0,L0,120,40);
+		Jlabeld1.setBounds(dx1,L1,120,40);
+		Jlabeld2.setBounds(dx2,L2,120,40);
+		Jlabeld3.setBounds(dx3,L3,120,40);
+		Jlabeld4.setBounds(dx4,L4,120,40);
+		Jlabeld5.setBounds(dx5,L5,120,40);
+		Jlabeld6.setBounds(dx6,L6,120,40);
+		Jlabeld7.setBounds(dx7,L7,120,40);
+		Jlabeld8.setBounds(dx8,L8,120,40);
+		Jlabeld9.setBounds(dx9,L9,120,40);
 		JlabelK1.setBounds(-5, 350, 400, 600);
 		JlabelK2.setBounds(375, 350, 400, 600);
 		JlabelK3.setBounds(755, 350, 400, 600);
@@ -318,7 +318,6 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		
 		label0.setForeground(Color.YELLOW);
 		label1.setForeground(Color.RED);
-		label0.setBackground(Color.BLUE);
 		label2.setForeground(new Color(240, 185, 206));
 		label3.setForeground(new Color(240, 185, 206));
 		label4.setForeground(new Color(240, 185, 206));
@@ -334,7 +333,6 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		Jlabelcr.setForeground(new Color(240, 185, 206));
 		Jlabelul.setForeground(new Color(240, 185, 206));
 		Jlabeld0.setForeground(Color.YELLOW);
-		Jlabeld0.setBackground(Color.BLUE);
 		Jlabeld1.setForeground(Color.RED);
 		Jlabeld2.setForeground(new Color(240, 185, 206));
 		Jlabeld3.setForeground(new Color(240, 185, 206));
@@ -413,12 +411,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		((JComponent) JlabelR2).setOpaque(false);
 		((JComponent) JlabelL).setOpaque(true);
 		((JComponent) JlabelR).setOpaque(true);
-		
-	/*	label0.setBackground(Color.BLUE);
-		label0.setOpaque(true);label0.setForeground(Color.YELLOW);
-		label0.add(Jlabeld0);
-		((JComponent) Jlabeld0).setOpaque(true);
-	*/	
+
 		frame.setVisible(true);
 		frame.setResizable(false);
 		
@@ -448,6 +441,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		JlabelR2.setVisible(false);
 
 		URL intro = this.getClass().getClassLoader().getResource("resources/Intro.wav");
+		assert intro != null;
 		AudioInputStream audioIntro = AudioSystem.getAudioInputStream(intro);
 		this.introSound = AudioSystem.getClip();
 		introSound.open(audioIntro);
@@ -668,12 +662,11 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		case 81 :
 
 			URL kredit = this.getClass().getClassLoader().getResource("resources/Kredit.wav");
-			AudioInputStream audioKredit = null;
+			AudioInputStream audioKredit;
 			try {
+				assert kredit != null;
 				audioKredit = AudioSystem.getAudioInputStream(kredit);
-			} catch (UnsupportedAudioFileException ex) {
-				throw new RuntimeException(ex);
-			} catch (IOException ex) {
+			} catch (UnsupportedAudioFileException | IOException ex) {
 				throw new RuntimeException(ex);
 			}
 			try {
@@ -683,9 +676,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			}
 			try {
 				kreditSound.open(audioKredit);
-			} catch (LineUnavailableException ex) {
-				throw new RuntimeException(ex);
-			} catch (IOException ex) {
+			} catch (LineUnavailableException | IOException ex) {
 				throw new RuntimeException(ex);
 			}
 
@@ -735,7 +726,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			frame.remove(Jlabeld0);//FIVE OF A KIND
 			Jlabeld0 = new JLabel(""+d0*ul);
 			frame.add(Jlabeld0);
-			Jlabeld0.setBounds(dx0,0,120,40);
+			Jlabeld0.setBounds(dx0,L0,120,40);
 			Jlabeld0.setForeground(Color.YELLOW);
 			Jlabeld0.setFont(new Font("Verdana", Font.PLAIN, 36));
 			((JComponent) Jlabeld0).setOpaque(false);
@@ -746,7 +737,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			frame.remove(Jlabeld1);//ROYAL FLUSH
 			Jlabeld1 = new JLabel(""+d1*ul);
 			frame.add(Jlabeld1);
-			Jlabeld1.setBounds(dx1,32,120,40);
+			Jlabeld1.setBounds(dx1,L1,120,40);
 			Jlabeld1.setForeground(Color.RED);
 			Jlabeld1.setFont(new Font("Verdana", Font.PLAIN, 36));
 			((JComponent) Jlabeld1).setOpaque(false);
@@ -757,7 +748,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			frame.remove(Jlabeld2);//STREET FLUSH
 			Jlabeld2 = new JLabel(""+d2*ul);
 			frame.add(Jlabeld2);
-			Jlabeld2.setBounds(dx2,64,120,40);
+			Jlabeld2.setBounds(dx2,L2,120,40);
 			Jlabeld2.setForeground(new Color(240, 185, 206));
 			Jlabeld2.setFont(new Font("Verdana", Font.PLAIN, 36));
 			((JComponent) Jlabeld2).setOpaque(false);
@@ -768,7 +759,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			frame.remove(Jlabeld3);//POKER
 			Jlabeld3 = new JLabel(""+d3*ul);
 			frame.add(Jlabeld3);
-			Jlabeld3.setBounds(dx3,96,120,40);
+			Jlabeld3.setBounds(dx3,L3,120,40);
 			Jlabeld3.setForeground(new Color(240, 185, 206));
 			Jlabeld3.setFont(new Font("Verdana", Font.PLAIN, 36));
 			((JComponent) Jlabeld3).setOpaque(false);
@@ -779,7 +770,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			frame.remove(Jlabeld4);//FULL HOUSE
 			Jlabeld4 = new JLabel(""+d4*ul);
 			frame.add(Jlabeld4);
-			Jlabeld4.setBounds(dx4,128,120,40);
+			Jlabeld4.setBounds(dx4,L4,120,40);
 			Jlabeld4.setForeground(new Color(240, 185, 206));
 			Jlabeld4.setFont(new Font("Verdana", Font.PLAIN, 36));
 			((JComponent) Jlabeld4).setOpaque(false);
@@ -790,7 +781,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			frame.remove(Jlabeld5);//FLUSH
 			Jlabeld5 = new JLabel(""+d5*ul);
 			frame.add(Jlabeld5);
-			Jlabeld5.setBounds(dx5,160,120,40);
+			Jlabeld5.setBounds(dx5,L5,120,40);
 			Jlabeld5.setForeground(new Color(240, 185, 206));
 			Jlabeld5.setFont(new Font("Verdana", Font.PLAIN, 36));
 			((JComponent) Jlabeld5).setOpaque(false);
@@ -801,7 +792,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			frame.remove(Jlabeld6);//STREET
 			Jlabeld6 = new JLabel(""+d6*ul);
 			frame.add(Jlabeld6);
-			Jlabeld6.setBounds(dx6,192,120,40);
+			Jlabeld6.setBounds(dx6,L6,120,40);
 			Jlabeld6.setForeground(new Color(240, 185, 206));
 			Jlabeld6.setFont(new Font("Verdana", Font.PLAIN, 36));
 			((JComponent) Jlabeld6).setOpaque(false);
@@ -812,7 +803,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			frame.remove(Jlabeld7);//THREE OF A KIND
 			Jlabeld7 = new JLabel(""+d7*ul);
 			frame.add(Jlabeld7);
-			Jlabeld7.setBounds(dx7,224,120,40);
+			Jlabeld7.setBounds(dx7,L7,120,40);
 			Jlabeld7.setForeground(new Color(240, 185, 206));
 			Jlabeld7.setFont(new Font("Verdana", Font.PLAIN, 36));
 			((JComponent) Jlabeld7).setOpaque(false);
@@ -823,7 +814,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			frame.remove(Jlabeld8);//2 PAIRS
 			Jlabeld8 = new JLabel(""+d8*ul);
 			frame.add(Jlabeld8);
-			Jlabeld8.setBounds(dx8,256,120,40);
+			Jlabeld8.setBounds(dx8,L8,120,40);
 			Jlabeld8.setForeground(new Color(240, 185, 206));
 			Jlabeld8.setFont(new Font("Verdana", Font.PLAIN, 36));
 			((JComponent) Jlabeld8).setOpaque(false);
@@ -834,7 +825,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			frame.remove(Jlabeld9);//HIGH PAIR
 			Jlabeld9 = new JLabel(""+d9*ul);
 			frame.add(Jlabeld9);
-			Jlabeld9.setBounds(dx9,288,120,40);
+			Jlabeld9.setBounds(dx9,L9,120,40);
 			Jlabeld9.setForeground(new Color(240, 185, 206));
 			Jlabeld9.setFont(new Font("Verdana", Font.PLAIN, 36));
 			((JComponent) Jlabeld9).setOpaque(false);
@@ -843,12 +834,11 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 
 
 				URL ulog = this.getClass().getClassLoader().getResource("resources/Ulog.wav");
-				AudioInputStream audioUlog = null;
+				AudioInputStream audioUlog;
 				try {
+					assert ulog != null;
 					audioUlog = AudioSystem.getAudioInputStream(ulog);
-				} catch (UnsupportedAudioFileException ex) {
-					throw new RuntimeException(ex);
-				} catch (IOException ex) {
+				} catch (UnsupportedAudioFileException | IOException ex) {
 					throw new RuntimeException(ex);
 				}
 				try {
@@ -858,9 +848,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 				}
 				try {
 					ulogSound.open(audioUlog);
-				} catch (LineUnavailableException ex) {
-					throw new RuntimeException(ex);
-				} catch (IOException ex) {
+				} catch (LineUnavailableException | IOException ex) {
 					throw new RuntimeException(ex);
 				}
 				this.ulogSound.start();
@@ -893,12 +881,11 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 				}
 
 				URL autohold = this.getClass().getClassLoader().getResource("resources/Autohold.wav");
-				AudioInputStream audioAutohold = null;
+				AudioInputStream audioAutohold;
 				try {
+					assert autohold != null;
 					audioAutohold = AudioSystem.getAudioInputStream(autohold);
-				} catch (UnsupportedAudioFileException ex) {
-					throw new RuntimeException(ex);
-				} catch (IOException ex) {
+				} catch (UnsupportedAudioFileException | IOException ex) {
 					throw new RuntimeException(ex);
 				}
 				try {
@@ -908,9 +895,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 				}
 				try {
 					autoholdSound.open(audioAutohold);
-				} catch (LineUnavailableException ex) {
-					throw new RuntimeException(ex);
-				} catch (IOException ex) {
+				} catch (LineUnavailableException | IOException ex) {
 					throw new RuntimeException(ex);
 				}
 				this.autoholdSound.start();
@@ -985,12 +970,11 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 				Jlabelcr.setVisible(true);
 
 					URL deljenje = this.getClass().getClassLoader().getResource("resources/Deljenje.wav");
-					AudioInputStream audioDeljenje = null;
+					AudioInputStream audioDeljenje;
 					try {
+						assert deljenje != null;
 						audioDeljenje = AudioSystem.getAudioInputStream(deljenje);
-					} catch (UnsupportedAudioFileException ex) {
-						throw new RuntimeException(ex);
-					} catch (IOException ex) {
+					} catch (UnsupportedAudioFileException | IOException ex) {
 						throw new RuntimeException(ex);
 					}
 					try {
@@ -1000,9 +984,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 					}
 					try {
 						deljenjeSound.open(audioDeljenje);
-					} catch (LineUnavailableException ex) {
-						throw new RuntimeException(ex);
-					} catch (IOException ex) {
+					} catch (LineUnavailableException | IOException ex) {
 						throw new RuntimeException(ex);
 					}
 					this.deljenjeSound.start();

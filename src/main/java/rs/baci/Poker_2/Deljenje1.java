@@ -13,7 +13,6 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 
-@SuppressWarnings("serial")
 public class Deljenje1 extends JFrame implements MainFrame {
 
 	Clip karteSound;
@@ -44,12 +43,11 @@ public class Deljenje1 extends JFrame implements MainFrame {
 		}
 
 		URL karte = this.getClass().getClassLoader().getResource("resources/Karta-1-5.wav");
-		AudioInputStream audioKarte = null;
+		AudioInputStream audioKarte;
 		try {
+			assert karte != null;
 			audioKarte = AudioSystem.getAudioInputStream(karte);
-		} catch (UnsupportedAudioFileException ex) {
-			throw new RuntimeException(ex);
-		} catch (IOException ex) {
+		} catch (UnsupportedAudioFileException | IOException ex) {
 			throw new RuntimeException(ex);
 		}
 		try {
@@ -59,9 +57,7 @@ public class Deljenje1 extends JFrame implements MainFrame {
 		}
 		try {
 			karteSound.open(audioKarte);
-		} catch (LineUnavailableException ex) {
-			throw new RuntimeException(ex);
-		} catch (IOException ex) {
+		} catch (LineUnavailableException | IOException ex) {
 			throw new RuntimeException(ex);
 		}
 		this.karteSound.start();
@@ -113,7 +109,8 @@ public class Deljenje1 extends JFrame implements MainFrame {
 		Karta5.card5.setVisible(true);
 		Karta5.card5.setBounds(1512, 380, 400, 540);
 		((JComponent) Karta5.card5).setOpaque(false);
-		
+		Thread.sleep(100);
+
 	}
 
 }
