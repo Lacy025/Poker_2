@@ -42,6 +42,8 @@ public class Deljenje1 extends JFrame implements MainFrame {
 		
 		}
 
+		Thread.sleep(100);
+
 		URL karte = this.getClass().getClassLoader().getResource("resources/Karta-1-5.wav");
 		AudioInputStream audioKarte;
 		try {

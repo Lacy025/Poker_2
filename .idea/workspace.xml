@@ -5,32 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="840edd46-d39a-4597-9bd9-becf4fec8351" name="Changes" comment="2.0.4">
-      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Fiveofakind.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Flush.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Fullhouse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Highpair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Poker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Royalflush.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Stop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Street.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Streetflush.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Threeofakind.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Twopairs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Stop.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Brojevi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Brojevi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Deljenje1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Deljenje1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Dobitak1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Dobitak1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Hold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Hold.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Joker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/MyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/MyFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Intro.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Intro.wav" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655324399134</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2.0.4">
+      <created>1659182971199</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1659182971199</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
