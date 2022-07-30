@@ -39,6 +39,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 	public int uu = 1;
 	public static int ul = 1;
 	public int ah = 1;
+	static int ch;
 	
 	public static int dx0 = 1200;
 	public static int dx1 = 1223;
@@ -77,6 +78,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 	public Component JlabelR2 = new JLabel("CARD");
 	public Component JlabelL = new JLabel("  LACIKA BAČI");
 	public Component JlabelR = new JLabel("  SRBIJA 2022");
+	public Component JlabelM1 = new JLabel("                    BIRAJTE ULOG");
+	public Component JlabelM2 = new JLabel("                 PRITISNITE DELJENJE");
 
 	private static BufferedImage loadImage(String path) {
 		try {
@@ -245,6 +248,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		Jlabelah.setVisible(true);
 		JlabelL.setVisible(true);
 		JlabelR.setVisible(false);
+		JlabelM1.setVisible(false);
+		JlabelM2.setVisible(false);
 		
 		label0.setBounds(0,L0,1300,40);
 		label1.setBounds(0,L1,500,40);
@@ -279,6 +284,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		JlabelK5.setBounds(1515, 350, 400, 600);
 		JlabelL.setBounds(20,950,300,40);
 		JlabelR.setBounds(1580,950,300,40);
+		JlabelM1.setBounds(550,950,800,40);
+		JlabelM2.setBounds(550,950,800,40);
 		
 		frame.add(label0);
 		frame.add(label1);
@@ -315,6 +322,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		frame.add(JlabelR2);
 		frame.add(JlabelL);
 		frame.add(JlabelR);
+		frame.add(JlabelM1);
+		frame.add(JlabelM2);
 		
 		label0.setForeground(Color.YELLOW);
 		label1.setForeground(Color.RED);
@@ -346,6 +355,10 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		JlabelR.setForeground(Color.YELLOW);
 		JlabelL.setBackground(Color.RED);
 		JlabelR.setBackground(Color.RED);
+		JlabelM1.setForeground(Color.YELLOW);
+		JlabelM2.setForeground(Color.YELLOW);
+		JlabelM1.setBackground(Color.RED);
+		JlabelM2.setBackground(Color.RED);
 		
 		label0.setFont(new Font("Verdana", Font.PLAIN, 36));
 		label1.setFont(new Font("Verdana", Font.PLAIN, 36));
@@ -375,6 +388,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		Jlabeld9.setFont(new Font("Verdana", Font.PLAIN, 36));
 		JlabelL.setFont(new Font("Verdana", Font.PLAIN, 36));
 		JlabelR.setFont(new Font("Verdana", Font.PLAIN, 36));
+		JlabelM1.setFont(new Font("Verdana", Font.PLAIN, 36));
+		JlabelM2.setFont(new Font("Verdana", Font.PLAIN, 36));
 		
 		label0.setOpaque(false);
 		label1.setOpaque(false);
@@ -411,6 +426,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		((JComponent) JlabelR2).setOpaque(false);
 		((JComponent) JlabelL).setOpaque(true);
 		((JComponent) JlabelR).setOpaque(true);
+		((JComponent) JlabelM1).setOpaque(true);
+		((JComponent) JlabelM2).setOpaque(true);
 
 		frame.setVisible(true);
 		frame.setResizable(false);
@@ -448,173 +465,348 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		introSound.start();
 		
 		frame.addKeyListener(this);
-		
+
 		while (delj==0) {
-				
-				if(jk==5000) {
+
+			if(jk==5000) {
+				if (cr==0||ch==1) {
 					JlabelL.setVisible(false);
 					JlabelR.setVisible(true);
 					Thread.sleep(500);
 					jk++;
 				}
-				if(jk==10000) {
-					JlabelR1.setVisible(false);
-					JlabelR2.setVisible(false);
-					JlabelK1.setVisible(false);
-					JlabelJ1.setVisible(true);
-					JlabelL.setVisible(true);
-					JlabelR.setVisible(false);
-					Thread.sleep(500);
-					jk++;
-				}	
-				if(jk==15000) {
-					JlabelL.setVisible(false);
-					JlabelR.setVisible(true);
+				else {
+					JlabelM1.setVisible(false);
+					JlabelM2.setVisible(true);
 					Thread.sleep(500);
 					jk++;
 				}
-				if(jk==20000) {
-					JlabelJ1.setVisible(false);
-					JlabelK2.setVisible(false);
-					JlabelJ2.setVisible(true);
-					JlabelK1.setVisible(true);
+			}
+
+			if(jk==10000) {
+				JlabelR1.setVisible(false);
+				JlabelR2.setVisible(false);
+				JlabelK1.setVisible(false);
+				JlabelJ1.setVisible(true);
+				if (cr==0||ch==1) {
 					JlabelL.setVisible(true);
 					JlabelR.setVisible(false);
 					Thread.sleep(500);
 					jk++;
 				}
-				if(jk==25000) {
+				else {
+					JlabelM1.setVisible(false);
+					JlabelM2.setVisible(true);
+					Thread.sleep(500);
+					jk++;
+				}
+			}
+
+			if(jk==15000) {
+				if (cr==0||ch==1) {
 					JlabelL.setVisible(false);
 					JlabelR.setVisible(true);
 					Thread.sleep(500);
 					jk++;
 				}
-				if(jk==30000) {
-					JlabelJ2.setVisible(false);
-					JlabelK3.setVisible(false);
-					JlabelJ3.setVisible(true);
-					JlabelK2.setVisible(true);
+				else {
+					JlabelM1.setVisible(false);
+					JlabelM2.setVisible(true);
+					Thread.sleep(500);
+					jk++;
+				}
+			}
+
+			if(jk==20000) {
+				JlabelJ1.setVisible(false);
+				JlabelK2.setVisible(false);
+				JlabelJ2.setVisible(true);
+				JlabelK1.setVisible(true);
+				if (cr==0||ch==1) {
 					JlabelL.setVisible(true);
 					JlabelR.setVisible(false);
 					Thread.sleep(500);
 					jk++;
 				}
-				if(jk==35000) {
+				else {
+					JlabelM1.setVisible(false);
+					JlabelM2.setVisible(true);
+					Thread.sleep(500);
+					jk++;
+				}
+			}
+
+			if(jk==25000) {
+				if (cr==0||ch==1) {
 					JlabelL.setVisible(false);
 					JlabelR.setVisible(true);
 					Thread.sleep(500);
 					jk++;
 				}
-				if(jk==40000) {
-					JlabelJ3.setVisible(false);
-					JlabelK4.setVisible(false);
-					JlabelJ4.setVisible(true);
-					JlabelK3.setVisible(true);
+				else {
+					JlabelM1.setVisible(false);
+					JlabelM2.setVisible(true);
+					Thread.sleep(500);
+					jk++;
+				}
+			}
+
+			if(jk==30000) {
+				JlabelJ2.setVisible(false);
+				JlabelK3.setVisible(false);
+				JlabelJ3.setVisible(true);
+				JlabelK2.setVisible(true);
+				if (cr==0||ch==1) {
 					JlabelL.setVisible(true);
 					JlabelR.setVisible(false);
 					Thread.sleep(500);
 					jk++;
 				}
-				if(jk==45000) {
+				else {
+					JlabelM1.setVisible(true);
+					JlabelM2.setVisible(false);
+					Thread.sleep(500);
+					jk++;
+				}
+			}
+
+			if(jk==35000) {
+				if (cr==0||ch==1) {
 					JlabelL.setVisible(false);
 					JlabelR.setVisible(true);
 					Thread.sleep(500);
 					jk++;
 				}
-				if(jk==50000) {
-					JlabelJ4.setVisible(false);
-					JlabelK5.setVisible(false);
-					JlabelJ5.setVisible(true);
-					JlabelK4.setVisible(true);
+				else {
+					JlabelM1.setVisible(true);
+					JlabelM2.setVisible(false);
+					Thread.sleep(500);
+					jk++;
+				}
+			}
+			if(jk==40000) {
+				JlabelJ3.setVisible(false);
+				JlabelK4.setVisible(false);
+				JlabelJ4.setVisible(true);
+				JlabelK3.setVisible(true);
+				if (cr==0||ch==1) {
 					JlabelL.setVisible(true);
 					JlabelR.setVisible(false);
 					Thread.sleep(500);
 					jk++;
 				}
-				if(jk==55000) {
+				else {
+					JlabelM1.setVisible(true);
+					JlabelM2.setVisible(false);
+					Thread.sleep(500);
+					jk++;
+				}
+			}
+			if(jk==45000) {
+				if (cr==0||ch==1) {
 					JlabelL.setVisible(false);
 					JlabelR.setVisible(true);
 					Thread.sleep(500);
 					jk++;
 				}
-				if(jk==60000) {	
-					JlabelK1.setVisible(false);
-					JlabelK2.setVisible(false);
-					JlabelK3.setVisible(false);
-					JlabelK4.setVisible(false);
-					JlabelK5.setVisible(false);
-					JlabelJ1.setVisible(false);
-					JlabelJ2.setVisible(false);
-					JlabelJ3.setVisible(false);
-					JlabelJ4.setVisible(false);
-					JlabelJ5.setVisible(false);
-					JlabelR1.setVisible(true);
-					JlabelR2.setVisible(true);
+				else {
+					JlabelM1.setVisible(true);
+					JlabelM2.setVisible(false);
+					Thread.sleep(500);
+					jk++;
+				}
+			}
+			if(jk==50000) {
+				JlabelJ4.setVisible(false);
+				JlabelK5.setVisible(false);
+				JlabelJ5.setVisible(true);
+				JlabelK4.setVisible(true);
+
+				if (cr==0||ch==1) {
 					JlabelL.setVisible(true);
 					JlabelR.setVisible(false);
 					Thread.sleep(500);
 					jk++;
-					}
-				if(jk==65000) {
+				}
+				else {
+					JlabelM1.setVisible(true);
+					JlabelM2.setVisible(false);
+					Thread.sleep(500);
+					jk++;
+				}
+			}
+			if(jk==55000) {
+				if (cr==0||ch==1) {
 					JlabelL.setVisible(false);
 					JlabelR.setVisible(true);
 					Thread.sleep(500);
 					jk++;
-					}
-				if(jk==70000) {
+				}
+				else {
+					JlabelM1.setVisible(false);
+					JlabelM2.setVisible(true);
+					Thread.sleep(500);
+					jk++;
+				}
+			}
+			if(jk==60000) {
+				JlabelK1.setVisible(false);
+				JlabelK2.setVisible(false);
+				JlabelK3.setVisible(false);
+				JlabelK4.setVisible(false);
+				JlabelK5.setVisible(false);
+				JlabelJ1.setVisible(false);
+				JlabelJ2.setVisible(false);
+				JlabelJ3.setVisible(false);
+				JlabelJ4.setVisible(false);
+				JlabelJ5.setVisible(false);
+				JlabelR1.setVisible(true);
+				JlabelR2.setVisible(true);
+
+				if (cr==0||ch==1) {
 					JlabelL.setVisible(true);
 					JlabelR.setVisible(false);
 					Thread.sleep(500);
 					jk++;
-					}
-				if(jk==75000) {
+				}
+				else {
+					JlabelM1.setVisible(false);
+					JlabelM2.setVisible(true);
+					Thread.sleep(500);
+					jk++;
+				}
+			}
+
+			if(jk==65000) {
+				if (cr==0||ch==1) {
 					JlabelL.setVisible(false);
 					JlabelR.setVisible(true);
 					Thread.sleep(500);
 					jk++;
-					}
-				if(jk==80000) {
+				}
+				else {
+					JlabelM1.setVisible(false);
+					JlabelM2.setVisible(true);
+					Thread.sleep(500);
+					jk++;
+				}
+			}
+
+			if(jk==70000) {
+				if (cr==0||ch==1) {
 					JlabelL.setVisible(true);
 					JlabelR.setVisible(false);
 					Thread.sleep(500);
 					jk++;
-					}
-				if(jk==85000) {
+				}
+				else {
+					JlabelM1.setVisible(false);
+					JlabelM2.setVisible(true);
+					Thread.sleep(500);
+					jk++;
+				}
+			}
+
+			if(jk==75000) {
+				if (cr==0||ch==1) {
 					JlabelL.setVisible(false);
 					JlabelR.setVisible(true);
 					Thread.sleep(500);
 					jk++;
-					}
-				if(jk==90000) {
+				}
+				else {
+					JlabelM1.setVisible(false);
+					JlabelM2.setVisible(true);
+					Thread.sleep(500);
+					jk++;
+				}
+			}
+
+			if(jk==80000) {
+				if (cr==0||ch==1) {
 					JlabelL.setVisible(true);
 					JlabelR.setVisible(false);
 					Thread.sleep(500);
 					jk++;
-					}
-				if(jk==95000) {
+				}
+				else {
+					JlabelM1.setVisible(true);
+					JlabelM2.setVisible(false);
+					Thread.sleep(500);
+					jk++;
+				}
+			}
+
+			if(jk==85000) {
+				if (cr==0||ch==1) {
 					JlabelL.setVisible(false);
 					JlabelR.setVisible(true);
 					Thread.sleep(500);
 					jk++;
-					}
-				if(jk==100000) {
+				}
+				else {
+					JlabelM1.setVisible(true);
+					JlabelM2.setVisible(false);
+					Thread.sleep(500);
+					jk++;
+				}
+			}
+
+			if(jk==90000) {
+				if (cr==0||ch==1) {
 					JlabelL.setVisible(true);
 					JlabelR.setVisible(false);
-					JlabelR1.setVisible(false);
-					JlabelR2.setVisible(false);
-					JlabelK1.setVisible(true);
-					JlabelK2.setVisible(true);
-					JlabelK3.setVisible(true);
-					JlabelK4.setVisible(true);
-					JlabelK5.setVisible(true);
+					Thread.sleep(500);
+					jk++;
+				}
+				else {
+					JlabelM1.setVisible(true);
+					JlabelM2.setVisible(false);
+					Thread.sleep(500);
+					jk++;
+				}
+			}
+
+			if(jk==95000) {
+				if (cr==0||ch==1) {
+					JlabelL.setVisible(false);
+					JlabelR.setVisible(true);
+					Thread.sleep(500);
+					jk++;
+				}
+				else {
+					JlabelM1.setVisible(true);
+					JlabelM2.setVisible(false);
+					Thread.sleep(500);
+					jk++;
+				}
+			}
+
+			if(jk==100000) {
+				JlabelR1.setVisible(false);
+				JlabelR2.setVisible(false);
+				JlabelK1.setVisible(true);
+				JlabelK2.setVisible(true);
+				JlabelK3.setVisible(true);
+				JlabelK4.setVisible(true);
+				JlabelK5.setVisible(true);
+
+				if (cr==0||ch==1) {
+					JlabelL.setVisible(true);
+					JlabelR.setVisible(false);
 					Thread.sleep(500);
 					jk=0;
-					
-					}
-				
-				jk++;
-			
+				}
+				else {
+					JlabelM1.setVisible(true);
+					JlabelM2.setVisible(false);
+					Thread.sleep(500);
+					jk=0;
+				}
 			}
+			jk++;
+
+		}
 			
 		if (delj==3) {
 			
@@ -635,6 +827,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			frame.remove(Jlabeld9);
 			frame.remove(JlabelL);
 			frame.remove(JlabelR);
+			frame.remove(JlabelM1);
+			frame.remove(JlabelM2);
 			frame.remove(JlabelR1);
 			frame.remove(JlabelR2);
 			frame.remove(JlabelK1);
@@ -697,6 +891,10 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			((JComponent) Jlabel13).setOpaque(false);
 			frame.add(Jlabelcr);
 			Jlabelcr.setVisible(true);
+			JlabelL.setVisible(false);
+			JlabelR.setVisible(false);
+			frame.remove(JlabelL);
+			frame.remove(JlabelR);
 			
 			break;
 			
@@ -914,7 +1112,17 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 				frame.removeKeyListener(this);
 				
 				try {
-					
+
+					JlabelM1.setVisible(false);
+					JlabelM2.setVisible(false);
+					frame.remove(JlabelM1);
+					frame.remove(JlabelM2);
+					JlabelL.setVisible(true);
+					JlabelR.setVisible(true);
+					frame.add(JlabelL);
+					frame.add(JlabelR);
+					ch=1;
+
 					new Countdown1();
 					
 				} catch (InterruptedException e1) {
@@ -944,10 +1152,14 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 				JlabelR2.setVisible(false);
 				JlabelL.setVisible(false);
 				JlabelR.setVisible(false);
+				JlabelM1.setVisible(false);
+				JlabelM1.setVisible(false);
 				frame.remove(JlabelR1);
 				frame.remove(JlabelR2);
 				frame.remove(JlabelL);
 				frame.remove(JlabelR);
+				frame.remove(JlabelM1);
+				frame.remove(JlabelM2);
 				JlabelJ1.setVisible(false);
 				JlabelJ2.setVisible(false);
 				JlabelJ3.setVisible(false);
