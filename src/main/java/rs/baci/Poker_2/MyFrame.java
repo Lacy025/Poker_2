@@ -38,7 +38,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 	static int cr;
 	public int uu = 1;
 	public static int ul = 1;
-	public int ah = 1;
+	public static int ah = 1;
 	static int ch;
 	
 	public static int dx0 = 1200;
@@ -325,71 +325,71 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		frame.add(JlabelM1);
 		frame.add(JlabelM2);
 		
-		label0.setForeground(Color.YELLOW);
-		label1.setForeground(Color.RED);
-		label2.setForeground(new Color(240, 185, 206));
-		label3.setForeground(new Color(240, 185, 206));
-		label4.setForeground(new Color(240, 185, 206));
-		label5.setForeground(new Color(240, 185, 206));
-		label6.setForeground(new Color(240, 185, 206));
-		label7.setForeground(new Color(240, 185, 206));
-		label8.setForeground(new Color(240, 185, 206));
-		label9.setForeground(new Color(240, 185, 206));
-		label10.setForeground(Color.RED);
-		label11.setForeground(Color.YELLOW);
+		label0.setForeground(color1);
+		label1.setForeground(color2);
+		label2.setForeground(color3);
+		label3.setForeground(color3);
+		label4.setForeground(color3);
+		label5.setForeground(color3);
+		label6.setForeground(color3);
+		label7.setForeground(color3);
+		label8.setForeground(color3);
+		label9.setForeground(color3);
+		label10.setForeground(color2);
+		label11.setForeground(color1);
 		
-		Jlabelah.setForeground(Color.BLUE);
-		Jlabelcr.setForeground(new Color(240, 185, 206));
-		Jlabelul.setForeground(new Color(240, 185, 206));
-		Jlabeld0.setForeground(Color.YELLOW);
-		Jlabeld1.setForeground(Color.RED);
-		Jlabeld2.setForeground(new Color(240, 185, 206));
-		Jlabeld3.setForeground(new Color(240, 185, 206));
-		Jlabeld4.setForeground(new Color(240, 185, 206));
-		Jlabeld5.setForeground(new Color(240, 185, 206));
-		Jlabeld6.setForeground(new Color(240, 185, 206));
-		Jlabeld7.setForeground(new Color(240, 185, 206));
-		Jlabeld8.setForeground(new Color(240, 185, 206));
-		Jlabeld9.setForeground(new Color(240, 185, 206));
-		JlabelL.setForeground(Color.YELLOW);
-		JlabelR.setForeground(Color.YELLOW);
-		JlabelL.setBackground(Color.RED);
-		JlabelR.setBackground(Color.RED);
-		JlabelM1.setForeground(Color.YELLOW);
-		JlabelM2.setForeground(Color.YELLOW);
-		JlabelM1.setBackground(Color.RED);
-		JlabelM2.setBackground(Color.RED);
+		Jlabelah.setForeground(color4);
+		Jlabelcr.setForeground(color3);
+		Jlabelul.setForeground(color3);
+		Jlabeld0.setForeground(color1);
+		Jlabeld1.setForeground(color2);
+		Jlabeld2.setForeground(color3);
+		Jlabeld3.setForeground(color3);
+		Jlabeld4.setForeground(color3);
+		Jlabeld5.setForeground(color3);
+		Jlabeld6.setForeground(color3);
+		Jlabeld7.setForeground(color3);
+		Jlabeld8.setForeground(color3);
+		Jlabeld9.setForeground(color3);
+		JlabelL.setForeground(color1);
+		JlabelR.setForeground(color1);
+		JlabelL.setBackground(color2);
+		JlabelR.setBackground(color2);
+		JlabelM1.setForeground(color1);
+		JlabelM2.setForeground(color1);
+		JlabelM1.setBackground(color2);
+		JlabelM2.setBackground(color2);
 		
-		label0.setFont(new Font("Verdana", Font.PLAIN, 36));
-		label1.setFont(new Font("Verdana", Font.PLAIN, 36));
-		label2.setFont(new Font("Verdana", Font.PLAIN, 36));
-		label3.setFont(new Font("Verdana", Font.PLAIN, 36));
-		label4.setFont(new Font("Verdana", Font.PLAIN, 36));
-		label5.setFont(new Font("Verdana", Font.PLAIN, 36));
-		label6.setFont(new Font("Verdana", Font.PLAIN, 36));
-		label7.setFont(new Font("Verdana", Font.PLAIN, 36));
-		label8.setFont(new Font("Verdana", Font.PLAIN, 36));
-		label9.setFont(new Font("Verdana", Font.PLAIN, 36));
-		label10.setFont(new Font("Verdana", Font.PLAIN, 36));
-		label11.setFont(new Font("Verdana", Font.PLAIN, 36));
+		label0.setFont(font1);
+		label1.setFont(font1);
+		label2.setFont(font1);
+		label3.setFont(font1);
+		label4.setFont(font1);
+		label5.setFont(font1);
+		label6.setFont(font1);
+		label7.setFont(font1);
+		label8.setFont(font1);
+		label9.setFont(font1);
+		label10.setFont(font1);
+		label11.setFont(font1);
 		
-		Jlabelah.setFont(new Font("Verdana", Font.PLAIN, 36));
-		Jlabelcr.setFont(new Font("Verdana", Font.PLAIN, 36));
-		Jlabelul.setFont(new Font("Verdana", Font.PLAIN, 36));
-		Jlabeld0.setFont(new Font("Verdana", Font.PLAIN, 36));
-		Jlabeld1.setFont(new Font("Verdana", Font.PLAIN, 36));
-		Jlabeld2.setFont(new Font("Verdana", Font.PLAIN, 36));
-		Jlabeld3.setFont(new Font("Verdana", Font.PLAIN, 36));
-		Jlabeld4.setFont(new Font("Verdana", Font.PLAIN, 36));
-		Jlabeld5.setFont(new Font("Verdana", Font.PLAIN, 36));
-		Jlabeld6.setFont(new Font("Verdana", Font.PLAIN, 36));
-		Jlabeld7.setFont(new Font("Verdana", Font.PLAIN, 36));
-		Jlabeld8.setFont(new Font("Verdana", Font.PLAIN, 36));
-		Jlabeld9.setFont(new Font("Verdana", Font.PLAIN, 36));
-		JlabelL.setFont(new Font("Verdana", Font.PLAIN, 36));
-		JlabelR.setFont(new Font("Verdana", Font.PLAIN, 36));
-		JlabelM1.setFont(new Font("Verdana", Font.PLAIN, 36));
-		JlabelM2.setFont(new Font("Verdana", Font.PLAIN, 36));
+		Jlabelah.setFont(font1);
+		Jlabelcr.setFont(font1);
+		Jlabelul.setFont(font1);
+		Jlabeld0.setFont(font1);
+		Jlabeld1.setFont(font1);
+		Jlabeld2.setFont(font1);
+		Jlabeld3.setFont(font1);
+		Jlabeld4.setFont(font1);
+		Jlabeld5.setFont(font1);
+		Jlabeld6.setFont(font1);
+		Jlabeld7.setFont(font1);
+		Jlabeld8.setFont(font1);
+		Jlabeld9.setFont(font1);
+		JlabelL.setFont(font1);
+		JlabelR.setFont(font1);
+		JlabelM1.setFont(font1);
+		JlabelM2.setFont(font1);
 		
 		label0.setOpaque(false);
 		label1.setOpaque(false);
@@ -450,8 +450,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		
 		JlabelR1.setBounds(400, 180, 1000, 800);
 		JlabelR2.setBounds(700, 420, 800, 800);
-		JlabelR1.setForeground(Color.RED);
-		JlabelR2.setForeground(Color.RED);
+		JlabelR1.setForeground(color2);
+		JlabelR2.setForeground(color2);
 		JlabelR1.setFont(new Font("Algerian", Font.ITALIC, 272));
 		JlabelR2.setFont(new Font("Algerian", Font.ITALIC, 272));
 		JlabelR1.setVisible(false);
@@ -886,8 +886,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			int kr = cr+100;cr=kr;
 			Jlabelcr = new JLabel(""+cr);
 			Jlabelcr.setBounds(1670,64,500,50);
-			Jlabelcr.setForeground(new Color(240, 185, 206));
-			Jlabelcr.setFont(new Font("Verdana", Font.PLAIN, 36));
+			Jlabelcr.setForeground(color3);
+			Jlabelcr.setFont(font1);
 			((JComponent) Jlabel13).setOpaque(false);
 			frame.add(Jlabelcr);
 			Jlabelcr.setVisible(true);
@@ -914,8 +914,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			Jlabelul = new JLabel(""+ul);
 			frame.add(Jlabelul);
 			Jlabelul.setBounds(1690,192,500,50);
-			Jlabelul.setForeground(new Color(240, 185, 206));
-			Jlabelul.setFont(new Font("Verdana", Font.PLAIN, 36));
+			Jlabelul.setForeground(color3);
+			Jlabelul.setFont(font1);
 			((JComponent) Jlabelul).setOpaque(false);
 			Jlabelul.setVisible(true);
 			
@@ -925,8 +925,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			Jlabeld0 = new JLabel(""+d0*ul);
 			frame.add(Jlabeld0);
 			Jlabeld0.setBounds(dx0,L0,120,40);
-			Jlabeld0.setForeground(Color.YELLOW);
-			Jlabeld0.setFont(new Font("Verdana", Font.PLAIN, 36));
+			Jlabeld0.setForeground(color1);
+			Jlabeld0.setFont(font1);
 			((JComponent) Jlabeld0).setOpaque(false);
 			Jlabeld0.setVisible(true);
 			
@@ -936,8 +936,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			Jlabeld1 = new JLabel(""+d1*ul);
 			frame.add(Jlabeld1);
 			Jlabeld1.setBounds(dx1,L1,120,40);
-			Jlabeld1.setForeground(Color.RED);
-			Jlabeld1.setFont(new Font("Verdana", Font.PLAIN, 36));
+			Jlabeld1.setForeground(color2);
+			Jlabeld1.setFont(font1);
 			((JComponent) Jlabeld1).setOpaque(false);
 			Jlabeld1.setVisible(true);
 			
@@ -947,8 +947,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			Jlabeld2 = new JLabel(""+d2*ul);
 			frame.add(Jlabeld2);
 			Jlabeld2.setBounds(dx2,L2,120,40);
-			Jlabeld2.setForeground(new Color(240, 185, 206));
-			Jlabeld2.setFont(new Font("Verdana", Font.PLAIN, 36));
+			Jlabeld2.setForeground(color3);
+			Jlabeld2.setFont(font1);
 			((JComponent) Jlabeld2).setOpaque(false);
 			Jlabeld2.setVisible(true);
 			
@@ -958,8 +958,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			Jlabeld3 = new JLabel(""+d3*ul);
 			frame.add(Jlabeld3);
 			Jlabeld3.setBounds(dx3,L3,120,40);
-			Jlabeld3.setForeground(new Color(240, 185, 206));
-			Jlabeld3.setFont(new Font("Verdana", Font.PLAIN, 36));
+			Jlabeld3.setForeground(color3);
+			Jlabeld3.setFont(font1);
 			((JComponent) Jlabeld3).setOpaque(false);
 			Jlabeld3.setVisible(true);
 			
@@ -969,8 +969,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			Jlabeld4 = new JLabel(""+d4*ul);
 			frame.add(Jlabeld4);
 			Jlabeld4.setBounds(dx4,L4,120,40);
-			Jlabeld4.setForeground(new Color(240, 185, 206));
-			Jlabeld4.setFont(new Font("Verdana", Font.PLAIN, 36));
+			Jlabeld4.setForeground(color3);
+			Jlabeld4.setFont(font1);
 			((JComponent) Jlabeld4).setOpaque(false);
 			Jlabeld4.setVisible(true);
 			
@@ -980,8 +980,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			Jlabeld5 = new JLabel(""+d5*ul);
 			frame.add(Jlabeld5);
 			Jlabeld5.setBounds(dx5,L5,120,40);
-			Jlabeld5.setForeground(new Color(240, 185, 206));
-			Jlabeld5.setFont(new Font("Verdana", Font.PLAIN, 36));
+			Jlabeld5.setForeground(color3);
+			Jlabeld5.setFont(font1);
 			((JComponent) Jlabeld5).setOpaque(false);
 			Jlabeld5.setVisible(true);
 			
@@ -991,8 +991,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			Jlabeld6 = new JLabel(""+d6*ul);
 			frame.add(Jlabeld6);
 			Jlabeld6.setBounds(dx6,L6,120,40);
-			Jlabeld6.setForeground(new Color(240, 185, 206));
-			Jlabeld6.setFont(new Font("Verdana", Font.PLAIN, 36));
+			Jlabeld6.setForeground(color3);
+			Jlabeld6.setFont(font1);
 			((JComponent) Jlabeld6).setOpaque(false);
 			Jlabeld6.setVisible(true);
 			
@@ -1002,8 +1002,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			Jlabeld7 = new JLabel(""+d7*ul);
 			frame.add(Jlabeld7);
 			Jlabeld7.setBounds(dx7,L7,120,40);
-			Jlabeld7.setForeground(new Color(240, 185, 206));
-			Jlabeld7.setFont(new Font("Verdana", Font.PLAIN, 36));
+			Jlabeld7.setForeground(color3);
+			Jlabeld7.setFont(font1);
 			((JComponent) Jlabeld7).setOpaque(false);
 			Jlabeld7.setVisible(true);
 			
@@ -1013,8 +1013,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			Jlabeld8 = new JLabel(""+d8*ul);
 			frame.add(Jlabeld8);
 			Jlabeld8.setBounds(dx8,L8,120,40);
-			Jlabeld8.setForeground(new Color(240, 185, 206));
-			Jlabeld8.setFont(new Font("Verdana", Font.PLAIN, 36));
+			Jlabeld8.setForeground(color3);
+			Jlabeld8.setFont(font1);
 			((JComponent) Jlabeld8).setOpaque(false);
 			Jlabeld8.setVisible(true);
 			
@@ -1024,8 +1024,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			Jlabeld9 = new JLabel(""+d9*ul);
 			frame.add(Jlabeld9);
 			Jlabeld9.setBounds(dx9,L9,120,40);
-			Jlabeld9.setForeground(new Color(240, 185, 206));
-			Jlabeld9.setFont(new Font("Verdana", Font.PLAIN, 36));
+			Jlabeld9.setForeground(color3);
+			Jlabeld9.setFont(font1);
 			((JComponent) Jlabeld9).setOpaque(false);
 			Jlabeld9.setVisible(true);
 
@@ -1072,8 +1072,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 				Jlabelah = new JLabel("AUTOHOLD");
 				frame.add(Jlabelah);
 				Jlabelah.setBounds(1620,292,500,40);
-				Jlabelah.setForeground(Color.BLUE);
-				Jlabelah.setFont(new Font("Verdana", Font.PLAIN, 36));
+				Jlabelah.setForeground(color4);
+				Jlabelah.setFont(font1);
 				((JComponent) Jlabelah).setOpaque(false);
 				Jlabelah.setVisible(true);
 				}
@@ -1153,7 +1153,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 				JlabelL.setVisible(false);
 				JlabelR.setVisible(false);
 				JlabelM1.setVisible(false);
-				JlabelM1.setVisible(false);
+				JlabelM2.setVisible(false);
 				frame.remove(JlabelR1);
 				frame.remove(JlabelR2);
 				frame.remove(JlabelL);
@@ -1175,8 +1175,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 				cr=cr-ul;
 				Jlabelcr = new JLabel(""+cr);
 				Jlabelcr.setBounds(1670,64,500,50);
-				Jlabelcr.setForeground(new Color(240, 185, 206));
-				Jlabelcr.setFont(new Font("Verdana", Font.PLAIN, 36));
+				Jlabelcr.setForeground(color3);
+				Jlabelcr.setFont(font1);
 				((JComponent) Jlabelcr).setOpaque(false);
 				frame.add(Jlabelcr);
 				Jlabelcr.setVisible(true);

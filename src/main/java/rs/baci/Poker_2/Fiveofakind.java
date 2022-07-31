@@ -16,10 +16,15 @@ public class Fiveofakind implements MainFrame, Brojevi, Dobici {
 
     Fiveofakind() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
-        label0.setBounds(0,0,1292,40);Jlabeld0.setBounds(MyFrame.dx0,0,120,40);
-        label0.add(Jlabeld0);frame.add(label0);label0.setOpaque(true);
-        label0.setBackground(Color.BLUE);MyFrame.label0.setForeground(Color.YELLOW);
-        Jlabeld0.setBackground(Color.BLUE);Jlabeld0.setForeground(Color.YELLOW);
+        label0.setBounds(0,0,1292,40);
+        Jlabeld0.setBounds(MyFrame.dx0,0,120,40);
+        label0.add(Jlabeld0);
+        frame.add(label0);
+        label0.setOpaque(true);
+        label0.setBackground(color2);
+        MyFrame.label0.setForeground(color1);
+        Jlabeld0.setBackground(color2);
+        Jlabeld0.setForeground(color1);
         label0.setFont(new Font("Verdana", Font.PLAIN, 36));
         Jlabeld0.setFont(new Font("Verdana", Font.PLAIN, 36));
         ((JComponent) Jlabeld0).setOpaque(true);

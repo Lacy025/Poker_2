@@ -1,5 +1,7 @@
 package rs.baci.Poker_2;
 
+import java.awt.*;
+
 public interface Brojevi {
 
 	int d0=1100;
@@ -23,5 +25,11 @@ public interface Brojevi {
 	int L7=238;
 	int L8=272;
 	int L9=306;
+	Color color1 = (Color.YELLOW);
+	Color color2 = (Color.RED);
+	Color color3 = new Color(240, 185, 206);
+	Color color4 = (Color.BLUE);
+
+	Font font1 = new Font("Verdana", Font.PLAIN, 36);
 
 }

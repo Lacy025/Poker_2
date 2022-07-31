@@ -4,10 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="840edd46-d39a-4597-9bd9-becf4fec8351" name="Changes" comment="2.0.4">
+    <list default="true" id="840edd46-d39a-4597-9bd9-becf4fec8351" name="Changes" comment="2.0.6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Brojevi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Brojevi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Countdown1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Countdown1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Countdown2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Countdown2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Fiveofakind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Fiveofakind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Flush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Flush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Fullhouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Fullhouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Highpair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Highpair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Hold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Hold.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Isplata1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Isplata1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Isplata2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Isplata2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/MyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/MyFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Poker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Poker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Royalflush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Royalflush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Stop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Stop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Street.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Street.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Streetflush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Streetflush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Threeofakind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Threeofakind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Twopairs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Twopairs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +44,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Deljenje1.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Isplata1.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/MyFrame.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -116,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659183372947</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="2.0.5">
+      <created>1659209680825</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1659209680825</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,7 +159,9 @@
     <MESSAGE value="2.0.2" />
     <MESSAGE value="2.0.3" />
     <MESSAGE value="2.0.4" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.0.4" />
+    <MESSAGE value="2.0.5" />
+    <MESSAGE value="2.0.6" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.0.6" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
