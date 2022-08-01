@@ -7,17 +7,17 @@ import javax.swing.JLabel;
 
 public class Hold implements MainFrame, Brojevi {
 
-	JLabel hold1 = new JLabel(" STOP");
-	JLabel hold2 = new JLabel(" STOP");
-	JLabel hold3 = new JLabel(" STOP");
-	JLabel hold4 = new JLabel(" STOP");
-	JLabel hold5 = new JLabel(" STOP");
+	static JLabel hold1 = new JLabel(" STOP");
+	static JLabel hold2 = new JLabel(" STOP");
+	static JLabel hold3 = new JLabel(" STOP");
+	static JLabel hold4 = new JLabel(" STOP");
+	static JLabel hold5 = new JLabel(" STOP");
 
 	Hold() throws InterruptedException, UnsupportedAudioFileException, LineUnavailableException, IOException {
 
-		if (Dobitak1.stop1==1&&MyFrame.ah==1) {
+		if (Dobitak.stop1==1&&MyFrame.ah==1) {
 
-			hold1.setBounds(120,920,130,40);
+			hold1.setBounds(120,914,130,40);
 			frame.add(hold1);
 			hold1.setForeground(color1);
 			hold1.setBackground(color2);
@@ -27,9 +27,9 @@ public class Hold implements MainFrame, Brojevi {
 			new Stop();
 		}
 
-		if (Dobitak1.stop2==1&&MyFrame.ah==1) {
+		if (Dobitak.stop2==1&&MyFrame.ah==1) {
 
-			hold2.setBounds(500,920,130,40);
+			hold2.setBounds(500,914,130,40);
 			frame.add(hold2);
 			hold2.setForeground(color1);
 			hold2.setBackground(color2);
@@ -39,9 +39,9 @@ public class Hold implements MainFrame, Brojevi {
 			new Stop();
 		}
 
-		if (Dobitak1.stop3==1&&MyFrame.ah==1) {
+		if (Dobitak.stop3==1&&MyFrame.ah==1) {
 
-			hold3.setBounds(890,920,130,40);
+			hold3.setBounds(890,914,130,40);
 			frame.add(hold3);
 			hold3.setForeground(color1);
 			hold3.setBackground(color2);
@@ -51,9 +51,9 @@ public class Hold implements MainFrame, Brojevi {
 			new Stop();
 		}
 
-		if (Dobitak1.stop4==1&&MyFrame.ah==1) {
+		if (Dobitak.stop4==1&&MyFrame.ah==1) {
 
-			hold4.setBounds(1270,920,130,40);
+			hold4.setBounds(1270,914,130,40);
 			frame.add(hold4);
 			hold4.setForeground(color1);
 			hold4.setBackground(color2);
@@ -63,9 +63,9 @@ public class Hold implements MainFrame, Brojevi {
 			new Stop();
 		}
 
-		if (Dobitak1.stop5==1&&MyFrame.ah==1) {
+		if (Dobitak.stop5==1&&MyFrame.ah==1) {
 
-			hold5.setBounds(1650,920,130,40);
+			hold5.setBounds(1650,914,130,40);
 			frame.add(hold5);
 			hold5.setForeground(color1);
 			hold5.setBackground(color2);

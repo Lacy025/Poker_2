@@ -284,8 +284,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		JlabelK5.setBounds(1515, 350, 400, 600);
 		JlabelL.setBounds(20,950,300,40);
 		JlabelR.setBounds(1580,950,300,40);
-		JlabelM1.setBounds(550,950,800,40);
-		JlabelM2.setBounds(550,950,800,40);
+		JlabelM1.setBounds(550,960,800,40);
+		JlabelM2.setBounds(550,960,800,40);
 		
 		frame.add(label0);
 		frame.add(label1);
@@ -808,7 +808,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 
 		}
 			
-		if (delj==3) {
+		if (delj==5) {
 			
 			jk=60000;cr=0;kr=0;ul=1;uu=1;ah=1;delj=0;
 			Jlabel13.setVisible(false);

@@ -34,7 +34,7 @@ public class Countdown1 implements MainFrame, Brojevi {
 				Jlabel13.setVisible(true);
 				frame.add(Jlabel13);
 
-				MyFrame.kr=0;MyFrame.cr=-1;MyFrame.delj=3;
+				MyFrame.kr=0;MyFrame.cr=-1;MyFrame.delj=5;
 			}
 			else if(((int)x/100 != (x/100)) && x>0) { ((JLabel) Jlabel13).setText(""+MyFrame.cr--);
 				try {

@@ -15,14 +15,15 @@ public class Main {
 		
 				new MyFrame();
 				
-				if (MyFrame.delj==3) {
+				if (MyFrame.delj==5) {
 					
 					System.out.println("THE END");
 				}
 				if (MyFrame.delj==1) {
 					
 					new Deljenje1();
-					new Dobitak1();
+					new Dobitak();
+					new Izbor();
 					
 				}
 				

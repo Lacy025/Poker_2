@@ -5,7 +5,7 @@ import java.io.IOException;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
-public class Dobitak1 {
+public class Dobitak {
 
 	public static int stop1;
 	public static int stop2;
@@ -13,7 +13,7 @@ public class Dobitak1 {
 	public static int stop4;
 	public static int stop5;
 
-	Dobitak1() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
+	Dobitak() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
 		int K1 = MyFrame.karta1;
 		int K2 = MyFrame.karta2;
@@ -556,6 +556,12 @@ public class Dobitak1 {
 				new Threeofakind();
 			}
 
+			if (((K2==K4)&&(K4==K5))||((K2==K4)&&(K5==0))||((K2==K5)&&(K4==0))||((K4==K5)&&(K2==0))) {
+				stop1=0;stop2=1;stop3=0;stop4=1;stop5=1;
+				DOBITAK++;
+				new Threeofakind();
+			}
+
 			if (((K3==K4)&&(K4==K5))||((K3==K4)&&(K5==0))||((K3==K5)&&(K4==0))||((K4==K5)&&(K3==0))) {
 				stop1=0;stop2=0;stop3=1;stop4=1;stop5=1;
 				DOBITAK++;
@@ -908,8 +914,6 @@ public class Dobitak1 {
 				new Hold();
 			}
 		}
-
-		MyFrame.delj = 2;
 
 	}
 }
