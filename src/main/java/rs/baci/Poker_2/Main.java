@@ -24,6 +24,7 @@ public class Main {
 					new Deljenje1();
 					new Dobitak();
 					new Izbor();
+					new Deljenje2();
 					
 				}
 				

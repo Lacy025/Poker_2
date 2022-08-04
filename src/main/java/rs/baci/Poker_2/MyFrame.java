@@ -32,7 +32,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 	Clip kreditSound;
 	Clip ulogSound;
 	Clip autoholdSound;
-	Clip deljenjeSound;
+	Clip deljenje1Sound;
 	
 	static int kr;
 	static int cr;
@@ -1181,25 +1181,25 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 				frame.add(Jlabelcr);
 				Jlabelcr.setVisible(true);
 
-					URL deljenje = this.getClass().getClassLoader().getResource("resources/Deljenje.wav");
-					AudioInputStream audioDeljenje;
+					URL deljenje1 = this.getClass().getClassLoader().getResource("resources/Deljenje1.wav");
+					AudioInputStream audioDeljenje1;
 					try {
-						assert deljenje != null;
-						audioDeljenje = AudioSystem.getAudioInputStream(deljenje);
+						assert deljenje1 != null;
+						audioDeljenje1 = AudioSystem.getAudioInputStream(deljenje1);
 					} catch (UnsupportedAudioFileException | IOException ex) {
 						throw new RuntimeException(ex);
 					}
 					try {
-						this.deljenjeSound = AudioSystem.getClip();
+						this.deljenje1Sound = AudioSystem.getClip();
 					} catch (LineUnavailableException ex) {
 						throw new RuntimeException(ex);
 					}
 					try {
-						deljenjeSound.open(audioDeljenje);
+						deljenje1Sound.open(audioDeljenje1);
 					} catch (LineUnavailableException | IOException ex) {
 						throw new RuntimeException(ex);
 					}
-					this.deljenjeSound.start();
+					this.deljenje1Sound.start();
 				
 				frame.add(JlabelK1);
 				frame.add(JlabelK2);

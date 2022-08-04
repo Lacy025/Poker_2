@@ -16,14 +16,14 @@ import javax.swing.JFrame;
 public class Deljenje1 extends JFrame implements MainFrame {
 
 	Clip karteSound;
+
+	public static int n1 = 0;
+	public static int n2 = 0;
+	public static int n3 = 0;
+	public static int n4 = 0;
+	public static int n5 = 0;
 	
 	Deljenje1() throws InterruptedException {
-		
-		int n1 = 0;
-		int n2 = 0;
-		int n3 = 0;
-		int n4 = 0;
-		int n5 = 0;
 		
 		Random karta01 = new Random();
 		Random karta02 = new Random();
