@@ -15,7 +15,7 @@ import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Izbor extends JFrame implements MainFrame, Brojevi, Dobici, KeyListener {
+public class Izbor1 extends JFrame implements MainFrame, Brojevi, Dobici, KeyListener {
 
     /**
      *
@@ -37,7 +37,7 @@ public class Izbor extends JFrame implements MainFrame, Brojevi, Dobici, KeyList
     public Component JlabelN2 = new JLabel("               PRITISNITE PONIŠTAVANJE");
     public Component JlabelN3 = new JLabel("                 PRITISNITE DELJENJE");
 
-    Izbor() throws InterruptedException {
+    Izbor1() throws InterruptedException {
 
         JlabelN1.setVisible(true);
         JlabelN2.setVisible(false);

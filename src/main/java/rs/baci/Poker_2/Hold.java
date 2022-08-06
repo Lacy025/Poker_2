@@ -15,7 +15,7 @@ public class Hold implements MainFrame, Brojevi {
 
 	Hold() throws InterruptedException, UnsupportedAudioFileException, LineUnavailableException, IOException {
 
-		if (Dobitak.stop1==1&&MyFrame.ah==1) {
+		if (MyFrame.delj==1&&Dobitak.stop1==1&&MyFrame.ah==1) {
 
 			hold1.setBounds(120,914,130,40);
 			frame.add(hold1);
@@ -27,7 +27,7 @@ public class Hold implements MainFrame, Brojevi {
 			new Stop();
 		}
 
-		if (Dobitak.stop2==1&&MyFrame.ah==1) {
+		if (MyFrame.delj==1&&Dobitak.stop2==1&&MyFrame.ah==1) {
 
 			hold2.setBounds(500,914,130,40);
 			frame.add(hold2);
@@ -39,7 +39,7 @@ public class Hold implements MainFrame, Brojevi {
 			new Stop();
 		}
 
-		if (Dobitak.stop3==1&&MyFrame.ah==1) {
+		if (MyFrame.delj==1&&Dobitak.stop3==1&&MyFrame.ah==1) {
 
 			hold3.setBounds(890,914,130,40);
 			frame.add(hold3);
@@ -51,7 +51,7 @@ public class Hold implements MainFrame, Brojevi {
 			new Stop();
 		}
 
-		if (Dobitak.stop4==1&&MyFrame.ah==1) {
+		if (MyFrame.delj==1&&Dobitak.stop4==1&&MyFrame.ah==1) {
 
 			hold4.setBounds(1270,914,130,40);
 			frame.add(hold4);
@@ -63,7 +63,7 @@ public class Hold implements MainFrame, Brojevi {
 			new Stop();
 		}
 
-		if (Dobitak.stop5==1&&MyFrame.ah==1) {
+		if (MyFrame.delj==1&&Dobitak.stop5==1&&MyFrame.ah==1) {
 
 			hold5.setBounds(1650,914,130,40);
 			frame.add(hold5);

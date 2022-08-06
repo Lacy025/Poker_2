@@ -23,11 +23,15 @@ public class Main {
 					
 					new Deljenje1();
 					new Dobitak();
-					new Izbor();
-					new Deljenje2();
-					
+					new Izbor1();
+
 				}
-				
+				if (MyFrame.delj==2) {
+
+					new Deljenje2();
+					new Dobitak();
+
+				}
 				System.out.println("THE END");
 				MyFrame.jk=60000;
 			//}		 
