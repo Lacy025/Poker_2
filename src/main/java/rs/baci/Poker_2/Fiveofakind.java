@@ -12,23 +12,42 @@ import javax.swing.JLabel;
 
 public class Fiveofakind implements MainFrame, Brojevi, Dobici {
 
-    public static Component Jlabeld0 = new JLabel(""+d0*MyFrame.ul);
+    public static Component Jlabeld00 = new JLabel(""+d0*MyFrame.ul);
 
     Fiveofakind() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
-        label0.setBounds(0,0,1292,40);
-        Jlabeld0.setBounds(MyFrame.dx0,0,120,40);
-        label0.add(Jlabeld0);
-        frame.add(label0);
-        label0.setOpaque(true);
-        label0.setBackground(color2);
-        MyFrame.label0.setForeground(color1);
-        Jlabeld0.setBackground(color2);
-        Jlabeld0.setForeground(color1);
-        label0.setFont(new Font("Verdana", Font.PLAIN, 36));
-        Jlabeld0.setFont(new Font("Verdana", Font.PLAIN, 36));
-        ((JComponent) Jlabeld0).setOpaque(true);
-        new Hold();
+        if (MyFrame.delj==1) {
+
+            label0.setBounds(0,0,1292,40);
+            Jlabeld00.setBounds(MyFrame.dx0,0,120,40);
+            label0.add(Jlabeld00);
+            frame.add(label0);
+            label0.setOpaque(true);
+            label0.setBackground(color2);
+            MyFrame.label0.setForeground(color1);
+            Jlabeld00.setBackground(color2);
+            Jlabeld00.setForeground(color1);
+            label0.setFont(new Font("Verdana", Font.PLAIN, 36));
+            Jlabeld00.setFont(new Font("Verdana", Font.PLAIN, 36));
+            ((JComponent) Jlabeld00).setOpaque(true);
+            new Hold();
+
+        }
+        else {
+
+            new Prostor();
+            new Tabela();
+
+            JLabel labelD0 = new JLabel(" FIVE OF A KIND");
+            labelD0.setVerticalAlignment(JLabel.TOP);
+            labelD0.setBounds(0,0,2200,200);
+            tabela.add(labelD0);
+            labelD0.setFont(font2);
+            labelD0.setForeground(color1);
+            labelD0.setOpaque(false);
+
+        }
+
 
     }
 

@@ -287,90 +287,90 @@ public class Izbor1 extends JFrame implements MainFrame, Brojevi, Dobici, KeyLis
 
                 label9.setVisible(false);
                 frame.remove(label9);
-                Highpair.Jlabeld9.setVisible(false);
-                frame.remove(Highpair.Jlabeld9);
-                label9.add(Highpair.Jlabeld9);
+                Highpair.Jlabeld09.setVisible(false);
+                frame.remove(Highpair.Jlabeld09);
+                label9.add(Highpair.Jlabeld09);
                 frame.add(label9);
                 label9.setVisible(true);
                 label9.setOpaque(false);
 
                 label8.setVisible(false);
                 frame.remove(label8);
-                Twopairs.Jlabeld8.setVisible(false);
-                frame.remove(Twopairs.Jlabeld8);
-                label8.add(Twopairs.Jlabeld8);
+                Twopairs.Jlabeld08.setVisible(false);
+                frame.remove(Twopairs.Jlabeld08);
+                label8.add(Twopairs.Jlabeld08);
                 frame.add(label8);
                 label8.setVisible(true);
                 label8.setOpaque(false);
 
                 label7.setVisible(false);
                 frame.remove(label7);
-                Threeofakind.Jlabeld7.setVisible(false);
-                frame.remove(Threeofakind.Jlabeld7);
-                label7.add(Threeofakind.Jlabeld7);
+                Threeofakind.Jlabeld07.setVisible(false);
+                frame.remove(Threeofakind.Jlabeld07);
+                label7.add(Threeofakind.Jlabeld07);
                 frame.add(label7);
                 label7.setVisible(true);
                 label7.setOpaque(false);
 
                 label6.setVisible(false);
                 frame.remove(label6);
-                Street.Jlabeld6.setVisible(false);
-                frame.remove(Street.Jlabeld6);
-                label6.add(Street.Jlabeld6);
+                Street.Jlabeld06.setVisible(false);
+                frame.remove(Street.Jlabeld06);
+                label6.add(Street.Jlabeld06);
                 frame.add(label6);
                 label6.setVisible(true);
                 label6.setOpaque(false);
 
                 label5.setVisible(false);
                 frame.remove(label5);
-                Flush.Jlabeld5.setVisible(false);
-                frame.remove(Flush.Jlabeld5);
-                label5.add(Flush.Jlabeld5);
+                Flush.Jlabeld05.setVisible(false);
+                frame.remove(Flush.Jlabeld05);
+                label5.add(Flush.Jlabeld05);
                 frame.add(label5);
                 label5.setVisible(true);
                 label5.setOpaque(false);
 
                 label4.setVisible(false);
                 frame.remove(label4);
-                Fullhouse.Jlabeld4.setVisible(false);
-                frame.remove(Fullhouse.Jlabeld4);
-                label4.add(Fullhouse.Jlabeld4);
+                Fullhouse.Jlabeld04.setVisible(false);
+                frame.remove(Fullhouse.Jlabeld04);
+                label4.add(Fullhouse.Jlabeld04);
                 frame.add(label4);
                 label4.setVisible(true);
                 label4.setOpaque(false);
 
                 label3.setVisible(false);
                 frame.remove(label3);
-                Poker.Jlabeld3.setVisible(false);
-                frame.remove(Poker.Jlabeld3);
-                label3.add(Poker.Jlabeld3);
+                Poker.Jlabeld03.setVisible(false);
+                frame.remove(Poker.Jlabeld03);
+                label3.add(Poker.Jlabeld03);
                 frame.add(label3);
                 label3.setVisible(true);
                 label3.setOpaque(false);
 
                 label2.setVisible(false);
                 frame.remove(label2);
-                Streetflush.Jlabeld2.setVisible(false);
-                frame.remove(Streetflush.Jlabeld2);
-                label2.add(Streetflush.Jlabeld2);
+                Streetflush.Jlabeld02.setVisible(false);
+                frame.remove(Streetflush.Jlabeld02);
+                label2.add(Streetflush.Jlabeld02);
                 frame.add(label2);
                 label2.setVisible(true);
                 label2.setOpaque(false);
 
                 label1.setVisible(false);
                 frame.remove(label1);
-                Royalflush.Jlabeld1.setVisible(false);
-                frame.remove(Royalflush.Jlabeld1);
-                label1.add(Royalflush.Jlabeld1);
+                Royalflush.Jlabeld01.setVisible(false);
+                frame.remove(Royalflush.Jlabeld01);
+                label1.add(Royalflush.Jlabeld01);
                 frame.add(label1);
                 label1.setVisible(true);
                 label1.setOpaque(false);
 
                 label0.setVisible(false);
                 frame.remove(label0);
-                Fiveofakind.Jlabeld0.setVisible(false);
-                frame.remove(Fiveofakind.Jlabeld0);
-                label0.add(Fiveofakind.Jlabeld0);
+                Fiveofakind.Jlabeld00.setVisible(false);
+                frame.remove(Fiveofakind.Jlabeld00);
+                label0.add(Fiveofakind.Jlabeld00);
                 frame.add(label0);
                 label0.setVisible(true);
                 label0.setOpaque(false);
@@ -421,6 +421,7 @@ public class Izbor1 extends JFrame implements MainFrame, Brojevi, Dobici, KeyLis
                 }
 
                 MyFrame.delj=2;
+
                 frame.removeKeyListener(this);
 
                 URL deljenje2 = this.getClass().getClassLoader().getResource("resources/Deljenje2.wav");

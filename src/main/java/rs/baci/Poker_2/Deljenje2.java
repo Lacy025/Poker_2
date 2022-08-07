@@ -18,35 +18,29 @@ public class Deljenje2 implements MainFrame {
     Clip karta4Sound;
     Clip karta5Sound;
 
-    public static int m1 = 0;
-    public static int m2 = 0;
-    public static int m3 = 0;
-    public static int m4 = 0;
-    public static int m5 = 0;
-
     int PAUZA = 0;
 
     Deljenje2() throws InterruptedException {
 
         if (Dobitak.stop1==0) {
 
-            Random karta06 = new Random();
+            Random karta01 = new Random();
 
-            m1 = karta06.nextInt(53);
+            MyFrame.n1 = karta01.nextInt(53);
 
-            while (m1==Deljenje1.n2 ||
-                    m1==Deljenje1.n3 ||
-                    m1==Deljenje1.n4 ||
-                    m1==Deljenje1.n5) {
+            while (MyFrame.n1==MyFrame.n2 ||
+                    MyFrame.n1==MyFrame.n3 ||
+                    MyFrame.n1==MyFrame.n4 ||
+                    MyFrame.n1==MyFrame.n5) {
 
-                m1 = karta06.nextInt(53);
+                MyFrame.n1 = karta01.nextInt(53);
 
             }
 
+            Thread.sleep(100);
             MyFrame.JlabelK1.setVisible(false);
             frame.remove(MyFrame.JlabelK1);
 
-            MyFrame.n1=m1;
             new Karta1();
 
             frame.add(Karta1.card1);
@@ -80,16 +74,16 @@ public class Deljenje2 implements MainFrame {
 
         if (Dobitak.stop2==0) {
 
-            Random karta07 = new Random();
+            Random karta02 = new Random();
 
-            m2 = karta07.nextInt(53);
+            MyFrame.n2 = karta02.nextInt(53);
 
-            while (m2==Deljenje1.n1 ||
-                    m2==Deljenje1.n3 ||
-                    m2==Deljenje1.n4 ||
-                    m2==Deljenje1.n5) {
+            while (MyFrame.n2==MyFrame.n1 ||
+                    MyFrame.n2==MyFrame.n3 ||
+                    MyFrame.n2==MyFrame.n4 ||
+                    MyFrame.n2==MyFrame.n5) {
 
-                m2 = karta07.nextInt(53);
+                MyFrame.n2 = karta02.nextInt(53);
 
             }
             if (PAUZA>0) {
@@ -99,7 +93,6 @@ public class Deljenje2 implements MainFrame {
             MyFrame.JlabelK2.setVisible(false);
             frame.remove(MyFrame.JlabelK2);
 
-            MyFrame.n2=m2;
             new Karta2();
 
             frame.add(Karta2.card2);
@@ -132,16 +125,16 @@ public class Deljenje2 implements MainFrame {
 
         if (Dobitak.stop3==0) {
 
-            Random karta08 = new Random();
+            Random karta03 = new Random();
 
-            m3 = karta08.nextInt(53);
+            MyFrame.n3 = karta03.nextInt(53);
 
-            while (m3==Deljenje1.n1 ||
-                    m3==Deljenje1.n2 ||
-                    m3==Deljenje1.n4 ||
-                    m3==Deljenje1.n5) {
+            while (MyFrame.n3==MyFrame.n1 ||
+                    MyFrame.n3==MyFrame.n2 ||
+                    MyFrame.n3==MyFrame.n4 ||
+                    MyFrame.n3==MyFrame.n5) {
 
-                m3 = karta08.nextInt(53);
+                MyFrame.n3 = karta03.nextInt(53);
 
             }
             if (PAUZA>0) {
@@ -151,7 +144,6 @@ public class Deljenje2 implements MainFrame {
             MyFrame.JlabelK3.setVisible(false);
             frame.remove(MyFrame.JlabelK3);
 
-            MyFrame.n3=m3;
             new Karta3();
 
             frame.add(Karta3.card3);
@@ -184,16 +176,16 @@ public class Deljenje2 implements MainFrame {
 
         if (Dobitak.stop4==0) {
 
-            Random karta09 = new Random();
+            Random karta04 = new Random();
 
-            m4 = karta09.nextInt(53);
+            MyFrame.n4 = karta04.nextInt(53);
 
-            while (m4==Deljenje1.n1 ||
-                    m4==Deljenje1.n2 ||
-                    m4==Deljenje1.n3 ||
-                    m4==Deljenje1.n5) {
+            while (MyFrame.n4==MyFrame.n1 ||
+                    MyFrame.n4==MyFrame.n3 ||
+                    MyFrame.n4==MyFrame.n2 ||
+                    MyFrame.n4==MyFrame.n5) {
 
-                m4 = karta09.nextInt(53);
+                MyFrame.n4 = karta04.nextInt(53);
 
             }
             if (PAUZA>0) {
@@ -203,7 +195,6 @@ public class Deljenje2 implements MainFrame {
             MyFrame.JlabelK4.setVisible(false);
             frame.remove(MyFrame.JlabelK4);
 
-            MyFrame.n4=m4;
             new Karta4();
 
             frame.add(Karta4.card4);
@@ -236,16 +227,16 @@ public class Deljenje2 implements MainFrame {
 
         if (Dobitak.stop5==0) {
 
-            Random karta10 = new Random();
+            Random karta05 = new Random();
 
-            m5 = karta10.nextInt(53);
+            MyFrame.n5 = karta05.nextInt(53);
 
-            while (m5==Deljenje1.n1 ||
-                    m5==Deljenje1.n2 ||
-                    m5==Deljenje1.n3 ||
-                    m5==Deljenje1.n4) {
+            while (MyFrame.n5==MyFrame.n1 ||
+                    MyFrame.n5==MyFrame.n2 ||
+                    MyFrame.n5==MyFrame.n3 ||
+                    MyFrame.n5==MyFrame.n4) {
 
-                m5 = karta10.nextInt(53);
+                MyFrame.n5 = karta05.nextInt(53);
 
             }
             if (PAUZA>0) {
@@ -255,7 +246,6 @@ public class Deljenje2 implements MainFrame {
             MyFrame.JlabelK5.setVisible(false);
             frame.remove(MyFrame.JlabelK5);
 
-            MyFrame.n5=m5;
             new Karta5();
 
             frame.add(Karta5.card5);

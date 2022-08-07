@@ -30,6 +30,7 @@ public class Main {
 
 					new Deljenje2();
 					new Dobitak();
+					new Izbor2();
 
 				}
 				System.out.println("THE END");

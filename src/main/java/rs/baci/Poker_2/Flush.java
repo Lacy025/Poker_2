@@ -9,23 +9,42 @@ import javax.swing.JLabel;
 
 public class Flush implements MainFrame, Brojevi, Dobici {
 
-    public static Component Jlabeld5 = new JLabel(""+d5*MyFrame.ul);
+    public static Component Jlabeld05 = new JLabel(""+d5*MyFrame.ul);
 
     Flush() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
-        label5.setBounds(0,172,1292,36);
-        Jlabeld5.setBounds(MyFrame.dx5,0,120,32);
-        label5.add(Jlabeld5);
-        frame.add(label5);
-        label5.setOpaque(true);
-        label5.setBackground(color2);
-        MyFrame.label5.setForeground(color3);
-        Jlabeld5.setBackground(color2);
-        Jlabeld5.setForeground(color3);
-        label5.setFont(font1);
-        Jlabeld5.setFont(font1);
-        ((JComponent) Jlabeld5).setOpaque(true);
-        new Hold();
+        if (MyFrame.delj==1) {
+
+            label5.setBounds(0,172,1292,36);
+            Jlabeld05.setBounds(MyFrame.dx5,0,120,32);
+            label5.add(Jlabeld05);
+            frame.add(label5);
+            label5.setOpaque(true);
+            label5.setBackground(color2);
+            MyFrame.label5.setForeground(color3);
+            Jlabeld05.setBackground(color2);
+            Jlabeld05.setForeground(color3);
+            label5.setFont(font1);
+            Jlabeld05.setFont(font1);
+            ((JComponent) Jlabeld05).setOpaque(true);
+            new Hold();
+
+        }
+        else {
+
+            new Prostor();
+            new Tabela();
+
+            JLabel labelD5 = new JLabel(" FLUSH");
+            labelD5.setVerticalAlignment(JLabel.TOP);
+            labelD5.setBounds(0,0,2200,200);
+            tabela.add(labelD5);
+            labelD5.setFont(font2);
+            labelD5.setForeground(color1);
+            labelD5.setOpaque(false);
+
+        }
+
 
     }
 

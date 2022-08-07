@@ -1,0 +1,20 @@
+package rs.baci.Poker_2;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+
+import javax.swing.BorderFactory;
+
+public class Tabela implements MainFrame{
+
+    Tabela() {
+
+        tabela.setBackground(Color.red);
+        tabela.setLayout(new BorderLayout(50,50));
+        tabela.setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, Color.YELLOW));
+        frame.add(tabela);
+        tabela.setBounds(20, 20, 1300, 340);
+    }
+
+}
+

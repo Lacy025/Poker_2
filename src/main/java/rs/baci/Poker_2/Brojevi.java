@@ -31,5 +31,6 @@ public interface Brojevi {
 	Color color4 = (Color.BLUE);
 
 	Font font1 = new Font("Verdana", Font.PLAIN, 36);
+	Font font2 = new Font("Arial", Font.PLAIN, 128);
 
 }
