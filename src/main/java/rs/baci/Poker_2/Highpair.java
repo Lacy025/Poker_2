@@ -37,11 +37,19 @@ public class Highpair implements MainFrame, Brojevi, Dobici {
 
             JLabel labelD9 = new JLabel(" HIGH PAIR");
             labelD9.setVerticalAlignment(JLabel.TOP);
-            labelD9.setBounds(0,0,2200,200);
+            labelD9.setBounds(0,0,1200,120);
             tabela.add(labelD9);
             labelD9.setFont(font2);
             labelD9.setForeground(color1);
             labelD9.setOpaque(false);
+
+            JLabel labelD09 = new JLabel(""+d9*MyFrame.ul+" ");
+            labelD09.setHorizontalAlignment(JLabel.RIGHT);
+            labelD09.setVerticalAlignment(JLabel.BOTTOM);
+            tabela.add(labelD09);
+            labelD09.setFont(font2);
+            labelD09.setForeground(color1);
+            labelD09.setOpaque(false);
 
         }
 

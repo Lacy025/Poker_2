@@ -5,7 +5,7 @@ import java.awt.Color;
 
 import javax.swing.BorderFactory;
 
-public class Tabela implements MainFrame{
+public class Tabela implements MainFrame, Dobici, Brojevi{
 
     Tabela() {
 
@@ -14,6 +14,13 @@ public class Tabela implements MainFrame{
         tabela.setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, Color.YELLOW));
         frame.add(tabela);
         tabela.setBounds(20, 20, 1300, 340);
+
+        label12.setBounds(0,160,2200,200);
+        tabela.add(label12);
+        label12.setFont(font2);
+        label12.setForeground(color1);
+        label12.setOpaque(false);
+
     }
 
 }

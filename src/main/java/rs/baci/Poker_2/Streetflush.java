@@ -37,11 +37,19 @@ public class Streetflush implements MainFrame, Brojevi, Dobici {
 
             JLabel labelD2 = new JLabel(" STREET FLUSH");
             labelD2.setVerticalAlignment(JLabel.TOP);
-            labelD2.setBounds(0,0,2200,200);
+            labelD2.setBounds(0,0,1200,120);
             tabela.add(labelD2);
             labelD2.setFont(font2);
             labelD2.setForeground(color1);
             labelD2.setOpaque(false);
+
+            JLabel labelD02 = new JLabel(""+d2*MyFrame.ul+" ");
+            labelD02.setHorizontalAlignment(JLabel.RIGHT);
+            labelD02.setVerticalAlignment(JLabel.BOTTOM);
+            tabela.add(labelD02);
+            labelD02.setFont(font2);
+            labelD02.setForeground(color1);
+            labelD02.setOpaque(false);
 
         }
 

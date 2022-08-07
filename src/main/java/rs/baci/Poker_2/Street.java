@@ -37,11 +37,19 @@ public class Street implements MainFrame, Brojevi, Dobici {
 
             JLabel labelD6 = new JLabel(" STREET");
             labelD6.setVerticalAlignment(JLabel.TOP);
-            labelD6.setBounds(0,0,2200,200);
+            labelD6.setBounds(0,0,1200,120);
             tabela.add(labelD6);
             labelD6.setFont(font2);
             labelD6.setForeground(color1);
             labelD6.setOpaque(false);
+
+            JLabel labelD06 = new JLabel(""+d6*MyFrame.ul+" ");
+            labelD06.setHorizontalAlignment(JLabel.RIGHT);
+            labelD06.setVerticalAlignment(JLabel.BOTTOM);
+            tabela.add(labelD06);
+            labelD06.setFont(font2);
+            labelD06.setForeground(color1);
+            labelD06.setOpaque(false);
 
         }
 

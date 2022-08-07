@@ -37,11 +37,19 @@ public class Flush implements MainFrame, Brojevi, Dobici {
 
             JLabel labelD5 = new JLabel(" FLUSH");
             labelD5.setVerticalAlignment(JLabel.TOP);
-            labelD5.setBounds(0,0,2200,200);
+            labelD5.setBounds(0,0,1200,120);
             tabela.add(labelD5);
             labelD5.setFont(font2);
             labelD5.setForeground(color1);
             labelD5.setOpaque(false);
+
+            JLabel labelD05 = new JLabel(""+d5*MyFrame.ul+" ");
+            labelD05.setHorizontalAlignment(JLabel.RIGHT);
+            labelD05.setVerticalAlignment(JLabel.BOTTOM);
+            tabela.add(labelD05);
+            labelD05.setFont(font2);
+            labelD05.setForeground(color1);
+            labelD05.setOpaque(false);
 
         }
 

@@ -36,7 +36,7 @@ public class Deljenje1 extends JFrame implements MainFrame {
 
 		n1 = karta01.nextInt(53);
 		n2 = karta02.nextInt(53);
-		n3 = karta03.nextInt(53);
+		//n3 = karta03.nextInt(53);
 		n4 = karta04.nextInt(53);
 		n5 = karta05.nextInt(53);
 		

@@ -37,11 +37,19 @@ public class Poker implements MainFrame, Brojevi, Dobici {
 
             JLabel labelD3 = new JLabel(" POKER");
             labelD3.setVerticalAlignment(JLabel.TOP);
-            labelD3.setBounds(0,0,2200,200);
+            labelD3.setBounds(0,0,1200,120);
             tabela.add(labelD3);
             labelD3.setFont(font2);
             labelD3.setForeground(color1);
             labelD3.setOpaque(false);
+
+            JLabel labelD03 = new JLabel(""+d3*MyFrame.ul+" ");
+            labelD03.setHorizontalAlignment(JLabel.RIGHT);
+            labelD03.setVerticalAlignment(JLabel.BOTTOM);
+            tabela.add(labelD03);
+            labelD03.setFont(font2);
+            labelD03.setForeground(color1);
+            labelD03.setOpaque(false);
 
         }
 

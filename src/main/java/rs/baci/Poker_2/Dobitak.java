@@ -9,6 +9,8 @@ public class Dobitak {
 
 	int dobitak = 0;
 
+	public static int DOBITAK;
+
 	public static int stop1;
 	public static int stop2;
 	public static int stop3;
@@ -919,6 +921,6 @@ public class Dobitak {
 				new Hold();
 			}
 		}
-
+		DOBITAK=dobitak;
 	}
 }

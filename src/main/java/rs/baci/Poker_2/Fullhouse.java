@@ -37,11 +37,19 @@ public class Fullhouse implements MainFrame, Brojevi, Dobici {
 
             JLabel labelD4 = new JLabel(" FULL HOUSE");
             labelD4.setVerticalAlignment(JLabel.TOP);
-            labelD4.setBounds(0,0,2200,200);
+            labelD4.setBounds(0,0,1200,120);
             tabela.add(labelD4);
             labelD4.setFont(font2);
             labelD4.setForeground(color1);
             labelD4.setOpaque(false);
+
+            JLabel labelD04 = new JLabel(""+d4*MyFrame.ul+" ");
+            labelD04.setHorizontalAlignment(JLabel.RIGHT);
+            labelD04.setVerticalAlignment(JLabel.BOTTOM);
+            tabela.add(labelD04);
+            labelD04.setFont(font2);
+            labelD04.setForeground(color1);
+            labelD04.setOpaque(false);
 
         }
 

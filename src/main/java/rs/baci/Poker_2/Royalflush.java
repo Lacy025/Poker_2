@@ -37,11 +37,19 @@ public class Royalflush implements MainFrame, Brojevi, Dobici {
 
             JLabel labelD1 = new JLabel(" ROYAL FLUSH");
             labelD1.setVerticalAlignment(JLabel.TOP);
-            labelD1.setBounds(0,0,2200,200);
+            labelD1.setBounds(0,0,1200,120);
             tabela.add(labelD1);
             labelD1.setFont(font2);
             labelD1.setForeground(color1);
             labelD1.setOpaque(false);
+
+            JLabel labelD01 = new JLabel(""+d1*MyFrame.ul+" ");
+            labelD01.setHorizontalAlignment(JLabel.RIGHT);
+            labelD01.setVerticalAlignment(JLabel.BOTTOM);
+            tabela.add(labelD01);
+            labelD01.setFont(font2);
+            labelD01.setForeground(color1);
+            labelD01.setOpaque(false);
 
         }
 

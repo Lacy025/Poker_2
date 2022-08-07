@@ -37,11 +37,19 @@ public class Threeofakind implements MainFrame, Brojevi, Dobici {
 
             JLabel labelD7 = new JLabel(" THREE OF A KIND");
             labelD7.setVerticalAlignment(JLabel.TOP);
-            labelD7.setBounds(0,0,2200,200);
+            labelD7.setBounds(0,0,1200,120);
             tabela.add(labelD7);
             labelD7.setFont(font2);
             labelD7.setForeground(color1);
             labelD7.setOpaque(false);
+
+            JLabel labelD07 = new JLabel(""+d7*MyFrame.ul+" ");
+            labelD07.setHorizontalAlignment(JLabel.RIGHT);
+            labelD07.setVerticalAlignment(JLabel.BOTTOM);
+            tabela.add(labelD07);
+            labelD07.setFont(font2);
+            labelD07.setForeground(color1);
+            labelD07.setOpaque(false);
         }
 
 

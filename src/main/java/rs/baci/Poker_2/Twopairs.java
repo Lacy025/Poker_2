@@ -36,11 +36,19 @@ public class Twopairs implements MainFrame, Brojevi, Dobici {
 
         JLabel labelD8 = new JLabel(" TWO PAIRS");
         labelD8.setVerticalAlignment(JLabel.TOP);
-        labelD8.setBounds(0,0,2200,200);
+        labelD8.setBounds(0,0,1200,120);
         tabela.add(labelD8);
         labelD8.setFont(font2);
         labelD8.setForeground(color1);
         labelD8.setOpaque(false);
+
+        JLabel labelD08 = new JLabel(""+d8*MyFrame.ul+" ");
+        labelD08.setHorizontalAlignment(JLabel.RIGHT);
+        labelD08.setVerticalAlignment(JLabel.BOTTOM);
+        tabela.add(labelD08);
+        labelD08.setFont(font2);
+        labelD08.setForeground(color1);
+        labelD08.setOpaque(false);
     }
 
 }

@@ -16,5 +16,6 @@ public interface Dobici {
 	JLabel label9=new JLabel("HIGH PAIR");
 	JLabel label10=new JLabel("KREDIT");
 	JLabel label11=new JLabel("ULOG");
+	JLabel label12=new JLabel(" DOBITAK");
 
 }

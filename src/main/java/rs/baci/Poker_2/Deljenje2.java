@@ -273,6 +273,7 @@ public class Deljenje2 implements MainFrame {
             }
             this.karta5Sound.start();
 
+            Thread.sleep(100);
 
         }
 

@@ -40,11 +40,19 @@ public class Fiveofakind implements MainFrame, Brojevi, Dobici {
 
             JLabel labelD0 = new JLabel(" FIVE OF A KIND");
             labelD0.setVerticalAlignment(JLabel.TOP);
-            labelD0.setBounds(0,0,2200,200);
+            labelD0.setBounds(0,0,1200,120);
             tabela.add(labelD0);
             labelD0.setFont(font2);
             labelD0.setForeground(color1);
             labelD0.setOpaque(false);
+
+            JLabel labelD00 = new JLabel(""+d0*MyFrame.ul+" ");
+            labelD00.setHorizontalAlignment(JLabel.RIGHT);
+            labelD00.setVerticalAlignment(JLabel.BOTTOM);
+            tabela.add(labelD00);
+            labelD00.setFont(font2);
+            labelD00.setForeground(color1);
+            labelD00.setOpaque(false);
 
         }
 
