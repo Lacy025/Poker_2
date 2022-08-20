@@ -1,6 +1,5 @@
 package rs.baci.Poker_2;
 
-import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
 import java.io.IOException;
@@ -13,6 +12,7 @@ import javax.swing.JLabel;
 public class Fiveofakind implements MainFrame, Brojevi, Dobici {
 
     public static Component Jlabeld00 = new JLabel(""+d0*MyFrame.ul);
+    public static Component labelD00 = new JLabel(""+d0*MyFrame.ul+" ");
 
     Fiveofakind() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
@@ -46,13 +46,13 @@ public class Fiveofakind implements MainFrame, Brojevi, Dobici {
             labelD0.setForeground(color1);
             labelD0.setOpaque(false);
 
-            JLabel labelD00 = new JLabel(""+d0*MyFrame.ul+" ");
-            labelD00.setHorizontalAlignment(JLabel.RIGHT);
-            labelD00.setVerticalAlignment(JLabel.BOTTOM);
+            ((JLabel) labelD00).setHorizontalAlignment(JLabel.RIGHT);
+            ((JLabel) labelD00).setVerticalAlignment(JLabel.BOTTOM);
             tabela.add(labelD00);
             labelD00.setFont(font2);
             labelD00.setForeground(color1);
-            labelD00.setOpaque(false);
+            ((JComponent) labelD00).setOpaque(false);
+            MyFrame.dobitak=d0*MyFrame.ul;
 
         }
 

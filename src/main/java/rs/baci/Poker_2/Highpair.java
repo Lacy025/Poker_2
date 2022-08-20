@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 public class Highpair implements MainFrame, Brojevi, Dobici {
 
     public static Component Jlabeld09 = new JLabel(""+d9*MyFrame.ul);
+    public static Component labelD09 = new JLabel(""+d9*MyFrame.ul+" ");
 
     Highpair() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
@@ -43,13 +44,13 @@ public class Highpair implements MainFrame, Brojevi, Dobici {
             labelD9.setForeground(color1);
             labelD9.setOpaque(false);
 
-            JLabel labelD09 = new JLabel(""+d9*MyFrame.ul+" ");
-            labelD09.setHorizontalAlignment(JLabel.RIGHT);
-            labelD09.setVerticalAlignment(JLabel.BOTTOM);
+            ((JLabel) labelD09).setHorizontalAlignment(JLabel.RIGHT);
+            ((JLabel) labelD09).setVerticalAlignment(JLabel.BOTTOM);
             tabela.add(labelD09);
             labelD09.setFont(font2);
             labelD09.setForeground(color1);
-            labelD09.setOpaque(false);
+            ((JComponent) labelD09).setOpaque(false);
+            MyFrame.dobitak=d9*MyFrame.ul;
 
         }
 

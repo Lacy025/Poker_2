@@ -32,5 +32,6 @@ public interface Brojevi {
 
 	Font font1 = new Font("Verdana", Font.PLAIN, 36);
 	Font font2 = new Font("Arial", Font.PLAIN, 128);
+	Font font3 = new Font("Verdana", Font.PLAIN, 48);
 
 }

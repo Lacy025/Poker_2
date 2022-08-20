@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 public class Flush implements MainFrame, Brojevi, Dobici {
 
     public static Component Jlabeld05 = new JLabel(""+d5*MyFrame.ul);
+    public static Component labelD05 = new JLabel(""+d5*MyFrame.ul+" ");
 
     Flush() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
@@ -43,13 +44,13 @@ public class Flush implements MainFrame, Brojevi, Dobici {
             labelD5.setForeground(color1);
             labelD5.setOpaque(false);
 
-            JLabel labelD05 = new JLabel(""+d5*MyFrame.ul+" ");
-            labelD05.setHorizontalAlignment(JLabel.RIGHT);
-            labelD05.setVerticalAlignment(JLabel.BOTTOM);
+            ((JLabel) labelD05).setHorizontalAlignment(JLabel.RIGHT);
+            ((JLabel) labelD05).setVerticalAlignment(JLabel.BOTTOM);
             tabela.add(labelD05);
             labelD05.setFont(font2);
             labelD05.setForeground(color1);
-            labelD05.setOpaque(false);
+            ((JComponent) labelD05).setOpaque(false);
+            MyFrame.dobitak=d5*MyFrame.ul;
 
         }
 

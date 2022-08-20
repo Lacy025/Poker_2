@@ -27,7 +27,6 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 	
 	@Serial
 	private static final long serialVersionUID = 1L;
-	
 	Clip introSound;
 	Clip kreditSound;
 	Clip ulogSound;
@@ -40,7 +39,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 	public static int ul = 1;
 	public static int ah = 1;
 	static int ch;
-	
+	public static int dobitak;
 	public static int dx0 = 1200;
 	public static int dx1 = 1223;
 	public static int dx2 = 1223;
@@ -62,7 +61,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 	public static int n5;
 	
 	public Component Jlabelah = new JLabel("AUTOHOLD");
-	public Component Jlabelcr = new JLabel(""+cr);
+	public static Component Jlabelcr = new JLabel(""+cr);
 	public Component Jlabelul = new JLabel(""+ul);
 	public static Component Jlabeld0 = new JLabel(""+d0*ul);
 	public static Component Jlabeld1 = new JLabel(""+d1*ul);

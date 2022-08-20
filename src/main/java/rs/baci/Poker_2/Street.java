@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 public class Street implements MainFrame, Brojevi, Dobici {
 
     public static Component Jlabeld06 = new JLabel(""+d6*MyFrame.ul);
+    public static Component labelD06 = new JLabel(""+d6*MyFrame.ul+" ");
 
     Street() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
@@ -43,13 +44,13 @@ public class Street implements MainFrame, Brojevi, Dobici {
             labelD6.setForeground(color1);
             labelD6.setOpaque(false);
 
-            JLabel labelD06 = new JLabel(""+d6*MyFrame.ul+" ");
-            labelD06.setHorizontalAlignment(JLabel.RIGHT);
-            labelD06.setVerticalAlignment(JLabel.BOTTOM);
+            ((JLabel) labelD06).setHorizontalAlignment(JLabel.RIGHT);
+            ((JLabel) labelD06).setVerticalAlignment(JLabel.BOTTOM);
             tabela.add(labelD06);
             labelD06.setFont(font2);
             labelD06.setForeground(color1);
-            labelD06.setOpaque(false);
+            ((JComponent) labelD06).setOpaque(false);
+            MyFrame.dobitak=d6*MyFrame.ul;
 
         }
 

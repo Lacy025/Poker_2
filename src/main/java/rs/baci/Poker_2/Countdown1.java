@@ -48,9 +48,12 @@ public class Countdown1 implements MainFrame, Brojevi {
 			else  {
 
 				((Timer) (e.getSource())).stop();
-				Jlabel13.setVisible(false);frame.remove(Jlabel13);
+				Jlabel13.setVisible(false);
+				frame.remove(Jlabel13);
+
 				try {
 					new Countdown2();
+
 				} catch (InterruptedException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();

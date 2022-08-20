@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 public class Threeofakind implements MainFrame, Brojevi, Dobici {
 
     public static Component Jlabeld07 = new JLabel(""+d7*MyFrame.ul);
+    public static Component labelD07 = new JLabel(""+d7*MyFrame.ul+" ");
 
     Threeofakind() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
@@ -43,13 +44,13 @@ public class Threeofakind implements MainFrame, Brojevi, Dobici {
             labelD7.setForeground(color1);
             labelD7.setOpaque(false);
 
-            JLabel labelD07 = new JLabel(""+d7*MyFrame.ul+" ");
-            labelD07.setHorizontalAlignment(JLabel.RIGHT);
-            labelD07.setVerticalAlignment(JLabel.BOTTOM);
+            ((JLabel) labelD07).setHorizontalAlignment(JLabel.RIGHT);
+            ((JLabel) labelD07).setVerticalAlignment(JLabel.BOTTOM);
             tabela.add(labelD07);
             labelD07.setFont(font2);
             labelD07.setForeground(color1);
-            labelD07.setOpaque(false);
+            ((JComponent) labelD07).setOpaque(false);
+            MyFrame.dobitak=d7*MyFrame.ul;
         }
 
 

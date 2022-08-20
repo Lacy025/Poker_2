@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 public class Poker implements MainFrame, Brojevi, Dobici {
 
     public static Component Jlabeld03 = new JLabel(""+d3*MyFrame.ul);
+    public static Component labelD03 = new JLabel(""+d3*MyFrame.ul+" ");
 
     Poker() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
@@ -43,13 +44,13 @@ public class Poker implements MainFrame, Brojevi, Dobici {
             labelD3.setForeground(color1);
             labelD3.setOpaque(false);
 
-            JLabel labelD03 = new JLabel(""+d3*MyFrame.ul+" ");
-            labelD03.setHorizontalAlignment(JLabel.RIGHT);
-            labelD03.setVerticalAlignment(JLabel.BOTTOM);
+            ((JLabel) labelD03).setHorizontalAlignment(JLabel.RIGHT);
+            ((JLabel) labelD03).setVerticalAlignment(JLabel.BOTTOM);
             tabela.add(labelD03);
             labelD03.setFont(font2);
             labelD03.setForeground(color1);
-            labelD03.setOpaque(false);
+            ((JComponent) labelD03).setOpaque(false);
+            MyFrame.dobitak=d3*MyFrame.ul;
 
         }
 

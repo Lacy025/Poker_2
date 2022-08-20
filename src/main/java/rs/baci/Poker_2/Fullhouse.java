@@ -10,7 +10,7 @@ import javax.swing.JLabel;
 public class Fullhouse implements MainFrame, Brojevi, Dobici {
 
     public static Component Jlabeld04 = new JLabel(""+d4*MyFrame.ul);
-
+    public static Component labelD04 = new JLabel(""+d4*MyFrame.ul+" ");
     Fullhouse() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
         if (MyFrame.delj==1) {
@@ -43,13 +43,13 @@ public class Fullhouse implements MainFrame, Brojevi, Dobici {
             labelD4.setForeground(color1);
             labelD4.setOpaque(false);
 
-            JLabel labelD04 = new JLabel(""+d4*MyFrame.ul+" ");
-            labelD04.setHorizontalAlignment(JLabel.RIGHT);
-            labelD04.setVerticalAlignment(JLabel.BOTTOM);
+            ((JLabel) labelD04).setHorizontalAlignment(JLabel.RIGHT);
+            ((JLabel) labelD04).setVerticalAlignment(JLabel.BOTTOM);
             tabela.add(labelD04);
             labelD04.setFont(font2);
             labelD04.setForeground(color1);
-            labelD04.setOpaque(false);
+            ((JComponent) labelD04).setOpaque(false);
+            MyFrame.dobitak=d4*MyFrame.ul;
 
         }
 
