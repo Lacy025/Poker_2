@@ -24,7 +24,7 @@ public class Countdown1 implements MainFrame, Brojevi {
 					new Isplata2();Thread.sleep(900);
 				} catch (UnsupportedAudioFileException | IOException | LineUnavailableException |
 						 InterruptedException e1) {
-					// TODO Auto-generated catch block
+
 					e1.printStackTrace();
 				}
 				Jlabel13.setBounds(1670,64,500,50);
@@ -40,7 +40,7 @@ public class Countdown1 implements MainFrame, Brojevi {
 				try {
 					new Isplata1();
 				} catch (UnsupportedAudioFileException | IOException | LineUnavailableException e1) {
-					// TODO Auto-generated catch block
+
 					e1.printStackTrace();
 				}
 			}
@@ -55,7 +55,7 @@ public class Countdown1 implements MainFrame, Brojevi {
 					new Countdown2();
 
 				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
+
 					e1.printStackTrace();
 				}
 			}

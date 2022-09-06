@@ -13,15 +13,9 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 
-public class Deljenje1 extends JFrame implements MainFrame {
+public class Deljenje1 implements MainFrame {
 
 	Clip karteSound;
-
-	public static int n1 = 0;
-	public static int n2 = 0;
-	public static int n3 = 0;
-	public static int n4 = 0;
-	public static int n5 = 0;
 	
 	Deljenje1() throws InterruptedException {
 		
@@ -30,19 +24,22 @@ public class Deljenje1 extends JFrame implements MainFrame {
 		Random karta03 = new Random();
 		Random karta04 = new Random();
 		Random karta05 = new Random();
-		
-	while (n1==n2 || n1==n3 || n1==n4 || n1==n5 || n2==n3 ||
-		   n2==n4 || n2==n5 || n3==n4 || n3==n5 || n4==n5) {
 
-		n1 = karta01.nextInt(53);
-		n2 = karta02.nextInt(53);
-		//n3 = karta03.nextInt(53);
-		n4 = karta04.nextInt(53);
-		n5 = karta05.nextInt(53);
-		
+		while (MyFrame.n1==MyFrame.n2 || MyFrame.n1==MyFrame.n3 ||
+				MyFrame.n1==MyFrame.n4 ||MyFrame.n1==MyFrame.n5 ||
+				MyFrame.n2==MyFrame.n3 || MyFrame.n2==MyFrame.n4 ||
+				MyFrame.n2==MyFrame.n5 || MyFrame.n3==MyFrame.n4 ||
+				MyFrame.n3==MyFrame.n5 || MyFrame.n4==MyFrame.n5) {
+
+			MyFrame.n1 = karta01.nextInt(53);
+			MyFrame.n2 = karta02.nextInt(53);
+			MyFrame.n3 = karta03.nextInt(53);
+			MyFrame.n4 = karta04.nextInt(53);
+			MyFrame.n5 = karta05.nextInt(53);
+
 		}
 
-		Thread.sleep(100);
+		Thread.sleep(200);
 
 		URL karte = this.getClass().getClassLoader().getResource("resources/Karta-1-5.wav");
 		AudioInputStream audioKarte;
@@ -63,9 +60,8 @@ public class Deljenje1 extends JFrame implements MainFrame {
 			throw new RuntimeException(ex);
 		}
 		this.karteSound.start();
-		
+
 		Thread.sleep(80);
-		MyFrame.n1=n1;
 		MyFrame.JlabelK1.setVisible(false);
 		frame.remove(MyFrame.JlabelK1);
 		new Karta1();
@@ -73,9 +69,8 @@ public class Deljenje1 extends JFrame implements MainFrame {
 		Karta1.card1.setVisible(true);
 		Karta1.card1.setBounds(-8, 380, 400, 540);
 		((JComponent) Karta1.card1).setOpaque(false);
-		
+
 		Thread.sleep(80);
-		MyFrame.n2=n2;
 		MyFrame.JlabelK2.setVisible(false);
 		frame.remove(MyFrame.JlabelK2);
 		new Karta2();
@@ -83,9 +78,8 @@ public class Deljenje1 extends JFrame implements MainFrame {
 		Karta2.card2.setVisible(true);
 		Karta2.card2.setBounds(373, 380, 400, 540);
 		((JComponent) Karta2.card2).setOpaque(false);
-		
+
 		Thread.sleep(80);
-		MyFrame.n3=n3;
 		MyFrame.JlabelK3.setVisible(false);
 		frame.remove(MyFrame.JlabelK3);
 		new Karta3();
@@ -93,21 +87,21 @@ public class Deljenje1 extends JFrame implements MainFrame {
 		Karta3.card3.setVisible(true);
 		Karta3.card3.setBounds(753, 380, 400, 540);
 		((JComponent) Karta3.card3).setOpaque(false);
-		
+
 		Thread.sleep(80);
-		MyFrame.n4=n4;
 		MyFrame.JlabelK4.setVisible(false);
 		frame.remove(MyFrame.JlabelK4);
-		new Karta4();frame.add(Karta4.card4);
+		new Karta4();
+		frame.add(Karta4.card4);
 		Karta4.card4.setVisible(true);
 		Karta4.card4.setBounds(1133, 380, 400, 540);
 		((JComponent) Karta4.card4).setOpaque(false);
-		
+
 		Thread.sleep(80);
-		MyFrame.n5=n5;
 		MyFrame.JlabelK5.setVisible(false);
 		frame.remove(MyFrame.JlabelK5);
-		new Karta5();frame.add(Karta5.card5);
+		new Karta5();
+		frame.add(Karta5.card5);
 		Karta5.card5.setVisible(true);
 		Karta5.card5.setBounds(1512, 380, 400, 540);
 		((JComponent) Karta5.card5).setOpaque(false);

@@ -1,6 +1,7 @@
 package rs.baci.Poker_2;
 
 import java.io.IOException;
+
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JLabel;
@@ -13,7 +14,7 @@ public class Hold implements MainFrame, Brojevi {
 	static JLabel hold4 = new JLabel(" STOP");
 	static JLabel hold5 = new JLabel(" STOP");
 
-	Hold() throws InterruptedException, UnsupportedAudioFileException, LineUnavailableException, IOException {
+	Hold() throws UnsupportedAudioFileException, IOException, LineUnavailableException, InterruptedException {
 
 		if (MyFrame.delj==1&&Dobitak.stop1==1&&MyFrame.ah==1) {
 

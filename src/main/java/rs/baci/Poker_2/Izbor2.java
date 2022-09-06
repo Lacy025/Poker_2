@@ -13,7 +13,7 @@ public class Izbor2 extends JFrame implements Brojevi, Dobici, MainFrame, KeyLis
 
     JLabel dupliranje = new JLabel("            DUPLIRANJE");
     JLabel kasiranje = new JLabel("             KASIRANJE");
-    JLabel pobeda = new JLabel("              POBEDIO !");
+    static JLabel pobeda = new JLabel("              POBEDIO !");
 
     int izbor=1;
     int pobedio;
@@ -139,7 +139,8 @@ public class Izbor2 extends JFrame implements Brojevi, Dobici, MainFrame, KeyLis
 
             }
 
-            Thread.sleep(1000);
+            Thread.sleep(400);
+            pobeda.setVisible(true);
             new Kasiranje();
 
         }
@@ -156,39 +157,40 @@ public class Izbor2 extends JFrame implements Brojevi, Dobici, MainFrame, KeyLis
 
         if (e.getKeyCode() == 32){
 
-        Highpair.labelD09.setVisible(false);
-        tabela.remove(Highpair.labelD09);
-        Twopairs.labelD08.setVisible(false);
-        tabela.remove(Twopairs.labelD08);
-        Threeofakind.labelD07.setVisible(false);
-        tabela.remove(Threeofakind.labelD07);
-        Street.labelD06.setVisible(false);
-        tabela.remove(Street.labelD06);
-        Flush.labelD05.setVisible(false);
-        tabela.remove(Flush.labelD05);
-        Fullhouse.labelD04.setVisible(false);
-        tabela.remove(Fullhouse.labelD04);
-        Poker.labelD03.setVisible(false);
-        tabela.remove(Poker.labelD03);
-        Streetflush.labelD02.setVisible(false);
-        tabela.remove(Streetflush.labelD02);
-        Royalflush.labelD01.setVisible(false);
-        tabela.remove(Royalflush.labelD01);
-        Fiveofakind.labelD00.setVisible(false);
-        tabela.remove(Fiveofakind.labelD00);
+            Highpair.labelD09.setVisible(false);
+            tabela.remove(Highpair.labelD09);
+            Twopairs.labelD08.setVisible(false);
+            tabela.remove(Twopairs.labelD08);
+            Threeofakind.labelD07.setVisible(false);
+            tabela.remove(Threeofakind.labelD07);
+            Street.labelD06.setVisible(false);
+            tabela.remove(Street.labelD06);
+            Flush.labelD05.setVisible(false);
+            tabela.remove(Flush.labelD05);
+            Fullhouse.labelD04.setVisible(false);
+            tabela.remove(Fullhouse.labelD04);
+            Poker.labelD03.setVisible(false);
+            tabela.remove(Poker.labelD03);
+            Streetflush.labelD02.setVisible(false);
+            tabela.remove(Streetflush.labelD02);
+            Royalflush.labelD01.setVisible(false);
+            tabela.remove(Royalflush.labelD01);
+            Fiveofakind.labelD00.setVisible(false);
+            tabela.remove(Fiveofakind.labelD00);
 
-        MyFrame.Jlabelcr.setVisible(false);
-        frame.remove(MyFrame.Jlabelcr);
+            MyFrame.Jlabelcr.setVisible(false);
+            frame.remove(MyFrame.Jlabelcr);
 
-        frame.removeKeyListener(this);
+            frame.removeKeyListener(this);
 
-        dobitakSound.stop();
+            dobitakSound.stop();
 
-        izbor=0;
+            izbor=0;
 
         try{
         new Upis1();
-        }catch(UnsupportedAudioFileException|IOException|LineUnavailableException ex){
+        }
+        catch(UnsupportedAudioFileException|IOException|LineUnavailableException ex) {
         throw new RuntimeException(ex);
         }
         }

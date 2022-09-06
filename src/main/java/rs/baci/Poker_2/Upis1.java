@@ -1,10 +1,13 @@
 package rs.baci.Poker_2;
 
+import java.awt.Component;
+import java.io.IOException;
+
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
-import javax.swing.*;
-import java.awt.*;
-import java.io.IOException;
+import javax.swing.JComponent;
+import javax.swing.JLabel;
+import javax.swing.Timer;
 
 public class Upis1 implements MainFrame, Brojevi {
 
@@ -54,6 +57,7 @@ public class Upis1 implements MainFrame, Brojevi {
                 } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e1) {
 
                     e1.printStackTrace();
+
                 }
 
 
@@ -64,11 +68,16 @@ public class Upis1 implements MainFrame, Brojevi {
                 ((Timer) (e.getSource())).stop();
                 Broj1.setVisible(false);
                 tabela.remove(Broj1);
+                //Credit1.setVisible(false);
+                //frame.remove(Credit1);
 
                 try {
+
                     new Upis2();
-                } catch (InterruptedException ex) {
-                    throw new RuntimeException(ex);
+
+                } catch (InterruptedException e1) {
+
+                    e1.printStackTrace();
                 }
 
             }});

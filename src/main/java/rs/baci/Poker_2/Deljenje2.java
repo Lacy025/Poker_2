@@ -18,9 +18,9 @@ public class Deljenje2 implements MainFrame {
     Clip karta4Sound;
     Clip karta5Sound;
 
-    int PAUZA = 0;
-
     Deljenje2() throws InterruptedException {
+
+        int PAUZA = 0;
 
         if (Dobitak.stop1==0) {
 
@@ -37,7 +37,14 @@ public class Deljenje2 implements MainFrame {
 
             }
 
-            Thread.sleep(100);
+            if (PAUZA>0) {
+                Thread.sleep(280);
+            }
+
+            else {
+                Thread.sleep(10);
+            }
+
             MyFrame.JlabelK1.setVisible(false);
             frame.remove(MyFrame.JlabelK1);
 
@@ -88,6 +95,10 @@ public class Deljenje2 implements MainFrame {
             }
             if (PAUZA>0) {
                 Thread.sleep(280);
+            }
+
+            else {
+                Thread.sleep(10);
             }
 
             MyFrame.JlabelK2.setVisible(false);
@@ -141,6 +152,10 @@ public class Deljenje2 implements MainFrame {
                 Thread.sleep(280);
             }
 
+            else {
+                Thread.sleep(10);
+            }
+
             MyFrame.JlabelK3.setVisible(false);
             frame.remove(MyFrame.JlabelK3);
 
@@ -190,6 +205,10 @@ public class Deljenje2 implements MainFrame {
             }
             if (PAUZA>0) {
                 Thread.sleep(280);
+            }
+
+            else {
+                Thread.sleep(10);
             }
 
             MyFrame.JlabelK4.setVisible(false);
@@ -243,6 +262,10 @@ public class Deljenje2 implements MainFrame {
                 Thread.sleep(280);
             }
 
+            else {
+                Thread.sleep(10);
+            }
+
             MyFrame.JlabelK5.setVisible(false);
             frame.remove(MyFrame.JlabelK5);
 
@@ -273,7 +296,7 @@ public class Deljenje2 implements MainFrame {
             }
             this.karta5Sound.start();
 
-            Thread.sleep(100);
+            Thread.sleep(200);
 
         }
 

@@ -7,7 +7,9 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class Dobitak {
 
-	int dobitak = 0;
+	int dobitak;
+	int dveiste;
+	int cetiriboje;
 
 	public static int DOBITAK;
 
@@ -31,6 +33,9 @@ public class Dobitak {
 		int B4 = MyFrame.boja4;
 		int B5 = MyFrame.boja5;
 
+		dveiste = 0;
+		cetiriboje = 0;
+
 		// FIVE OF A KIND
 
 		if (((K1==K2)&&(K2==K3)&&(K3==K4)&&(K5==0)) ||
@@ -47,7 +52,7 @@ public class Dobitak {
 		// ROYAL FLUSH OR STREET
 
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			int ROYAL = 0;
 
@@ -70,7 +75,6 @@ public class Dobitak {
 					stop1=1;stop2=1;stop3=1;stop4=1;stop5=1;
 					dobitak++;
 					new Royalflush();
-
 				}
 				else {
 					stop1=1;stop2=1;stop3=1;stop4=1;stop5=1;
@@ -82,7 +86,7 @@ public class Dobitak {
 		// STREET FLUSH OR STREET
 		// 1-5
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			int STRFL1 = 0;
 
@@ -105,7 +109,6 @@ public class Dobitak {
 					stop1=1;stop2=1;stop3=1;stop4=1;stop5=1;
 					dobitak++;
 					new Streetflush();
-
 				}
 				else {
 					stop1=1;stop2=1;stop3=1;stop4=1;stop5=1;
@@ -118,7 +121,7 @@ public class Dobitak {
 		// STREET FLUSH OR STREET
 		// 2-6
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			int STRFL2 = 0;
 
@@ -141,7 +144,6 @@ public class Dobitak {
 					stop1=1;stop2=1;stop3=1;stop4=1;stop5=1;
 					dobitak++;
 					new Streetflush();
-
 				}
 				else {
 					stop1=1;stop2=1;stop3=1;stop4=1;stop5=1;
@@ -154,7 +156,7 @@ public class Dobitak {
 		// STREET FLUSH OR STREET
 		// 3-7
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			int STRFL3 = 0;
 
@@ -177,7 +179,6 @@ public class Dobitak {
 					stop1=1;stop2=1;stop3=1;stop4=1;stop5=1;
 					dobitak++;
 					new Streetflush();
-
 				}
 				else {
 					stop1=1;stop2=1;stop3=1;stop4=1;stop5=1;
@@ -190,7 +191,7 @@ public class Dobitak {
 		// STREET FLUSH OR STREET
 		// 4-8
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			int STRFL4 = 0;
 
@@ -213,7 +214,6 @@ public class Dobitak {
 					stop1=1;stop2=1;stop3=1;stop4=1;stop5=1;
 					dobitak++;
 					new Streetflush();
-
 				}
 				else {
 					stop1=1;stop2=1;stop3=1;stop4=1;stop5=1;
@@ -226,7 +226,7 @@ public class Dobitak {
 		// STREET FLUSH OR STREET
 		// 5-9
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			int STRFL5 = 0;
 
@@ -249,7 +249,6 @@ public class Dobitak {
 					stop1=1;stop2=1;stop3=1;stop4=1;stop5=1;
 					dobitak++;
 					new Streetflush();
-
 				}
 				else {
 					stop1=1;stop2=1;stop3=1;stop4=1;stop5=1;
@@ -262,7 +261,7 @@ public class Dobitak {
 		// STREET FLUSH OR STREET
 		// 6-10
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			int STRFL6 = 0;
 
@@ -285,7 +284,6 @@ public class Dobitak {
 					stop1=1;stop2=1;stop3=1;stop4=1;stop5=1;
 					dobitak++;
 					new Streetflush();
-
 				}
 				else {
 					stop1=1;stop2=1;stop3=1;stop4=1;stop5=1;
@@ -298,7 +296,7 @@ public class Dobitak {
 		// STREET FLUSH OR STREET
 		// 7-11
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			int STRFL7 = 0;
 
@@ -321,7 +319,6 @@ public class Dobitak {
 					stop1=1;stop2=1;stop3=1;stop4=1;stop5=1;
 					dobitak++;
 					new Streetflush();
-
 				}
 				else {
 					stop1=1;stop2=1;stop3=1;stop4=1;stop5=1;
@@ -334,7 +331,7 @@ public class Dobitak {
 		// STREET FLUSH OR STREET
 		// 8-12
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			int STRFL8 = 0;
 
@@ -357,9 +354,9 @@ public class Dobitak {
 					stop1=1;stop2=1;stop3=1;stop4=1;stop5=1;
 					dobitak++;
 					new Streetflush();
-
 				}
 				else {
+
 					stop1=1;stop2=1;stop3=1;stop4=1;stop5=1;
 					dobitak++;
 					new Street();
@@ -370,7 +367,7 @@ public class Dobitak {
 		// STREET FLUSH OR STREET
 		// 9-13
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			int STRFL9 = 0;
 
@@ -393,9 +390,9 @@ public class Dobitak {
 					stop1=1;stop2=1;stop3=1;stop4=1;stop5=1;
 					dobitak++;
 					new Streetflush();
-
 				}
 				else {
+
 					stop1=1;stop2=1;stop3=1;stop4=1;stop5=1;
 					dobitak++;
 					new Street();
@@ -405,7 +402,7 @@ public class Dobitak {
 
 		// POKER
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			if (((K1==K2)&&(K2==K3)&&(K3==K4)) ||
 					((K1==K2)&&(K2==K3)&&(K4==0)) ||
@@ -460,7 +457,7 @@ public class Dobitak {
 
 		//FULL HOUSE
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			if (((K1==K2)&&(K2==K3)&&(K4==K5)) ||
 					((K1==K2)&&(K3==K4)&&(K4==K5)) ||
@@ -496,7 +493,7 @@ public class Dobitak {
 
 		//FLUSH
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			if (((B1==B2)&&(B2==B3)&&(B3==B4)&&(B4==B5)) ||
 					((B1==B2)&&(B2==B3)&&(B3==B4)&&(K5==0)) ||
@@ -513,7 +510,7 @@ public class Dobitak {
 
 		//THREE OF A KIND
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			if (((K1==K2)&&(K2==K3))||((K1==K2)&&(K3==0))||((K1==K3)&&(K2==0))||((K2==K3)&&(K1==0))) {
 				stop1=1;stop2=1;stop3=1;stop4=0;stop5=0;
@@ -578,7 +575,7 @@ public class Dobitak {
 
 		//2 PAIRS
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			if (((K1==K2)&&(K3==K4))||((K1==K3)&&(K2==K4))||((K1==K4)&&(K2==K3))) {
 				stop1=1;stop2=1;stop3=1;stop4=1;stop5=0;
@@ -613,105 +610,133 @@ public class Dobitak {
 
 		//HIGH PAIR
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			if (K1==K2) {
 				stop1=1;stop2=1;stop3=0;stop4=0;stop5=0;
-				dobitak++;
+
 				if (K1>10) {
+					dobitak++;
 					new Highpair();
 				}
 				else {
+					dveiste=1;
 					new Hold();
 				}
 			}
+
 			if (K1==K3) {
 				stop1=1;stop2=0;stop3=1;stop4=0;stop5=0;
-				dobitak++;
+
 				if (K1>10) {
+					dobitak++;
 					new Highpair();
 				}
 				else {
+					dveiste=1;
 					new Hold();
 				}
 			}
+
 			if (K1==K4) {
 				stop1=1;stop2=0;stop3=0;stop4=1;stop5=0;
-				dobitak++;
+
 				if (K1>10) {
+					dobitak++;
 					new Highpair();
 				}
 				else {
+					dveiste=1;
 					new Hold();
 				}
 			}
+
 			if (K1==K5) {
 				stop1=1;stop2=0;stop3=0;stop4=0;stop5=1;
-				dobitak++;
+
 				if (K1>10) {
+					dobitak++;
 					new Highpair();
 				}
 				else {
 					new Hold();
 				}
 			}
+
 			if (K2==K3) {
 				stop1=0;stop2=1;stop3=1;stop4=0;stop5=0;
-				dobitak++;
+
 				if (K2>10) {
+					dobitak++;
 					new Highpair();
 				}
 				else {
+					dveiste=1;
 					new Hold();
 				}
 			}
+
 			if (K2==K4) {
 				stop1=0;stop2=1;stop3=0;stop4=1;stop5=0;
-				dobitak++;
+
 				if (K2>10) {
+					dobitak++;
 					new Highpair();
 				}
 				else {
+					dveiste=1;
 					new Hold();
 				}
 			}
+
 			if (K2==K5) {
 				stop1=0;stop2=1;stop3=0;stop4=0;stop5=1;
-				dobitak++;
+
 				if (K2>10) {
+					dobitak++;
 					new Highpair();
 				}
 				else {
+					dveiste=1;
 					new Hold();
 				}
 			}
+
 			if (K3==K4) {
 				stop1=0;stop2=0;stop3=1;stop4=1;stop5=0;
-				dobitak++;
+
 				if (K3>10) {
+					dobitak++;
 					new Highpair();
 				}
 				else {
+					dveiste=1;
 					new Hold();
 				}
 			}
+
 			if (K3==K5) {
 				stop1=0;stop2=0;stop3=1;stop4=0;stop5=1;
-				dobitak++;
+
 				if (K3>10) {
+					dobitak++;
 					new Highpair();
 				}
 				else {
+					dveiste=1;
 					new Hold();
 				}
 			}
+
 			if (K4==K5) {
 				stop1=0;stop2=0;stop3=0;stop4=1;stop5=1;
-				dobitak++;
+
 				if (K4>10) {
+					dobitak++;
 					new Highpair();
 				}
 				else {
+					dveiste=1;
 					new Hold();
 				}
 			}
@@ -720,207 +745,286 @@ public class Dobitak {
 
 		//HIGH PAIR WITH JOKER
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			if (K1==0) {
 				stop1=1;
 				if (K2>10) {
 					stop2=1;stop3=0;stop4=0;stop5=0;
-					dobitak++;new Highpair();
+					dobitak++;
+					new Highpair();
 				}
 
-				if (dobitak ==0) {
+				if (dobitak==0) {
 
 					if (K3>10) {
 						stop2=0;stop3=1;stop4=0;stop5=0;
-						dobitak++;new Highpair();
+						dobitak++;
+						new Highpair();
 					}
 				}
 
-				if (dobitak ==0) {
+				if (dobitak==0) {
 
 					if (K4>10) {
 						stop2=0;stop3=0;stop4=1;stop5=0;
-						dobitak++;new Highpair();
+						dobitak++;
+						new Highpair();
 					}
 				}
 
-				if (dobitak ==0) {
+				if (dobitak==0) {
 
 					if (K5>10) {
 						stop2=0;stop3=0;stop4=0;stop5=1;
-						dobitak++;new Highpair();
+						dobitak++;
+						new Highpair();
 					}
 				}
 			}
 		}
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			if (K2==0) {
 				stop2=1;
 				if (K1>10) {
 					stop1=1;stop3=0;stop4=0;stop5=0;
-					dobitak++;new Highpair();
+					dobitak++;
+					new Highpair();
 				}
 
-				if (dobitak ==0) {
+				if (dobitak==0) {
 
 					if (K3>10) {
 						stop1=0;stop3=1;stop4=0;stop5=0;
-						dobitak++;new Highpair();
+						dobitak++;
+						new Highpair();
 					}
 				}
 
-				if (dobitak ==0) {
+				if (dobitak==0) {
 
 					if (K4>10) {
 						stop1=0;stop3=0;stop4=1;stop5=0;
-						dobitak++;new Highpair();
+						dobitak++;
+						new Highpair();
 					}
 				}
 
-				if (dobitak ==0) {
+				if (dobitak==0) {
 
 					if (K5>10) {
 						stop1=0;stop3=0;stop4=0;stop5=1;
-						dobitak++;new Highpair();
+						dobitak++;
+						new Highpair();
 					}
 				}
 			}
 		}
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			if (K3==0) {
 				stop3=1;
 				if (K1>10) {
 					stop1=1;stop2=0;stop4=0;stop5=0;
-					dobitak++;new Highpair();
+					dobitak++;
+					new Highpair();
 				}
 
-				if (dobitak ==0) {
+				if (dobitak==0) {
 
 					if (K2>10) {
 						stop1=0;stop2=1;stop4=0;stop5=0;
-						dobitak++;new Highpair();
+						dobitak++;
+						new Highpair();
 					}
 				}
 
-				if (dobitak ==0) {
+				if (dobitak==0) {
 
 					if (K4>10) {
 						stop1=0;stop2=0;stop4=1;stop5=0;
-						dobitak++;new Highpair();
+						dobitak++;
+						new Highpair();
 					}
 				}
 
-				if (dobitak ==0) {
+				if (dobitak==0) {
 
 					if (K5>10) {
 						stop2=1;stop2=0;stop4=0;stop5=1;
-						dobitak++;new Highpair();
+						dobitak++;
+						new Highpair();
 					}
 				}
 			}
 		}
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			if (K4==0) {
 				stop4=1;
 				if (K1>10) {
 					stop1=1;stop2=0;stop3=0;stop5=0;
-					dobitak++;new Highpair();
+					dobitak++;
+					new Highpair();
 				}
 
-				if (dobitak ==0) {
+				if (dobitak==0) {
 
 					if (K2>10) {
 						stop1=0;stop2=1;stop3=0;stop5=0;
-						dobitak++;new Highpair();
+						dobitak++;
+						new Highpair();
 					}
 				}
 
-				if (dobitak ==0) {
+				if (dobitak==0) {
 
 					if (K3>10) {
 						stop1=0;stop2=0;stop3=1;stop5=0;
-						dobitak++;new Highpair();
+						dobitak++;
+						new Highpair();
 					}
 				}
 
-				if (dobitak ==0) {
+				if (dobitak==0) {
 
 					if (K5>10) {
 						stop1=0;stop2=0;stop3=0;stop5=1;
-						dobitak++;new Highpair();
+						dobitak++;
+						new Highpair();
 					}
 				}
 			}
 		}
 
-		if (dobitak ==0) {
+		if (dobitak==0) {
 
 			if (K5==0) {
 				stop5=1;
 				if (K1>10) {
 					stop1=1;stop2=0;stop3=0;stop4=0;
-					dobitak++;new Highpair();
+					dobitak++;
+					new Highpair();
 				}
 
-				if (dobitak ==0) {
+				if (dobitak==0) {
 
 					if (K2>10) {
 						stop1=0;stop2=1;stop3=0;stop4=0;
-						dobitak++;new Highpair();
+						dobitak++;
+						new Highpair();
 					}
 				}
 
-				if (dobitak ==0) {
+				if (dobitak==0) {
 
 					if (K3>10) {
 						stop1=0;stop2=0;stop3=1;stop4=0;
-						dobitak++;new Highpair();
+						dobitak++;
+						new Highpair();
 					}
 				}
 
-				if (dobitak ==0) {
+				if (dobitak==0) {
 
 					if (K4>10) {
 						stop1=0;stop2=0;stop3=0;stop4=1;
-						dobitak++;new Highpair();
+						dobitak++;
+						new Highpair();
 					}
 				}
 			}
 
 		}
 
-		//JOKER
+		// 4 BOJE
 
-		if (dobitak ==0) {
+		if (dobitak==0&&dveiste==0) {
 
-			if (K1==0) {
+			if (((B1==B2)&&(B2==B3)&&(B3==B4)) ||
+					((B1==B2)&&(B2==B3)&&(B4==0)) ||
+					((B1==B2)&&(B3==0)&&(B2==B4)) ||
+					((B1==B3)&&(B2==0)&&(B3==B4)) ||
+					((B1==0)&&(B2==B3)&&(B3==B4))) {
+				stop1=1;stop2=1;stop3=1;stop4=1;stop5=0;
+				cetiriboje++;
+				new Hold();
+
+			}
+
+			if (((B1==B2)&&(B2==B3)&&(B3==B5)) ||
+					((B1==B2)&&(B2==B3)&&(B5==0)) ||
+					((B1==B2)&&(B3==0)&&(B2==B5)) ||
+					((B1==B3)&&(B2==0)&&(B3==B5)) ||
+					((B1==0)&&(B2==B3)&&(B3==B5))) {
+				stop1=1;stop2=1;stop3=1;stop4=0;stop5=1;
+				cetiriboje++;
+				new Hold();
+
+			}
+
+			if (((B1==B2)&&(B2==B4)&&(B4==B5)) ||
+					((B1==B2)&&(B2==B4)&&(B5==0)) ||
+					((B1==B2)&&(B4==0)&&(B2==B5)) ||
+					((B1==B4)&&(B2==0)&&(B4==B5)) ||
+					((B1==0)&&(B2==B4)&&(B4==B5))) {
+				stop1=1;stop2=1;stop3=0;stop4=1;stop5=1;
+				cetiriboje++;
+				new Hold();
+
+			}
+
+			if (((B1==B3)&&(B3==B4)&&(B4==B5)) ||
+					((B1==B3)&&(B3==B4)&&(B5==0)) ||
+					((B1==B3)&&(B4==0)&&(B3==B5)) ||
+					((B1==B4)&&(B3==0)&&(B4==B5)) ||
+					((B1==0)&&(B3==B4)&&(B4==B5))) {
+				stop1=1;stop2=0;stop3=1;stop4=1;stop5=1;
+				cetiriboje++;
+				new Hold();
+
+			}
+
+			if (((B2==B3)&&(B3==B4)&&(B4==B5)) ||
+					((B2==B3)&&(B3==B4)&&(B5==0)) ||
+					((B2==B3)&&(B4==0)&&(B3==B5)) ||
+					((B2==B4)&&(B3==0)&&(B4==B5)) ||
+					((B2==0)&&(B3==B4)&&(B4==B5))) {
+				stop1=0;stop2=1;stop3=1;stop4=1;stop5=1;
+				cetiriboje++;
+				new Hold();
+
+			}
+
+			//JOKER
+
+			if (cetiriboje==0&&K1==0) {
 				stop1=1;stop2=0;stop3=0;stop4=0;stop5=0;
 				new Hold();
 			}
-			if (K2==0) {
+			if (cetiriboje==0&&K2==0) {
 				stop1=0;stop2=1;stop3=0;stop4=0;stop5=0;
 				new Hold();
 			}
-			if (K3==0) {
+			if (cetiriboje==0&&K3==0) {
 				stop1=0;stop2=0;stop3=1;stop4=0;stop5=0;
 				new Hold();
 			}
-			if (K4==0) {
+			if (cetiriboje==0&&K4==0) {
 				stop1=0;stop2=0;stop3=0;stop4=1;stop5=0;
 				new Hold();
 			}
-			if (K5==0) {
+			if (cetiriboje==0&&K5==0) {
 				stop1=0;stop2=0;stop3=0;stop4=0;stop5=1;
 				new Hold();
 			}
 		}
+
 		DOBITAK=dobitak;
+
 	}
 }

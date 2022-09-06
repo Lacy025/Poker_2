@@ -1,28 +1,31 @@
 package rs.baci.Poker_2;
 
+import java.awt.Component;
+import java.io.IOException;
+
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
-import javax.swing.*;
-import java.awt.*;
-import java.io.IOException;
+import javax.swing.JComponent;
+import javax.swing.JLabel;
+import javax.swing.Timer;
 
 public class Upis2 implements Brojevi, MainFrame {
 
     public Component Broj2 = new JLabel(""+MyFrame.dobitak+" ");
-    public Component Credit = new JLabel(""+MyFrame.cr);
+    public Component Credit2 = new JLabel(""+MyFrame.cr);
 
     Timer timer2;
 
     Upis2 () throws InterruptedException {
 
+        Upis1.Credit1.setVisible(false);
         frame.remove(Upis1.Credit1);
 
         try {
 
             new Isplata2();
 
-        } catch (
-                UnsupportedAudioFileException | IOException | LineUnavailableException e3) {
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e3) {
 
             e3.printStackTrace();
         }
@@ -39,6 +42,7 @@ public class Upis2 implements Brojevi, MainFrame {
 
                     e2.printStackTrace();
                 }
+
             }
 
             MyFrame.dobitak = MyFrame.dobitak-100;
@@ -46,8 +50,8 @@ public class Upis2 implements Brojevi, MainFrame {
 
             if(MyFrame.dobitak>-1) {
 
-                ((JLabel) Broj2).setText("" + MyFrame.dobitak + " ");
-                ((JLabel) Credit).setText(""+ MyFrame.cr);
+                ((JLabel) Broj2).setText(""+String.valueOf(MyFrame.dobitak+" "));
+                ((JLabel) Credit2).setText(""+String.valueOf(MyFrame.cr));
 
                 try {
 
@@ -63,12 +67,12 @@ public class Upis2 implements Brojevi, MainFrame {
 
                 ((Timer) (e.getSource())).stop();
                 tabela.remove(Broj2);
-                frame.remove(Credit);
+                frame.remove(Credit2);
 
             }});
 
         tabela.add(Broj2);
-        frame.add(Credit);
+        frame.add(Credit2);
 
         ((JLabel) Broj2).setHorizontalAlignment(JLabel.RIGHT);
         ((JLabel) Broj2).setVerticalAlignment(JLabel.BOTTOM);
@@ -77,12 +81,12 @@ public class Upis2 implements Brojevi, MainFrame {
         Broj2.setForeground(color1);
         ((JComponent) Broj2).setOpaque(false);
 
-        Credit.setBounds(1670,64,500,50);
-        Credit.setFont(font1);
-        Credit.setForeground(color3);
-        ((JComponent) Credit).setOpaque(false);
-        Credit.setVisible(true);
-        frame.add(Credit);
+        Credit2.setBounds(1670,64,500,50);
+        Credit2.setFont(font1);
+        Credit2.setForeground(color3);
+        ((JComponent) Credit2).setOpaque(false);
+        Credit2.setVisible(true);
+        frame.add(Credit2);
 
         timer2.setInitialDelay(0);
         timer2.start();

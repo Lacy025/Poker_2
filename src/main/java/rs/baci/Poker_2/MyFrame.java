@@ -23,7 +23,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 
-public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyListener {
+public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 	
 	@Serial
 	private static final long serialVersionUID = 1L;
@@ -40,6 +40,8 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 	public static int ah = 1;
 	static int ch;
 	public static int dobitak;
+	public static int ukupno;
+	public static int igra;
 	public static int dx0 = 1200;
 	public static int dx1 = 1223;
 	public static int dx2 = 1223;
@@ -60,9 +62,9 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 	public static int n4;
 	public static int n5;
 	
-	public Component Jlabelah = new JLabel("AUTOHOLD");
+	public static Component Jlabelah = new JLabel("AUTOHOLD");
 	public static Component Jlabelcr = new JLabel(""+cr);
-	public Component Jlabelul = new JLabel(""+ul);
+	public static Component Jlabelul = new JLabel(""+ul);
 	public static Component Jlabeld0 = new JLabel(""+d0*ul);
 	public static Component Jlabeld1 = new JLabel(""+d1*ul);
 	public static Component Jlabeld2 = new JLabel(""+d2*ul);
@@ -223,20 +225,22 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 	public static Component card3 = new JLabel();
 	public static Component card4 = new JLabel();
 	public static Component card5 = new JLabel();
-	
+
 	public static int karta1;
-	public static int boja1;
 	public static int karta2;
-	public static int boja2;
 	public static int karta3;
-	public static int boja3;
 	public static int karta4;
-	public static int boja4;
 	public static int karta5;
+	public static int boja1;
+	public static int boja2;
+	public static int boja3;
+	public static int boja4;
 	public static int boja5;
 	
 	MyFrame() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
-		
+
+		if (cr==0&&igra==0) {
+
 		frame.setTitle("POKER");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setBackground(new Color(0,0,0));
@@ -245,11 +249,107 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		
 		Jlabelah.setVisible(true);
-		JlabelL.setVisible(true);
-		JlabelR.setVisible(false);
-		JlabelM1.setVisible(false);
-		JlabelM2.setVisible(false);
-		
+
+			URL intro = this.getClass().getClassLoader().getResource("resources/Intro.wav");
+			assert intro != null;
+			AudioInputStream audioIntro = AudioSystem.getAudioInputStream(intro);
+			this.introSound = AudioSystem.getClip();
+			introSound.open(audioIntro);
+			introSound.start();
+
+			JlabelL.setVisible(false);
+			JlabelR.setVisible(false);
+
+			frame.setVisible(true);
+			frame.setResizable(false);
+
+			frame.add(JlabelL);
+			frame.add(JlabelR);
+
+			Jlabelah.setBounds(1620,292,500,40);
+
+			JlabelK1.setBounds(-5, 350, 400, 600);
+			JlabelK2.setBounds(375, 350, 400, 600);
+			JlabelK3.setBounds(755, 350, 400, 600);
+			JlabelK4.setBounds(1135, 350, 400, 600);
+			JlabelK5.setBounds(1515, 350, 400, 600);
+			JlabelL.setBounds(20,950,300,40);
+			JlabelR.setBounds(1580,950,300,40);
+
+			frame.add(Jlabelah);
+
+		}
+
+		if (ukupno>0) {
+			cr=cr-ukupno;
+		}
+
+		ukupno=0;
+
+		if (ul>cr&&cr>0) {
+
+			ul=cr;
+			((JLabel) Jlabelul).setText(""+(ul));
+
+			((JLabel) Jlabeld0).setText(""+String.valueOf(d0*ul));
+			((JLabel) Jlabeld1).setText(""+String.valueOf(d1*ul));
+			((JLabel) Jlabeld2).setText(""+String.valueOf(d2*ul));
+			((JLabel) Jlabeld3).setText(""+String.valueOf(d3*ul));
+			((JLabel) Jlabeld4).setText(""+String.valueOf(d4*ul));
+			((JLabel) Jlabeld5).setText(""+String.valueOf(d5*ul));
+			((JLabel) Jlabeld6).setText(""+String.valueOf(d6*ul));
+			((JLabel) Jlabeld7).setText(""+String.valueOf(d7*ul));
+			((JLabel) Jlabeld8).setText(""+String.valueOf(d8*ul));
+			((JLabel) Jlabeld9).setText(""+String.valueOf(d9*ul));
+
+			new Ulog();
+
+		}
+
+		if (cr==0&igra==1) {
+
+			ul=1;jk=60000;
+
+			frame.add(JlabelL);
+			frame.add(JlabelR);
+			JlabelL.setVisible(true);
+			JlabelR.setVisible(true);
+			JlabelL.setBounds(20,950,300,40);
+			JlabelR.setBounds(1580,950,300,40);
+
+			ch=1;
+
+			dx0 = 1200;
+			dx1 = 1223;
+			dx2 = 1223;
+			dx3 = 1246;
+			dx4 = 1246;
+			dx5 = 1269;
+			dx6 = 1269;
+			dx7 = 1269;
+			dx8 = 1269;
+			dx9 = 1269;
+
+			((JLabel) Jlabelul).setText(""+(ul));
+
+			((JLabel) Jlabeld0).setText(""+String.valueOf(d0*ul));
+			((JLabel) Jlabeld1).setText(""+String.valueOf(d1*ul));
+			((JLabel) Jlabeld2).setText(""+String.valueOf(d2*ul));
+			((JLabel) Jlabeld3).setText(""+String.valueOf(d3*ul));
+			((JLabel) Jlabeld4).setText(""+String.valueOf(d4*ul));
+			((JLabel) Jlabeld5).setText(""+String.valueOf(d5*ul));
+			((JLabel) Jlabeld6).setText(""+String.valueOf(d6*ul));
+			((JLabel) Jlabeld7).setText(""+String.valueOf(d7*ul));
+			((JLabel) Jlabeld8).setText(""+String.valueOf(d8*ul));
+			((JLabel) Jlabeld9).setText(""+String.valueOf(d9*ul));
+
+		}
+
+		((JLabel) Jlabelcr).setText(""+(cr));
+
+		JlabelM1.setBounds(550,960,800,40);
+		JlabelM2.setBounds(550,960,800,40);
+
 		label0.setBounds(0,L0,1300,40);
 		label1.setBounds(0,L1,500,40);
 		label2.setBounds(0,L2,500,40);
@@ -276,15 +376,12 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		Jlabeld7.setBounds(dx7,L7,120,40);
 		Jlabeld8.setBounds(dx8,L8,120,40);
 		Jlabeld9.setBounds(dx9,L9,120,40);
-		JlabelK1.setBounds(-5, 350, 400, 600);
-		JlabelK2.setBounds(375, 350, 400, 600);
-		JlabelK3.setBounds(755, 350, 400, 600);
-		JlabelK4.setBounds(1135, 350, 400, 600);
-		JlabelK5.setBounds(1515, 350, 400, 600);
-		JlabelL.setBounds(20,950,300,40);
-		JlabelR.setBounds(1580,950,300,40);
-		JlabelM1.setBounds(550,960,800,40);
-		JlabelM2.setBounds(550,960,800,40);
+
+		Jlabelcr.setBounds(1670,64,500,50);
+		Jlabelul.setBounds(1690,192,500,50);
+
+		frame.add(Jlabelcr);
+		frame.add(Jlabelul);
 		
 		frame.add(label0);
 		frame.add(label1);
@@ -298,10 +395,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		frame.add(label9);
 		frame.add(label10);
 		frame.add(label11);
-		
-		frame.add(Jlabelah);
-		frame.add(Jlabelcr);
-		frame.add(Jlabelul);
+
 		frame.add(Jlabeld0);
 		frame.add(Jlabeld1);
 		frame.add(Jlabeld2);
@@ -317,12 +411,31 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		frame.add(JlabelK3);
 		frame.add(JlabelK4);
 		frame.add(JlabelK5);
-		frame.add(JlabelR1);
-		frame.add(JlabelR2);
-		frame.add(JlabelL);
-		frame.add(JlabelR);
-		frame.add(JlabelM1);
-		frame.add(JlabelM2);
+
+		label0.setVisible(true);
+		label1.setVisible(true);
+		label2.setVisible(true);
+		label3.setVisible(true);
+		label4.setVisible(true);
+		label5.setVisible(true);
+		label6.setVisible(true);
+		label7.setVisible(true);
+		label8.setVisible(true);
+		label9.setVisible(true);
+
+		Jlabeld0.setVisible(true);
+		Jlabeld1.setVisible(true);
+		Jlabeld2.setVisible(true);
+		Jlabeld3.setVisible(true);
+		Jlabeld4.setVisible(true);
+		Jlabeld5.setVisible(true);
+		Jlabeld6.setVisible(true);
+		Jlabeld7.setVisible(true);
+		Jlabeld8.setVisible(true);
+		Jlabeld9.setVisible(true);
+
+		Jlabelcr.setVisible(true);
+		Jlabelul.setVisible(true);
 		
 		label0.setForeground(color1);
 		label1.setForeground(color2);
@@ -336,7 +449,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		label9.setForeground(color3);
 		label10.setForeground(color2);
 		label11.setForeground(color1);
-		
+
 		Jlabelah.setForeground(color4);
 		Jlabelcr.setForeground(color3);
 		Jlabelul.setForeground(color3);
@@ -428,8 +541,22 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		((JComponent) JlabelM1).setOpaque(true);
 		((JComponent) JlabelM2).setOpaque(true);
 
-		frame.setVisible(true);
-		frame.setResizable(false);
+		JlabelR1.setBounds(400, 180, 1000, 800);
+		JlabelR2.setBounds(700, 420, 800, 800);
+		JlabelR1.setForeground(color2);
+		JlabelR2.setForeground(color2);
+		JlabelR1.setFont(new Font("Algerian", Font.ITALIC, 272));
+		JlabelR2.setFont(new Font("Algerian", Font.ITALIC, 272));
+		JlabelR1.setVisible(false);
+		JlabelR2.setVisible(false);
+
+		frame.add(JlabelR1);
+		frame.add(JlabelR2);
+		frame.add(JlabelM1);
+		frame.add(JlabelM2);
+
+		JlabelM1.setVisible(false);
+		JlabelM2.setVisible(false);
 		
 		frame.add(JlabelJ1);
 		JlabelJ1.setBounds(-5, 350, 400, 600);
@@ -446,23 +573,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		frame.add(JlabelJ5);
 		JlabelJ5.setBounds(1515, 350, 400, 600);
 		((JComponent) JlabelJ5).setOpaque(false);
-		
-		JlabelR1.setBounds(400, 180, 1000, 800);
-		JlabelR2.setBounds(700, 420, 800, 800);
-		JlabelR1.setForeground(color2);
-		JlabelR2.setForeground(color2);
-		JlabelR1.setFont(new Font("Algerian", Font.ITALIC, 272));
-		JlabelR2.setFont(new Font("Algerian", Font.ITALIC, 272));
-		JlabelR1.setVisible(false);
-		JlabelR2.setVisible(false);
 
-		URL intro = this.getClass().getClassLoader().getResource("resources/Intro.wav");
-		assert intro != null;
-		AudioInputStream audioIntro = AudioSystem.getAudioInputStream(intro);
-		this.introSound = AudioSystem.getClip();
-		introSound.open(audioIntro);
-		introSound.start();
-		
 		frame.addKeyListener(this);
 
 		while (delj==0) {
@@ -808,43 +919,97 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		}
 			
 		if (delj==5) {
-			
-			jk=60000;cr=0;kr=0;ul=1;uu=1;ah=1;delj=0;
-			Jlabel13.setVisible(false);
-			frame.remove(Jlabelah);
-			frame.remove(Jlabelcr);
-			frame.remove(Jlabelul);
-			frame.remove(Jlabeld0);
-			frame.remove(Jlabeld1);
-			frame.remove(Jlabeld2);
-			frame.remove(Jlabeld3);
-			frame.remove(Jlabeld4);
-			frame.remove(Jlabeld5);
-			frame.remove(Jlabeld6);
-			frame.remove(Jlabeld7);
-			frame.remove(Jlabeld8);
-			frame.remove(Jlabeld9);
-			frame.remove(JlabelL);
-			frame.remove(JlabelR);
-			frame.remove(JlabelM1);
-			frame.remove(JlabelM2);
-			frame.remove(JlabelR1);
-			frame.remove(JlabelR2);
-			frame.remove(JlabelK1);
-			frame.remove(JlabelK2);
-			frame.remove(JlabelK3);
-			frame.remove(JlabelK4);
-			frame.remove(JlabelK5);
-			frame.remove(JlabelJ1);
-			frame.remove(JlabelJ2);
-			frame.remove(JlabelJ3);
-			frame.remove(JlabelJ4);
-			frame.remove(JlabelJ5);
-			frame.dispose();
-	}
 
+			jk=60000;cr=0;kr=0;ul=1;uu=1;ah=1;delj=0;
+
+			Jlabelah.setVisible(false);
+			frame.remove(Jlabelah);
+			Jlabelcr.setVisible(false);
+			frame.remove(Jlabelcr);
+			Jlabelul.setVisible(false);
+			frame.remove(Jlabelul);
+			Jlabeld0.setVisible(false);
+			frame.remove(Jlabeld0);
+			Jlabeld1.setVisible(false);
+			frame.remove(Jlabeld1);
+			Jlabeld2.setVisible(false);
+			frame.remove(Jlabeld2);
+			Jlabeld3.setVisible(false);
+			frame.remove(Jlabeld3);
+			Jlabeld4.setVisible(false);
+			frame.remove(Jlabeld4);
+			Jlabeld5.setVisible(false);
+			frame.remove(Jlabeld5);
+			Jlabeld6.setVisible(false);
+			frame.remove(Jlabeld6);
+			Jlabeld7.setVisible(false);
+			frame.remove(Jlabeld7);
+			Jlabeld8.setVisible(false);
+			frame.remove(Jlabeld8);
+			Jlabeld9.setVisible(false);
+			frame.remove(Jlabeld9);
+			JlabelL.setVisible(false);
+			frame.remove(JlabelL);
+			JlabelR.setVisible(false);
+			frame.remove(JlabelR);
+			JlabelM1.setVisible(false);
+			frame.remove(JlabelM1);
+			JlabelM2.setVisible(false);
+			frame.remove(JlabelM2);
+			JlabelR1.setVisible(false);
+			frame.remove(JlabelR1);
+			JlabelR2.setVisible(false);
+			frame.remove(JlabelR2);
+			JlabelK1.setVisible(false);
+			frame.remove(JlabelK1);
+			JlabelK2.setVisible(false);
+			frame.remove(JlabelK2);
+			JlabelK3.setVisible(false);
+			frame.remove(JlabelK3);
+			JlabelK4.setVisible(false);
+			frame.remove(JlabelK4);
+			JlabelK5.setVisible(false);
+			frame.remove(JlabelK5);
+			JlabelJ1.setVisible(false);
+			frame.remove(JlabelJ1);
+			JlabelJ2.setVisible(false);
+			frame.remove(JlabelJ2);
+			JlabelJ3.setVisible(false);
+			frame.remove(JlabelJ3);
+			JlabelJ4.setVisible(false);
+			frame.remove(JlabelJ4);
+			JlabelJ5.setVisible(false);
+			frame.remove(JlabelJ5);
+
+			((JLabel) Jlabelul).setText(""+String.valueOf(1));
+			((JLabel) Jlabeld0).setText(""+String.valueOf(d0));
+			((JLabel) Jlabeld1).setText(""+String.valueOf(d1));
+			((JLabel) Jlabeld2).setText(""+String.valueOf(d2));
+			((JLabel) Jlabeld3).setText(""+String.valueOf(d3));
+			((JLabel) Jlabeld4).setText(""+String.valueOf(d4));
+			((JLabel) Jlabeld5).setText(""+String.valueOf(d5));
+			((JLabel) Jlabeld6).setText(""+String.valueOf(d6));
+			((JLabel) Jlabeld7).setText(""+String.valueOf(d7));
+			((JLabel) Jlabeld8).setText(""+String.valueOf(d8));
+			((JLabel) Jlabeld9).setText(""+String.valueOf(d9));
+
+			dx0 = 1200;
+			dx1 = 1223;
+			dx2 = 1223;
+			dx3 = 1246;
+			dx4 = 1246;
+			dx5 = 1269;
+			dx6 = 1269;
+			dx7 = 1269;
+			dx8 = 1269;
+			dx9 = 1269;
+
+			igra=0;
+
+			frame.dispose();
+
+	}
 			frame.removeKeyListener(this);
-			
 }
 	
 	@Override
@@ -853,6 +1018,12 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 		switch(e.getKeyCode()) {
 		
 		case 81 :
+
+			if (cr<1&&igra==0) {
+
+				this.introSound.stop();
+
+			}
 
 			URL kredit = this.getClass().getClassLoader().getResource("resources/Kredit.wav");
 			AudioInputStream audioKredit;
@@ -872,163 +1043,152 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			} catch (LineUnavailableException | IOException ex) {
 				throw new RuntimeException(ex);
 			}
-
-			this.introSound.stop();
-			this.kreditSound.stop();
 			this.kreditSound.start();
-			
-			
+
 			Jlabelcr.setVisible(false);
 			frame.remove(Jlabelcr);
-			Jlabelcr.setVisible(false);
-			frame.remove(Jlabelcr);
-			int kr = cr+100;cr=kr;
-			Jlabelcr = new JLabel(""+cr);
+			cr=cr+100;
+			((JLabel) Jlabelcr).setText(""+String.valueOf(cr));
 			Jlabelcr.setBounds(1670,64,500,50);
 			Jlabelcr.setForeground(color3);
 			Jlabelcr.setFont(font1);
-			((JComponent) Jlabel13).setOpaque(false);
 			frame.add(Jlabelcr);
 			Jlabelcr.setVisible(true);
-			JlabelL.setVisible(false);
-			JlabelR.setVisible(false);
-			frame.remove(JlabelL);
-			frame.remove(JlabelR);
+			JlabelL.setVisible(false);JlabelR.setVisible(false);
+			frame.remove(JlabelL);frame.remove(JlabelR);
 			
 			break;
 			
-		case 53 : 
-			
+		case 53 :
+
 			if (cr>0) {
-			Jlabelul.setVisible(false);
-			frame.remove(Jlabelul);
-			int uu = ul+1;
-			if (uu==41) {
-				uu=1;
+				Jlabelul.setVisible(false);
+				frame.remove(Jlabelul);
+				int uu = ul+1;
+				if (uu==41) {
+					uu=1;
 				}ul=uu;
-			if (uu==cr+1) {
-				uu=1;
+				if (uu==cr+1) {
+					uu=1;
 				}
 				ul=uu;
-			Jlabelul = new JLabel(""+ul);
-			frame.add(Jlabelul);
-			Jlabelul.setBounds(1690,192,500,50);
-			Jlabelul.setForeground(color3);
-			Jlabelul.setFont(font1);
-			((JComponent) Jlabelul).setOpaque(false);
-			Jlabelul.setVisible(true);
-			
-			int ddx0=1200;if(uu>9) {ddx0=1177;}dx0=ddx0;
-			Jlabeld0.setVisible(false);
-			frame.remove(Jlabeld0);//FIVE OF A KIND
-			Jlabeld0 = new JLabel(""+d0*ul);
-			frame.add(Jlabeld0);
-			Jlabeld0.setBounds(dx0,L0,120,40);
-			Jlabeld0.setForeground(color1);
-			Jlabeld0.setFont(font1);
-			((JComponent) Jlabeld0).setOpaque(false);
-			Jlabeld0.setVisible(true);
-			
-			int ddx1=1223;if(uu>1) {ddx1=1200;} if(uu>19) {ddx1=1177;}dx1=ddx1;
-			Jlabeld1.setVisible(false);
-			frame.remove(Jlabeld1);//ROYAL FLUSH
-			Jlabeld1 = new JLabel(""+d1*ul);
-			frame.add(Jlabeld1);
-			Jlabeld1.setBounds(dx1,L1,120,40);
-			Jlabeld1.setForeground(color2);
-			Jlabeld1.setFont(font1);
-			((JComponent) Jlabeld1).setOpaque(false);
-			Jlabeld1.setVisible(true);
-			
-			int ddx2=1223;if(uu>9) {ddx2=1200;} dx2=ddx2;
-			Jlabeld2.setVisible(false);
-			frame.remove(Jlabeld2);//STREET FLUSH
-			Jlabeld2 = new JLabel(""+d2*ul);
-			frame.add(Jlabeld2);
-			Jlabeld2.setBounds(dx2,L2,120,40);
-			Jlabeld2.setForeground(color3);
-			Jlabeld2.setFont(font1);
-			((JComponent) Jlabeld2).setOpaque(false);
-			Jlabeld2.setVisible(true);
-			
-			int ddx3=1246;if(uu>2) {ddx3=1223;} if(uu>24) {ddx3=1200;} dx3=ddx3;
-			Jlabeld3.setVisible(false);
-			frame.remove(Jlabeld3);//POKER
-			Jlabeld3 = new JLabel(""+d3*ul);
-			frame.add(Jlabeld3);
-			Jlabeld3.setBounds(dx3,L3,120,40);
-			Jlabeld3.setForeground(color3);
-			Jlabeld3.setFont(font1);
-			((JComponent) Jlabeld3).setOpaque(false);
-			Jlabeld3.setVisible(true);
-			
-			int ddx4=1246;if(uu>9) {ddx4=1223;} dx4=ddx4;
-			Jlabeld4.setVisible(false);
-			frame.remove(Jlabeld4);//FULL HOUSE
-			Jlabeld4 = new JLabel(""+d4*ul);
-			frame.add(Jlabeld4);
-			Jlabeld4.setBounds(dx4,L4,120,40);
-			Jlabeld4.setForeground(color3);
-			Jlabeld4.setFont(font1);
-			((JComponent) Jlabeld4).setOpaque(false);
-			Jlabeld4.setVisible(true);
-			
-			int ddx5=1269;if(uu>1) {ddx5=1246;} if(uu>14) {ddx5=1223;} dx5=ddx5;
-			Jlabeld5.setVisible(false);
-			frame.remove(Jlabeld5);//FLUSH
-			Jlabeld5 = new JLabel(""+d5*ul);
-			frame.add(Jlabeld5);
-			Jlabeld5.setBounds(dx5,L5,120,40);
-			Jlabeld5.setForeground(color3);
-			Jlabeld5.setFont(font1);
-			((JComponent) Jlabeld5).setOpaque(false);
-			Jlabeld5.setVisible(true);
-			
-			int ddx6=1269;if(uu>1) {ddx6=1246;} if(uu>19) {ddx6=1223;} dx6=ddx6;
-			Jlabeld6.setVisible(false);
-			frame.remove(Jlabeld6);//STREET
-			Jlabeld6 = new JLabel(""+d6*ul);
-			frame.add(Jlabeld6);
-			Jlabeld6.setBounds(dx6,L6,120,40);
-			Jlabeld6.setForeground(color3);
-			Jlabeld6.setFont(font1);
-			((JComponent) Jlabeld6).setOpaque(false);
-			Jlabeld6.setVisible(true);
-			
-			int ddx7=1269;if(uu>3) {ddx7=1246;} if(uu>33) {ddx7=1223;} dx7=ddx7;
-			Jlabeld7.setVisible(false);
-			frame.remove(Jlabeld7);//THREE OF A KIND
-			Jlabeld7 = new JLabel(""+d7*ul);
-			frame.add(Jlabeld7);
-			Jlabeld7.setBounds(dx7,L7,120,40);
-			Jlabeld7.setForeground(color3);
-			Jlabeld7.setFont(font1);
-			((JComponent) Jlabeld7).setOpaque(false);
-			Jlabeld7.setVisible(true);
-			
-			int ddx8=1269;if(uu>4) {ddx8=1246;} dx8=ddx8;
-			Jlabeld8.setVisible(false);
-			frame.remove(Jlabeld8);//2 PAIRS
-			Jlabeld8 = new JLabel(""+d8*ul);
-			frame.add(Jlabeld8);
-			Jlabeld8.setBounds(dx8,L8,120,40);
-			Jlabeld8.setForeground(color3);
-			Jlabeld8.setFont(font1);
-			((JComponent) Jlabeld8).setOpaque(false);
-			Jlabeld8.setVisible(true);
-			
-			int ddx9=1269;if(uu>9) {ddx9=1246;} dx9=ddx9;
-			Jlabeld9.setVisible(false);
-			frame.remove(Jlabeld9);//HIGH PAIR
-			Jlabeld9 = new JLabel(""+d9*ul);
-			frame.add(Jlabeld9);
-			Jlabeld9.setBounds(dx9,L9,120,40);
-			Jlabeld9.setForeground(color3);
-			Jlabeld9.setFont(font1);
-			((JComponent) Jlabeld9).setOpaque(false);
-			Jlabeld9.setVisible(true);
+				((JLabel) Jlabelul).setText(""+String.valueOf(ul));
+				frame.add(Jlabelul);
+				Jlabelul.setBounds(1690,192,500,50);
+				Jlabelul.setForeground(color3);
+				Jlabelul.setFont(font1);
+				((JComponent) Jlabelul).setOpaque(false);
+				Jlabelul.setVisible(true);
 
+				int ddx0=1200;if(uu>9) {ddx0=1177;}dx0=ddx0;
+				Jlabeld0.setVisible(false);
+				frame.remove(Jlabeld0);//FIVE OF A KIND
+				((JLabel) Jlabeld0).setText(""+String.valueOf(d0*ul));
+				frame.add(Jlabeld0);
+				Jlabeld0.setBounds(dx0,L0,120,40);
+				Jlabeld0.setForeground(color1);
+				Jlabeld0.setFont(font1);
+				((JComponent) Jlabeld0).setOpaque(false);
+				Jlabeld0.setVisible(true);
 
+				int ddx1=1223;if(uu>1) {ddx1=1200;} if(uu>19) {ddx1=1177;}dx1=ddx1;
+				Jlabeld1.setVisible(false);
+				frame.remove(Jlabeld1);//ROYAL FLUSH
+				((JLabel) Jlabeld1).setText(""+String.valueOf(d1*ul));
+				frame.add(Jlabeld1);
+				Jlabeld1.setBounds(dx1,L1,120,40);
+				Jlabeld1.setForeground(color2);
+				Jlabeld1.setFont(font1);
+				((JComponent) Jlabeld1).setOpaque(false);
+				Jlabeld1.setVisible(true);
+
+				int ddx2=1223;if(uu>9) {ddx2=1200;} dx2=ddx2;
+				Jlabeld2.setVisible(false);
+				frame.remove(Jlabeld2);//STREET FLUSH
+				((JLabel) Jlabeld2).setText(""+String.valueOf(d2*ul));
+				frame.add(Jlabeld2);
+				Jlabeld2.setBounds(dx2,L2,120,40);
+				Jlabeld2.setForeground(color3);
+				Jlabeld2.setFont(font1);
+				((JComponent) Jlabeld2).setOpaque(false);
+				Jlabeld2.setVisible(true);
+
+				int ddx3=1246;if(uu>2) {ddx3=1223;} if(uu>24) {ddx3=1200;} dx3=ddx3;
+				Jlabeld3.setVisible(false);
+				frame.remove(Jlabeld3);//POKER
+				((JLabel) Jlabeld3).setText(""+String.valueOf(d3*ul));
+				frame.add(Jlabeld3);
+				Jlabeld3.setBounds(dx3,L3,120,40);
+				Jlabeld3.setForeground(color3);
+				Jlabeld3.setFont(font1);
+				((JComponent) Jlabeld3).setOpaque(false);
+				Jlabeld3.setVisible(true);
+
+				int ddx4=1246;if(uu>9) {ddx4=1223;} dx4=ddx4;
+				Jlabeld4.setVisible(false);
+				frame.remove(Jlabeld4);//FULL HOUSE
+				((JLabel) Jlabeld4).setText(""+String.valueOf(d4*ul));
+				frame.add(Jlabeld4);
+				Jlabeld4.setBounds(dx4,L4,120,40);
+				Jlabeld4.setForeground(color3);
+				Jlabeld4.setFont(font1);
+				((JComponent) Jlabeld4).setOpaque(false);
+				Jlabeld4.setVisible(true);
+
+				int ddx5=1269;if(uu>1) {ddx5=1246;} if(uu>14) {ddx5=1223;} dx5=ddx5;
+				Jlabeld5.setVisible(false);
+				frame.remove(Jlabeld5);//FLUSH
+				((JLabel) Jlabeld5).setText(""+String.valueOf(d5*ul));
+				frame.add(Jlabeld5);
+				Jlabeld5.setBounds(dx5,L5,120,40);
+				Jlabeld5.setForeground(color3);
+				Jlabeld5.setFont(font1);
+				((JComponent) Jlabeld5).setOpaque(false);
+				Jlabeld5.setVisible(true);
+
+				int ddx6=1269;if(uu>1) {ddx6=1246;} if(uu>19) {ddx6=1223;} dx6=ddx6;
+				Jlabeld6.setVisible(false);
+				frame.remove(Jlabeld6);//STREET
+				((JLabel) Jlabeld6).setText(""+String.valueOf(d6*ul));
+				frame.add(Jlabeld6);
+				Jlabeld6.setBounds(dx6,L6,120,40);
+				Jlabeld6.setForeground(color3);
+				Jlabeld6.setFont(font1);
+				((JComponent) Jlabeld6).setOpaque(false);
+				Jlabeld6.setVisible(true);
+
+				int ddx7=1269;if(uu>3) {ddx7=1246;} if(uu>33) {ddx7=1223;} dx7=ddx7;
+				Jlabeld7.setVisible(false);
+				frame.remove(Jlabeld7);//THREE OF A KIND
+				((JLabel) Jlabeld7).setText(""+String.valueOf(d7*ul));
+				frame.add(Jlabeld7);
+				Jlabeld7.setBounds(dx7,L7,120,40);
+				Jlabeld7.setForeground(color3);
+				Jlabeld7.setFont(font1);
+				((JComponent) Jlabeld7).setOpaque(false);
+				Jlabeld7.setVisible(true);
+
+				int ddx8=1269;if(uu>4) {ddx8=1246;} dx8=ddx8;
+				Jlabeld8.setVisible(false);
+				frame.remove(Jlabeld8);//2 PAIRS
+				((JLabel) Jlabeld8).setText(""+String.valueOf(d8*ul));
+				frame.add(Jlabeld8);
+				Jlabeld8.setBounds(dx8,L8,120,40);
+				Jlabeld8.setForeground(color3);
+				Jlabeld8.setFont(font1);
+				((JComponent) Jlabeld8).setOpaque(false);
+				Jlabeld8.setVisible(true);
+
+				int ddx9=1269;if(uu>9) {ddx9=1246;} dx9=ddx9;
+				Jlabeld9.setVisible(false);
+				frame.remove(Jlabeld9);//HIGH PAIR
+				((JLabel) Jlabeld9).setText(""+String.valueOf(d9*ul));
+				frame.add(Jlabeld9);
+				Jlabeld9.setBounds(dx9,L9,120,40);
+				Jlabeld9.setForeground(color3);
+				Jlabeld9.setFont(font1);
+				((JComponent) Jlabeld9).setOpaque(false);
+				Jlabeld9.setVisible(true);
 
 				URL ulog = this.getClass().getClassLoader().getResource("resources/Ulog.wav");
 				AudioInputStream audioUlog;
@@ -1105,30 +1265,29 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 				frame.remove(Jlabelcr);
 			
 			if (cr>0) {
-				
+
 				Jlabelcr.setVisible(false);
 				frame.remove(Jlabelcr);
 				frame.removeKeyListener(this);
-				
+
+				JlabelM1.setVisible(false);
+				JlabelM2.setVisible(false);
+				frame.remove(JlabelM1);
+				frame.remove(JlabelM2);
+				frame.add(JlabelL);
+				frame.add(JlabelR);
+				JlabelL.setVisible(true);
+				JlabelR.setVisible(true);
+				JlabelL.setBounds(20,950,300,40);
+				JlabelR.setBounds(1580,950,300,40);
+				ch=1;
+
 				try {
-
-					JlabelM1.setVisible(false);
-					JlabelM2.setVisible(false);
-					frame.remove(JlabelM1);
-					frame.remove(JlabelM2);
-					JlabelL.setVisible(true);
-					JlabelR.setVisible(true);
-					frame.add(JlabelL);
-					frame.add(JlabelR);
-					ch=1;
-
 					new Countdown1();
-					
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+				} catch (InterruptedException ex) {
+					throw new RuntimeException(ex);
 				}
-				
+
 				break;
 				
 				}
@@ -1145,40 +1304,42 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 			case 10 : 
 				
 				if (cr>0) {
-					
-				delj=1;
-				JlabelR1.setVisible(false);
-				JlabelR2.setVisible(false);
-				JlabelL.setVisible(false);
-				JlabelR.setVisible(false);
-				JlabelM1.setVisible(false);
-				JlabelM2.setVisible(false);
-				frame.remove(JlabelR1);
-				frame.remove(JlabelR2);
-				frame.remove(JlabelL);
-				frame.remove(JlabelR);
-				frame.remove(JlabelM1);
-				frame.remove(JlabelM2);
-				JlabelJ1.setVisible(false);
-				JlabelJ2.setVisible(false);
-				JlabelJ3.setVisible(false);
-				JlabelJ4.setVisible(false);
-				JlabelJ5.setVisible(false);
-				frame.remove(JlabelJ1);
-				frame.remove(JlabelJ2);
-				frame.remove(JlabelJ3);
-				frame.remove(JlabelJ4);
-				frame.remove(JlabelJ5);
-				Jlabelcr.setVisible(false);
-				frame.remove(Jlabelcr);
-				cr=cr-ul;
-				Jlabelcr = new JLabel(""+cr);
-				Jlabelcr.setBounds(1670,64,500,50);
-				Jlabelcr.setForeground(color3);
-				Jlabelcr.setFont(font1);
-				((JComponent) Jlabelcr).setOpaque(false);
-				frame.add(Jlabelcr);
-				Jlabelcr.setVisible(true);
+
+					delj=1;
+					JlabelR1.setVisible(false);
+					JlabelR2.setVisible(false);
+					JlabelL.setVisible(false);
+					JlabelR.setVisible(false);
+					JlabelM1.setVisible(false);
+					JlabelM2.setVisible(false);
+					frame.remove(JlabelR1);
+					frame.remove(JlabelR2);
+					frame.remove(JlabelL);
+					frame.remove(JlabelR);
+					frame.remove(JlabelM1);
+					frame.remove(JlabelM2);
+					JlabelJ1.setVisible(false);
+					JlabelJ2.setVisible(false);
+					JlabelJ3.setVisible(false);
+					JlabelJ4.setVisible(false);
+					JlabelJ5.setVisible(false);
+					frame.remove(JlabelJ1);
+					frame.remove(JlabelJ2);
+					frame.remove(JlabelJ3);
+					frame.remove(JlabelJ4);
+					frame.remove(JlabelJ5);
+
+					Jlabelcr.setVisible(false);
+					frame.remove(Jlabelcr);
+					cr=cr-ul;
+					((JLabel) Jlabelcr).setText(""+String.valueOf(cr));
+					Jlabelcr.setBounds(1670,64,500,50);
+					Jlabelcr.setForeground(color3);
+					Jlabelcr.setFont(font1);
+					((JComponent) Jlabelcr).setOpaque(false);
+					frame.add(Jlabelcr);
+					Jlabelcr.setVisible(true);
+					igra=1;
 
 					URL deljenje1 = this.getClass().getClassLoader().getResource("resources/Deljenje1.wav");
 					AudioInputStream audioDeljenje1;
@@ -1212,6 +1373,7 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 				JlabelK5.setVisible(true);
 				
 				break;
+
 				}
 				
 			else {
@@ -1227,7 +1389,6 @@ public class MyFrame extends JFrame implements Brojevi, Dobici, MainFrame, KeyLi
 }
 	@Override
 	public void keyReleased(KeyEvent e) {
-		
 		
 	}
 }

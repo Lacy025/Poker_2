@@ -22,9 +22,11 @@ public class Countdown2 implements MainFrame, Brojevi {
                     MyFrame.cr = MyFrame.cr-100;
 			 	
 	            try {
+
 					new Isplata2();
+
 				} catch (UnsupportedAudioFileException | IOException | LineUnavailableException e1) {
-					// TODO Auto-generated catch block
+
 					e1.printStackTrace();
 				}
 	            }
@@ -47,4 +49,5 @@ public class Countdown2 implements MainFrame, Brojevi {
 		    	timer.setInitialDelay(0);
 			    timer.start();                     
 	}
+
 }

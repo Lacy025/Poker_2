@@ -1,7 +1,6 @@
 package rs.baci.Poker_2;
 
 import java.awt.Component;
-import java.awt.Font;
 import java.io.IOException;
 
 import javax.sound.sampled.LineUnavailableException;
@@ -11,52 +10,58 @@ import javax.swing.JLabel;
 
 public class Fiveofakind implements MainFrame, Brojevi, Dobici {
 
-    public static Component Jlabeld00 = new JLabel(""+d0*MyFrame.ul);
-    public static Component labelD00 = new JLabel(""+d0*MyFrame.ul+" ");
+    public static Component labelD00 = new JLabel();
+    public static Component labelD0 = new JLabel(" FIVE OF A KIND");
 
     Fiveofakind() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
         if (MyFrame.delj==1) {
 
             label0.setBounds(0,0,1292,40);
-            Jlabeld00.setBounds(MyFrame.dx0,0,120,40);
-            label0.add(Jlabeld00);
+            MyFrame.Jlabeld0.setBounds(MyFrame.dx0,0,120,40);
+            label0.setVisible(false);
+            frame.remove(label0);
+            MyFrame.Jlabeld0.setVisible(true);
             frame.add(label0);
+            label0.add(MyFrame.Jlabeld0);
+            label0.setVisible(true);
             label0.setOpaque(true);
             label0.setBackground(color2);
-            MyFrame.label0.setForeground(color1);
-            Jlabeld00.setBackground(color2);
-            Jlabeld00.setForeground(color1);
-            label0.setFont(new Font("Verdana", Font.PLAIN, 36));
-            Jlabeld00.setFont(new Font("Verdana", Font.PLAIN, 36));
-            ((JComponent) Jlabeld00).setOpaque(true);
+            label0.setForeground(color1);
+            MyFrame.Jlabeld0.setBackground(color2);
+            MyFrame.Jlabeld0.setForeground(color1);
+            label0.setFont(font1);
+            MyFrame.Jlabeld0.setFont(font1);
+            ((JComponent) MyFrame.Jlabeld0).setOpaque(true);
+
             new Hold();
 
         }
+
         else {
 
             new Prostor();
             new Tabela();
 
-            JLabel labelD0 = new JLabel(" FIVE OF A KIND");
-            labelD0.setVerticalAlignment(JLabel.TOP);
+            ((JLabel) labelD0).setVerticalAlignment(JLabel.TOP);
             labelD0.setBounds(0,0,1200,120);
             tabela.add(labelD0);
+            labelD0.setVisible(true);
             labelD0.setFont(font2);
             labelD0.setForeground(color1);
-            labelD0.setOpaque(false);
+            ((JComponent) labelD0).setOpaque(false);
 
+            ((JLabel) labelD00).setText("" + d0 * MyFrame.ul + " ");
             ((JLabel) labelD00).setHorizontalAlignment(JLabel.RIGHT);
             ((JLabel) labelD00).setVerticalAlignment(JLabel.BOTTOM);
             tabela.add(labelD00);
+            labelD00.setVisible(true);
             labelD00.setFont(font2);
             labelD00.setForeground(color1);
             ((JComponent) labelD00).setOpaque(false);
             MyFrame.dobitak=d0*MyFrame.ul;
+            MyFrame.ukupno=d0*MyFrame.ul;
 
         }
-
-
     }
-
 }

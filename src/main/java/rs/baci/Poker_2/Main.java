@@ -10,15 +10,16 @@ public class Main {
 	public static void main(String[] args) throws UnsupportedAudioFileException,
 	IOException, LineUnavailableException, InterruptedException {
 		
-		//int game = 1;
-			//while (game>0) {
+		int game = 1;
+
+			while (game>0) {
 		
 				new MyFrame();
 				
 				if (MyFrame.delj==5) {
-					
-					System.out.println("THE END");
+					System.out.println("ISPLATA");
 				}
+
 				if (MyFrame.delj==1) {
 					
 					new Deljenje1();
@@ -33,8 +34,19 @@ public class Main {
 					new Izbor2();
 
 				}
+
 				System.out.println("THE END");
 				MyFrame.jk=60000;
-			//}		 
+
+				if (MyFrame.ukupno>0) {
+					Thread.sleep(2500);
+				}
+				if (MyFrame.ukupno==0) {
+					Thread.sleep(500);
+				}
+
+				new Clear();
+				System.out.println(MyFrame.ukupno);
+			}
 	}
 }	

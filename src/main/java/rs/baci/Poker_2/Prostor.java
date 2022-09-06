@@ -1,16 +1,7 @@
 package rs.baci.Poker_2;
 
-import javax.swing.JFrame;
-import java.io.Serial;
 
-public class Prostor extends JFrame implements MainFrame, Dobici {
-
-
-    /**
-     *
-     */
-    @Serial
-    private static final long serialVersionUID = 1L;
+public class Prostor implements MainFrame, Dobici {
 
     Prostor() {
 
