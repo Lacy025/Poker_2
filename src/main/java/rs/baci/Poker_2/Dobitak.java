@@ -659,6 +659,7 @@ public class Dobitak {
 					new Highpair();
 				}
 				else {
+					dveiste=1;
 					new Hold();
 				}
 			}
