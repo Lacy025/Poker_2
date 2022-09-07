@@ -7,7 +7,7 @@ import java.awt.event.KeyListener;
 import java.io.IOException;
 import java.net.URL;
 
-public class Izbor2 extends JFrame implements Brojevi, Dobici, MainFrame, KeyListener {
+public class Izbor2 implements Brojevi, Dobici, MainFrame, KeyListener {
 
     Clip dobitakSound;
 
@@ -157,26 +157,26 @@ public class Izbor2 extends JFrame implements Brojevi, Dobici, MainFrame, KeyLis
 
         if (e.getKeyCode() == 32){
 
-            Highpair.labelD09.setVisible(false);
-            tabela.remove(Highpair.labelD09);
-            Twopairs.labelD08.setVisible(false);
-            tabela.remove(Twopairs.labelD08);
-            Threeofakind.labelD07.setVisible(false);
-            tabela.remove(Threeofakind.labelD07);
-            Street.labelD06.setVisible(false);
-            tabela.remove(Street.labelD06);
-            Flush.labelD05.setVisible(false);
-            tabela.remove(Flush.labelD05);
-            Fullhouse.labelD04.setVisible(false);
-            tabela.remove(Fullhouse.labelD04);
-            Poker.labelD03.setVisible(false);
-            tabela.remove(Poker.labelD03);
-            Streetflush.labelD02.setVisible(false);
-            tabela.remove(Streetflush.labelD02);
-            Royalflush.labelD01.setVisible(false);
-            tabela.remove(Royalflush.labelD01);
-            Fiveofakind.labelD00.setVisible(false);
-            tabela.remove(Fiveofakind.labelD00);
+            Highpair.labelD9.setVisible(false);
+            tabela.remove(Highpair.labelD9);
+            Twopairs.labelD8.setVisible(false);
+            tabela.remove(Twopairs.labelD8);
+            Threeofakind.labelD7.setVisible(false);
+            tabela.remove(Threeofakind.labelD7);
+            Street.labelD6.setVisible(false);
+            tabela.remove(Street.labelD6);
+            Flush.labelD5.setVisible(false);
+            tabela.remove(Flush.labelD5);
+            Fullhouse.labelD4.setVisible(false);
+            tabela.remove(Fullhouse.labelD4);
+            Poker.labelD3.setVisible(false);
+            tabela.remove(Poker.labelD3);
+            Streetflush.labelD2.setVisible(false);
+            tabela.remove(Streetflush.labelD2);
+            Royalflush.labelD1.setVisible(false);
+            tabela.remove(Royalflush.labelD1);
+            Fiveofakind.labelD0.setVisible(false);
+            tabela.remove(Fiveofakind.labelD0);
 
             MyFrame.Jlabelcr.setVisible(false);
             frame.remove(MyFrame.Jlabelcr);

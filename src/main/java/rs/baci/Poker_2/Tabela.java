@@ -17,12 +17,13 @@ public class Tabela implements MainFrame, Dobici, Brojevi{
         tabela.setBounds(20, 20, 1300, 340);
 
         label12.setHorizontalAlignment(JLabel.LEFT);
-        label12.setBounds(0,160,2200,200);
-        tabela.add(label12);
+        label12.setVerticalAlignment(JLabel.BOTTOM);
+        label12.setBounds(30,140,2200,200);
         label12.setVisible(true);
         label12.setFont(font2);
         label12.setForeground(color1);
         label12.setOpaque(false);
+        tabela.add(label12);
 
     }
 

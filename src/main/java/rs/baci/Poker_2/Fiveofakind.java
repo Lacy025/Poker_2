@@ -10,8 +10,7 @@ import javax.swing.JLabel;
 
 public class Fiveofakind implements MainFrame, Brojevi, Dobici {
 
-    public static Component labelD00 = new JLabel();
-    public static Component labelD0 = new JLabel(" FIVE OF A KIND");
+    public static Component labelD0 = new JLabel();
 
     Fiveofakind() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
@@ -43,22 +42,24 @@ public class Fiveofakind implements MainFrame, Brojevi, Dobici {
             new Prostor();
             new Tabela();
 
-            ((JLabel) labelD0).setVerticalAlignment(JLabel.TOP);
-            labelD0.setBounds(0,0,1200,120);
-            tabela.add(labelD0);
+            label0.setVerticalAlignment(JLabel.TOP);
+            label0.setHorizontalAlignment(JLabel.LEFT);
+            label0.setBounds(30,10,1200,120);
+            label0.setVisible(true);
+            label0.setFont(font2);
+            label0.setForeground(color1);
+            label0.setOpaque(false);
+            tabela.add(label0);
+
+            ((JLabel) labelD0).setText("" + d0 * MyFrame.ul + " ");
+            ((JLabel) labelD0).setHorizontalAlignment(JLabel.RIGHT);
+            ((JLabel) labelD0).setVerticalAlignment(JLabel.BOTTOM);
             labelD0.setVisible(true);
             labelD0.setFont(font2);
             labelD0.setForeground(color1);
             ((JComponent) labelD0).setOpaque(false);
+            tabela.add(labelD0);
 
-            ((JLabel) labelD00).setText("" + d0 * MyFrame.ul + " ");
-            ((JLabel) labelD00).setHorizontalAlignment(JLabel.RIGHT);
-            ((JLabel) labelD00).setVerticalAlignment(JLabel.BOTTOM);
-            tabela.add(labelD00);
-            labelD00.setVisible(true);
-            labelD00.setFont(font2);
-            labelD00.setForeground(color1);
-            ((JComponent) labelD00).setOpaque(false);
             MyFrame.dobitak=d0*MyFrame.ul;
             MyFrame.ukupno=d0*MyFrame.ul;
 

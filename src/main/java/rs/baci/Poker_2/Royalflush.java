@@ -10,8 +10,7 @@ import javax.swing.JLabel;
 
 public class Royalflush implements MainFrame, Brojevi, Dobici {
 
-    public static Component labelD01 = new JLabel();
-    public static Component labelD1 = new JLabel(" ROYAL FLUSH");
+    public static Component labelD1 = new JLabel();
 
     Royalflush() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
@@ -43,22 +42,24 @@ public class Royalflush implements MainFrame, Brojevi, Dobici {
             new Prostor();
             new Tabela();
 
-            ((JLabel) labelD1).setVerticalAlignment(JLabel.TOP);
-            labelD1.setBounds(0,0,1200,120);
-            tabela.add(labelD1);
+            label1.setVerticalAlignment(JLabel.TOP);
+            label1.setHorizontalAlignment(JLabel.LEFT);
+            label1.setBounds(30,10,1200,120);
+            label1.setVisible(true);
+            label1.setFont(font2);
+            label1.setForeground(color1);
+            label1.setOpaque(false);
+            tabela.add(label1);
+
+            ((JLabel) labelD1).setText("" + d1 * MyFrame.ul + " ");
+            ((JLabel) labelD1).setHorizontalAlignment(JLabel.RIGHT);
+            ((JLabel) labelD1).setVerticalAlignment(JLabel.BOTTOM);
             labelD1.setVisible(true);
             labelD1.setFont(font2);
             labelD1.setForeground(color1);
             ((JComponent) labelD1).setOpaque(false);
+            tabela.add(labelD1);
 
-            ((JLabel) labelD01).setText("" + d1 * MyFrame.ul + " ");
-            ((JLabel) labelD01).setHorizontalAlignment(JLabel.RIGHT);
-            ((JLabel) labelD01).setVerticalAlignment(JLabel.BOTTOM);
-            tabela.add(labelD01);
-            labelD01.setVisible(true);
-            labelD01.setFont(font2);
-            labelD01.setForeground(color1);
-            ((JComponent) labelD01).setOpaque(false);
             MyFrame.dobitak=d1*MyFrame.ul;
             MyFrame.ukupno=d7*MyFrame.ul;
 

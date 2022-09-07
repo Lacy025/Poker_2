@@ -10,8 +10,7 @@ import javax.swing.JLabel;
 
 public class Fullhouse implements MainFrame, Brojevi, Dobici {
 
-    public static Component labelD04 = new JLabel();
-    public static Component labelD4 = new JLabel(" FULL HOUSE");
+    public static Component labelD4 = new JLabel();
 
     Fullhouse() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
@@ -43,22 +42,24 @@ public class Fullhouse implements MainFrame, Brojevi, Dobici {
             new Prostor();
             new Tabela();
 
-            ((JLabel) labelD4).setVerticalAlignment(JLabel.TOP);
-            labelD4.setBounds(0,0,1200,120);
-            tabela.add(labelD4);
+            label4.setVerticalAlignment(JLabel.TOP);
+            label4.setHorizontalAlignment(JLabel.LEFT);
+            label4.setBounds(30,10,1200,120);
+            label4.setVisible(true);
+            label4.setFont(font2);
+            label4.setForeground(color1);
+            label4.setOpaque(false);
+            tabela.add(label4);
+
+            ((JLabel) labelD4).setText("" + d4 * MyFrame.ul + " ");
+            ((JLabel) labelD4).setHorizontalAlignment(JLabel.RIGHT);
+            ((JLabel) labelD4).setVerticalAlignment(JLabel.BOTTOM);
             labelD4.setVisible(true);
             labelD4.setFont(font2);
             labelD4.setForeground(color1);
             ((JComponent) labelD4).setOpaque(false);
+            tabela.add(labelD4);
 
-            ((JLabel) labelD04).setText("" + d4 * MyFrame.ul + " ");
-            ((JLabel) labelD04).setHorizontalAlignment(JLabel.RIGHT);
-            ((JLabel) labelD04).setVerticalAlignment(JLabel.BOTTOM);
-            tabela.add(labelD04);
-            labelD04.setVisible(true);
-            labelD04.setFont(font2);
-            labelD04.setForeground(color1);
-            ((JComponent) labelD04).setOpaque(false);
             MyFrame.dobitak=d4*MyFrame.ul;
             MyFrame.ukupno=d4*MyFrame.ul;
 

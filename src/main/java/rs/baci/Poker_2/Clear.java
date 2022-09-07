@@ -5,8 +5,11 @@ public class Clear implements Brojevi, Dobici, MainFrame {
 
     Clear() {
 
+        label12.setVisible(false);
+        tabela.remove(label12);
         tabela.setVisible(false);
         frame.remove(tabela);
+
         Karta1.card1.setVisible(false);
         frame.remove(Karta1.card1);
         Karta2.card2.setVisible(false);
@@ -20,26 +23,26 @@ public class Clear implements Brojevi, Dobici, MainFrame {
         Izbor2.pobeda.setVisible(false);
         frame.remove(Izbor2.pobeda);
 
-        Highpair.labelD9.setVisible(false);
-        frame.remove(Highpair.labelD9);
-        Twopairs.labelD8.setVisible(false);
-        frame.remove(Twopairs.labelD8);
-        Threeofakind.labelD7.setVisible(false);
-        frame.remove(Threeofakind.labelD7);
-        Street.labelD6.setVisible(false);
-        frame.remove(Street.labelD6);
-        Flush.labelD5.setVisible(false);
-        frame.remove(Flush.labelD5);
-        Fullhouse.labelD4.setVisible(false);
-        frame.remove(Fullhouse.labelD4);
-        Poker.labelD3.setVisible(false);
-        frame.remove(Poker.labelD3);
-        Streetflush.labelD2.setVisible(false);
-        frame.remove(Streetflush.labelD2);
-        Royalflush.labelD1.setVisible(false);
-        frame.remove(Royalflush.labelD1);
-        Fiveofakind.labelD0.setVisible(false);
-        frame.remove(Fiveofakind.labelD0);
+        label9.setVisible(false);
+        frame.remove(label9);
+        label8.setVisible(false);
+        frame.remove(label8);
+        label7.setVisible(false);
+        frame.remove(label7);
+        label6.setVisible(false);
+        frame.remove(label6);
+        label5.setVisible(false);
+        frame.remove(label5);
+        label4.setVisible(false);
+        frame.remove(label4);
+        label3.setVisible(false);
+        frame.remove(label3);
+        label2.setVisible(false);
+        frame.remove(label2);
+        label1.setVisible(false);
+        frame.remove(label1);
+        label0.setVisible(false);
+        frame.remove(label0);
 
         MyFrame.n1=0;
         MyFrame.n2=0;

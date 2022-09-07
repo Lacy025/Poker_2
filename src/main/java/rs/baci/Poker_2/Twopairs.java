@@ -10,8 +10,7 @@ import javax.swing.JLabel;
 
 public class Twopairs implements MainFrame, Brojevi, Dobici {
 
-    public static Component labelD08 = new JLabel();
-    public static Component labelD8 = new JLabel(" 2 PAIRS");
+    public static Component labelD8 = new JLabel();
 
     Twopairs() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
@@ -43,22 +42,24 @@ public class Twopairs implements MainFrame, Brojevi, Dobici {
             new Prostor();
             new Tabela();
 
-            ((JLabel) labelD8).setVerticalAlignment(JLabel.TOP);
-            labelD8.setBounds(0,0,1200,120);
-            tabela.add(labelD8);
+            label8.setVerticalAlignment(JLabel.TOP);
+            label8.setHorizontalAlignment(JLabel.LEFT);
+            label8.setBounds(30,10,1200,120);
+            label8.setVisible(true);
+            label8.setFont(font2);
+            label8.setForeground(color1);
+            label8.setOpaque(false);
+            tabela.add(label8);
+
+            ((JLabel) labelD8).setText("" + d8 * MyFrame.ul + " ");
+            ((JLabel) labelD8).setHorizontalAlignment(JLabel.RIGHT);
+            ((JLabel) labelD8).setVerticalAlignment(JLabel.BOTTOM);
             labelD8.setVisible(true);
             labelD8.setFont(font2);
             labelD8.setForeground(color1);
             ((JComponent) labelD8).setOpaque(false);
+            tabela.add(labelD8);
 
-            ((JLabel) labelD08).setText("" + d8 * MyFrame.ul + " ");
-            ((JLabel) labelD08).setHorizontalAlignment(JLabel.RIGHT);
-            ((JLabel) labelD08).setVerticalAlignment(JLabel.BOTTOM);
-            tabela.add(labelD08);
-            labelD08.setVisible(true);
-            labelD08.setFont(font2);
-            labelD08.setForeground(color1);
-            ((JComponent) labelD08).setOpaque(false);
             MyFrame.dobitak=d8*MyFrame.ul;
             MyFrame.ukupno=d8*MyFrame.ul;
 

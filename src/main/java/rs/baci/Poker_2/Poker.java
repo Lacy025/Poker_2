@@ -10,8 +10,7 @@ import javax.swing.JLabel;
 
 public class Poker implements MainFrame, Brojevi, Dobici {
 
-    public static Component labelD03 = new JLabel();
-    public static Component labelD3 = new JLabel(" POKER");
+    public static Component labelD3 = new JLabel();
 
     Poker() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
@@ -43,22 +42,24 @@ public class Poker implements MainFrame, Brojevi, Dobici {
             new Prostor();
             new Tabela();
 
-            ((JLabel) labelD3).setVerticalAlignment(JLabel.TOP);
-            labelD3.setBounds(0,0,1200,120);
-            tabela.add(labelD3);
+            label3.setVerticalAlignment(JLabel.TOP);
+            label3.setHorizontalAlignment(JLabel.LEFT);
+            label3.setBounds(30,10,1200,120);
+            label3.setVisible(true);
+            label3.setFont(font2);
+            label3.setForeground(color1);
+            label3.setOpaque(false);
+            tabela.add(label3);
+
+            ((JLabel) labelD3).setText("" + d3 * MyFrame.ul + " ");
+            ((JLabel) labelD3).setHorizontalAlignment(JLabel.RIGHT);
+            ((JLabel) labelD3).setVerticalAlignment(JLabel.BOTTOM);
             labelD3.setVisible(true);
             labelD3.setFont(font2);
             labelD3.setForeground(color1);
             ((JComponent) labelD3).setOpaque(false);
+            tabela.add(labelD3);
 
-            ((JLabel) labelD03).setText("" + d3 * MyFrame.ul + " ");
-            ((JLabel) labelD03).setHorizontalAlignment(JLabel.RIGHT);
-            ((JLabel) labelD03).setVerticalAlignment(JLabel.BOTTOM);
-            tabela.add(labelD03);
-            labelD03.setVisible(true);
-            labelD03.setFont(font2);
-            labelD03.setForeground(color1);
-            ((JComponent) labelD03).setOpaque(false);
             MyFrame.dobitak=d3*MyFrame.ul;
             MyFrame.ukupno=d3*MyFrame.ul;
 

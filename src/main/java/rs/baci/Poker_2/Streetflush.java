@@ -10,8 +10,7 @@ import javax.swing.JLabel;
 
 public class Streetflush implements MainFrame, Brojevi, Dobici {
 
-    public static Component labelD02 = new JLabel();
-    public static Component labelD2 = new JLabel(" STREET FLUSH");
+    public static Component labelD2 = new JLabel();
 
     Streetflush() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
@@ -43,22 +42,24 @@ public class Streetflush implements MainFrame, Brojevi, Dobici {
             new Prostor();
             new Tabela();
 
-            ((JLabel) labelD2).setVerticalAlignment(JLabel.TOP);
-            labelD2.setBounds(0,0,1200,120);
-            tabela.add(labelD2);
+            label2.setVerticalAlignment(JLabel.TOP);
+            label2.setHorizontalAlignment(JLabel.LEFT);
+            label2.setBounds(30,10,1200,120);
+            label2.setVisible(true);
+            label2.setFont(font2);
+            label2.setForeground(color1);
+            label2.setOpaque(false);
+            tabela.add(label2);
+
+            ((JLabel) labelD2).setText("" + d2 * MyFrame.ul + " ");
+            ((JLabel) labelD2).setHorizontalAlignment(JLabel.RIGHT);
+            ((JLabel) labelD2).setVerticalAlignment(JLabel.BOTTOM);
             labelD2.setVisible(true);
             labelD2.setFont(font2);
             labelD2.setForeground(color1);
             ((JComponent) labelD2).setOpaque(false);
+            tabela.add(labelD2);
 
-            ((JLabel) labelD02).setText("" + d2 * MyFrame.ul + " ");
-            ((JLabel) labelD02).setHorizontalAlignment(JLabel.RIGHT);
-            ((JLabel) labelD02).setVerticalAlignment(JLabel.BOTTOM);
-            tabela.add(labelD02);
-            labelD02.setVisible(true);
-            labelD02.setFont(font2);
-            labelD02.setForeground(color1);
-            ((JComponent) labelD02).setOpaque(false);
             MyFrame.dobitak=d2*MyFrame.ul;
             MyFrame.ukupno=d2*MyFrame.ul;
 
