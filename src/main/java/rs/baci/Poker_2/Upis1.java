@@ -58,6 +58,8 @@ public class Upis1 implements MainFrame, Brojevi {
 
                     e1.printStackTrace();
 
+                } catch (InterruptedException ex) {
+                    throw new RuntimeException(ex);
                 }
 
 

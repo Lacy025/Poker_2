@@ -10,9 +10,9 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class Isplata1 {
 
-	Clip isplata1Sound;
+	public static Clip isplata1Sound;
 	
-public Isplata1() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+public Isplata1() throws UnsupportedAudioFileException, IOException, LineUnavailableException, InterruptedException {
 
 	URL isplata1 = this.getClass().getClassLoader().getResource("resources/Isplata1.wav");
 	AudioInputStream audioIsplata1;
@@ -23,16 +23,17 @@ public Isplata1() throws UnsupportedAudioFileException, IOException, LineUnavail
 		throw new RuntimeException(ex);
 	}
 	try {
-		isplata1Sound = AudioSystem.getClip();
+		Isplata1.isplata1Sound = AudioSystem.getClip();
 	} catch (LineUnavailableException ex) {
 		throw new RuntimeException(ex);
 	}
 	try {
-		isplata1Sound.open(audioIsplata1);
+		Isplata1.isplata1Sound.open(audioIsplata1);
 	} catch (LineUnavailableException | IOException ex) {
 		throw new RuntimeException(ex);
 	}
-	isplata1Sound.start();
+	Isplata1.isplata1Sound.start();
+	Thread.sleep(10);
 	}
 	
 }

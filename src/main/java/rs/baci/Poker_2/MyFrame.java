@@ -1257,6 +1257,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				}
 				this.autoholdSound.start();
 			}
+
 			break;
 
 			case 109 : 
@@ -1303,7 +1304,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 			
 			case 10 : 
 				
-				if (cr>0) {
+				if (cr>0&&delj==0) {
 
 					delj=1;
 					JlabelR1.setVisible(false);

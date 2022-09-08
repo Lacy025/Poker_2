@@ -42,6 +42,8 @@ public class Countdown1 implements MainFrame, Brojevi {
 				} catch (UnsupportedAudioFileException | IOException | LineUnavailableException e1) {
 
 					e1.printStackTrace();
+				} catch (InterruptedException ex) {
+					throw new RuntimeException(ex);
 				}
 			}
 
