@@ -272,15 +272,15 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 
 			while (igra==0||prekid<9999) {
 
-				if (prekid==10000) {
+				if (prekid==1000) {
 					Thread.sleep(400);
 					prekid++;
 				}
-				if (prekid==20000) {
+				if (prekid==2000) {
 					Thread.sleep(400);
 					prekid++;
 				}
-				if (prekid==30000) {
+				if (prekid==3000) {
 					Thread.sleep(400);
 					prekid++;
 				}
