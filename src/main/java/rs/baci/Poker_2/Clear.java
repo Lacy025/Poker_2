@@ -5,11 +5,6 @@ public class Clear implements Brojevi, Dobici, MainFrame {
 
     Clear() {
 
-        label12.setVisible(false);
-        tabela.remove(label12);
-        tabela.setVisible(false);
-        frame.remove(tabela);
-
         Karta1.card1.setVisible(false);
         frame.remove(Karta1.card1);
         Karta2.card2.setVisible(false);
@@ -43,6 +38,32 @@ public class Clear implements Brojevi, Dobici, MainFrame {
         frame.remove(label1);
         label0.setVisible(false);
         frame.remove(label0);
+
+        Highpair.labelD9.setVisible(false);
+        tabela.remove(Highpair.labelD9);
+        Twopairs.labelD8.setVisible(false);
+        tabela.remove(Twopairs.labelD8);
+        Threeofakind.labelD7.setVisible(false);
+        tabela.remove(Threeofakind.labelD7);
+        Street.labelD6.setVisible(false);
+        tabela.remove(Street.labelD6);
+        Flush.labelD5.setVisible(false);
+        tabela.remove(Flush.labelD5);
+        Fullhouse.labelD4.setVisible(false);
+        tabela.remove(Fullhouse.labelD4);
+        Poker.labelD3.setVisible(false);
+        tabela.remove(Poker.labelD3);
+        Streetflush.labelD2.setVisible(false);
+        tabela.remove(Streetflush.labelD2);
+        Royalflush.labelD1.setVisible(false);
+        tabela.remove(Royalflush.labelD1);
+        Fiveofakind.labelD0.setVisible(false);
+        tabela.remove(Fiveofakind.labelD0);
+
+        label12.setVisible(false);
+        tabela.remove(label12);
+        tabela.setVisible(false);
+        frame.remove(tabela);
 
         MyFrame.n1=0;
         MyFrame.n2=0;

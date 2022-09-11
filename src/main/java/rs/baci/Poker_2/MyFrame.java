@@ -31,7 +31,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 	Clip kreditSound;
 	Clip ulogSound;
 	Clip autoholdSound;
-	Clip deljenje1Sound;
+	Clip kasaSound;
 	
 	static int kr;
 	static int cr;
@@ -55,7 +55,8 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 	
 	public static int jk = 60000;
 	public static int delj;
-	
+	static int prekid;
+
 	public static int n1;
 	public static int n2;
 	public static int n3;
@@ -75,12 +76,12 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 	public static Component Jlabeld7 = new JLabel(""+d7*ul);
 	public static Component Jlabeld8 = new JLabel(""+d8*ul);
 	public static Component Jlabeld9 = new JLabel(""+d9*ul);
-	public Component JlabelR1 = new JLabel("JOKER");
-	public Component JlabelR2 = new JLabel("CARD");
-	public Component JlabelL = new JLabel("  LACIKA BAČI");
-	public Component JlabelR = new JLabel("  SRBIJA 2022");
-	public Component JlabelM1 = new JLabel("                    BIRAJTE ULOG");
-	public Component JlabelM2 = new JLabel("                 PRITISNITE DELJENJE");
+	public static Component JlabelR1 = new JLabel("JOKER");
+	public static Component JlabelR2 = new JLabel("CARD");
+	public static Component JlabelL = new JLabel("  LACIKA BAČI");
+	public static Component JlabelR = new JLabel("  SRBIJA 2022");
+	public static Component JlabelM1 = new JLabel("                    BIRAJTE ULOG");
+	public static Component JlabelM2 = new JLabel("                 PRITISNITE DELJENJE");
 
 	private static BufferedImage loadImage(String path) {
 		try {
@@ -102,15 +103,15 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 	static ImageIcon iconK5 = new ImageIcon(Objects.requireNonNull(loadImage("resources/53.png")));
 	public static final Component JlabelK5 = new JLabel(iconK5);
 	static ImageIcon iconJ1 = new ImageIcon(Objects.requireNonNull(loadImage("resources/0.png")));
-	private static final Component JlabelJ1 = new JLabel(iconJ1);
+	static final Component JlabelJ1 = new JLabel(iconJ1);
 	static ImageIcon iconJ2 = new ImageIcon(Objects.requireNonNull(loadImage("resources/0.png")));
-	private static final Component JlabelJ2 = new JLabel(iconJ2);
+	static final Component JlabelJ2 = new JLabel(iconJ2);
 	static ImageIcon iconJ3 = new ImageIcon(Objects.requireNonNull(loadImage("resources/0.png")));
-	private static final Component JlabelJ3 = new JLabel(iconJ3);
+	static final Component JlabelJ3 = new JLabel(iconJ3);
 	static ImageIcon iconJ4 = new ImageIcon(Objects.requireNonNull(loadImage("resources/0.png")));
-	private static final Component JlabelJ4 = new JLabel(iconJ4);
+	static final Component JlabelJ4 = new JLabel(iconJ4);
 	static ImageIcon iconJ5 = new ImageIcon(Objects.requireNonNull(loadImage("resources/0.png")));
-	private static final Component JlabelJ5 = new JLabel(iconJ5);
+	static final Component JlabelJ5 = new JLabel(iconJ5);
 
 	static ImageIcon icon0 = new ImageIcon(Objects.requireNonNull(loadImage("resources/0.png")));
 	static ImageIcon icon1 = new ImageIcon(Objects.requireNonNull(loadImage("resources/1.png")));
@@ -238,6 +239,63 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 	public static int boja5;
 	
 	MyFrame() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
+
+		if (Dobitak.DOBITAK>0) {
+
+			URL kasa = this.getClass().getClassLoader().getResource("resources/Kraj.wav");
+			AudioInputStream audioKasa;
+			try {
+				assert kasa != null;
+				audioKasa = AudioSystem.getAudioInputStream(kasa);
+			} catch (UnsupportedAudioFileException | IOException ex) {
+				throw new RuntimeException(ex);
+			}
+			try {
+				this.kasaSound = AudioSystem.getClip();
+			} catch (LineUnavailableException ex) {
+				throw new RuntimeException(ex);
+			}
+			try {
+				kasaSound.open(audioKasa);
+			} catch (LineUnavailableException | IOException ex) {
+				throw new RuntimeException(ex);
+			}
+			this.kasaSound.start();
+
+		}
+
+		frame.addKeyListener(this);
+
+		prekid=1;
+
+		if (cr>0) {
+
+			while (igra==0||prekid<400000) {
+
+				if (prekid==100000) {
+					Thread.sleep(800);
+					prekid++;
+				}
+				if (prekid==200000) {
+					Thread.sleep(800);
+					prekid++;
+				}
+				if (prekid==300000) {
+					Thread.sleep(800);
+					prekid++;
+				}
+				if (prekid==400000) {
+					Thread.sleep(800);
+					prekid++;
+				}
+				prekid++;
+			}
+
+		}
+
+		Dobitak.DOBITAK=0;
+		new Clear();
+		prekid=0;
 
 		if (cr==0&&igra==0) {
 
@@ -573,8 +631,6 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 		frame.add(JlabelJ5);
 		JlabelJ5.setBounds(1515, 350, 400, 600);
 		((JComponent) JlabelJ5).setOpaque(false);
-
-		frame.addKeyListener(this);
 
 		while (delj==0) {
 
@@ -1302,86 +1358,31 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 			
 				}
 			
-			case 10 : 
-				
-				if (cr>0&&delj==0) {
+			case 10 :
 
-					delj=1;
-					JlabelR1.setVisible(false);
-					JlabelR2.setVisible(false);
-					JlabelL.setVisible(false);
-					JlabelR.setVisible(false);
-					JlabelM1.setVisible(false);
-					JlabelM2.setVisible(false);
-					frame.remove(JlabelR1);
-					frame.remove(JlabelR2);
-					frame.remove(JlabelL);
-					frame.remove(JlabelR);
-					frame.remove(JlabelM1);
-					frame.remove(JlabelM2);
-					JlabelJ1.setVisible(false);
-					JlabelJ2.setVisible(false);
-					JlabelJ3.setVisible(false);
-					JlabelJ4.setVisible(false);
-					JlabelJ5.setVisible(false);
-					frame.remove(JlabelJ1);
-					frame.remove(JlabelJ2);
-					frame.remove(JlabelJ3);
-					frame.remove(JlabelJ4);
-					frame.remove(JlabelJ5);
+				if (Dobitak.DOBITAK>0) {
 
-					Jlabelcr.setVisible(false);
-					frame.remove(Jlabelcr);
-					cr=cr-ul;
-					((JLabel) Jlabelcr).setText(""+String.valueOf(cr));
-					Jlabelcr.setBounds(1670,64,500,50);
-					Jlabelcr.setForeground(color3);
-					Jlabelcr.setFont(font1);
-					((JComponent) Jlabelcr).setOpaque(false);
-					frame.add(Jlabelcr);
-					Jlabelcr.setVisible(true);
-					igra=1;
-
-					URL deljenje1 = this.getClass().getClassLoader().getResource("resources/Deljenje1.wav");
-					AudioInputStream audioDeljenje1;
-					try {
-						assert deljenje1 != null;
-						audioDeljenje1 = AudioSystem.getAudioInputStream(deljenje1);
-					} catch (UnsupportedAudioFileException | IOException ex) {
-						throw new RuntimeException(ex);
-					}
-					try {
-						this.deljenje1Sound = AudioSystem.getClip();
-					} catch (LineUnavailableException ex) {
-						throw new RuntimeException(ex);
-					}
-					try {
-						deljenje1Sound.open(audioDeljenje1);
-					} catch (LineUnavailableException | IOException ex) {
-						throw new RuntimeException(ex);
-					}
-					this.deljenje1Sound.start();
-				
-				frame.add(JlabelK1);
-				frame.add(JlabelK2);
-				frame.add(JlabelK3);
-				frame.add(JlabelK4);
-				frame.add(JlabelK5);
-				JlabelK1.setVisible(true);
-				JlabelK2.setVisible(true);
-				JlabelK3.setVisible(true);
-				JlabelK4.setVisible(true);
-				JlabelK5.setVisible(true);
-				
-				break;
+					prekid=400000;
+					this.kasaSound.stop();
 
 				}
-				
-			else {
-				
-				break;
-				
-			}
+
+				if (cr>0) {
+
+					delj=1;
+					prekid=400000;
+					igra=1;
+
+					break;
+
+				}
+
+				else {
+
+					break;
+
+				}
+
 		}
 	}
 	@Override

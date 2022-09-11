@@ -39,13 +39,11 @@ public class Main {
 				MyFrame.jk=60000;
 
 				if (MyFrame.ukupno>0) {
-					Thread.sleep(2500);
+					Thread.sleep(50);
 				}
 				if (MyFrame.ukupno==0) {
-					Thread.sleep(500);
+					Thread.sleep(50);
 				}
-
-				new Clear();
 				System.out.println(MyFrame.ukupno);
 			}
 	}

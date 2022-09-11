@@ -10,14 +10,80 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
-import javax.swing.JComponent;
-import javax.swing.JFrame;
+import javax.swing.*;
 
-public class Deljenje1 implements MainFrame {
+public class Deljenje1 implements MainFrame, Brojevi {
+
+	Clip deljenje1Sound;
 
 	Clip karteSound;
 	
 	Deljenje1() throws InterruptedException {
+
+		MyFrame.JlabelR1.setVisible(false);
+		MyFrame.JlabelR2.setVisible(false);
+		MyFrame.JlabelL.setVisible(false);
+		MyFrame.JlabelR.setVisible(false);
+		MyFrame.JlabelM1.setVisible(false);
+		MyFrame.JlabelM2.setVisible(false);
+		frame.remove(MyFrame.JlabelR1);
+		frame.remove(MyFrame.JlabelR2);
+		frame.remove(MyFrame.JlabelL);
+		frame.remove(MyFrame.JlabelR);
+		frame.remove(MyFrame.JlabelM1);
+		frame.remove(MyFrame.JlabelM2);
+		MyFrame.JlabelJ1.setVisible(false);
+		MyFrame.JlabelJ2.setVisible(false);
+		MyFrame.JlabelJ3.setVisible(false);
+		MyFrame.JlabelJ4.setVisible(false);
+		MyFrame.JlabelJ5.setVisible(false);
+		frame.remove(MyFrame.JlabelJ1);
+		frame.remove(MyFrame.JlabelJ2);
+		frame.remove(MyFrame.JlabelJ3);
+		frame.remove(MyFrame.JlabelJ4);
+		frame.remove(MyFrame.JlabelJ5);
+
+		MyFrame.Jlabelcr.setVisible(false);
+		frame.remove(MyFrame.Jlabelcr);
+		MyFrame.cr=MyFrame.cr-MyFrame.ul;
+		((JLabel) MyFrame.Jlabelcr).setText(""+String.valueOf(MyFrame.cr));
+		MyFrame.Jlabelcr.setBounds(1670,64,500,50);
+		MyFrame.Jlabelcr.setForeground(color3);
+		MyFrame.Jlabelcr.setFont(font1);
+		((JComponent) MyFrame.Jlabelcr).setOpaque(false);
+		frame.add(MyFrame.Jlabelcr);
+		MyFrame.Jlabelcr.setVisible(true);
+
+		URL deljenje1 = this.getClass().getClassLoader().getResource("resources/Deljenje1.wav");
+		AudioInputStream audioDeljenje1;
+		try {
+			assert deljenje1 != null;
+			audioDeljenje1 = AudioSystem.getAudioInputStream(deljenje1);
+		} catch (UnsupportedAudioFileException | IOException ex) {
+			throw new RuntimeException(ex);
+		}
+		try {
+			this.deljenje1Sound = AudioSystem.getClip();
+		} catch (LineUnavailableException ex) {
+			throw new RuntimeException(ex);
+		}
+		try {
+			deljenje1Sound.open(audioDeljenje1);
+		} catch (LineUnavailableException | IOException ex) {
+			throw new RuntimeException(ex);
+		}
+		this.deljenje1Sound.start();
+
+		frame.add(MyFrame.JlabelK1);
+		frame.add(MyFrame.JlabelK2);
+		frame.add(MyFrame.JlabelK3);
+		frame.add(MyFrame.JlabelK4);
+		frame.add(MyFrame.JlabelK5);
+		MyFrame.JlabelK1.setVisible(true);
+		MyFrame.JlabelK2.setVisible(true);
+		MyFrame.JlabelK3.setVisible(true);
+		MyFrame.JlabelK4.setVisible(true);
+		MyFrame.JlabelK5.setVisible(true);
 		
 		Random karta01 = new Random();
 		Random karta02 = new Random();

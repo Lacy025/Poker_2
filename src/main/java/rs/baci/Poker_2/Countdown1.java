@@ -39,11 +39,9 @@ public class Countdown1 implements MainFrame, Brojevi {
 			else if(((int)x/100 != (x/100)) && x>0) { ((JLabel) Jlabel13).setText(""+MyFrame.cr--);
 				try {
 					new Isplata1();
-				} catch (UnsupportedAudioFileException | IOException | LineUnavailableException e1) {
+				} catch (UnsupportedAudioFileException | IOException | LineUnavailableException | InterruptedException e1) {
 
 					e1.printStackTrace();
-				} catch (InterruptedException ex) {
-					throw new RuntimeException(ex);
 				}
 			}
 

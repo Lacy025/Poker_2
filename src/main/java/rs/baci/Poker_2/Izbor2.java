@@ -141,7 +141,6 @@ public class Izbor2 implements Brojevi, Dobici, MainFrame, KeyListener {
 
             Thread.sleep(400);
             pobeda.setVisible(true);
-            new Kasiranje();
 
         }
 

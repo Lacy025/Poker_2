@@ -54,14 +54,11 @@ public class Upis1 implements MainFrame, Brojevi {
 
                     new Isplata1();
 
-                } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e1) {
+                } catch (UnsupportedAudioFileException | IOException | LineUnavailableException | InterruptedException e1) {
 
                     e1.printStackTrace();
 
-                } catch (InterruptedException ex) {
-                    throw new RuntimeException(ex);
                 }
-
 
             }
 
@@ -75,6 +72,7 @@ public class Upis1 implements MainFrame, Brojevi {
 
                 try {
 
+                    Isplata1.isplata1Sound.stop();
                     new Upis2();
 
                 } catch (InterruptedException e1) {
@@ -82,7 +80,8 @@ public class Upis1 implements MainFrame, Brojevi {
                     e1.printStackTrace();
                 }
 
-            }});
+            }
+        });
 
 
         ((JLabel) Broj1).setHorizontalAlignment(JLabel.RIGHT);
