@@ -14,16 +14,16 @@ public class Upis1 implements MainFrame, Brojevi {
     public Component Broj1 = new JLabel(""+MyFrame.dobitak*MyFrame.ul+" ");
     public static Component Credit1 = new JLabel(""+MyFrame.cr);
 
-    Timer timer1;
+    Timer timer2;
 
     Upis1() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 
         ((JLabel) Broj1).setText("" + MyFrame.dobitak-- + " ");
         ((JLabel) Credit1).setText(""+ MyFrame.cr++);
 
-        timer1 = new Timer(50, e -> { double x = MyFrame.dobitak;
+        timer2 = new Timer(50, e -> { double x2 = MyFrame.dobitak;
 
-            if (x==-1) {
+            if (x2==-1) {
 
                 ((JLabel) Broj1).setText(""+ 0 +" ");
                 ((JLabel) Credit1).setText(""+ 0);
@@ -44,7 +44,7 @@ public class Upis1 implements MainFrame, Brojevi {
 
             }
 
-            else if(((int)x/100 != (x/100)) && x>0) {
+            else if(((int)x2/100 != (x2/100)) && x2>0) {
 
                 ((JLabel) Broj1).setText("" + MyFrame.dobitak-- + " ");
                 ((JLabel) Credit1).setText(""+ MyFrame.cr++);
@@ -67,8 +67,6 @@ public class Upis1 implements MainFrame, Brojevi {
                 ((Timer) (e.getSource())).stop();
                 Broj1.setVisible(false);
                 tabela.remove(Broj1);
-                //Credit1.setVisible(false);
-                //frame.remove(Credit1);
 
                 try {
 
@@ -98,8 +96,8 @@ public class Upis1 implements MainFrame, Brojevi {
         Credit1.setVisible(true);
         frame.add(Credit1);
 
-        timer1.setInitialDelay(0);
-        timer1.start();
+        timer2.setInitialDelay(0);
+        timer2.start();
 
     }
 

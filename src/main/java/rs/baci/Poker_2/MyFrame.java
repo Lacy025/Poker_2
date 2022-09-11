@@ -270,22 +270,42 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 
 		if (cr>0) {
 
-			while (igra==0||prekid<400000) {
+			while (igra==0||prekid<9999) {
 
-				if (prekid==100000) {
-					Thread.sleep(800);
+				if (prekid==10000) {
+					Thread.sleep(400);
 					prekid++;
 				}
-				if (prekid==200000) {
-					Thread.sleep(800);
+				if (prekid==20000) {
+					Thread.sleep(400);
 					prekid++;
 				}
-				if (prekid==300000) {
-					Thread.sleep(800);
+				if (prekid==30000) {
+					Thread.sleep(400);
 					prekid++;
 				}
-				if (prekid==400000) {
-					Thread.sleep(800);
+				if (prekid==4000) {
+					Thread.sleep(400);
+					prekid++;
+				}
+				if (prekid==5000) {
+					Thread.sleep(400);
+					prekid++;
+				}
+				if (prekid==6000) {
+					Thread.sleep(400);
+					prekid++;
+				}
+				if (prekid==7000) {
+					Thread.sleep(400);
+					prekid++;
+				}
+				if (prekid==8000) {
+					Thread.sleep(400);
+					prekid++;
+				}
+				if (prekid==9000) {
+					Thread.sleep(400);
 					prekid++;
 				}
 				prekid++;
@@ -295,7 +315,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 
 		Dobitak.DOBITAK=0;
 		new Clear();
-		prekid=0;
+		prekid=10000;
 
 		if (cr==0&&igra==0) {
 
@@ -1075,55 +1095,68 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 		
 		case 81 :
 
-			if (cr<1&&igra==0) {
+			if (prekid>9999) {
 
-				this.introSound.stop();
+				if (cr < 1 && igra == 0) {
+
+					this.introSound.stop();
+
+				}
+
+				URL kredit = this.getClass().getClassLoader().getResource("resources/Kredit.wav");
+				AudioInputStream audioKredit;
+				try {
+					assert kredit != null;
+					audioKredit = AudioSystem.getAudioInputStream(kredit);
+				} catch (UnsupportedAudioFileException | IOException ex) {
+					throw new RuntimeException(ex);
+				}
+				try {
+					this.kreditSound = AudioSystem.getClip();
+				} catch (LineUnavailableException ex) {
+					throw new RuntimeException(ex);
+				}
+				try {
+					kreditSound.open(audioKredit);
+				} catch (LineUnavailableException | IOException ex) {
+					throw new RuntimeException(ex);
+				}
+				this.kreditSound.start();
+
+				Jlabelcr.setVisible(false);
+				frame.remove(Jlabelcr);
+				cr = cr + 100;
+				((JLabel) Jlabelcr).setText("" + String.valueOf(cr));
+				Jlabelcr.setBounds(1670, 64, 500, 50);
+				Jlabelcr.setForeground(color3);
+				Jlabelcr.setFont(font1);
+				frame.add(Jlabelcr);
+				Jlabelcr.setVisible(true);
+				JlabelL.setVisible(false);
+				JlabelR.setVisible(false);
+				frame.remove(JlabelL);
+				frame.remove(JlabelR);
+
+				break;
 
 			}
-
-			URL kredit = this.getClass().getClassLoader().getResource("resources/Kredit.wav");
-			AudioInputStream audioKredit;
-			try {
-				assert kredit != null;
-				audioKredit = AudioSystem.getAudioInputStream(kredit);
-			} catch (UnsupportedAudioFileException | IOException ex) {
-				throw new RuntimeException(ex);
+			else {
+				break;
 			}
-			try {
-				this.kreditSound = AudioSystem.getClip();
-			} catch (LineUnavailableException ex) {
-				throw new RuntimeException(ex);
-			}
-			try {
-				kreditSound.open(audioKredit);
-			} catch (LineUnavailableException | IOException ex) {
-				throw new RuntimeException(ex);
-			}
-			this.kreditSound.start();
-
-			Jlabelcr.setVisible(false);
-			frame.remove(Jlabelcr);
-			cr=cr+100;
-			((JLabel) Jlabelcr).setText(""+String.valueOf(cr));
-			Jlabelcr.setBounds(1670,64,500,50);
-			Jlabelcr.setForeground(color3);
-			Jlabelcr.setFont(font1);
-			frame.add(Jlabelcr);
-			Jlabelcr.setVisible(true);
-			JlabelL.setVisible(false);JlabelR.setVisible(false);
-			frame.remove(JlabelL);frame.remove(JlabelR);
-			
-			break;
 			
 		case 53 :
 
-			if (cr>0) {
+			if (cr>0&&prekid>9999) {
+
 				Jlabelul.setVisible(false);
 				frame.remove(Jlabelul);
 				int uu = ul+1;
+
 				if (uu==41) {
 					uu=1;
-				}ul=uu;
+				}
+				ul=uu;
+
 				if (uu==cr+1) {
 					uu=1;
 				}
@@ -1276,21 +1309,23 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 			
 		case 32 : 
 			
-			if (cr>0) {
+			if (cr>0&&prekid>9999) {
+
 				if (ah==1) { int aha=ah--;ah=aha;
 				Jlabelah.setVisible(false);
 				frame.remove(Jlabelah);ah=0;
 				}
-				else { int aha=ah++;ah=aha;
-				Jlabelah.setVisible(false);
-				frame.remove(Jlabelah);ah=1;
-				Jlabelah = new JLabel("AUTOHOLD");
-				frame.add(Jlabelah);
-				Jlabelah.setBounds(1620,292,500,40);
-				Jlabelah.setForeground(color4);
-				Jlabelah.setFont(font1);
-				((JComponent) Jlabelah).setOpaque(false);
-				Jlabelah.setVisible(true);
+				else {
+					int aha=ah++;ah=aha;
+					Jlabelah.setVisible(false);
+					frame.remove(Jlabelah);ah=1;
+					Jlabelah = new JLabel("AUTOHOLD");
+					frame.add(Jlabelah);
+					Jlabelah.setBounds(1620,292,500,40);
+					Jlabelah.setForeground(color4);
+					Jlabelah.setFont(font1);
+					((JComponent) Jlabelah).setOpaque(false);
+					Jlabelah.setVisible(true);
 				}
 
 				URL autohold = this.getClass().getClassLoader().getResource("resources/Autohold.wav");
@@ -1316,8 +1351,10 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 
 			break;
 
-			case 109 : 
-				
+			case 109 :
+
+				if (prekid>9999) {
+
 				Jlabelcr.setVisible(false);
 				frame.remove(Jlabelcr);
 			
@@ -1350,19 +1387,22 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				}
 			
 			else {
-				
 				Jlabelcr.setVisible(true);
 				frame.add(Jlabelcr);
-				
-			break;
-			
+
+				break;
+					}
 				}
+
+			else {
+				break;
+					}
 			
 			case 10 :
 
 				if (Dobitak.DOBITAK>0) {
 
-					prekid=400000;
+					prekid=10000;
 					this.kasaSound.stop();
 
 				}
@@ -1370,7 +1410,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				if (cr>0) {
 
 					delj=1;
-					prekid=400000;
+					prekid=10000;
 					igra=1;
 
 					break;

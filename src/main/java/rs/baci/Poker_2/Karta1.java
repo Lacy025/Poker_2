@@ -1,18 +1,10 @@
 package rs.baci.Poker_2;
 
+import javax.swing.*;
 import java.awt.Component;
-import java.io.Serial;
 
-import javax.swing.JLabel;
+public class Karta1 {
 
-public class Karta1 extends JLabel {
-
-	/**
-	 * 
-	 */
-	@Serial
-	private static final long serialVersionUID = 1L;
-	
 	public static Component card1 = new JLabel();
 
 	Karta1() {

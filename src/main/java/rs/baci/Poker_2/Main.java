@@ -45,6 +45,7 @@ public class Main {
 					Thread.sleep(50);
 				}
 				System.out.println(MyFrame.ukupno);
+				MyFrame.prekid=0;
 			}
 	}
 }	

@@ -12,14 +12,14 @@ public class Countdown1 implements MainFrame, Brojevi {
 
 	public Component Jlabel13 = new JLabel(""+MyFrame.cr);
 
-	Timer timer;
+	Timer timer1;
 
 	Countdown1() throws InterruptedException {
 
 		((JLabel) Jlabel13).setText(""+MyFrame.cr--);
 
-		timer = new Timer(50, e -> { double x = MyFrame.cr;
-			if (x==-1) {((JLabel) Jlabel13).setText(""+0);
+		timer1 = new Timer(50, e -> { double x1 = MyFrame.cr;
+			if (x1==-1) {((JLabel) Jlabel13).setText(""+0);
 				try {
 					new Isplata2();Thread.sleep(900);
 				} catch (UnsupportedAudioFileException | IOException | LineUnavailableException |
@@ -36,9 +36,11 @@ public class Countdown1 implements MainFrame, Brojevi {
 
 				MyFrame.kr=0;MyFrame.cr=-1;MyFrame.delj=5;
 			}
-			else if(((int)x/100 != (x/100)) && x>0) { ((JLabel) Jlabel13).setText(""+MyFrame.cr--);
+			else if(((int)x1/100 != (x1/100)) && x1>0) { ((JLabel) Jlabel13).setText(""+MyFrame.cr--);
 				try {
+
 					new Isplata1();
+
 				} catch (UnsupportedAudioFileException | IOException | LineUnavailableException | InterruptedException e1) {
 
 					e1.printStackTrace();
@@ -52,6 +54,7 @@ public class Countdown1 implements MainFrame, Brojevi {
 				frame.remove(Jlabel13);
 
 				try {
+
 					new Countdown2();
 
 				} catch (InterruptedException e1) {
@@ -69,7 +72,7 @@ public class Countdown1 implements MainFrame, Brojevi {
 		((JComponent) Jlabel13).setOpaque(false);
 		Jlabel13.setVisible(true);
 
-		timer.setInitialDelay(0);
-		timer.start();
+		timer1.setInitialDelay(0);
+		timer1.start();
 	}
 }
