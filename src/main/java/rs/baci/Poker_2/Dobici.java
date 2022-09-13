@@ -18,4 +18,15 @@ public interface Dobici {
 	JLabel label11=new JLabel("ULOG");
 	JLabel label12=new JLabel("DOBITAK");
 
+	JLabel labelT0 = new JLabel("FIVE OF A KIND");
+	JLabel labelT1 = new JLabel("ROYAL FLUSH");
+	JLabel labelT2 = new JLabel("STREET FLUSH");
+	JLabel labelT3 = new JLabel("POKER");
+	JLabel labelT4 = new JLabel("FULL HOUSE");
+	JLabel labelT5 = new JLabel("FLUSH");
+	JLabel labelT6 = new JLabel("STREET");
+	JLabel labelT7 = new JLabel("THREE OF A KIND");
+	JLabel labelT8 = new JLabel("2 PAIRS");
+	JLabel labelT9 = new JLabel("HIGH PAIR");
+
 }

@@ -1,10 +1,13 @@
 package rs.baci.Poker_2;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Component;
 import java.io.IOException;
 
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
+import javax.swing.BorderFactory;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 
@@ -16,22 +19,12 @@ public class Flush implements MainFrame, Brojevi, Dobici {
 
         if (MyFrame.delj==1) {
 
-            label5.setBounds(0,172,1292,36);
-            MyFrame.Jlabeld5.setBounds(MyFrame.dx5,0,120,32);
-            label5.setVisible(false);
-            frame.remove(label5);
-            MyFrame.Jlabeld5.setVisible(true);
-            frame.add(label5);
-            label5.add(MyFrame.Jlabeld5);
-            label5.setVisible(true);
-            label5.setOpaque(true);
-            label5.setBackground(color2);
-            label5.setForeground(color3);
-            MyFrame.Jlabeld5.setBackground(color2);
-            MyFrame.Jlabeld5.setForeground(color3);
-            label5.setFont(font1);
-            MyFrame.Jlabeld5.setFont(font1);
-            ((JComponent) MyFrame.Jlabeld5).setOpaque(true);
+            rucno.setLayout(new BorderLayout(50,50));
+            rucno.setBorder(BorderFactory.createMatteBorder(20, 20, 20, 20, Color.RED));
+            frame.add(rucno);
+            rucno.setBounds(0, L5+2, 1292, 32);
+            rucno.setVisible(true);
+            rucno.setOpaque(false);
 
             new Hold();
 
@@ -42,23 +35,23 @@ public class Flush implements MainFrame, Brojevi, Dobici {
             new Prostor();
             new Tabela();
 
-            label5.setVerticalAlignment(JLabel.TOP);
-            label5.setHorizontalAlignment(JLabel.LEFT);
-            label5.setBounds(30,10,1200,120);
-            label5.setVisible(true);
-            label5.setFont(font2);
-            label5.setForeground(color1);
-            label5.setOpaque(false);
-            tabela.add(label5);
+            labelT5.setVerticalAlignment(JLabel.TOP);
+            labelT5.setHorizontalAlignment(JLabel.LEFT);
+            labelT5.setBounds(30,10,1200,120);
+            labelT5.setVisible(true);
+            labelT5.setFont(font2);
+            labelT5.setForeground(color1);
+            labelT5.setOpaque(false);
+            tabela.add(labelT5);
 
             ((JLabel) labelD5).setText("" + d5 * MyFrame.ul + " ");
             ((JLabel) labelD5).setHorizontalAlignment(JLabel.RIGHT);
             ((JLabel) labelD5).setVerticalAlignment(JLabel.BOTTOM);
+            tabela.add(labelD5);
             labelD5.setVisible(true);
             labelD5.setFont(font2);
             labelD5.setForeground(color1);
             ((JComponent) labelD5).setOpaque(false);
-            tabela.add(labelD5);
 
             MyFrame.dobitak=d5*MyFrame.ul;
             MyFrame.ukupno=d5*MyFrame.ul;

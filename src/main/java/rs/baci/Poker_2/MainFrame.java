@@ -7,5 +7,6 @@ public interface MainFrame {
 	
 	JFrame frame = new JFrame();
 	JPanel tabela = new JPanel();
+	JPanel rucno = new JPanel();
 	
 }
