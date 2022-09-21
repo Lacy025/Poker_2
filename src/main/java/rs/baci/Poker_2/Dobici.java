@@ -28,5 +28,6 @@ public interface Dobici {
 	JLabel labelT7 = new JLabel("THREE OF A KIND");
 	JLabel labelT8 = new JLabel("2 PAIRS");
 	JLabel labelT9 = new JLabel("HIGH PAIR");
+	JLabel labelT10 = new JLabel();
 
 }

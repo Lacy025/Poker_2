@@ -13,14 +13,14 @@ public class Izbor2 implements Brojevi, Dobici, MainFrame, KeyListener {
 
     JLabel dupliranje = new JLabel("            DUPLIRANJE");
     JLabel kasiranje = new JLabel("             KASIRANJE");
-    static JLabel pobeda = new JLabel("              POBEDIO !");
+    public static JLabel pobeda = new JLabel("              POBEDIO !");
 
-    int izbor=1;
+    public static int izbor = 1;
     int pobedio;
 
     Izbor2() throws InterruptedException {
 
-        if (Dobitak.DOBITAK>0) {
+        if (Dobitak.DOBITAK > 0) {
 
             URL dobitak = this.getClass().getClassLoader().getResource("resources/Dobitak.wav");
             AudioInputStream audioDobitak;
@@ -45,9 +45,9 @@ public class Izbor2 implements Brojevi, Dobici, MainFrame, KeyListener {
             dupliranje.setVisible(true);
             kasiranje.setVisible(false);
             pobeda.setVisible(false);
-            dupliranje.setBounds(20,930,720,60);
-            kasiranje.setBounds(1160,930,720,60);
-            pobeda.setBounds(600,930,720,60);
+            dupliranje.setBounds(20, 930, 720, 60);
+            kasiranje.setBounds(1160, 930, 720, 60);
+            pobeda.setBounds(600, 930, 720, 60);
             frame.add(dupliranje);
             frame.add(kasiranje);
             dupliranje.setForeground(color1);
@@ -65,27 +65,9 @@ public class Izbor2 implements Brojevi, Dobici, MainFrame, KeyListener {
 
             frame.addKeyListener(this);
 
-            while (izbor==1) {
+            while (izbor == 1) {
 
-                if (pobedio==5000) {
-
-                    dupliranje.setVisible(true);
-                    kasiranje.setVisible(false);
-                    Thread.sleep(500);
-                    pobedio++;
-
-                }
-
-                if (pobedio==10000) {
-
-                    dupliranje.setVisible(false);
-                    kasiranje.setVisible(true);
-                    Thread.sleep(500);
-                    pobedio++;
-
-                }
-
-                if (pobedio==15000) {
+                if (pobedio == 5000) {
 
                     dupliranje.setVisible(true);
                     kasiranje.setVisible(false);
@@ -94,44 +76,30 @@ public class Izbor2 implements Brojevi, Dobici, MainFrame, KeyListener {
 
                 }
 
-                if (pobedio==20000) {
+                if (pobedio == 10000) {
 
                     dupliranje.setVisible(false);
                     kasiranje.setVisible(true);
-                    Thread.sleep(500);
-                    pobedio=0;
-
-                }
-
-                pobedio++;
-
-            }
-
-            pobedio=1;
-            dupliranje.setVisible(false);
-            kasiranje.setVisible(false);
-            frame.remove(dupliranje);
-            frame.remove(kasiranje);
-            frame.add(pobeda);
-            pobeda.setVisible(true);
-
-            pobedio++;
-
-            while (pobedio>0&&MyFrame.dobitak>-1) {
-
-                if (pobedio==5000) {
-
-                    pobeda.setVisible(true);
                     Thread.sleep(500);
                     pobedio++;
 
                 }
 
-                if (pobedio==10000&&MyFrame.dobitak>-1) {
+                if (pobedio == 15000) {
 
-                    pobeda.setVisible(false);
+                    dupliranje.setVisible(true);
+                    kasiranje.setVisible(false);
                     Thread.sleep(500);
-                    pobedio=0;
+                    pobedio++;
+
+                }
+
+                if (pobedio == 20000) {
+
+                    dupliranje.setVisible(false);
+                    kasiranje.setVisible(true);
+                    Thread.sleep(500);
+                    pobedio = 0;
 
                 }
 
@@ -139,12 +107,49 @@ public class Izbor2 implements Brojevi, Dobici, MainFrame, KeyListener {
 
             }
 
-            Thread.sleep(400);
-            pobeda.setVisible(true);
+            if (izbor==2) {
+
+                pobedio = 1;
+                dupliranje.setVisible(false);
+                kasiranje.setVisible(false);
+                frame.remove(dupliranje);
+                frame.remove(kasiranje);
+                frame.add(pobeda);
+                pobeda.setVisible(true);
+
+                pobedio++;
+
+                while (pobedio > 0 && MyFrame.dobitak > -1) {
+
+                    if (pobedio == 5000) {
+
+                        pobeda.setVisible(true);
+                        Thread.sleep(500);
+                        pobedio++;
+
+                    }
+
+                    if (pobedio == 10000 && MyFrame.dobitak > -1) {
+
+                        pobeda.setVisible(false);
+                        Thread.sleep(500);
+                        pobedio = 0;
+
+                    }
+
+                    pobedio++;
+
+                }
+
+                Thread.sleep(400);
+                pobeda.setVisible(true);
+
+            }
 
         }
 
     }
+
 
     @Override
     public void keyTyped(KeyEvent e) {
@@ -154,52 +159,62 @@ public class Izbor2 implements Brojevi, Dobici, MainFrame, KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
 
-        if (e.getKeyCode() == 32){
+        switch(e.getKeyCode()) {
 
-            Highpair.labelD9.setVisible(false);
-            tabela.remove(Highpair.labelD9);
-            Twopairs.labelD8.setVisible(false);
-            tabela.remove(Twopairs.labelD8);
-            Threeofakind.labelD7.setVisible(false);
-            tabela.remove(Threeofakind.labelD7);
-            Street.labelD6.setVisible(false);
-            tabela.remove(Street.labelD6);
-            Flush.labelD5.setVisible(false);
-            tabela.remove(Flush.labelD5);
-            Fullhouse.labelD4.setVisible(false);
-            tabela.remove(Fullhouse.labelD4);
-            Poker.labelD3.setVisible(false);
-            tabela.remove(Poker.labelD3);
-            Streetflush.labelD2.setVisible(false);
-            tabela.remove(Streetflush.labelD2);
-            Royalflush.labelD1.setVisible(false);
-            tabela.remove(Royalflush.labelD1);
-            Fiveofakind.labelD0.setVisible(false);
-            tabela.remove(Fiveofakind.labelD0);
+            case 32 :
 
-            MyFrame.Jlabelcr.setVisible(false);
-            frame.remove(MyFrame.Jlabelcr);
+                labelT10.setVisible(false);
+                tabela.remove(labelT10);
 
-            frame.removeKeyListener(this);
+                MyFrame.Jlabelcr.setVisible(false);
+                frame.remove(MyFrame.Jlabelcr);
 
-            dobitakSound.stop();
+                frame.removeKeyListener(this);
 
-            izbor=0;
+                dobitakSound.stop();
 
-        try{
-        new Upis1();
+                izbor=2;
+
+                try {
+
+                    new Upis1();
+
+                } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e1) {
+
+                    e1.printStackTrace();
+                }
+
+                break;
+
+            case 10 :
+
+                Karta1.card1.setVisible(false);
+                frame.remove(Karta1.card1);
+                Karta2.card2.setVisible(false);
+                frame.remove(Karta2.card2);
+                Karta3.card3.setVisible(false);
+                frame.remove(Karta3.card3);
+                Karta4.card4.setVisible(false);
+                frame.remove(Karta4.card4);
+                Karta5.card5.setVisible(false);
+                frame.remove(Karta5.card5);
+
+                dupliranje.setVisible(false);
+                kasiranje.setVisible(false);
+                frame.remove(dupliranje);
+                frame.remove(kasiranje);
+
+                frame.removeKeyListener(this);
+                dobitakSound.stop();
+                izbor = 3;
+
+                break;
+
         }
-        catch(UnsupportedAudioFileException|IOException|LineUnavailableException ex) {
-        throw new RuntimeException(ex);
-        }
-        }
-
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
 
-
     }
-
 }

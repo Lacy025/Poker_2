@@ -37,16 +37,11 @@ public class Deljenje2 implements MainFrame {
                     MyFrame.n1==MyFrame.n5) {
 
                 MyFrame.n1 = karta01.nextInt(53);
-
+                pauza++;
             }
 
-            if (karta>0) {
-                Thread.sleep(280);
-            }
-
-            else {
                 Thread.sleep(20-(pauza*2));
-            }
+
 
             MyFrame.JlabelK1.setVisible(false);
             frame.remove(MyFrame.JlabelK1);
@@ -82,6 +77,8 @@ public class Deljenje2 implements MainFrame {
 
         }
 
+        pauza=1;
+
         if (Dobitak.stop2==0) {
 
             Random karta02 = new Random();
@@ -94,7 +91,7 @@ public class Deljenje2 implements MainFrame {
                     MyFrame.n2==MyFrame.n5) {
 
                 MyFrame.n2 = karta02.nextInt(53);
-
+                pauza++;
             }
             if (karta>0) {
                 Thread.sleep(280);
@@ -137,6 +134,8 @@ public class Deljenje2 implements MainFrame {
 
         }
 
+        pauza=1;
+
         if (Dobitak.stop3==0) {
 
             Random karta03 = new Random();
@@ -149,6 +148,7 @@ public class Deljenje2 implements MainFrame {
                     MyFrame.n3==MyFrame.n5) {
 
                 MyFrame.n3 = karta03.nextInt(53);
+                pauza++;
 
             }
             if (karta>0) {
@@ -192,6 +192,8 @@ public class Deljenje2 implements MainFrame {
 
         }
 
+        pauza=1;
+
         if (Dobitak.stop4==0) {
 
             Random karta04 = new Random();
@@ -204,6 +206,7 @@ public class Deljenje2 implements MainFrame {
                     MyFrame.n4==MyFrame.n5) {
 
                 MyFrame.n4 = karta04.nextInt(53);
+                pauza++;
 
             }
             if (karta>0) {
@@ -247,6 +250,8 @@ public class Deljenje2 implements MainFrame {
 
         }
 
+        pauza=1;
+
         if (Dobitak.stop5==0) {
 
             Random karta05 = new Random();
@@ -259,6 +264,7 @@ public class Deljenje2 implements MainFrame {
                     MyFrame.n5==MyFrame.n4) {
 
                 MyFrame.n5 = karta05.nextInt(53);
+                pauza++;
 
             }
             if (karta>0) {
@@ -300,6 +306,7 @@ public class Deljenje2 implements MainFrame {
             this.karta5Sound.start();
 
             Thread.sleep(200);
+            karta=0;
 
         }
 

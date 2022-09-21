@@ -2,18 +2,14 @@ package rs.baci.Poker_2;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Component;
 import java.io.IOException;
 
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.BorderFactory;
-import javax.swing.JComponent;
 import javax.swing.JLabel;
 
 public class Threeofakind implements MainFrame, Brojevi, Dobici {
-
-    public static Component labelD7 = new JLabel();
 
     Threeofakind() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
@@ -44,14 +40,14 @@ public class Threeofakind implements MainFrame, Brojevi, Dobici {
             labelT7.setOpaque(false);
             tabela.add(labelT7);
 
-            ((JLabel) labelD7).setText("" + d7 * MyFrame.ul + " ");
-            ((JLabel) labelD7).setHorizontalAlignment(JLabel.RIGHT);
-            ((JLabel) labelD7).setVerticalAlignment(JLabel.BOTTOM);
-            tabela.add(labelD7);
-            labelD7.setVisible(true);
-            labelD7.setFont(font2);
-            labelD7.setForeground(color1);
-            ((JComponent) labelD7).setOpaque(false);
+            labelT10.setText("" + d7 * MyFrame.ul + " ");
+            labelT10.setHorizontalAlignment(JLabel.RIGHT);
+            labelT10.setVerticalAlignment(JLabel.BOTTOM);
+            tabela.add(labelT10);
+            labelT10.setVisible(true);
+            labelT10.setFont(font2);
+            labelT10.setForeground(color1);
+            labelT10.setOpaque(false);
 
             MyFrame.dobitak=d7*MyFrame.ul;
             MyFrame.ukupno=d7*MyFrame.ul;

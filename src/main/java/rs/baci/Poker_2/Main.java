@@ -33,6 +33,12 @@ public class Main {
 					new Dobitak();
 					new Izbor2();
 
+					if (Izbor2.izbor==3) {
+
+						new Dupliranje();
+
+					}
+
 				}
 
 				System.out.println("THE END");

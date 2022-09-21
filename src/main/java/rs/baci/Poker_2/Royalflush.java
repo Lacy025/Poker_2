@@ -2,18 +2,14 @@ package rs.baci.Poker_2;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Component;
 import java.io.IOException;
 
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.BorderFactory;
-import javax.swing.JComponent;
 import javax.swing.JLabel;
 
 public class Royalflush implements MainFrame, Brojevi, Dobici {
-
-    public static Component labelD1 = new JLabel();
 
     Royalflush() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
@@ -44,14 +40,14 @@ public class Royalflush implements MainFrame, Brojevi, Dobici {
             labelT1.setOpaque(false);
             tabela.add(labelT1);
 
-            ((JLabel) labelD1).setText("" + d1 * MyFrame.ul + " ");
-            ((JLabel) labelD1).setHorizontalAlignment(JLabel.RIGHT);
-            ((JLabel) labelD1).setVerticalAlignment(JLabel.BOTTOM);
-            tabela.add(labelD1);
-            labelD1.setVisible(true);
-            labelD1.setFont(font2);
-            labelD1.setForeground(color1);
-            ((JComponent) labelD1).setOpaque(false);
+            labelT10.setText("" + d1 * MyFrame.ul + " ");
+            labelT10.setHorizontalAlignment(JLabel.RIGHT);
+            labelT10.setVerticalAlignment(JLabel.BOTTOM);
+            tabela.add(labelT10);
+            labelT10.setVisible(true);
+            labelT10.setFont(font2);
+            labelT10.setForeground(color1);
+            labelT10.setOpaque(false);
 
             MyFrame.dobitak=d1*MyFrame.ul;
             MyFrame.ukupno=d7*MyFrame.ul;

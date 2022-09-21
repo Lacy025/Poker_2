@@ -2,18 +2,14 @@ package rs.baci.Poker_2;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Component;
 import java.io.IOException;
 
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.BorderFactory;
-import javax.swing.JComponent;
 import javax.swing.JLabel;
 
 public class Street implements MainFrame, Brojevi, Dobici {
-
-    public static Component labelD6 = new JLabel();
 
     Street() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
@@ -44,14 +40,14 @@ public class Street implements MainFrame, Brojevi, Dobici {
             labelT6.setOpaque(false);
             tabela.add(labelT6);
 
-            ((JLabel) labelD6).setText("" + d6 * MyFrame.ul + " ");
-            ((JLabel) labelD6).setHorizontalAlignment(JLabel.RIGHT);
-            ((JLabel) labelD6).setVerticalAlignment(JLabel.BOTTOM);
-            tabela.add(labelD6);
-            labelD6.setVisible(true);
-            labelD6.setFont(font2);
-            labelD6.setForeground(color1);
-            ((JComponent) labelD6).setOpaque(false);
+            labelT10.setText("" + d6 * MyFrame.ul + " ");
+            labelT10.setHorizontalAlignment(JLabel.RIGHT);
+            labelT10.setVerticalAlignment(JLabel.BOTTOM);
+            tabela.add(labelT10);
+            labelT10.setVisible(true);
+            labelT10.setFont(font2);
+            labelT10.setForeground(color1);
+            labelT10.setOpaque(false);
 
             MyFrame.dobitak=d6*MyFrame.ul;
             MyFrame.ukupno=d6*MyFrame.ul;

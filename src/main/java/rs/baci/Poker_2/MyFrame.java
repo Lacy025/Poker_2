@@ -62,6 +62,18 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 	public static int n3;
 	public static int n4;
 	public static int n5;
+
+	public static int k01;
+	public static int k02;
+	public static int k03;
+	public static int k04;
+	public static int k05;
+	public static int k06;
+	public static int k07;
+	public static int k08;
+	public static int k09;
+	public static int k10;
+	public static int k11;
 	
 	public static Component Jlabelah = new JLabel("AUTOHOLD");
 	public static Component Jlabelcr = new JLabel(""+cr);
@@ -1308,11 +1320,14 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 			
 			if (cr>0&&prekid>9999) {
 
-				if (ah==1) { int aha=ah--;ah=aha;
-				Jlabelah.setVisible(false);
-				frame.remove(Jlabelah);ah=0;
+				if (ah==1) {
+					int aha=ah--;ah=aha;
+					Jlabelah.setVisible(false);
+					frame.remove(Jlabelah);ah=0;
 				}
+
 				else {
+
 					int aha=ah++;ah=aha;
 					Jlabelah.setVisible(false);
 					frame.remove(Jlabelah);ah=1;
@@ -1399,7 +1414,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 
 				if (Dobitak.DOBITAK>0) {
 
-					prekid=10000;
+					prekid=9999;
 					this.kasaSound.stop();
 
 				}
@@ -1407,7 +1422,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				if (cr>0) {
 
 					delj=1;
-					prekid=10000;
+					prekid=9999;
 					igra=1;
 
 					break;
