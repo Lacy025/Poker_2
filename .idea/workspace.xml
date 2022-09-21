@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="840edd46-d39a-4597-9bd9-becf4fec8351" name="Changes" comment="2.5.0">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="840edd46-d39a-4597-9bd9-becf4fec8351" name="Changes" comment="2.5.1">
       <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Dupliranje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Dupliranje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Izbor2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Izbor2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663799831981</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="2.5.1">
+      <created>1663802999236</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1663802999236</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -332,7 +336,8 @@
     <MESSAGE value="2.4.8" />
     <MESSAGE value="2.4.9" />
     <MESSAGE value="2.5.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.5.0" />
+    <MESSAGE value="2.5.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.5.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
