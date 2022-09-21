@@ -147,37 +147,14 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                 pogodio();
 
-                frame.add(Izbor2.pobeda);
-                Izbor2.pobeda.setVisible(true);
-                karta++;
-                vecamanja = 1;
-                razmak = 0;
-
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                duplo=duplo*2;
-                labelT10.setText(""+String.valueOf(duplo+" "));
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(1400);
-
-                Izbor2.pobeda.setVisible(false);
-                frame.remove(Izbor2.pobeda);
+                pogodak();
 
             }
 
             else {
 
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                labelT10.setText(0+" ");
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
+                promasaj();
 
-                Thread.sleep(2000);
-                clearing();
-                Dobitak.DOBITAK=0;
             }
         }
 
@@ -246,36 +223,13 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                 pogodio();
 
-                frame.add(Izbor2.pobeda);
-                Izbor2.pobeda.setVisible(true);
-                karta++;
-                vecamanja=1;
-
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                duplo=duplo*2;
-                labelT10.setText(""+String.valueOf(duplo+" "));
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(1400);
-
-                Izbor2.pobeda.setVisible(false);
-                frame.remove(Izbor2.pobeda);
+                pogodak();
 
             }
 
             else {
 
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                labelT10.setText(0+" ");
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(2000);
-                clearing();
-                Dobitak.DOBITAK=0;
+                promasaj();
 
             }
         }
@@ -346,36 +300,13 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                 pogodio();
 
-                frame.add(Izbor2.pobeda);
-                Izbor2.pobeda.setVisible(true);
-                karta++;
-                vecamanja=1;
-
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                duplo=duplo*2;
-                labelT10.setText(""+String.valueOf(duplo+" "));
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(1400);
-
-                Izbor2.pobeda.setVisible(false);
-                frame.remove(Izbor2.pobeda);
+                pogodak();
 
             }
 
             else {
 
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                labelT10.setText(0+" ");
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(2000);
-                clearing();
-                Dobitak.DOBITAK=0;
+                promasaj();
 
             }
         }
@@ -447,36 +378,13 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                 pogodio();
 
-                frame.add(Izbor2.pobeda);
-                Izbor2.pobeda.setVisible(true);
-                karta++;
-                vecamanja=1;
-
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                duplo=duplo*2;
-                labelT10.setText(""+String.valueOf(duplo+" "));
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(1400);
-
-                Izbor2.pobeda.setVisible(false);
-                frame.remove(Izbor2.pobeda);
+                pogodak();
 
             }
 
             else {
 
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                labelT10.setText(0+" ");
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(2000);
-                clearing();
-                Dobitak.DOBITAK=0;
+                promasaj();
 
             }
         }
@@ -549,36 +457,13 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                 pogodio();
 
-                frame.add(Izbor2.pobeda);
-                Izbor2.pobeda.setVisible(true);
-                karta++;
-                vecamanja=1;
-
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                duplo=duplo*2;
-                labelT10.setText(""+String.valueOf(duplo+" "));
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(1400);
-
-                Izbor2.pobeda.setVisible(false);
-                frame.remove(Izbor2.pobeda);
+                pogodak();
 
             }
 
             else {
 
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                labelT10.setText(0+" ");
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(2000);
-                clearing();
-                Dobitak.DOBITAK=0;
+                promasaj();
 
             }
         }
@@ -652,36 +537,13 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                 pogodio();
 
-                frame.add(Izbor2.pobeda);
-                Izbor2.pobeda.setVisible(true);
-                karta++;
-                vecamanja=1;
-
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                duplo=duplo*2;
-                labelT10.setText(""+String.valueOf(duplo+" "));
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(1400);
-
-                Izbor2.pobeda.setVisible(false);
-                frame.remove(Izbor2.pobeda);
+                pogodak();
 
             }
 
             else {
 
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                labelT10.setText(0+" ");
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(2000);
-                clearing();
-                Dobitak.DOBITAK=0;
+                promasaj();
 
             }
         }
@@ -756,36 +618,13 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                 pogodio();
 
-                frame.add(Izbor2.pobeda);
-                Izbor2.pobeda.setVisible(true);
-                karta++;
-                vecamanja=1;
-
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                duplo=duplo*2;
-                labelT10.setText(""+String.valueOf(duplo+" "));
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(1400);
-
-                Izbor2.pobeda.setVisible(false);
-                frame.remove(Izbor2.pobeda);
+                pogodak();
 
             }
 
             else {
 
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                labelT10.setText(0+" ");
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(2000);
-                clearing();
-                Dobitak.DOBITAK=0;
+                promasaj();
 
             }
         }
@@ -861,36 +700,13 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                 pogodio();
 
-                frame.add(Izbor2.pobeda);
-                Izbor2.pobeda.setVisible(true);
-                karta++;
-                vecamanja=1;
-
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                duplo=duplo*2;
-                labelT10.setText(""+String.valueOf(duplo+" "));
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(1400);
-
-                Izbor2.pobeda.setVisible(false);
-                frame.remove(Izbor2.pobeda);
+                pogodak();
 
             }
 
             else {
 
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                labelT10.setText(0+" ");
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(2000);
-                clearing();
-                Dobitak.DOBITAK=0;
+                promasaj();
 
             }
         }
@@ -967,36 +783,13 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                 pogodio();
 
-                frame.add(Izbor2.pobeda);
-                Izbor2.pobeda.setVisible(true);
-                karta++;
-                vecamanja=1;
-
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                duplo=duplo*2;
-                labelT10.setText(""+String.valueOf(duplo+" "));
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(1400);
-
-                Izbor2.pobeda.setVisible(false);
-                frame.remove(Izbor2.pobeda);
+                pogodak();
 
             }
 
             else {
 
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                labelT10.setText(0+" ");
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(2000);
-                clearing();
-                Dobitak.DOBITAK=0;
+                promasaj();
 
             }
         }
@@ -1074,36 +867,13 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                 pogodio();
 
-                frame.add(Izbor2.pobeda);
-                Izbor2.pobeda.setVisible(true);
-                karta++;
-                vecamanja=1;
-
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                duplo=duplo*2;
-                labelT10.setText(""+String.valueOf(duplo+" "));
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(1400);
-
-                Izbor2.pobeda.setVisible(false);
-                frame.remove(Izbor2.pobeda);
+                pogodak();
 
             }
 
             else {
 
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                labelT10.setText(0+" ");
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(2000);
-                clearing();
-                Dobitak.DOBITAK=0;
+                promasaj();
 
             }
         }
@@ -1182,36 +952,13 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                 pogodio();
 
-                frame.add(Izbor2.pobeda);
-                Izbor2.pobeda.setVisible(true);
-                karta++;
-                vecamanja=1;
-
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                duplo=duplo*2;
-                labelT10.setText(""+String.valueOf(duplo+" "));
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(1400);
-
-                Izbor2.pobeda.setVisible(false);
-                frame.remove(Izbor2.pobeda);
+                pogodak();
 
             }
 
             else {
 
-                labelT10.setVisible(false);
-                tabela.remove(labelT10);
-                labelT10.setText(0+" ");
-                tabela.add(labelT10);
-                labelT10.setVisible(true);
-
-                Thread.sleep(2000);
-                clearing();
-                Dobitak.DOBITAK=0;
+                promasaj();
 
             }
         }
@@ -1372,4 +1119,64 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
         MyFrame.cr = MyFrame.cr+100;
 
     }
+
+    public void pogodak() throws InterruptedException {
+
+        frame.add(Izbor2.pobeda);
+        Izbor2.pobeda.setVisible(true);
+        karta++;
+        vecamanja=1;
+
+        labelT10.setVisible(false);
+        tabela.remove(labelT10);
+        duplo=duplo*2;
+        labelT10.setText(""+String.valueOf(duplo+" "));
+        tabela.add(labelT10);
+        labelT10.setVisible(true);
+
+        Thread.sleep(1400);
+
+        Izbor2.pobeda.setVisible(false);
+        frame.remove(Izbor2.pobeda);
+
+    }
+
+    public void promasaj() throws InterruptedException {
+
+        labelT10.setVisible(false);
+        tabela.remove(labelT10);
+        labelT10.setText(0+" ");
+        tabela.add(labelT10);
+        labelT10.setVisible(true);
+
+        Thread.sleep(2000);
+        clearing();
+        Dobitak.DOBITAK=0;
+        Izbor2.izbor=0;
+
+        Karta11.card11.setVisible(false);
+        ((Container) Karta10.card10).remove(Karta11.card11);
+        Karta10.card10.setVisible(false);
+        ((Container) Karta09.card09).remove(Karta10.card10);
+        Karta09.card09.setVisible(false);
+        ((Container) Karta08.card08).remove(Karta09.card09);
+        Karta08.card08.setVisible(false);
+        ((Container) Karta07.card07).remove(Karta08.card08);
+        Karta07.card07.setVisible(false);
+        ((Container) Karta06.card06).remove(Karta07.card07);
+        Karta06.card06.setVisible(false);
+        ((Container) Karta05.card05).remove(Karta06.card06);
+        Karta05.card05.setVisible(false);
+        ((Container) Karta04.card04).remove(Karta05.card05);
+        Karta04.card04.setVisible(false);
+        ((Container) Karta03.card03).remove(Karta04.card04);
+        Karta03.card03.setVisible(false);
+        ((Container) Karta02.card02).remove(Karta03.card03);
+        Karta02.card02.setVisible(false);
+        ((Container) Karta01.card01).remove(Karta02.card02);
+        Karta01.card01.setVisible(false);
+        frame.remove(Karta01.card01);
+
+    }
+
 }

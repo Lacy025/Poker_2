@@ -65,6 +65,8 @@ public class Izbor2 implements Brojevi, Dobici, MainFrame, KeyListener {
 
             frame.addKeyListener(this);
 
+            izbor=1;
+
             while (izbor == 1) {
 
                 if (pobedio == 5000) {
