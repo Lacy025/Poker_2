@@ -15,10 +15,6 @@ public class Main {
 			while (game>0) {
 		
 				new MyFrame();
-				
-				if (MyFrame.delj==5) {
-					System.out.println("ISPLATA");
-				}
 
 				if (MyFrame.delj==1) {
 					
@@ -41,7 +37,6 @@ public class Main {
 
 				}
 
-				System.out.println("THE END");
 				MyFrame.jk=60000;
 
 				if (MyFrame.ukupno>0) {
@@ -50,7 +45,7 @@ public class Main {
 				if (MyFrame.ukupno==0) {
 					Thread.sleep(50);
 				}
-				System.out.println(MyFrame.ukupno);
+
 				MyFrame.prekid=0;
 			}
 	}

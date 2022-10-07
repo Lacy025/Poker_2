@@ -17,10 +17,8 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
-import javax.swing.ImageIcon;
-import javax.swing.JComponent;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
+import javax.swing.*;
+import javax.swing.plaf.metal.MetalLookAndFeel;
 
 
 public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
@@ -326,7 +324,8 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 		}
 
 		Dobitak.DOBITAK=0;
-		new Clear();
+		new Clear1();
+		new Clear2();
 		prekid=10000;
 
 		if (cr==0&&igra==0) {
@@ -337,7 +336,18 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 		frame.setLayout(null);
 		frame.setSize(1920,1080);
 		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-		
+			frame.setUndecorated(true);
+			frame.getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
+
+			MetalLookAndFeel.setCurrentTheme(new MyDefaultMetalTheme());
+			try {
+				UIManager.setLookAndFeel(new MetalLookAndFeel());
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+			SwingUtilities.updateComponentTreeUI(frame);
+
 		Jlabelah.setVisible(true);
 
 			URL intro = this.getClass().getClassLoader().getResource("resources/Intro.wav");
@@ -381,17 +391,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 			ul=cr;
 			((JLabel) Jlabelul).setText(""+(ul));
 
-			((JLabel) Jlabeld0).setText(""+String.valueOf(d0*ul));
-			((JLabel) Jlabeld1).setText(""+String.valueOf(d1*ul));
-			((JLabel) Jlabeld2).setText(""+String.valueOf(d2*ul));
-			((JLabel) Jlabeld3).setText(""+String.valueOf(d3*ul));
-			((JLabel) Jlabeld4).setText(""+String.valueOf(d4*ul));
-			((JLabel) Jlabeld5).setText(""+String.valueOf(d5*ul));
-			((JLabel) Jlabeld6).setText(""+String.valueOf(d6*ul));
-			((JLabel) Jlabeld7).setText(""+String.valueOf(d7*ul));
-			((JLabel) Jlabeld8).setText(""+String.valueOf(d8*ul));
-			((JLabel) Jlabeld9).setText(""+String.valueOf(d9*ul));
-
+			ulog();
 			new Ulog();
 
 		}
@@ -422,16 +422,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 
 			((JLabel) Jlabelul).setText(""+(ul));
 
-			((JLabel) Jlabeld0).setText(""+String.valueOf(d0*ul));
-			((JLabel) Jlabeld1).setText(""+String.valueOf(d1*ul));
-			((JLabel) Jlabeld2).setText(""+String.valueOf(d2*ul));
-			((JLabel) Jlabeld3).setText(""+String.valueOf(d3*ul));
-			((JLabel) Jlabeld4).setText(""+String.valueOf(d4*ul));
-			((JLabel) Jlabeld5).setText(""+String.valueOf(d5*ul));
-			((JLabel) Jlabeld6).setText(""+String.valueOf(d6*ul));
-			((JLabel) Jlabeld7).setText(""+String.valueOf(d7*ul));
-			((JLabel) Jlabeld8).setText(""+String.valueOf(d8*ul));
-			((JLabel) Jlabeld9).setText(""+String.valueOf(d9*ul));
+			ulog();
 
 		}
 
@@ -498,6 +489,14 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 		frame.add(JlabelK3);
 		frame.add(JlabelK4);
 		frame.add(JlabelK5);
+
+		frame.add(JlabelR1);
+		frame.add(JlabelR2);
+		frame.add(JlabelM1);
+		frame.add(JlabelM2);
+
+		JlabelM1.setVisible(false);
+		JlabelM2.setVisible(false);
 
 		label0.setVisible(true);
 		label1.setVisible(true);
@@ -637,11 +636,6 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 		JlabelR1.setVisible(false);
 		JlabelR2.setVisible(false);
 
-		frame.add(JlabelR1);
-		frame.add(JlabelR2);
-		frame.add(JlabelM1);
-		frame.add(JlabelM2);
-
 		JlabelM1.setVisible(false);
 		JlabelM2.setVisible(false);
 		
@@ -670,7 +664,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Thread.sleep(500);
 					jk++;
 				}
-				else {
+				if (cr>0) {
 					JlabelM1.setVisible(false);
 					JlabelM2.setVisible(true);
 					Thread.sleep(500);
@@ -689,7 +683,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Thread.sleep(500);
 					jk++;
 				}
-				else {
+				if (cr>0) {
 					JlabelM1.setVisible(false);
 					JlabelM2.setVisible(true);
 					Thread.sleep(500);
@@ -704,7 +698,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Thread.sleep(500);
 					jk++;
 				}
-				else {
+				if (cr>0) {
 					JlabelM1.setVisible(false);
 					JlabelM2.setVisible(true);
 					Thread.sleep(500);
@@ -723,7 +717,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Thread.sleep(500);
 					jk++;
 				}
-				else {
+				if (cr>0) {
 					JlabelM1.setVisible(false);
 					JlabelM2.setVisible(true);
 					Thread.sleep(500);
@@ -738,7 +732,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Thread.sleep(500);
 					jk++;
 				}
-				else {
+				if (cr>0) {
 					JlabelM1.setVisible(false);
 					JlabelM2.setVisible(true);
 					Thread.sleep(500);
@@ -757,7 +751,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Thread.sleep(500);
 					jk++;
 				}
-				else {
+				if (cr>0) {
 					JlabelM1.setVisible(true);
 					JlabelM2.setVisible(false);
 					Thread.sleep(500);
@@ -772,7 +766,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Thread.sleep(500);
 					jk++;
 				}
-				else {
+				if (cr>0) {
 					JlabelM1.setVisible(true);
 					JlabelM2.setVisible(false);
 					Thread.sleep(500);
@@ -790,7 +784,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Thread.sleep(500);
 					jk++;
 				}
-				else {
+				if (cr>0) {
 					JlabelM1.setVisible(true);
 					JlabelM2.setVisible(false);
 					Thread.sleep(500);
@@ -804,7 +798,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Thread.sleep(500);
 					jk++;
 				}
-				else {
+				if (cr>0) {
 					JlabelM1.setVisible(true);
 					JlabelM2.setVisible(false);
 					Thread.sleep(500);
@@ -823,7 +817,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Thread.sleep(500);
 					jk++;
 				}
-				else {
+				if (cr>0) {
 					JlabelM1.setVisible(true);
 					JlabelM2.setVisible(false);
 					Thread.sleep(500);
@@ -837,7 +831,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Thread.sleep(500);
 					jk++;
 				}
-				else {
+				if (cr>0) {
 					JlabelM1.setVisible(false);
 					JlabelM2.setVisible(true);
 					Thread.sleep(500);
@@ -864,7 +858,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Thread.sleep(500);
 					jk++;
 				}
-				else {
+				if (cr>0) {
 					JlabelM1.setVisible(false);
 					JlabelM2.setVisible(true);
 					Thread.sleep(500);
@@ -879,7 +873,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Thread.sleep(500);
 					jk++;
 				}
-				else {
+				if (cr>0) {
 					JlabelM1.setVisible(false);
 					JlabelM2.setVisible(true);
 					Thread.sleep(500);
@@ -894,7 +888,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Thread.sleep(500);
 					jk++;
 				}
-				else {
+				if (cr>0) {
 					JlabelM1.setVisible(false);
 					JlabelM2.setVisible(true);
 					Thread.sleep(500);
@@ -909,7 +903,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Thread.sleep(500);
 					jk++;
 				}
-				else {
+				if (cr>0) {
 					JlabelM1.setVisible(false);
 					JlabelM2.setVisible(true);
 					Thread.sleep(500);
@@ -924,7 +918,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Thread.sleep(500);
 					jk++;
 				}
-				else {
+				if (cr>0) {
 					JlabelM1.setVisible(true);
 					JlabelM2.setVisible(false);
 					Thread.sleep(500);
@@ -939,7 +933,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Thread.sleep(500);
 					jk++;
 				}
-				else {
+				if (cr>0) {
 					JlabelM1.setVisible(true);
 					JlabelM2.setVisible(false);
 					Thread.sleep(500);
@@ -954,7 +948,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Thread.sleep(500);
 					jk++;
 				}
-				else {
+				if (cr>0) {
 					JlabelM1.setVisible(true);
 					JlabelM2.setVisible(false);
 					Thread.sleep(500);
@@ -969,7 +963,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Thread.sleep(500);
 					jk++;
 				}
-				else {
+				if (cr>0) {
 					JlabelM1.setVisible(true);
 					JlabelM2.setVisible(false);
 					Thread.sleep(500);
@@ -992,13 +986,14 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Thread.sleep(500);
 					jk=0;
 				}
-				else {
+				if (cr>0) {
 					JlabelM1.setVisible(true);
 					JlabelM2.setVisible(false);
 					Thread.sleep(500);
 					jk=0;
 				}
 			}
+
 			jk++;
 
 		}
@@ -1445,4 +1440,20 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 	public void keyReleased(KeyEvent e) {
 		
 	}
+
+	public static void ulog() {
+
+		((JLabel) Jlabeld0).setText(""+String.valueOf(d0*ul));
+		((JLabel) Jlabeld1).setText(""+String.valueOf(d1*ul));
+		((JLabel) Jlabeld2).setText(""+String.valueOf(d2*ul));
+		((JLabel) Jlabeld3).setText(""+String.valueOf(d3*ul));
+		((JLabel) Jlabeld4).setText(""+String.valueOf(d4*ul));
+		((JLabel) Jlabeld5).setText(""+String.valueOf(d5*ul));
+		((JLabel) Jlabeld6).setText(""+String.valueOf(d6*ul));
+		((JLabel) Jlabeld7).setText(""+String.valueOf(d7*ul));
+		((JLabel) Jlabeld8).setText(""+String.valueOf(d8*ul));
+		((JLabel) Jlabeld9).setText(""+String.valueOf(d9*ul));
+
+	}
+
 }

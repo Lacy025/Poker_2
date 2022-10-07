@@ -11,7 +11,7 @@ import javax.swing.Timer;
 
 public class Upis1 implements MainFrame, Brojevi {
 
-    public Component Broj1 = new JLabel(""+MyFrame.dobitak*MyFrame.ul+" ");
+    public Component Broj1 = new JLabel(MyFrame.dobitak*MyFrame.ul+" ");
     public static Component Credit1 = new JLabel(""+MyFrame.cr);
 
     Timer timer2;

@@ -40,7 +40,7 @@ public class Deljenje2 implements MainFrame {
                 pauza++;
             }
 
-                Thread.sleep(20-(pauza*2));
+            Thread.sleep(200-((pauza*10)+(MyFrame.n1*3)));
 
 
             MyFrame.JlabelK1.setVisible(false);
@@ -49,8 +49,8 @@ public class Deljenje2 implements MainFrame {
             new Karta1();
 
             frame.add(Karta1.card1);
-            Karta1.card1.setVisible(true);
             Karta1.card1.setBounds(-8, 380, 400, 540);
+            Karta1.card1.setVisible(true);
             ((JComponent) Karta1.card1).setOpaque(false);
 
 
@@ -98,7 +98,7 @@ public class Deljenje2 implements MainFrame {
             }
 
             else {
-                Thread.sleep(20-(pauza*2));
+                Thread.sleep(200-((pauza*10)+(MyFrame.n2*3)));
             }
 
             MyFrame.JlabelK2.setVisible(false);
@@ -107,8 +107,8 @@ public class Deljenje2 implements MainFrame {
             new Karta2();
 
             frame.add(Karta2.card2);
-            Karta2.card2.setVisible(true);
             Karta2.card2.setBounds(373, 380, 400, 540);
+            Karta2.card2.setVisible(true);
             ((JComponent) Karta2.card2).setOpaque(false);
 
             URL karta2 = this.getClass().getClassLoader().getResource("resources/Karta2.wav");
@@ -156,7 +156,7 @@ public class Deljenje2 implements MainFrame {
             }
 
             else {
-                Thread.sleep(20-(pauza*2));
+                Thread.sleep(200-((pauza*10)+(MyFrame.n3*3)));
             }
 
             MyFrame.JlabelK3.setVisible(false);
@@ -165,8 +165,8 @@ public class Deljenje2 implements MainFrame {
             new Karta3();
 
             frame.add(Karta3.card3);
-            Karta3.card3.setVisible(true);
             Karta3.card3.setBounds(753, 380, 400, 540);
+            Karta3.card3.setVisible(true);
             ((JComponent) Karta3.card3).setOpaque(false);
 
             URL karta3 = this.getClass().getClassLoader().getResource("resources/Karta3.wav");
@@ -214,7 +214,7 @@ public class Deljenje2 implements MainFrame {
             }
 
             else {
-                Thread.sleep(20-(pauza*2));
+                Thread.sleep(200-((pauza*10)+(MyFrame.n4*3)));
             }
 
             MyFrame.JlabelK4.setVisible(false);
@@ -223,8 +223,8 @@ public class Deljenje2 implements MainFrame {
             new Karta4();
 
             frame.add(Karta4.card4);
-            Karta4.card4.setVisible(true);
             Karta4.card4.setBounds(1133, 380, 400, 540);
+            Karta4.card4.setVisible(true);
             ((JComponent) Karta4.card4).setOpaque(false);
 
             URL karta4 = this.getClass().getClassLoader().getResource("resources/Karta4.wav");
@@ -272,7 +272,7 @@ public class Deljenje2 implements MainFrame {
             }
 
             else {
-                Thread.sleep(20-(pauza*2));
+                Thread.sleep(200-((pauza*10)+(MyFrame.n5*3)));
             }
 
             MyFrame.JlabelK5.setVisible(false);
@@ -281,8 +281,8 @@ public class Deljenje2 implements MainFrame {
             new Karta5();
 
             frame.add(Karta5.card5);
-            Karta5.card5.setVisible(true);
             Karta5.card5.setBounds(1512, 380, 400, 540);
+            Karta5.card5.setVisible(true);
             ((JComponent) Karta5.card5).setOpaque(false);
 
             URL karta5 = this.getClass().getClassLoader().getResource("resources/Karta5.wav");
@@ -305,10 +305,10 @@ public class Deljenje2 implements MainFrame {
             }
             this.karta5Sound.start();
 
-            Thread.sleep(200);
-            karta=0;
-
         }
+
+        karta=0;
+        Thread.sleep(100);
 
     }
 

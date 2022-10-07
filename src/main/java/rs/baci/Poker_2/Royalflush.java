@@ -16,7 +16,7 @@ public class Royalflush implements MainFrame, Brojevi, Dobici {
         if (MyFrame.delj==1) {
 
             rucno.setLayout(new BorderLayout(50,50));
-            rucno.setBorder(BorderFactory.createMatteBorder(20, 20, 20, 20, Color.RED));
+            rucno.setBorder(BorderFactory.createMatteBorder(20, 20, 20, 20, Color.YELLOW));
             frame.add(rucno);
             rucno.setBounds(0, L1+2, 1292, 32);
             rucno.setVisible(true);
@@ -50,7 +50,7 @@ public class Royalflush implements MainFrame, Brojevi, Dobici {
             labelT10.setOpaque(false);
 
             MyFrame.dobitak=d1*MyFrame.ul;
-            MyFrame.ukupno=d7*MyFrame.ul;
+            MyFrame.ukupno=d1*MyFrame.ul;
 
         }
     }

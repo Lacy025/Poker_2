@@ -132,8 +132,8 @@ public class Deljenje1 implements MainFrame, Brojevi {
 		frame.remove(MyFrame.JlabelK1);
 		new Karta1();
 		frame.add(Karta1.card1);
-		Karta1.card1.setVisible(true);
 		Karta1.card1.setBounds(-8, 380, 400, 540);
+		Karta1.card1.setVisible(true);
 		((JComponent) Karta1.card1).setOpaque(false);
 
 		Thread.sleep(80);
@@ -141,8 +141,8 @@ public class Deljenje1 implements MainFrame, Brojevi {
 		frame.remove(MyFrame.JlabelK2);
 		new Karta2();
 		frame.add(Karta2.card2);
-		Karta2.card2.setVisible(true);
 		Karta2.card2.setBounds(373, 380, 400, 540);
+		Karta2.card2.setVisible(true);
 		((JComponent) Karta2.card2).setOpaque(false);
 
 		Thread.sleep(80);
@@ -150,8 +150,8 @@ public class Deljenje1 implements MainFrame, Brojevi {
 		frame.remove(MyFrame.JlabelK3);
 		new Karta3();
 		frame.add(Karta3.card3);
-		Karta3.card3.setVisible(true);
 		Karta3.card3.setBounds(753, 380, 400, 540);
+		Karta3.card3.setVisible(true);
 		((JComponent) Karta3.card3).setOpaque(false);
 
 		Thread.sleep(80);
@@ -159,8 +159,8 @@ public class Deljenje1 implements MainFrame, Brojevi {
 		frame.remove(MyFrame.JlabelK4);
 		new Karta4();
 		frame.add(Karta4.card4);
-		Karta4.card4.setVisible(true);
 		Karta4.card4.setBounds(1133, 380, 400, 540);
+		Karta4.card4.setVisible(true);
 		((JComponent) Karta4.card4).setOpaque(false);
 
 		Thread.sleep(80);
@@ -168,8 +168,8 @@ public class Deljenje1 implements MainFrame, Brojevi {
 		frame.remove(MyFrame.JlabelK5);
 		new Karta5();
 		frame.add(Karta5.card5);
-		Karta5.card5.setVisible(true);
 		Karta5.card5.setBounds(1512, 380, 400, 540);
+		Karta5.card5.setVisible(true);
 		((JComponent) Karta5.card5).setOpaque(false);
 		Thread.sleep(100);
 
