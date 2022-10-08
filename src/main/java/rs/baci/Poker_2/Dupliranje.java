@@ -986,8 +986,6 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                     Karta11.card11.setVisible(true);
                     ((JComponent) Karta11.card11).setOpaque(false);
 
-
-
                     if ((MyFrame.k11>24&&vecamanja==-1)||(MyFrame.k11<25&&vecamanja==-2)) {
 
                         pogodio();

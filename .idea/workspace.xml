@@ -4,25 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="840edd46-d39a-4597-9bd9-becf4fec8351" name="Changes" comment="2.5.1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Clear1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Clear2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Kasiranje.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/MyDefaultMetalTheme.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Pobednik.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Polovina.java" afterDir="false" />
+    <list default="true" id="840edd46-d39a-4597-9bd9-becf4fec8351" name="Changes" comment="2.6.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Clear.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Deljenje1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Deljenje1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Deljenje2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Deljenje2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Dupliranje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Dupliranje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Fiveofakind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Fiveofakind.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/MyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/MyFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Royalflush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Royalflush.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Upis1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Upis1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Upis2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Upis2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +34,7 @@
     <setting file="file://$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Izbor1.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Izbor2.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta01.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Kasiranje.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Main.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/MyFrame.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Polovina.java" root0="SKIP_INSPECTION" />
@@ -315,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663803033810</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="2.6.0">
+      <created>1665181158608</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1665181158608</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -352,7 +345,8 @@
     <MESSAGE value="2.4.9" />
     <MESSAGE value="2.5.0" />
     <MESSAGE value="2.5.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.5.1" />
+    <MESSAGE value="2.6.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.6.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
