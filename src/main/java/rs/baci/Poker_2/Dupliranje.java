@@ -23,7 +23,6 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 
 public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
-
     JLabel veca = new JLabel("8, 9, 10, J, Q, K = VEĆA");
     JLabel manja = new JLabel(" A, 2, 3, 4, 5, 6 = MANJA");
     public static JLabel VECA = new JLabel("VEĆA");
@@ -1098,8 +1097,8 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                 if (duplo>1) {
 
-                    vecamanja=-100;
-                    pola=1;
+                    vecamanja = -100;
+                    pola = 1;
 
                     break;
 
@@ -1113,9 +1112,9 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
             case 32 :
 
-                vecamanja=-100;
-                karta=-3;
-                kockanje=0;
+                vecamanja = -100;
+                karta = -3;
+                kockanje = 0;
 
                 break;
 
@@ -1245,8 +1244,8 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
         clearing();
 
-        Dobitak.DOBITAK=0;
-        Izbor2.izbor=0;
+        Dobitak.DOBITAK = 0;
+        Izbor2.izbor = 0;
 
     }
 

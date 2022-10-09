@@ -276,9 +276,9 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 
 		frame.addKeyListener(this);
 
-		prekid=1;
+		prekid = 1;
 
-		if (cr>0) {
+		if (cr>0&&(Dupliranje.karta>0||Dobitak.DOBITAK>0)) {
 
 			while (igra==0||prekid<9999) {
 
@@ -321,6 +321,10 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				prekid++;
 			}
 
+		}
+
+		else {
+			Thread.sleep(500);
 		}
 
 		Dobitak.DOBITAK=0;
