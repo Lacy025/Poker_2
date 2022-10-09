@@ -102,68 +102,71 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                 PRAZNA.setBounds(-800, 350, 2000, 600);
                 PRAZNA.setOpaque(false);
 
-                Random karta01 = new Random();
+                provera();
 
-                MyFrame.k01 = karta01.nextInt(49);
+                if (karta == 1) {
 
-                while (MyFrame.k01==0) {
+                    Random karta01 = new Random();
 
                     MyFrame.k01 = karta01.nextInt(49);
 
-                }
+                    while (MyFrame.k01 == 0) {
 
-                System.out.println(MyFrame.k01);
+                        MyFrame.k01 = karta01.nextInt(49);
 
-                new Karta01();
+                    }
 
-                while (vecamanja>0) {
+                    System.out.println(MyFrame.k01);
 
-                    if (razmak==200) {
+                    new Karta01();
 
-                        vecasound();
-                        veca.setVisible(true);
-                        manja.setVisible(false);
-                        Thread.sleep(300);
+                    while (vecamanja > 0) {
+
+                        if (razmak == 200) {
+
+                            vecasound();
+                            veca.setVisible(true);
+                            manja.setVisible(false);
+                            Thread.sleep(300);
+                            razmak++;
+
+                        }
+
+                        if (razmak == 400) {
+
+                            manjasound();
+                            veca.setVisible(false);
+                            manja.setVisible(true);
+                            Thread.sleep(300);
+                            razmak = 0;
+
+                        }
                         razmak++;
-
                     }
 
-                    if (razmak==400) {
+                    if (vecamanja > -3) {
 
-                        manjasound();
                         veca.setVisible(false);
-                        manja.setVisible(true);
-                        Thread.sleep(300);
-                        razmak=0;
+                        manja.setVisible(false);
+                        frame.remove(veca);
+                        frame.remove(manja);
 
-                    }
-                    razmak++;
-                }
+                        PRAZNA.setVisible(false);
+                        frame.remove(PRAZNA);
+                        frame.add(Karta01.card01);
+                        Karta01.card01.setBounds(-805, 350, 2000, 600);
+                        Karta01.card01.setVisible(true);
 
-                if (vecamanja>-3) {
+                        if ((MyFrame.k01 > 24 && vecamanja == -1) || (MyFrame.k01 < 25 && vecamanja == -2)) {
 
-                    veca.setVisible(false);
-                    manja.setVisible(false);
-                    frame.remove(veca);
-                    frame.remove(manja);
+                            pogodio();
 
-                    PRAZNA.setVisible(false);
-                    frame.remove(PRAZNA);
-                    frame.add(Karta01.card01);
-                    Karta01.card01.setBounds(-805, 350, 2000, 600);
-                    Karta01.card01.setVisible(true);
+                            pogodak();
 
-                    if ((MyFrame.k01>24&&vecamanja==-1)||(MyFrame.k01<25&&vecamanja==-2)) {
+                        } else {
 
-                        pogodio();
-
-                        pogodak();
-
-                    }
-
-                    else {
-
-                        promasaj();
+                            promasaj();
+                        }
                     }
                 }
             }
@@ -175,74 +178,77 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                 PRAZNA.setBounds(70, 0, 2000, 600);
                 PRAZNA.setOpaque(false);
 
-                Random karta02 = new Random();
+                provera();
 
-                MyFrame.k02 = karta02.nextInt(49);
+                if (karta == 2) {
 
-                while (MyFrame.k02==0 ||
-                        MyFrame.k02==MyFrame.k01) {
+                    Random karta02 = new Random();
 
                     MyFrame.k02 = karta02.nextInt(49);
 
-                }
+                    while (MyFrame.k02 == 0 ||
+                            MyFrame.k02 == MyFrame.k01) {
 
-                System.out.println(MyFrame.k02);
+                        MyFrame.k02 = karta02.nextInt(49);
 
-                new Karta02();
+                    }
 
-                frame.add(veca);
-                frame.add(manja);
+                    System.out.println(MyFrame.k02);
 
-                while (vecamanja>0) {
+                    new Karta02();
 
-                    if (razmak==200) {
+                    frame.add(veca);
+                    frame.add(manja);
 
-                        vecasound();
-                        veca.setVisible(true);
-                        manja.setVisible(false);
-                        Thread.sleep(275);
+                    while (vecamanja > 0) {
+
+                        if (razmak == 200) {
+
+                            vecasound();
+                            veca.setVisible(true);
+                            manja.setVisible(false);
+                            Thread.sleep(275);
+                            razmak++;
+
+                        }
+
+                        if (razmak == 400) {
+
+                            manjasound();
+                            veca.setVisible(false);
+                            manja.setVisible(true);
+                            Thread.sleep(275);
+                            razmak = 0;
+
+                        }
                         razmak++;
-
                     }
 
-                    if (razmak==400) {
+                    if (vecamanja > -3) {
 
-                        manjasound();
                         veca.setVisible(false);
-                        manja.setVisible(true);
-                        Thread.sleep(275);
-                        razmak=0;
+                        manja.setVisible(false);
+                        frame.remove(veca);
+                        frame.remove(manja);
 
-                    }
-                    razmak++;
-                }
+                        PRAZNA.setVisible(false);
+                        ((Container) Karta01.card01).remove(PRAZNA);
+                        ((Container) Karta01.card01).add(Karta02.card02);
+                        Karta02.card02.setBounds(70, 0, 2000, 600);
+                        Karta02.card02.setVisible(true);
+                        ((JComponent) Karta02.card02).setOpaque(false);
 
-                if (vecamanja>-3) {
+                        if ((MyFrame.k02 > 24 && vecamanja == -1) || (MyFrame.k02 < 25 && vecamanja == -2)) {
 
-                    veca.setVisible(false);
-                    manja.setVisible(false);
-                    frame.remove(veca);
-                    frame.remove(manja);
+                            pogodio();
 
-                    PRAZNA.setVisible(false);
-                    ((Container) Karta01.card01).remove(PRAZNA);
-                    ((Container) Karta01.card01).add(Karta02.card02);
-                    Karta02.card02.setBounds(70, 0, 2000, 600);
-                    Karta02.card02.setVisible(true);
-                    ((JComponent) Karta02.card02).setOpaque(false);
+                            pogodak();
 
-                    if ((MyFrame.k02>24&&vecamanja==-1)||(MyFrame.k02<25&&vecamanja==-2)) {
+                        } else {
 
-                        pogodio();
+                            promasaj();
 
-                        pogodak();
-
-                    }
-
-                    else {
-
-                        promasaj();
-
+                        }
                     }
                 }
             }
@@ -254,75 +260,78 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                 PRAZNA.setBounds(70, 0, 2000, 600);
                 PRAZNA.setOpaque(false);
 
-                Random karta03 = new Random();
+                provera();
 
-                MyFrame.k03 = karta03.nextInt(49);
+                if (karta == 3) {
 
-                while (MyFrame.k03==0 ||
-                        MyFrame.k03==MyFrame.k01 ||
-                        MyFrame.k03==MyFrame.k02) {
+                    Random karta03 = new Random();
 
                     MyFrame.k03 = karta03.nextInt(49);
 
-                }
+                    while (MyFrame.k03 == 0 ||
+                            MyFrame.k03 == MyFrame.k01 ||
+                            MyFrame.k03 == MyFrame.k02) {
 
-                System.out.println(MyFrame.k03);
+                        MyFrame.k03 = karta03.nextInt(49);
 
-                new Karta03();
+                    }
 
-                frame.add(veca);
-                frame.add(manja);
+                    System.out.println(MyFrame.k03);
 
-                while (vecamanja>0) {
+                    new Karta03();
 
-                    if (razmak==200) {
+                    frame.add(veca);
+                    frame.add(manja);
 
-                        vecasound();
-                        veca.setVisible(true);
-                        manja.setVisible(false);
-                        Thread.sleep(250);
+                    while (vecamanja > 0) {
+
+                        if (razmak == 200) {
+
+                            vecasound();
+                            veca.setVisible(true);
+                            manja.setVisible(false);
+                            Thread.sleep(250);
+                            razmak++;
+
+                        }
+
+                        if (razmak == 400) {
+
+                            manjasound();
+                            veca.setVisible(false);
+                            manja.setVisible(true);
+                            Thread.sleep(250);
+                            razmak = 0;
+
+                        }
                         razmak++;
-
                     }
 
-                    if (razmak==400) {
+                    if (vecamanja > -3) {
 
-                        manjasound();
                         veca.setVisible(false);
-                        manja.setVisible(true);
-                        Thread.sleep(250);
-                        razmak=0;
+                        manja.setVisible(false);
+                        frame.remove(veca);
+                        frame.remove(manja);
 
-                    }
-                    razmak++;
-                }
+                        PRAZNA.setVisible(false);
+                        ((Container) Karta02.card02).remove(PRAZNA);
+                        ((Container) Karta02.card02).add(Karta03.card03);
+                        Karta03.card03.setBounds(70, 0, 2000, 600);
+                        Karta03.card03.setVisible(true);
+                        ((JComponent) Karta03.card03).setOpaque(false);
 
-                if (vecamanja>-3) {
+                        if ((MyFrame.k03 > 24 && vecamanja == -1) || (MyFrame.k03 < 25 && vecamanja == -2)) {
 
-                    veca.setVisible(false);
-                    manja.setVisible(false);
-                    frame.remove(veca);
-                    frame.remove(manja);
+                            pogodio();
 
-                    PRAZNA.setVisible(false);
-                    ((Container) Karta02.card02).remove(PRAZNA);
-                    ((Container) Karta02.card02).add(Karta03.card03);
-                    Karta03.card03.setBounds(70, 0, 2000, 600);
-                    Karta03.card03.setVisible(true);
-                    ((JComponent) Karta03.card03).setOpaque(false);
+                            pogodak();
 
-                    if ((MyFrame.k03>24&&vecamanja==-1)||(MyFrame.k03<25&&vecamanja==-2)) {
+                        } else {
 
-                        pogodio();
+                            promasaj();
 
-                        pogodak();
-
-                    }
-
-                    else {
-
-                        promasaj();
-
+                        }
                     }
                 }
             }
@@ -334,76 +343,79 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                 PRAZNA.setBounds(70, 0, 2000, 600);
                 PRAZNA.setOpaque(false);
 
-                Random karta04 = new Random();
+                provera();
 
-                MyFrame.k04 = karta04.nextInt(49);
+                if (karta == 4) {
 
-                while (MyFrame.k04==0 ||
-                        MyFrame.k04==MyFrame.k01 ||
-                        MyFrame.k04==MyFrame.k02 ||
-                        MyFrame.k04==MyFrame.k03) {
+                    Random karta04 = new Random();
 
                     MyFrame.k04 = karta04.nextInt(49);
 
-                }
+                    while (MyFrame.k04 == 0 ||
+                            MyFrame.k04 == MyFrame.k01 ||
+                            MyFrame.k04 == MyFrame.k02 ||
+                            MyFrame.k04 == MyFrame.k03) {
 
-                System.out.println(MyFrame.k04);
+                        MyFrame.k04 = karta04.nextInt(49);
 
-                new Karta04();
+                    }
 
-                frame.add(veca);
-                frame.add(manja);
+                    System.out.println(MyFrame.k04);
 
-                while (vecamanja>0) {
+                    new Karta04();
 
-                    if (razmak==200) {
+                    frame.add(veca);
+                    frame.add(manja);
 
-                        vecasound();
-                        veca.setVisible(true);
-                        manja.setVisible(false);
-                        Thread.sleep(225);
+                    while (vecamanja > 0) {
+
+                        if (razmak == 200) {
+
+                            vecasound();
+                            veca.setVisible(true);
+                            manja.setVisible(false);
+                            Thread.sleep(225);
+                            razmak++;
+
+                        }
+
+                        if (razmak == 400) {
+
+                            manjasound();
+                            veca.setVisible(false);
+                            manja.setVisible(true);
+                            Thread.sleep(225);
+                            razmak = 0;
+
+                        }
                         razmak++;
-
                     }
 
-                    if (razmak==400) {
+                    if (vecamanja > -3) {
 
-                        manjasound();
                         veca.setVisible(false);
-                        manja.setVisible(true);
-                        Thread.sleep(225);
-                        razmak=0;
+                        manja.setVisible(false);
+                        frame.remove(veca);
+                        frame.remove(manja);
 
-                    }
-                    razmak++;
-                }
+                        PRAZNA.setVisible(false);
+                        ((Container) Karta03.card03).remove(PRAZNA);
+                        ((Container) Karta03.card03).add(Karta04.card04);
+                        Karta04.card04.setBounds(70, 0, 2000, 600);
+                        Karta04.card04.setVisible(true);
+                        ((JComponent) Karta04.card04).setOpaque(false);
 
-                if (vecamanja>-3) {
+                        if ((MyFrame.k04 > 24 && vecamanja == -1) || (MyFrame.k04 < 25 && vecamanja == -2)) {
 
-                    veca.setVisible(false);
-                    manja.setVisible(false);
-                    frame.remove(veca);
-                    frame.remove(manja);
+                            pogodio();
 
-                    PRAZNA.setVisible(false);
-                    ((Container) Karta03.card03).remove(PRAZNA);
-                    ((Container) Karta03.card03).add(Karta04.card04);
-                    Karta04.card04.setBounds(70, 0, 2000, 600);
-                    Karta04.card04.setVisible(true);
-                    ((JComponent) Karta04.card04).setOpaque(false);
+                            pogodak();
 
-                    if ((MyFrame.k04>24&&vecamanja==-1)||(MyFrame.k04<25&&vecamanja==-2)) {
+                        } else {
 
-                        pogodio();
+                            promasaj();
 
-                        pogodak();
-
-                    }
-
-                    else {
-
-                        promasaj();
-
+                        }
                     }
                 }
             }
@@ -415,76 +427,79 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                 PRAZNA.setBounds(70, 0, 2000, 600);
                 PRAZNA.setOpaque(false);
 
-                Random karta05 = new Random();
+                provera();
 
-                MyFrame.k05 = karta05.nextInt(49);
+                if (karta == 5) {
 
-                while (MyFrame.k05==0 ||
-                        MyFrame.k05==MyFrame.k01 ||
-                        MyFrame.k05==MyFrame.k02 ||
-                        MyFrame.k05==MyFrame.k03 ||
-                        MyFrame.k05==MyFrame.k04) {
+                    Random karta05 = new Random();
 
                     MyFrame.k05 = karta05.nextInt(49);
 
-                }
+                    while (MyFrame.k05 == 0 ||
+                            MyFrame.k05 == MyFrame.k01 ||
+                            MyFrame.k05 == MyFrame.k02 ||
+                            MyFrame.k05 == MyFrame.k03 ||
+                            MyFrame.k05 == MyFrame.k04) {
 
-                System.out.println(MyFrame.k05);
+                        MyFrame.k05 = karta05.nextInt(49);
 
-                new Karta05();
+                    }
 
-                frame.add(veca);
-                frame.add(manja);
+                    System.out.println(MyFrame.k05);
 
-                while (vecamanja>0) {
+                    new Karta05();
 
-                    if (razmak==200) {
+                    frame.add(veca);
+                    frame.add(manja);
 
-                        vecasound();
-                        veca.setVisible(true);
-                        manja.setVisible(false);
-                        Thread.sleep(200);
+                    while (vecamanja > 0) {
+
+                        if (razmak == 200) {
+
+                            vecasound();
+                            veca.setVisible(true);
+                            manja.setVisible(false);
+                            Thread.sleep(200);
+                            razmak++;
+
+                        }
+
+                        if (razmak == 400) {
+
+                            manjasound();
+                            veca.setVisible(false);
+                            manja.setVisible(true);
+                            Thread.sleep(200);
+                            razmak = 0;
+
+                        }
                         razmak++;
-
                     }
 
-                    if (razmak==400) {
+                    if (vecamanja > -3) {
 
-                        manjasound();
                         veca.setVisible(false);
-                        manja.setVisible(true);
-                        Thread.sleep(200);
-                        razmak=0;
+                        manja.setVisible(false);
+                        frame.remove(veca);
+                        frame.remove(manja);
 
-                    }
-                    razmak++;
-                }
+                        PRAZNA.setVisible(false);
+                        ((Container) Karta04.card04).remove(PRAZNA);
+                        ((Container) Karta04.card04).add(Karta05.card05);
+                        Karta05.card05.setBounds(70, 0, 2000, 600);
+                        Karta05.card05.setVisible(true);
+                        ((JComponent) Karta05.card05).setOpaque(false);
 
-                if (vecamanja>-3) {
+                        if ((MyFrame.k05 > 24 && vecamanja == -1) || (MyFrame.k05 < 25 && vecamanja == -2)) {
 
-                    veca.setVisible(false);
-                    manja.setVisible(false);
-                    frame.remove(veca);
-                    frame.remove(manja);
+                            pogodio();
 
-                    PRAZNA.setVisible(false);
-                    ((Container) Karta04.card04).remove(PRAZNA);
-                    ((Container) Karta04.card04).add(Karta05.card05);
-                    Karta05.card05.setBounds(70, 0, 2000, 600);
-                    Karta05.card05.setVisible(true);
-                    ((JComponent) Karta05.card05).setOpaque(false);
+                            pogodak();
 
-                    if ((MyFrame.k05>24&&vecamanja==-1)||(MyFrame.k05<25&&vecamanja==-2)) {
+                        } else {
 
-                        pogodio();
-
-                        pogodak();
-
-                    }
-
-                    else {
-
-                        promasaj();
+                            promasaj();
+                        }
                     }
                 }
             }
@@ -496,78 +511,81 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                 PRAZNA.setBounds(70, 0, 2000, 600);
                 PRAZNA.setOpaque(false);
 
-                Random karta06 = new Random();
+                provera();
 
-                MyFrame.k06 = karta06.nextInt(49);
+                if (karta == 6) {
 
-                while (MyFrame.k06==0 ||
-                        MyFrame.k06==MyFrame.k01 ||
-                        MyFrame.k06==MyFrame.k02 ||
-                        MyFrame.k06==MyFrame.k03 ||
-                        MyFrame.k06==MyFrame.k04 ||
-                        MyFrame.k06==MyFrame.k05) {
+                    Random karta06 = new Random();
 
                     MyFrame.k06 = karta06.nextInt(49);
 
-                }
+                    while (MyFrame.k06 == 0 ||
+                            MyFrame.k06 == MyFrame.k01 ||
+                            MyFrame.k06 == MyFrame.k02 ||
+                            MyFrame.k06 == MyFrame.k03 ||
+                            MyFrame.k06 == MyFrame.k04 ||
+                            MyFrame.k06 == MyFrame.k05) {
 
-                System.out.println(MyFrame.k06);
+                        MyFrame.k06 = karta06.nextInt(49);
 
-                new Karta06();
+                    }
 
-                frame.add(veca);
-                frame.add(manja);
+                    System.out.println(MyFrame.k06);
 
-                while (vecamanja>0) {
+                    new Karta06();
 
-                    if (razmak==200) {
+                    frame.add(veca);
+                    frame.add(manja);
 
-                        vecasound();
-                        veca.setVisible(true);
-                        manja.setVisible(false);
-                        Thread.sleep(175);
+                    while (vecamanja > 0) {
+
+                        if (razmak == 200) {
+
+                            vecasound();
+                            veca.setVisible(true);
+                            manja.setVisible(false);
+                            Thread.sleep(175);
+                            razmak++;
+
+                        }
+
+                        if (razmak == 400) {
+
+                            manjasound();
+                            veca.setVisible(false);
+                            manja.setVisible(true);
+                            Thread.sleep(175);
+                            razmak = 0;
+
+                        }
                         razmak++;
-
                     }
 
-                    if (razmak==400) {
+                    if (vecamanja > -3) {
 
-                        manjasound();
                         veca.setVisible(false);
-                        manja.setVisible(true);
-                        Thread.sleep(175);
-                        razmak=0;
+                        manja.setVisible(false);
+                        frame.remove(veca);
+                        frame.remove(manja);
 
-                    }
-                    razmak++;
-                }
+                        PRAZNA.setVisible(false);
+                        ((Container) Karta05.card05).remove(PRAZNA);
+                        ((Container) Karta05.card05).add(Karta06.card06);
+                        Karta06.card06.setBounds(70, 0, 2000, 600);
+                        Karta06.card06.setVisible(true);
+                        ((JComponent) Karta06.card06).setOpaque(false);
 
-                if (vecamanja>-3) {
+                        if ((MyFrame.k06 > 24 && vecamanja == -1) || (MyFrame.k06 < 25 && vecamanja == -2)) {
 
-                    veca.setVisible(false);
-                    manja.setVisible(false);
-                    frame.remove(veca);
-                    frame.remove(manja);
+                            pogodio();
 
-                    PRAZNA.setVisible(false);
-                    ((Container) Karta05.card05).remove(PRAZNA);
-                    ((Container) Karta05.card05).add(Karta06.card06);
-                    Karta06.card06.setBounds(70, 0, 2000, 600);
-                    Karta06.card06.setVisible(true);
-                    ((JComponent) Karta06.card06).setOpaque(false);
+                            pogodak();
 
-                    if ((MyFrame.k06>24&&vecamanja==-1)||(MyFrame.k06<25&&vecamanja==-2)) {
+                        } else {
 
-                        pogodio();
+                            promasaj();
 
-                        pogodak();
-
-                    }
-
-                    else {
-
-                        promasaj();
-
+                        }
                     }
                 }
             }
@@ -579,79 +597,82 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                 PRAZNA.setBounds(70, 0, 2000, 600);
                 PRAZNA.setOpaque(false);
 
-                Random karta07 = new Random();
+                provera();
 
-                MyFrame.k07 = karta07.nextInt(49);
+                if (karta == 7) {
 
-                while (MyFrame.k07==0 ||
-                        MyFrame.k07==MyFrame.k01 ||
-                        MyFrame.k07==MyFrame.k02 ||
-                        MyFrame.k07==MyFrame.k03 ||
-                        MyFrame.k07==MyFrame.k04 ||
-                        MyFrame.k07==MyFrame.k05 ||
-                        MyFrame.k07==MyFrame.k06) {
+                    Random karta07 = new Random();
 
                     MyFrame.k07 = karta07.nextInt(49);
 
-                }
+                    while (MyFrame.k07 == 0 ||
+                            MyFrame.k07 == MyFrame.k01 ||
+                            MyFrame.k07 == MyFrame.k02 ||
+                            MyFrame.k07 == MyFrame.k03 ||
+                            MyFrame.k07 == MyFrame.k04 ||
+                            MyFrame.k07 == MyFrame.k05 ||
+                            MyFrame.k07 == MyFrame.k06) {
 
-                System.out.println(MyFrame.k07);
+                        MyFrame.k07 = karta07.nextInt(49);
 
-                new Karta07();
+                    }
 
-                frame.add(veca);
-                frame.add(manja);
+                    System.out.println(MyFrame.k07);
 
-                while (vecamanja>0) {
+                    new Karta07();
 
-                    if (razmak==200) {
+                    frame.add(veca);
+                    frame.add(manja);
 
-                        vecasound();
-                        veca.setVisible(true);
-                        manja.setVisible(false);
-                        Thread.sleep(150);
+                    while (vecamanja > 0) {
+
+                        if (razmak == 200) {
+
+                            vecasound();
+                            veca.setVisible(true);
+                            manja.setVisible(false);
+                            Thread.sleep(150);
+                            razmak++;
+
+                        }
+
+                        if (razmak == 400) {
+
+                            manjasound();
+                            veca.setVisible(false);
+                            manja.setVisible(true);
+                            Thread.sleep(150);
+                            razmak = 0;
+
+                        }
                         razmak++;
-
                     }
 
-                    if (razmak==400) {
+                    if (vecamanja > -3) {
 
-                        manjasound();
                         veca.setVisible(false);
-                        manja.setVisible(true);
-                        Thread.sleep(150);
-                        razmak=0;
+                        manja.setVisible(false);
+                        frame.remove(veca);
+                        frame.remove(manja);
 
-                    }
-                    razmak++;
-                }
+                        PRAZNA.setVisible(false);
+                        ((Container) Karta06.card06).remove(PRAZNA);
+                        ((Container) Karta06.card06).add(Karta07.card07);
+                        Karta07.card07.setBounds(70, 0, 2000, 600);
+                        Karta07.card07.setVisible(true);
+                        ((JComponent) Karta07.card07).setOpaque(false);
 
-                if (vecamanja>-3) {
+                        if ((MyFrame.k07 > 24 && vecamanja == -1) || (MyFrame.k07 < 25 && vecamanja == -2)) {
 
-                    veca.setVisible(false);
-                    manja.setVisible(false);
-                    frame.remove(veca);
-                    frame.remove(manja);
+                            pogodio();
 
-                    PRAZNA.setVisible(false);
-                    ((Container) Karta06.card06).remove(PRAZNA);
-                    ((Container) Karta06.card06).add(Karta07.card07);
-                    Karta07.card07.setBounds(70, 0, 2000, 600);
-                    Karta07.card07.setVisible(true);
-                    ((JComponent) Karta07.card07).setOpaque(false);
+                            pogodak();
 
-                    if ((MyFrame.k07>24&&vecamanja==-1)||(MyFrame.k07<25&&vecamanja==-2)) {
+                        } else {
 
-                        pogodio();
+                            promasaj();
 
-                        pogodak();
-
-                    }
-
-                    else {
-
-                        promasaj();
-
+                        }
                     }
                 }
             }
@@ -663,79 +684,82 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                 PRAZNA.setBounds(70, 0, 2000, 600);
                 PRAZNA.setOpaque(false);
 
-                Random karta08 = new Random();
+                provera();
 
-                MyFrame.k08 = karta08.nextInt(49);
+                if (karta == 8) {
 
-                while (MyFrame.k08==0 ||
-                        MyFrame.k08==MyFrame.k01 ||
-                        MyFrame.k08==MyFrame.k02 ||
-                        MyFrame.k08==MyFrame.k03 ||
-                        MyFrame.k08==MyFrame.k04 ||
-                        MyFrame.k08==MyFrame.k05 ||
-                        MyFrame.k08==MyFrame.k06 ||
-                        MyFrame.k08==MyFrame.k07) {
+                    Random karta08 = new Random();
 
                     MyFrame.k08 = karta08.nextInt(49);
 
-                }
+                    while (MyFrame.k08 == 0 ||
+                            MyFrame.k08 == MyFrame.k01 ||
+                            MyFrame.k08 == MyFrame.k02 ||
+                            MyFrame.k08 == MyFrame.k03 ||
+                            MyFrame.k08 == MyFrame.k04 ||
+                            MyFrame.k08 == MyFrame.k05 ||
+                            MyFrame.k08 == MyFrame.k06 ||
+                            MyFrame.k08 == MyFrame.k07) {
 
-                System.out.println(MyFrame.k08);
+                        MyFrame.k08 = karta08.nextInt(49);
 
-                new Karta08();
+                    }
 
-                frame.add(veca);
-                frame.add(manja);
+                    System.out.println(MyFrame.k08);
 
-                while (vecamanja>0) {
+                    new Karta08();
 
-                    if (razmak==200) {
+                    frame.add(veca);
+                    frame.add(manja);
 
-                        vecasound();
-                        veca.setVisible(true);
-                        manja.setVisible(false);
-                        Thread.sleep(125);
+                    while (vecamanja > 0) {
+
+                        if (razmak == 200) {
+
+                            vecasound();
+                            veca.setVisible(true);
+                            manja.setVisible(false);
+                            Thread.sleep(125);
+                            razmak++;
+
+                        }
+
+                        if (razmak == 400) {
+
+                            manjasound();
+                            veca.setVisible(false);
+                            manja.setVisible(true);
+                            Thread.sleep(125);
+                            razmak = 0;
+
+                        }
                         razmak++;
-
                     }
 
-                    if (razmak==400) {
+                    if (vecamanja > -3) {
 
-                        manjasound();
                         veca.setVisible(false);
-                        manja.setVisible(true);
-                        Thread.sleep(125);
-                        razmak=0;
+                        manja.setVisible(false);
+                        frame.remove(veca);
+                        frame.remove(manja);
 
-                    }
-                    razmak++;
-                }
+                        PRAZNA.setVisible(false);
+                        ((Container) Karta07.card07).remove(PRAZNA);
+                        ((Container) Karta07.card07).add(Karta08.card08);
+                        Karta08.card08.setBounds(70, 0, 2000, 600);
+                        Karta08.card08.setVisible(true);
+                        ((JComponent) Karta08.card08).setOpaque(false);
 
-                if (vecamanja>-3) {
+                        if ((MyFrame.k08 > 24 && vecamanja == -1) || (MyFrame.k08 < 25 && vecamanja == -2)) {
 
-                    veca.setVisible(false);
-                    manja.setVisible(false);
-                    frame.remove(veca);
-                    frame.remove(manja);
+                            pogodio();
 
-                    PRAZNA.setVisible(false);
-                    ((Container) Karta07.card07).remove(PRAZNA);
-                    ((Container) Karta07.card07).add(Karta08.card08);
-                    Karta08.card08.setBounds(70, 0, 2000, 600);
-                    Karta08.card08.setVisible(true);
-                    ((JComponent) Karta08.card08).setOpaque(false);
+                            pogodak();
 
-                    if ((MyFrame.k08>24&&vecamanja==-1)||(MyFrame.k08<25&&vecamanja==-2)) {
+                        } else {
 
-                        pogodio();
-
-                        pogodak();
-
-                    }
-
-                    else {
-
-                        promasaj();
+                            promasaj();
+                        }
                     }
                 }
             }
@@ -747,81 +771,84 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                 PRAZNA.setBounds(70, 0, 2000, 600);
                 PRAZNA.setOpaque(false);
 
-                Random karta09 = new Random();
+                provera();
 
-                MyFrame.k09 = karta09.nextInt(49);
+                if (karta == 9) {
 
-                while (MyFrame.k09==0 ||
-                        MyFrame.k09==MyFrame.k01 ||
-                        MyFrame.k09==MyFrame.k02 ||
-                        MyFrame.k09==MyFrame.k03 ||
-                        MyFrame.k09==MyFrame.k04 ||
-                        MyFrame.k09==MyFrame.k05 ||
-                        MyFrame.k09==MyFrame.k06 ||
-                        MyFrame.k09==MyFrame.k07 ||
-                        MyFrame.k09==MyFrame.k08) {
+                    Random karta09 = new Random();
 
                     MyFrame.k09 = karta09.nextInt(49);
 
-                }
+                    while (MyFrame.k09 == 0 ||
+                            MyFrame.k09 == MyFrame.k01 ||
+                            MyFrame.k09 == MyFrame.k02 ||
+                            MyFrame.k09 == MyFrame.k03 ||
+                            MyFrame.k09 == MyFrame.k04 ||
+                            MyFrame.k09 == MyFrame.k05 ||
+                            MyFrame.k09 == MyFrame.k06 ||
+                            MyFrame.k09 == MyFrame.k07 ||
+                            MyFrame.k09 == MyFrame.k08) {
 
-                System.out.println(MyFrame.k09);
+                        MyFrame.k09 = karta09.nextInt(49);
 
-                new Karta09();
+                    }
 
-                frame.add(veca);
-                frame.add(manja);
+                    System.out.println(MyFrame.k09);
 
-                while (vecamanja>0) {
+                    new Karta09();
 
-                    if (razmak==200) {
+                    frame.add(veca);
+                    frame.add(manja);
 
-                        vecasound();
-                        veca.setVisible(true);
-                        manja.setVisible(false);
-                        Thread.sleep(100);
+                    while (vecamanja > 0) {
+
+                        if (razmak == 200) {
+
+                            vecasound();
+                            veca.setVisible(true);
+                            manja.setVisible(false);
+                            Thread.sleep(100);
+                            razmak++;
+
+                        }
+
+                        if (razmak == 400) {
+
+                            manjasound();
+                            veca.setVisible(false);
+                            manja.setVisible(true);
+                            Thread.sleep(100);
+                            razmak = 0;
+
+                        }
                         razmak++;
-
                     }
 
-                    if (razmak==400) {
+                    if (vecamanja > -3) {
 
-                        manjasound();
                         veca.setVisible(false);
-                        manja.setVisible(true);
-                        Thread.sleep(100);
-                        razmak=0;
+                        manja.setVisible(false);
+                        frame.remove(veca);
+                        frame.remove(manja);
 
-                    }
-                    razmak++;
-                }
+                        PRAZNA.setVisible(false);
+                        ((Container) Karta08.card08).remove(PRAZNA);
+                        ((Container) Karta08.card08).add(Karta09.card09);
+                        Karta09.card09.setBounds(70, 0, 2000, 600);
+                        Karta09.card09.setVisible(true);
+                        ((JComponent) Karta09.card09).setOpaque(false);
 
-                if (vecamanja>-3) {
+                        if ((MyFrame.k09 > 24 && vecamanja == -1) || (MyFrame.k09 < 25 && vecamanja == -2)) {
 
-                    veca.setVisible(false);
-                    manja.setVisible(false);
-                    frame.remove(veca);
-                    frame.remove(manja);
+                            pogodio();
 
-                    PRAZNA.setVisible(false);
-                    ((Container) Karta08.card08).remove(PRAZNA);
-                    ((Container) Karta08.card08).add(Karta09.card09);
-                    Karta09.card09.setBounds(70, 0, 2000, 600);
-                    Karta09.card09.setVisible(true);
-                    ((JComponent) Karta09.card09).setOpaque(false);
+                            pogodak();
 
-                    if ((MyFrame.k09>24&&vecamanja==-1)||(MyFrame.k09<25&&vecamanja==-2)) {
+                        } else {
 
-                        pogodio();
+                            promasaj();
 
-                        pogodak();
-
-                    }
-
-                    else {
-
-                        promasaj();
-
+                        }
                     }
                 }
             }
@@ -833,82 +860,85 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                 PRAZNA.setBounds(70, 0, 2000, 600);
                 PRAZNA.setOpaque(false);
 
-                Random karta10 = new Random();
+                provera();
 
-                MyFrame.k10 = karta10.nextInt(49);
+                if (karta == 10) {
 
-                while (MyFrame.k10==0 ||
-                        MyFrame.k10==MyFrame.k01 ||
-                        MyFrame.k10==MyFrame.k02 ||
-                        MyFrame.k10==MyFrame.k03 ||
-                        MyFrame.k10==MyFrame.k04 ||
-                        MyFrame.k10==MyFrame.k05 ||
-                        MyFrame.k10==MyFrame.k06 ||
-                        MyFrame.k10==MyFrame.k07 ||
-                        MyFrame.k10==MyFrame.k08 ||
-                        MyFrame.k10==MyFrame.k09) {
+                    Random karta10 = new Random();
 
                     MyFrame.k10 = karta10.nextInt(49);
 
-                }
+                    while (MyFrame.k10 == 0 ||
+                            MyFrame.k10 == MyFrame.k01 ||
+                            MyFrame.k10 == MyFrame.k02 ||
+                            MyFrame.k10 == MyFrame.k03 ||
+                            MyFrame.k10 == MyFrame.k04 ||
+                            MyFrame.k10 == MyFrame.k05 ||
+                            MyFrame.k10 == MyFrame.k06 ||
+                            MyFrame.k10 == MyFrame.k07 ||
+                            MyFrame.k10 == MyFrame.k08 ||
+                            MyFrame.k10 == MyFrame.k09) {
 
-                System.out.println(MyFrame.k10);
+                        MyFrame.k10 = karta10.nextInt(49);
 
-                new Karta10();
+                    }
 
-                frame.add(veca);
-                frame.add(manja);
+                    System.out.println(MyFrame.k10);
 
-                while (vecamanja>0) {
+                    new Karta10();
 
-                    if (razmak==200) {
+                    frame.add(veca);
+                    frame.add(manja);
 
-                        vecasound();
-                        veca.setVisible(true);
-                        manja.setVisible(false);
-                        Thread.sleep(75);
+                    while (vecamanja > 0) {
+
+                        if (razmak == 200) {
+
+                            vecasound();
+                            veca.setVisible(true);
+                            manja.setVisible(false);
+                            Thread.sleep(75);
+                            razmak++;
+
+                        }
+
+                        if (razmak == 400) {
+
+                            manjasound();
+                            veca.setVisible(false);
+                            manja.setVisible(true);
+                            Thread.sleep(75);
+                            razmak = 0;
+
+                        }
                         razmak++;
-
                     }
 
-                    if (razmak==400) {
+                    if (vecamanja > -3) {
 
-                        manjasound();
                         veca.setVisible(false);
-                        manja.setVisible(true);
-                        Thread.sleep(75);
-                        razmak=0;
+                        manja.setVisible(false);
+                        frame.remove(veca);
+                        frame.remove(manja);
 
-                    }
-                    razmak++;
-                }
+                        PRAZNA.setVisible(false);
+                        ((Container) Karta09.card09).remove(PRAZNA);
+                        ((Container) Karta09.card09).add(Karta10.card10);
+                        Karta10.card10.setBounds(70, 0, 2000, 600);
+                        Karta10.card10.setVisible(true);
+                        ((JComponent) Karta10.card10).setOpaque(false);
 
-                if (vecamanja>-3) {
+                        if ((MyFrame.k10 > 24 && vecamanja == -1) || (MyFrame.k10 < 25 && vecamanja == -2)) {
 
-                    veca.setVisible(false);
-                    manja.setVisible(false);
-                    frame.remove(veca);
-                    frame.remove(manja);
+                            pogodio();
 
-                    PRAZNA.setVisible(false);
-                    ((Container) Karta09.card09).remove(PRAZNA);
-                    ((Container) Karta09.card09).add(Karta10.card10);
-                    Karta10.card10.setBounds(70, 0, 2000, 600);
-                    Karta10.card10.setVisible(true);
-                    ((JComponent) Karta10.card10).setOpaque(false);
+                            pogodak();
 
-                    if ((MyFrame.k10>24&&vecamanja==-1)||(MyFrame.k10<25&&vecamanja==-2)) {
+                        } else {
 
-                        pogodio();
+                            promasaj();
 
-                        pogodak();
-
-                    }
-
-                    else {
-
-                        promasaj();
-
+                        }
                     }
                 }
             }
@@ -920,83 +950,86 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                 PRAZNA.setBounds(70, 0, 2000, 600);
                 PRAZNA.setOpaque(false);
 
-                Random karta11 = new Random();
+                provera();
 
-                MyFrame.k11 = karta11.nextInt(49);
+                if (karta == 11) {
 
-                while (MyFrame.k11==0 ||
-                        MyFrame.k11==MyFrame.k01 ||
-                        MyFrame.k11==MyFrame.k02 ||
-                        MyFrame.k11==MyFrame.k03 ||
-                        MyFrame.k11==MyFrame.k04 ||
-                        MyFrame.k11==MyFrame.k05 ||
-                        MyFrame.k11==MyFrame.k06 ||
-                        MyFrame.k11==MyFrame.k07 ||
-                        MyFrame.k11==MyFrame.k08 ||
-                        MyFrame.k11==MyFrame.k09 ||
-                        MyFrame.k11==MyFrame.k10) {
+                    Random karta11 = new Random();
 
                     MyFrame.k11 = karta11.nextInt(49);
 
-                }
+                    while (MyFrame.k11 == 0 ||
+                            MyFrame.k11 == MyFrame.k01 ||
+                            MyFrame.k11 == MyFrame.k02 ||
+                            MyFrame.k11 == MyFrame.k03 ||
+                            MyFrame.k11 == MyFrame.k04 ||
+                            MyFrame.k11 == MyFrame.k05 ||
+                            MyFrame.k11 == MyFrame.k06 ||
+                            MyFrame.k11 == MyFrame.k07 ||
+                            MyFrame.k11 == MyFrame.k08 ||
+                            MyFrame.k11 == MyFrame.k09 ||
+                            MyFrame.k11 == MyFrame.k10) {
 
-                System.out.println(MyFrame.k11);
+                        MyFrame.k11 = karta11.nextInt(49);
 
-                new Karta11();
+                    }
 
-                frame.add(veca);
-                frame.add(manja);
+                    System.out.println(MyFrame.k11);
 
-                while (vecamanja>0) {
+                    new Karta11();
 
-                    if (razmak==200) {
+                    frame.add(veca);
+                    frame.add(manja);
 
-                        vecasound();
-                        veca.setVisible(true);
-                        manja.setVisible(false);
-                        Thread.sleep(50);
+                    while (vecamanja > 0) {
+
+                        if (razmak == 200) {
+
+                            vecasound();
+                            veca.setVisible(true);
+                            manja.setVisible(false);
+                            Thread.sleep(50);
+                            razmak++;
+
+                        }
+
+                        if (razmak == 400) {
+
+                            manjasound();
+                            veca.setVisible(false);
+                            manja.setVisible(true);
+                            Thread.sleep(50);
+                            razmak = 0;
+
+                        }
                         razmak++;
-
                     }
 
-                    if (razmak==400) {
+                    if (vecamanja > -3) {
 
-                        manjasound();
                         veca.setVisible(false);
-                        manja.setVisible(true);
-                        Thread.sleep(50);
-                        razmak=0;
+                        manja.setVisible(false);
+                        frame.remove(veca);
+                        frame.remove(manja);
 
-                    }
-                    razmak++;
-                }
+                        PRAZNA.setVisible(false);
+                        ((Container) Karta10.card10).remove(PRAZNA);
+                        ((Container) Karta10.card10).add(Karta11.card11);
+                        Karta11.card11.setBounds(70, 0, 2000, 600);
+                        Karta11.card11.setVisible(true);
+                        ((JComponent) Karta11.card11).setOpaque(false);
 
-                if (vecamanja>-3) {
+                        if ((MyFrame.k11 > 24 && vecamanja == -1) || (MyFrame.k11 < 25 && vecamanja == -2)) {
 
-                    veca.setVisible(false);
-                    manja.setVisible(false);
-                    frame.remove(veca);
-                    frame.remove(manja);
+                            pogodio();
 
-                    PRAZNA.setVisible(false);
-                    ((Container) Karta10.card10).remove(PRAZNA);
-                    ((Container) Karta10.card10).add(Karta11.card11);
-                    Karta11.card11.setBounds(70, 0, 2000, 600);
-                    Karta11.card11.setVisible(true);
-                    ((JComponent) Karta11.card11).setOpaque(false);
+                            pogodak();
 
-                    if ((MyFrame.k11>24&&vecamanja==-1)||(MyFrame.k11<25&&vecamanja==-2)) {
+                        } else {
 
-                        pogodio();
+                            promasaj();
 
-                        pogodak();
-
-                    }
-
-                    else {
-
-                        promasaj();
-
+                        }
                     }
                 }
             }
@@ -1131,7 +1164,7 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
     }
 
-    public void vecasound() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+    void vecasound() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 
         URL tasterveca = this.getClass().getClassLoader().getResource("resources/Hoch.wav");
         AudioInputStream audioVeca;
@@ -1155,7 +1188,7 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
     }
 
-    public void manjasound() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+    void manjasound() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 
         URL tastermanja = this.getClass().getClassLoader().getResource("resources/Tief.wav");
         AudioInputStream audioManja;
@@ -1179,7 +1212,7 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
     }
 
-    public void pogodio() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+    void pogodio() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
 
         URL pogodak = this.getClass().getClassLoader().getResource("resources/Pogodak.wav");
         AudioInputStream audioPogodak;
@@ -1203,7 +1236,7 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
     }
 
-    public void clearing() {
+    void clearing() {
 
         frame.removeKeyListener(this);
 
@@ -1212,7 +1245,7 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
     }
 
-    public void pogodak() throws InterruptedException {
+    void pogodak() throws InterruptedException {
 
         frame.add(Izbor2.pobeda);
         Izbor2.pobeda.setVisible(true);
@@ -1233,7 +1266,7 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
     }
 
-    public void promasaj() throws InterruptedException {
+    void promasaj() throws InterruptedException {
 
         labelT10.setVisible(false);
         tabela.remove(labelT10);
@@ -1246,6 +1279,17 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
         Dobitak.DOBITAK = 0;
         Izbor2.izbor = 0;
+
+    }
+    void provera() {
+
+        if (duplo>9999) {
+
+            vecamanja=-100;
+            karta=-3;
+            kockanje=0;
+
+        }
 
     }
 
