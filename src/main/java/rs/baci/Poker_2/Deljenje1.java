@@ -102,7 +102,13 @@ public class Deljenje1 implements MainFrame, Brojevi {
 			MyFrame.n3 = karta03.nextInt(53);
 			MyFrame.n4 = karta04.nextInt(53);
 			MyFrame.n5 = karta05.nextInt(53);
-
+/*
+			MyFrame.n1 = 10;
+			MyFrame.n2 = 11;
+			MyFrame.n3 = 12;
+			MyFrame.n4 = 13;
+			MyFrame.n5 = 1;
+*/
 		}
 
 		Thread.sleep(200);
