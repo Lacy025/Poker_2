@@ -33,10 +33,11 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 	
 	static int kr;
 	static int cr;
+	static int ch;
 	public int uu = 1;
 	public static int ul = 1;
 	public static int ah = 1;
-	static int ch;
+	public static int blokada;
 	public static int dobitak;
 	public static int ukupno;
 	public static int igra;
@@ -274,9 +275,13 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 
 		}
 
-		frame.addKeyListener(this);
+		if (cr<10000) {
 
-		prekid = 1;
+			frame.addKeyListener(this);
+
+			prekid = 1;
+
+		}
 
 		if (cr>0&&(Dupliranje.karta>0||Dobitak.DOBITAK>0)) {
 
@@ -659,6 +664,13 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 		JlabelJ5.setBounds(1515, 350, 400, 600);
 		((JComponent) JlabelJ5).setOpaque(false);
 
+		if (cr>9999) {
+
+			blokada = 1;
+			frame.addKeyListener(this);
+
+		}
+
 		if (delj!=1) {
 
 			new Jokers();
@@ -766,7 +778,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 		
 		case 81 :
 
-			if (prekid>9999) {
+			if (prekid>9999&&blokada==0) {
 
 				if (cr < 1 && igra == 0) {
 
@@ -817,7 +829,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 			
 		case 53 :
 
-			if (cr>0&&prekid>9999) {
+			if (cr>0&&prekid>9999&&blokada==0) {
 
 				Jlabelul.setVisible(false);
 				frame.remove(Jlabelul);
@@ -980,7 +992,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 			
 		case 32 : 
 			
-			if (cr>0&&prekid>9999) {
+			if (cr>0&&prekid>9999&&blokada==0) {
 
 				if (ah==1) {
 					int aha=ah--;ah=aha;
@@ -1049,6 +1061,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				JlabelL.setBounds(20,950,300,40);
 				JlabelR.setBounds(1580,950,300,40);
 				ch=1;
+				blokada=0;
 
 				try {
 					new Countdown1();
@@ -1081,7 +1094,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 
 				}
 
-				if (cr>0) {
+				if (cr>0&&blokada==0) {
 
 					delj=1;
 					prekid=9999;
