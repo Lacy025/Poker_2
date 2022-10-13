@@ -9,7 +9,7 @@ Enter = Double or nothing
 Left CTRL = Tief  
 Right CTRL = Hoch  
 5 = Take a half  
-Space = Take all
+Space = Take all   
 End - Cashout
 
 Enjoy !
