@@ -677,7 +677,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 
 		}
 			
-		if (delj==5) {
+		if (delj==3) {
 
 			jk=60000;cr=0;kr=0;ul=1;uu=1;ah=1;delj=0;
 
@@ -776,7 +776,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 		
 		switch(e.getKeyCode()) {
 		
-		case 81 :
+		case 81 :  // Keypad Q
 
 			if (prekid>9999&&blokada==0) {
 
@@ -827,7 +827,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				break;
 			}
 			
-		case 53 :
+		case 53 :  // Keypad 5
 
 			if (cr>0&&prekid>9999&&blokada==0) {
 
@@ -990,7 +990,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 			
 			break;
 			
-		case 32 : 
+		case 32 :  // Keypad Space
 			
 			if (cr>0&&prekid>9999&&blokada==0) {
 
@@ -1037,7 +1037,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 
 			break;
 
-			case 109 :
+			case 35 :  // Keypad End
 
 				if (prekid>9999) {
 
@@ -1085,7 +1085,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				break;
 					}
 			
-			case 10 :
+			case 10 :  // Keypad Enter
 
 				if (Dobitak.DOBITAK>0) {
 
@@ -1121,7 +1121,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 		
 	}
 
-	public static void ulog() {
+	void ulog() {
 
 		((JLabel) Jlabeld0).setText(""+String.valueOf(d0*ul));
 		((JLabel) Jlabeld1).setText(""+String.valueOf(d1*ul));

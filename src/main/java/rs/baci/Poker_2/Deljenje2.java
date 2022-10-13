@@ -23,6 +23,7 @@ public class Deljenje2 implements MainFrame {
 
     Deljenje2() throws InterruptedException {
 
+        karta=0;
         pauza = 1;
 
         if (Dobitak.stop1==0) {
@@ -307,7 +308,6 @@ public class Deljenje2 implements MainFrame {
 
         }
 
-        karta=0;
         Thread.sleep(100);
 
     }
