@@ -18,15 +18,22 @@ public class Countdown1 implements MainFrame, Brojevi {
 
 		((JLabel) Jlabel13).setText(""+MyFrame.cr--);
 
-		timer1 = new Timer(50, e -> { double x1 = MyFrame.cr;
+		timer1 = new Timer(50, e -> {
+
+			double x1 = MyFrame.cr;
+
 			if (x1==-1) {((JLabel) Jlabel13).setText(""+0);
 				try {
-					new Isplata2();Thread.sleep(900);
+
+					new Isplata2();
+					Thread.sleep(900);
+
 				} catch (UnsupportedAudioFileException | IOException | LineUnavailableException |
 						 InterruptedException e1) {
 
 					e1.printStackTrace();
 				}
+
 				Jlabel13.setBounds(1670,64,500,50);
 				Jlabel13.setFont(font1);
 				Jlabel13.setForeground(color3);
@@ -36,7 +43,9 @@ public class Countdown1 implements MainFrame, Brojevi {
 
 				MyFrame.kr=0;MyFrame.cr=-1;MyFrame.delj=5;
 			}
-			else if(((int)x1/100 != (x1/100)) && x1>0) { ((JLabel) Jlabel13).setText(""+MyFrame.cr--);
+			else if(((int)x1/100 != (x1/100)) && x1>0) {
+				((JLabel) Jlabel13).setText(""+MyFrame.cr--);
+
 				try {
 
 					new Isplata1();

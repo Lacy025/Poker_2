@@ -18,8 +18,9 @@ public class Countdown2 implements MainFrame, Brojevi {
 		
 		 		timer = new Timer(1000, e -> {
 			 	
-		 		if(MyFrame.cr>-1) { ((JLabel) Jlabel13).setText(""+MyFrame.cr);
-                    MyFrame.cr = MyFrame.cr-100;
+		 		if(MyFrame.cr>-1) {
+					 ((JLabel) Jlabel13).setText(""+MyFrame.cr);
+					 MyFrame.cr = MyFrame.cr-100;
 			 	
 	            try {
 
@@ -30,10 +31,13 @@ public class Countdown2 implements MainFrame, Brojevi {
 					e1.printStackTrace();
 				}
 	            }
-	            else  {((Timer) (e.getSource())).stop();frame.remove(Jlabel13);
-	            MyFrame.kr=0;
+	            else  {
+
+					((Timer) (e.getSource())).stop();frame.remove(Jlabel13);
+	            	MyFrame.kr=0;
                     MyFrame.cr=-1;
                     MyFrame.delj=3;
+
 	            }
 		 		
 		 		});

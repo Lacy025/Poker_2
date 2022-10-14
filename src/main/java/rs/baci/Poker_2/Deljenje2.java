@@ -41,8 +41,7 @@ public class Deljenje2 implements MainFrame {
                 pauza++;
             }
 
-            Thread.sleep(200-((pauza*10)+(MyFrame.n1*3)));
-
+            Thread.sleep(200-(MyFrame.n1*3)-(pauza*10));
 
             MyFrame.JlabelK1.setVisible(false);
             frame.remove(MyFrame.JlabelK1);
@@ -99,7 +98,7 @@ public class Deljenje2 implements MainFrame {
             }
 
             else {
-                Thread.sleep(200-((pauza*10)+(MyFrame.n2*3)));
+                Thread.sleep(200-(MyFrame.n2*3)-(pauza*10));
             }
 
             MyFrame.JlabelK2.setVisible(false);
@@ -157,7 +156,7 @@ public class Deljenje2 implements MainFrame {
             }
 
             else {
-                Thread.sleep(200-((pauza*10)+(MyFrame.n3*3)));
+                Thread.sleep(200-(MyFrame.n3*3)-(pauza*10));
             }
 
             MyFrame.JlabelK3.setVisible(false);
@@ -215,7 +214,7 @@ public class Deljenje2 implements MainFrame {
             }
 
             else {
-                Thread.sleep(200-((pauza*10)+(MyFrame.n4*3)));
+                Thread.sleep(200-(MyFrame.n4*3)-(pauza*10));
             }
 
             MyFrame.JlabelK4.setVisible(false);
@@ -273,7 +272,7 @@ public class Deljenje2 implements MainFrame {
             }
 
             else {
-                Thread.sleep(200-((pauza*10)+(MyFrame.n5*3)));
+                Thread.sleep(200-(MyFrame.n5*3)-(pauza*10));
             }
 
             MyFrame.JlabelK5.setVisible(false);
