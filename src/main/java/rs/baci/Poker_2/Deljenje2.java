@@ -22,7 +22,7 @@ public class Deljenje2 implements MainFrame {
 
     Deljenje2() throws InterruptedException {
 
-        karta=5;
+        karta=1;
 
         if (Dobitak.stop1==0) {
 
@@ -38,7 +38,7 @@ public class Deljenje2 implements MainFrame {
                 MyFrame.n1 = karta1.nextInt(53);
             }
             new Karta1();
-            karta--;
+            karta++;
         }
 
         if (Dobitak.stop2==0) {
@@ -55,7 +55,7 @@ public class Deljenje2 implements MainFrame {
                 MyFrame.n2 = karta2.nextInt(53);
             }
             new Karta2();
-            karta--;
+            karta++;
         }
 
         if (Dobitak.stop3==0) {
@@ -72,7 +72,7 @@ public class Deljenje2 implements MainFrame {
                 MyFrame.n3 = karta3.nextInt(53);
             }
             new Karta3();
-            karta--;
+            karta++;
         }
 
         if (Dobitak.stop4==0) {
@@ -89,7 +89,7 @@ public class Deljenje2 implements MainFrame {
                 MyFrame.n4 = karta4.nextInt(53);
             }
             new Karta4();
-            karta--;
+            karta++;
         }
 
         if (Dobitak.stop5==0) {
@@ -106,10 +106,10 @@ public class Deljenje2 implements MainFrame {
                 MyFrame.n5 = karta5.nextInt(53);
             }
             new Karta5();
-            karta--;
+            karta++;
         }
 
-        Thread.sleep(karta*50);
+        Thread.sleep(50-(karta*5));
 
         if (Dobitak.stop1==0) {
 
