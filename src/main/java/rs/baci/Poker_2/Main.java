@@ -23,6 +23,7 @@ public class Main {
 					new Izbor1();
 
 				}
+
 				if (MyFrame.delj==2) {
 
 					new Deljenje2();
@@ -42,11 +43,13 @@ public class Main {
 				if (MyFrame.ukupno>0) {
 					Thread.sleep(50);
 				}
+
 				if (MyFrame.ukupno==0) {
 					Thread.sleep(50);
 				}
 
 				MyFrame.prekid=0;
+
 			}
 	}
 }	

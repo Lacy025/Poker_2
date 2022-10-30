@@ -1096,11 +1096,11 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
         switch(e.getKeyCode()) {
 
-            case 17 :
+            case 17 : // KEYPAD 'CTRL'
 
                 int location = e.getKeyLocation();
 
-                if (location == KeyEvent.KEY_LOCATION_LEFT) {
+                if (location == KeyEvent.KEY_LOCATION_LEFT) { // TIEF
 
                     vecamanja = -2;
                     VECA.setVisible(false);
@@ -1113,7 +1113,7 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                     break;
                 }
 
-                if (location == KeyEvent.KEY_LOCATION_RIGHT) {
+                if (location == KeyEvent.KEY_LOCATION_RIGHT) { // HOCH
 
                     vecamanja = -1;
                     MANJA.setVisible(false);
@@ -1126,7 +1126,7 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                     break;
                 }
 
-            case 53 :
+            case 53 : // KEYPAD '5' - UZIMANJE POLOVINE
 
                 if (duplo>1) {
 
@@ -1143,7 +1143,7 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                 }
 
-            case 32 :
+            case 32 : // KEYPAD 'SPACE' - KASIRANJE
 
                 vecamanja = -100;
                 karta = -3;

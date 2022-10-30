@@ -70,6 +70,7 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
                 JlabelN3.setVisible(false);
                 Thread.sleep(1000);
                 st++;
+
             }
 
             if (st==80000) {
@@ -79,6 +80,7 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
                 JlabelN3.setVisible(true);
                 Thread.sleep(1000);
                 st++;
+
             }
             if (st==120000) {
 
@@ -87,7 +89,9 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
                 JlabelN3.setVisible(false);
                 Thread.sleep(1000);
                 st=0;
+
             }
+
             st++;
 
         }
@@ -100,7 +104,7 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
 
         switch(e.getKeyCode()) {
 
-            case 32 :
+            case 32 : // KEYPAD 'SPACE' - PONIŠTAVANJE
 
                 Hold.hold1.setVisible(false);
                 frame.remove(Hold.hold1);
@@ -154,7 +158,7 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
 
                 break;
 
-            case 49 :
+            case 49 : // KEYPAD '1' - CARD 1 HOLD
 
                 hold1.setBounds(120,914,130,40);
                 frame.add(hold1);
@@ -173,7 +177,7 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
 
                 break;
 
-            case 50 :
+            case 50 : // KEYPAD '2' - CARD 2 HOLD
 
                 hold2.setBounds(500,914,130,40);
                 frame.add(hold2);
@@ -192,7 +196,7 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
 
                 break;
 
-            case 51 :
+            case 51 : // KEYPAD '3' - CARD 3 HOLD
 
                 hold3.setBounds(890,914,130,40);
                 frame.add(hold3);
@@ -211,7 +215,7 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
 
                 break;
 
-            case 52 :
+            case 52 : // KEYPAD '4' - CARD 4 HOLD
 
                 hold4.setBounds(1270,914,130,40);
                 frame.add(hold4);
@@ -230,7 +234,7 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
 
                 break;
 
-            case 53 :
+            case 53 : // KEYPAD '5' - CARD 5 HOLD
 
                 hold5.setBounds(1650,914,130,40);
                 frame.add(hold5);
@@ -249,7 +253,7 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
 
                 break;
 
-            case 10 :
+            case 10 : // KEYPAD 'ENTER' - DELJENJE 2
 
                 hold1.setVisible(false);
                 hold2.setVisible(false);

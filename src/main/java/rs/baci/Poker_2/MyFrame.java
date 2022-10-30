@@ -390,7 +390,9 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 		}
 
 		if (ukupno>0) {
+
 			cr=cr-ukupno;
+
 		}
 
 		ukupno=0;
@@ -776,7 +778,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 		
 		switch(e.getKeyCode()) {
 		
-		case 81 :  // Keypad Q
+		case 81 : // KEYPAD 'Q'
 
 			if (prekid>9999&&blokada==0) {
 
@@ -827,7 +829,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				break;
 			}
 			
-		case 53 :  // Keypad 5
+		case 53 : // KEYPAD '5'
 
 			if (cr>0&&prekid>9999&&blokada==0) {
 
@@ -990,21 +992,27 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 			
 			break;
 			
-		case 32 :  // Keypad Space
+		case 32 : // KEYPAD 'SPACE'
 			
 			if (cr>0&&prekid>9999&&blokada==0) {
 
 				if (ah==1) {
-					int aha=ah--;ah=aha;
+
+					int aha=ah--;
+					ah=aha;
 					Jlabelah.setVisible(false);
-					frame.remove(Jlabelah);ah=0;
+					frame.remove(Jlabelah);
+					ah=0;
+
 				}
 
 				else {
 
-					int aha=ah++;ah=aha;
+					int aha=ah++;
+					ah=aha;
 					Jlabelah.setVisible(false);
-					frame.remove(Jlabelah);ah=1;
+					frame.remove(Jlabelah);
+					ah=1;
 					Jlabelah = new JLabel("AUTOHOLD");
 					frame.add(Jlabelah);
 					Jlabelah.setBounds(1620,292,500,40);
@@ -1012,6 +1020,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Jlabelah.setFont(font1);
 					((JComponent) Jlabelah).setOpaque(false);
 					Jlabelah.setVisible(true);
+
 				}
 
 				URL autohold = this.getClass().getClassLoader().getResource("resources/Autohold.wav");
@@ -1037,7 +1046,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 
 			break;
 
-			case 35 :  // Keypad End
+			case 35 : // KEYPAD 'END'
 
 				if (prekid>9999) {
 
@@ -1085,7 +1094,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				break;
 					}
 			
-			case 10 :  // Keypad Enter
+			case 10 : // KEYPAD 'ENTER'
 
 				if (Dobitak.DOBITAK>0) {
 

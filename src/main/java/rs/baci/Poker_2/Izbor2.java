@@ -134,7 +134,7 @@ public class Izbor2 implements Brojevi, Dobici, MainFrame, KeyListener {
 
         switch(e.getKeyCode()) {
 
-            case 32 :
+            case 32 : // KEYPAD 'SPACE' - KASIRANJE
 
                 frame.removeKeyListener(this);
 
@@ -144,7 +144,7 @@ public class Izbor2 implements Brojevi, Dobici, MainFrame, KeyListener {
 
                 break;
 
-            case 10 :
+            case 10 : // KEYPAD 'ENTER' - DUPLIRANJE
 
                 Karta1.card1.setVisible(false);
                 frame.remove(Karta1.card1);
