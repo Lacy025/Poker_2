@@ -56,8 +56,6 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
     Dupliranje() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
-        frame.addKeyListener(this);
-
         Izbor2.izbor=0;
         pola=0;
         kockanje=1;
@@ -116,9 +114,9 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                     }
 
-                    System.out.println(MyFrame.k01);
-
                     new Karta01();
+
+                    frame.addKeyListener(this);
 
                     while (vecamanja > 0) {
 
@@ -143,6 +141,8 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                         }
                         razmak++;
                     }
+
+                    frame.removeKeyListener(this);
 
                     if (vecamanja > -3) {
 
@@ -193,12 +193,12 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                     }
 
-                    System.out.println(MyFrame.k02);
-
                     new Karta02();
 
                     frame.add(veca);
                     frame.add(manja);
+
+                    frame.addKeyListener(this);
 
                     while (vecamanja > 0) {
 
@@ -223,6 +223,8 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                         }
                         razmak++;
                     }
+
+                    frame.removeKeyListener(this);
 
                     if (vecamanja > -3) {
 
@@ -276,12 +278,12 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                     }
 
-                    System.out.println(MyFrame.k03);
-
                     new Karta03();
 
                     frame.add(veca);
                     frame.add(manja);
+
+                    frame.addKeyListener(this);
 
                     while (vecamanja > 0) {
 
@@ -306,6 +308,8 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                         }
                         razmak++;
                     }
+
+                    frame.removeKeyListener(this);
 
                     if (vecamanja > -3) {
 
@@ -360,12 +364,12 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                     }
 
-                    System.out.println(MyFrame.k04);
-
                     new Karta04();
 
                     frame.add(veca);
                     frame.add(manja);
+
+                    frame.addKeyListener(this);
 
                     while (vecamanja > 0) {
 
@@ -390,6 +394,8 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                         }
                         razmak++;
                     }
+
+                    frame.removeKeyListener(this);
 
                     if (vecamanja > -3) {
 
@@ -445,12 +451,12 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                     }
 
-                    System.out.println(MyFrame.k05);
-
                     new Karta05();
 
                     frame.add(veca);
                     frame.add(manja);
+
+                    frame.addKeyListener(this);
 
                     while (vecamanja > 0) {
 
@@ -475,6 +481,8 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                         }
                         razmak++;
                     }
+
+                    frame.removeKeyListener(this);
 
                     if (vecamanja > -3) {
 
@@ -530,12 +538,12 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                     }
 
-                    System.out.println(MyFrame.k06);
-
                     new Karta06();
 
                     frame.add(veca);
                     frame.add(manja);
+
+                    frame.addKeyListener(this);
 
                     while (vecamanja > 0) {
 
@@ -560,6 +568,8 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                         }
                         razmak++;
                     }
+
+                    frame.removeKeyListener(this);
 
                     if (vecamanja > -3) {
 
@@ -617,12 +627,12 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                     }
 
-                    System.out.println(MyFrame.k07);
-
                     new Karta07();
 
                     frame.add(veca);
                     frame.add(manja);
+
+                    frame.addKeyListener(this);
 
                     while (vecamanja > 0) {
 
@@ -647,6 +657,8 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                         }
                         razmak++;
                     }
+
+                    frame.removeKeyListener(this);
 
                     if (vecamanja > -3) {
 
@@ -705,12 +717,12 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                     }
 
-                    System.out.println(MyFrame.k08);
-
                     new Karta08();
 
                     frame.add(veca);
                     frame.add(manja);
+
+                    frame.addKeyListener(this);
 
                     while (vecamanja > 0) {
 
@@ -735,6 +747,8 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                         }
                         razmak++;
                     }
+
+                    frame.removeKeyListener(this);
 
                     if (vecamanja > -3) {
 
@@ -793,12 +807,12 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                     }
 
-                    System.out.println(MyFrame.k09);
-
                     new Karta09();
 
                     frame.add(veca);
                     frame.add(manja);
+
+                    frame.addKeyListener(this);
 
                     while (vecamanja > 0) {
 
@@ -823,6 +837,8 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                         }
                         razmak++;
                     }
+
+                    frame.removeKeyListener(this);
 
                     if (vecamanja > -3) {
 
@@ -883,12 +899,12 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                     }
 
-                    System.out.println(MyFrame.k10);
-
                     new Karta10();
 
                     frame.add(veca);
                     frame.add(manja);
+
+                    frame.addKeyListener(this);
 
                     while (vecamanja > 0) {
 
@@ -913,6 +929,8 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                         }
                         razmak++;
                     }
+
+                    frame.removeKeyListener(this);
 
                     if (vecamanja > -3) {
 
@@ -974,12 +992,12 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                     }
 
-                    System.out.println(MyFrame.k11);
-
                     new Karta11();
 
                     frame.add(veca);
                     frame.add(manja);
+
+                    frame.addKeyListener(this);
 
                     while (vecamanja > 0) {
 
@@ -1004,6 +1022,8 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                         }
                         razmak++;
                     }
+
+                    frame.removeKeyListener(this);
 
                     if (vecamanja > -3) {
 
@@ -1061,6 +1081,8 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
             }
 
             if (pola==1) {
+
+                frame.removeKeyListener(this);
 
                 veca.setVisible(false);
                 frame.remove(veca);
