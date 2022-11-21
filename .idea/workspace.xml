@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="840edd46-d39a-4597-9bd9-becf4fec8351" name="Changes" comment="2.7.3">
+    <list default="true" id="840edd46-d39a-4597-9bd9-becf4fec8351" name="Changes" comment="2.7.4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Dupliranje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Dupliranje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/MyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/MyFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -386,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667156527247</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="2.7.4">
+      <created>1668380684003</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1668380684003</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -401,7 +408,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2.1.2" />
     <MESSAGE value="2.2.0" />
     <MESSAGE value="2.3.1" />
     <MESSAGE value="2.3.2" />
@@ -426,7 +432,8 @@
     <MESSAGE value="2.7.1" />
     <MESSAGE value="2.7.2" />
     <MESSAGE value="2.7.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.7.3" />
+    <MESSAGE value="2.7.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.7.4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

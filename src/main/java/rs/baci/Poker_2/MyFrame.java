@@ -780,7 +780,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 		
 		case 81 : // KEYPAD 'Q'
 
-			if (prekid>9999&&blokada==0) {
+			if (prekid>9999&&blokada==0&&cr<4901) {
 
 				if (cr < 1 && igra == 0) {
 
