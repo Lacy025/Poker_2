@@ -70,8 +70,8 @@ public class Jokers implements MainFrame {
 
 				if (MyFrame.cr>0) {
 
-					MyFrame.JlabelM1.setVisible(false);
-					MyFrame.JlabelM2.setVisible(true);
+					MyFrame.JlabelM1.setVisible(true);
+					MyFrame.JlabelM2.setVisible(false);
 
 					try {
 						Thread.sleep(500);
@@ -102,8 +102,8 @@ public class Jokers implements MainFrame {
 
 				if (MyFrame.cr>0) {
 
-					MyFrame.JlabelM1.setVisible(false);
-					MyFrame.JlabelM2.setVisible(true);
+					MyFrame.JlabelM1.setVisible(true);
+					MyFrame.JlabelM2.setVisible(false);
 
 					try {
 						Thread.sleep(500);
@@ -303,8 +303,8 @@ public class Jokers implements MainFrame {
 
 				if (MyFrame.cr>0) {
 
-					MyFrame.JlabelM1.setVisible(true);
-					MyFrame.JlabelM2.setVisible(false);
+					MyFrame.JlabelM1.setVisible(false);
+					MyFrame.JlabelM2.setVisible(true);
 
 					try {
 						Thread.sleep(500);
@@ -334,8 +334,8 @@ public class Jokers implements MainFrame {
 
 				if (MyFrame.cr>0) {
 
-					MyFrame.JlabelM1.setVisible(true);
-					MyFrame.JlabelM2.setVisible(false);
+					MyFrame.JlabelM1.setVisible(false);
+					MyFrame.JlabelM2.setVisible(true);
 
 					try {
 						Thread.sleep(500);
@@ -412,8 +412,8 @@ public class Jokers implements MainFrame {
 
 				if (MyFrame.cr>0) {
 
-					MyFrame.JlabelM1.setVisible(false);
-					MyFrame.JlabelM2.setVisible(true);
+					MyFrame.JlabelM1.setVisible(true);
+					MyFrame.JlabelM2.setVisible(false);
 
 					try {
 						Thread.sleep(500);
@@ -538,8 +538,8 @@ public class Jokers implements MainFrame {
 
 				if (MyFrame.cr>0) {
 
-					MyFrame.JlabelM1.setVisible(false);
-					MyFrame.JlabelM2.setVisible(true);
+					MyFrame.JlabelM1.setVisible(true);
+					MyFrame.JlabelM2.setVisible(false);
 
 					try {
 						Thread.sleep(500);
@@ -571,8 +571,8 @@ public class Jokers implements MainFrame {
 
 				if (MyFrame.cr>0) {
 
-					MyFrame.JlabelM1.setVisible(false);
-					MyFrame.JlabelM2.setVisible(true);
+					MyFrame.JlabelM1.setVisible(true);
+					MyFrame.JlabelM2.setVisible(false);
 
 					try {
 						Thread.sleep(500);
@@ -611,8 +611,8 @@ public class Jokers implements MainFrame {
 
 				if (MyFrame.cr>0) {
 
-					MyFrame.JlabelM1.setVisible(true);
-					MyFrame.JlabelM2.setVisible(false);
+					MyFrame.JlabelM1.setVisible(false);
+					MyFrame.JlabelM2.setVisible(true);
 
 					try {
 						Thread.sleep(500);
@@ -644,8 +644,8 @@ public class Jokers implements MainFrame {
 
 				if (MyFrame.cr>0) {
 
-					MyFrame.JlabelM1.setVisible(true);
-					MyFrame.JlabelM2.setVisible(false);
+					MyFrame.JlabelM1.setVisible(false);
+					MyFrame.JlabelM2.setVisible(true);
 
 					try {
 						Thread.sleep(500);
@@ -764,8 +764,8 @@ public class Jokers implements MainFrame {
 
 				if (MyFrame.cr>0) {
 
-					MyFrame.JlabelM1.setVisible(true);
-					MyFrame.JlabelM2.setVisible(false);
+					MyFrame.JlabelM1.setVisible(false);
+					MyFrame.JlabelM2.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
