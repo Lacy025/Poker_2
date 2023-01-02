@@ -788,6 +788,8 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 
 				}
 
+				ch=0;
+
 				URL kredit = this.getClass().getClassLoader().getResource("resources/Kredit.wav");
 				AudioInputStream audioKredit;
 				try {

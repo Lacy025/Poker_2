@@ -7,12 +7,11 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JLabel;
 import javax.swing.Timer;
 
-public class Polovina extends Thread implements MainFrame, Dobici, Brojevi {
+public class Polovina implements MainFrame, Dobici, Brojevi {
 	
 	Timer timer3;
-	
-	@Override
-	public void run() {
+
+	Polovina() {
 		
 		Dupliranje.pola=0;
 		Dupliranje.karta=0;

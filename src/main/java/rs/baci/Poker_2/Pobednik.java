@@ -1,9 +1,7 @@
 package rs.baci.Poker_2;
 
-public class Pobednik implements Runnable, MainFrame {
-
-	@Override
-	public void run() {
+public class Pobednik implements MainFrame {
+	Pobednik() {
 			
 		while (Dupliranje.x3 != Dupliranje.duplo) {
 		
@@ -11,7 +9,7 @@ public class Pobednik implements Runnable, MainFrame {
 			
 			try {
 				
-				Thread.sleep(500);
+				Thread.sleep(400);
 				
 			} catch (InterruptedException e) {
 				
@@ -22,7 +20,7 @@ public class Pobednik implements Runnable, MainFrame {
 			
 				try {
 					
-					Thread.sleep(500);
+					Thread.sleep(400);
 					
 				} catch (InterruptedException e) {
 					
