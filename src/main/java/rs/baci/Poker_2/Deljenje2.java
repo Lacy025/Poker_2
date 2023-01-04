@@ -19,10 +19,12 @@ public class Deljenje2 implements MainFrame {
     Clip karta5Sound;
 
     int karta;
+    int dupla;
 
     Deljenje2() throws InterruptedException {
 
-        karta=1;
+        karta = 0;
+        dupla = 0;
 
         if (Dobitak.stop1==0) {
 
@@ -36,9 +38,9 @@ public class Deljenje2 implements MainFrame {
                     MyFrame.n1==MyFrame.n5) {
 
                 MyFrame.n1 = karta1.nextInt(53);
+                dupla++;
             }
             new Karta1();
-            karta++;
         }
 
         if (Dobitak.stop2==0) {
@@ -53,9 +55,9 @@ public class Deljenje2 implements MainFrame {
                     MyFrame.n2==MyFrame.n5) {
 
                 MyFrame.n2 = karta2.nextInt(53);
+                dupla++;
             }
             new Karta2();
-            karta++;
         }
 
         if (Dobitak.stop3==0) {
@@ -70,9 +72,9 @@ public class Deljenje2 implements MainFrame {
                     MyFrame.n3==MyFrame.n5) {
 
                 MyFrame.n3 = karta3.nextInt(53);
+                dupla++;
             }
             new Karta3();
-            karta++;
         }
 
         if (Dobitak.stop4==0) {
@@ -87,9 +89,9 @@ public class Deljenje2 implements MainFrame {
                     MyFrame.n4==MyFrame.n5) {
 
                 MyFrame.n4 = karta4.nextInt(53);
+                dupla++;
             }
             new Karta4();
-            karta++;
         }
 
         if (Dobitak.stop5==0) {
@@ -104,14 +106,22 @@ public class Deljenje2 implements MainFrame {
                     MyFrame.n5==MyFrame.n4) {
 
                 MyFrame.n5 = karta5.nextInt(53);
+                dupla++;
             }
             new Karta5();
-            karta++;
         }
 
         Thread.sleep(50-(karta*5));
 
         if (Dobitak.stop1==0) {
+
+            if (karta==0) {
+                Thread.sleep(100-(dupla*10));
+                karta++;
+            }
+            else {
+                Thread.sleep(300);
+            }
 
             MyFrame.JlabelK1.setVisible(false);
             frame.remove(MyFrame.JlabelK1);
@@ -140,12 +150,17 @@ public class Deljenje2 implements MainFrame {
                 throw new RuntimeException(ex);
             }
             this.karta1Sound.start();
-
-            Thread.sleep(300);
-
         }
 
         if (Dobitak.stop2==0) {
+
+            if (karta==0) {
+                Thread.sleep(100-(dupla*10));
+                karta++;
+            }
+            else {
+                Thread.sleep(300);
+            }
 
             MyFrame.JlabelK2.setVisible(false);
             frame.remove(MyFrame.JlabelK2);
@@ -174,12 +189,17 @@ public class Deljenje2 implements MainFrame {
                 throw new RuntimeException(ex);
             }
             this.karta2Sound.start();
-
-            Thread.sleep(300);
-
         }
 
         if (Dobitak.stop3==0) {
+
+            if (karta==0) {
+                Thread.sleep(100-(dupla*10));
+                karta++;
+            }
+            else {
+                Thread.sleep(300);
+            }
 
             MyFrame.JlabelK3.setVisible(false);
             frame.remove(MyFrame.JlabelK3);
@@ -208,12 +228,17 @@ public class Deljenje2 implements MainFrame {
                 throw new RuntimeException(ex);
             }
             this.karta3Sound.start();
-
-            Thread.sleep(300);
-
         }
 
         if (Dobitak.stop4==0) {
+
+            if (karta==0) {
+                Thread.sleep(100-(dupla*10));
+                karta++;
+            }
+            else {
+                Thread.sleep(300);
+            }
 
             MyFrame.JlabelK4.setVisible(false);
             frame.remove(MyFrame.JlabelK4);
@@ -242,12 +267,17 @@ public class Deljenje2 implements MainFrame {
                 throw new RuntimeException(ex);
             }
             this.karta4Sound.start();
-
-            Thread.sleep(300);
-
         }
 
         if (Dobitak.stop5==0) {
+
+            if (karta==0) {
+                Thread.sleep(100-(dupla*10));
+                karta++;
+            }
+            else {
+                Thread.sleep(300);
+            }
 
             MyFrame.JlabelK5.setVisible(false);
             frame.remove(MyFrame.JlabelK5);
@@ -276,11 +306,7 @@ public class Deljenje2 implements MainFrame {
                 throw new RuntimeException(ex);
             }
             this.karta5Sound.start();
-
         }
-
-        Thread.sleep(50);
-
+        Thread.sleep(100);
     }
-
 }
