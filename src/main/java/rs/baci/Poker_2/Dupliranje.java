@@ -1099,15 +1099,12 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
                 x3=((int)Dupliranje.duplo)/2;
 
-                new Polovina();
-                new Pobednik();
-             /*
                 Polovina polovina = new Polovina();
                 Pobednik pobednik = new Pobednik();
                 Thread Pobednik = new Thread(pobednik);
                 polovina.start();
                 Pobednik.start();
-             */
+
                 frame.add(veca);
                 frame.add(manja);
 

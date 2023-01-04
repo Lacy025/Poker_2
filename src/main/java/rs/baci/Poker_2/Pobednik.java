@@ -1,7 +1,7 @@
 package rs.baci.Poker_2;
 
-public class Pobednik implements MainFrame {
-	Pobednik() {
+public class Pobednik implements Runnable, MainFrame {
+	public void run() {
 			
 		while (Dupliranje.x3 != Dupliranje.duplo) {
 		
