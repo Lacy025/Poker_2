@@ -10,27 +10,19 @@ import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 
 public class Highpair implements MainFrame, Brojevi, Dobici {
-
     Highpair() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
-
-        if (MyFrame.delj==1) {
-
+        if (MyFrame.delj == 1) {
             rucno.setLayout(new BorderLayout(50,50));
             rucno.setBorder(BorderFactory.createMatteBorder(20, 20, 20, 20, Color.RED));
             frame.add(rucno);
             rucno.setBounds(0, L9+2, 1292, 32);
             rucno.setVisible(true);
             rucno.setOpaque(false);
-
             new Hold();
-
         }
-
         else {
-
             new Prostor();
             new Tabela();
-
             labelT9.setVerticalAlignment(JLabel.TOP);
             labelT9.setHorizontalAlignment(JLabel.LEFT);
             labelT9.setBounds(30,10,1200,120);
@@ -39,8 +31,7 @@ public class Highpair implements MainFrame, Brojevi, Dobici {
             labelT9.setForeground(color1);
             labelT9.setOpaque(false);
             tabela.add(labelT9);
-
-            labelT10.setText("" + d9 * MyFrame.ul + " ");
+            labelT10.setText(d9 * MyFrame.ul + " ");
             labelT10.setHorizontalAlignment(JLabel.RIGHT);
             labelT10.setVerticalAlignment(JLabel.BOTTOM);
             tabela.add(labelT10);
@@ -48,10 +39,8 @@ public class Highpair implements MainFrame, Brojevi, Dobici {
             labelT10.setFont(font2);
             labelT10.setForeground(color1);
             labelT10.setOpaque(false);
-
-            MyFrame.dobitak=d9*MyFrame.ul;
-            MyFrame.ukupno=d9*MyFrame.ul;
-
+            MyFrame.dobitak = d9 * MyFrame.ul;
+            MyFrame.ukupno = d9 * MyFrame.ul;
         }
     }
 }

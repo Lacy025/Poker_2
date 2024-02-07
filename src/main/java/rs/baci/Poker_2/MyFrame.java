@@ -6,9 +6,9 @@ import java.awt.Font;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import java.io.Serial;
+import java.io.Serializable;
 import java.net.URL;
 import java.util.Objects;
 import javax.imageio.ImageIO;
@@ -21,7 +21,7 @@ import javax.swing.*;
 import javax.swing.plaf.metal.MetalLookAndFeel;
 
 
-public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
+public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Serializable {
 	
 	@Serial
 	private static final long serialVersionUID = 1L;
@@ -231,12 +231,6 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 	protected static Component Jlabel50 = new JLabel(icon50);
 	protected static Component Jlabel51 = new JLabel(icon51);
 	protected static Component Jlabel52 = new JLabel(icon52);
-	
-	public static Component card1 = new JLabel();
-	public static Component card2 = new JLabel();
-	public static Component card3 = new JLabel();
-	public static Component card4 = new JLabel();
-	public static Component card5 = new JLabel();
 
 	public static int karta1;
 	public static int karta2;
@@ -252,7 +246,6 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 	MyFrame() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
 		if (Dobitak.DOBITAK>0) {
-
 			URL kasa = this.getClass().getClassLoader().getResource("resources/Kraj.wav");
 			AudioInputStream audioKasa;
 			try {
@@ -272,73 +265,61 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				throw new RuntimeException(ex);
 			}
 			this.kasaSound.start();
-
 		}
-
-		if (cr<10000) {
-
+		if (cr < 10000) {
 			frame.addKeyListener(this);
-
 			prekid = 1;
-
 		}
-
-		if (cr>0&&(Dupliranje.karta>0||Dobitak.DOBITAK>0)) {
-
-			while (igra==0||prekid<9999) {
-
-				if (prekid==1000) {
+		if (cr > 0 && (Dupliranje.karta > 0 || Dobitak.DOBITAK > 0)) {
+			while (igra == 0 || prekid  <9999) {
+				if (prekid == 1000) {
 					Thread.sleep(400);
 					prekid++;
 				}
-				if (prekid==2000) {
+				if (prekid == 2000) {
 					Thread.sleep(400);
 					prekid++;
 				}
-				if (prekid==3000) {
+				if (prekid == 3000) {
 					Thread.sleep(400);
 					prekid++;
 				}
-				if (prekid==4000) {
+				if (prekid == 4000) {
 					Thread.sleep(400);
 					prekid++;
 				}
-				if (prekid==5000) {
+				if (prekid == 5000) {
 					Thread.sleep(400);
 					prekid++;
 				}
-				if (prekid==6000) {
+				if (prekid == 6000) {
 					Thread.sleep(400);
 					prekid++;
 				}
-				if (prekid==7000) {
+				if (prekid == 7000) {
 					Thread.sleep(400);
 					prekid++;
 				}
-				if (prekid==8000) {
+				if (prekid == 8000) {
 					Thread.sleep(400);
 					prekid++;
 				}
-				if (prekid==9000) {
+				if (prekid == 9000) {
 					Thread.sleep(400);
 					prekid++;
 				}
 				prekid++;
 			}
-
 		}
-
 		else {
 			Thread.sleep(500);
 		}
-
-		Dobitak.DOBITAK=0;
+		Dobitak.DOBITAK = 0;
 		new Clear1();
 		new Clear2();
-		prekid=10000;
+		prekid = 10000;
 
-		if (cr==0&&igra==0) {
-
+		if (cr == 0 && igra == 0) {
 		frame.setTitle("POKER");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setBackground(new Color(0,0,0));
@@ -386,31 +367,22 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 			JlabelR.setBounds(1580,950,300,40);
 
 			frame.add(Jlabelah);
-
 		}
-
 		if (ukupno>0) {
-
-			cr=cr-ukupno;
-
+			cr = cr - ukupno;
 		}
-
 		ukupno=0;
 
-		if (ul>cr&&cr>0) {
-
-			ul=cr;
+		if (ul > cr && cr > 0) {
+			ul = cr;
 			((JLabel) Jlabelul).setText(""+(ul));
-
 			ulog();
 			new Ulog();
-
 		}
 
-		if (cr==0&igra==1) {
-
-			ul=1;jk=60000;
-
+		if (cr == 0 & igra == 1) {
+			ul = 1;
+			jk = 60000;
 			frame.add(JlabelL);
 			frame.add(JlabelR);
 			JlabelL.setVisible(true);
@@ -418,7 +390,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 			JlabelL.setBounds(20,950,300,40);
 			JlabelR.setBounds(1580,950,300,40);
 
-			ch=1;
+			ch = 1;
 
 			dx0 = 1200;
 			dx1 = 1223;
@@ -432,9 +404,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 			dx9 = 1269;
 
 			((JLabel) Jlabelul).setText(""+(ul));
-
 			ulog();
-
 		}
 
 		((JLabel) Jlabelcr).setText(""+(cr));
@@ -666,22 +636,21 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 		JlabelJ5.setBounds(1515, 350, 400, 600);
 		((JComponent) JlabelJ5).setOpaque(false);
 
-		if (cr>9999) {
-
+		if (cr > 9999) {
 			blokada = 1;
 			frame.addKeyListener(this);
-
 		}
-
-		if (delj!=1) {
-
+		if (delj != 1) {
 			new Jokers();
-
 		}
-			
-		if (delj==3) {
-
-			jk=60000;cr=0;kr=0;ul=1;uu=1;ah=1;delj=0;
+		if (delj == 3) {
+			jk=60000;
+			cr=0;
+			kr=0;
+			ul=1;
+			uu=1;
+			ah=1;
+			delj=0;
 
 			Jlabelah.setVisible(false);
 			frame.remove(Jlabelah);
@@ -742,17 +711,17 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 			JlabelJ5.setVisible(false);
 			frame.remove(JlabelJ5);
 
-			((JLabel) Jlabelul).setText(""+String.valueOf(1));
-			((JLabel) Jlabeld0).setText(""+String.valueOf(d0));
-			((JLabel) Jlabeld1).setText(""+String.valueOf(d1));
-			((JLabel) Jlabeld2).setText(""+String.valueOf(d2));
-			((JLabel) Jlabeld3).setText(""+String.valueOf(d3));
-			((JLabel) Jlabeld4).setText(""+String.valueOf(d4));
-			((JLabel) Jlabeld5).setText(""+String.valueOf(d5));
-			((JLabel) Jlabeld6).setText(""+String.valueOf(d6));
-			((JLabel) Jlabeld7).setText(""+String.valueOf(d7));
-			((JLabel) Jlabeld8).setText(""+String.valueOf(d8));
-			((JLabel) Jlabeld9).setText(""+String.valueOf(d9));
+			((JLabel) Jlabelul).setText(String.valueOf(1));
+			((JLabel) Jlabeld0).setText(String.valueOf(d0));
+			((JLabel) Jlabeld1).setText(String.valueOf(d1));
+			((JLabel) Jlabeld2).setText(String.valueOf(d2));
+			((JLabel) Jlabeld3).setText(String.valueOf(d3));
+			((JLabel) Jlabeld4).setText(String.valueOf(d4));
+			((JLabel) Jlabeld5).setText(String.valueOf(d5));
+			((JLabel) Jlabeld6).setText(String.valueOf(d6));
+			((JLabel) Jlabeld7).setText(String.valueOf(d7));
+			((JLabel) Jlabeld8).setText(String.valueOf(d8));
+			((JLabel) Jlabeld9).setText(String.valueOf(d9));
 
 			dx0 = 1200;
 			dx1 = 1223;
@@ -766,9 +735,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 			dx9 = 1269;
 
 			igra=0;
-
 			frame.dispose();
-
 	}
 			frame.removeKeyListener(this);
 }
@@ -779,16 +746,11 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 		switch(e.getKeyCode()) {
 		
 		case 81 : // KEYPAD 'Q'
-
-			if (prekid>9999&&blokada==0&&cr<4901) {
-
+			if (prekid > 9999 && blokada == 0 && cr < 4901) {
 				if (cr < 1 && igra == 0) {
-
 					this.introSound.stop();
-
 				}
-
-				ch=0;
+				ch = 0;
 
 				URL kredit = this.getClass().getClassLoader().getResource("resources/Kredit.wav");
 				AudioInputStream audioKredit;
@@ -813,7 +775,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				Jlabelcr.setVisible(false);
 				frame.remove(Jlabelcr);
 				cr = cr + 100;
-				((JLabel) Jlabelcr).setText("" + String.valueOf(cr));
+				((JLabel) Jlabelcr).setText(String.valueOf(cr));
 				Jlabelcr.setBounds(1670, 64, 500, 50);
 				Jlabelcr.setForeground(color3);
 				Jlabelcr.setFont(font1);
@@ -824,31 +786,27 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				frame.remove(JlabelL);
 				frame.remove(JlabelR);
 
-				break;
+            }
+            break;
 
-			}
-			else {
-				break;
-			}
-			
-		case 53 : // KEYPAD '5'
+            case 53 : // KEYPAD '5'
 
-			if (cr>0&&prekid>9999&&blokada==0) {
-
+			if (cr > 0 && prekid > 9999 && blokada == 0) {
 				Jlabelul.setVisible(false);
 				frame.remove(Jlabelul);
-				int uu = ul+1;
+				int uu = ul + 1;
 
-				if (uu==41) {
+				if (uu == 41) {
 					uu=1;
 				}
-				ul=uu;
+				ul = uu;
 
-				if (uu==cr+1) {
+				if (uu == cr + 1) {
 					uu=1;
 				}
-				ul=uu;
-				((JLabel) Jlabelul).setText(""+String.valueOf(ul));
+				ul = uu;
+
+				((JLabel) Jlabelul).setText(String.valueOf(ul));
 				frame.add(Jlabelul);
 				Jlabelul.setBounds(1690,192,500,50);
 				Jlabelul.setForeground(color3);
@@ -856,10 +814,15 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				((JComponent) Jlabelul).setOpaque(false);
 				Jlabelul.setVisible(true);
 
-				int ddx0=1200;if(uu>9) {ddx0=1177;}dx0=ddx0;
+				int ddx0 = 1200;
+				if(uu > 9) {
+					ddx0 = 1177;
+				}
+				dx0 = ddx0;
+
 				Jlabeld0.setVisible(false);
 				frame.remove(Jlabeld0);//FIVE OF A KIND
-				((JLabel) Jlabeld0).setText(""+String.valueOf(d0*ul));
+				((JLabel) Jlabeld0).setText(String.valueOf(d0 * ul));
 				frame.add(Jlabeld0);
 				Jlabeld0.setBounds(dx0,L0,120,32);
 				Jlabeld0.setForeground(color1);
@@ -867,10 +830,18 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				((JComponent) Jlabeld0).setOpaque(false);
 				Jlabeld0.setVisible(true);
 
-				int ddx1=1223;if(uu>1) {ddx1=1200;} if(uu>19) {ddx1=1177;}dx1=ddx1;
+				int ddx1 = 1223;
+				if(uu > 1) {
+					ddx1 = 1200;
+				}
+				if (uu>19) {
+					ddx1 = 1177;
+				}
+				dx1 = ddx1;
+
 				Jlabeld1.setVisible(false);
 				frame.remove(Jlabeld1);//ROYAL FLUSH
-				((JLabel) Jlabeld1).setText(""+String.valueOf(d1*ul));
+				((JLabel) Jlabeld1).setText(String.valueOf(d1*ul));
 				frame.add(Jlabeld1);
 				Jlabeld1.setBounds(dx1,L1,120,32);
 				Jlabeld1.setForeground(color2);
@@ -878,10 +849,15 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				((JComponent) Jlabeld1).setOpaque(false);
 				Jlabeld1.setVisible(true);
 
-				int ddx2=1223;if(uu>9) {ddx2=1200;} dx2=ddx2;
+				int ddx2 = 1223;
+				if(uu > 9) {
+					ddx2 = 1200;
+				}
+				dx2 = ddx2;
+
 				Jlabeld2.setVisible(false);
 				frame.remove(Jlabeld2);//STREET FLUSH
-				((JLabel) Jlabeld2).setText(""+String.valueOf(d2*ul));
+				((JLabel) Jlabeld2).setText(String.valueOf(d2*ul));
 				frame.add(Jlabeld2);
 				Jlabeld2.setBounds(dx2,L2,120,32);
 				Jlabeld2.setForeground(color3);
@@ -889,10 +865,18 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				((JComponent) Jlabeld2).setOpaque(false);
 				Jlabeld2.setVisible(true);
 
-				int ddx3=1246;if(uu>2) {ddx3=1223;} if(uu>24) {ddx3=1200;} dx3=ddx3;
+				int ddx3 = 1246;
+				if(uu > 2) {
+					ddx3 = 1223;
+				}
+				if(uu > 24) {
+					ddx3 = 1200;
+				}
+				dx3 = ddx3;
+
 				Jlabeld3.setVisible(false);
 				frame.remove(Jlabeld3);//POKER
-				((JLabel) Jlabeld3).setText(""+String.valueOf(d3*ul));
+				((JLabel) Jlabeld3).setText(String.valueOf(d3*ul));
 				frame.add(Jlabeld3);
 				Jlabeld3.setBounds(dx3,L3,120,32);
 				Jlabeld3.setForeground(color3);
@@ -900,10 +884,15 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				((JComponent) Jlabeld3).setOpaque(false);
 				Jlabeld3.setVisible(true);
 
-				int ddx4=1246;if(uu>9) {ddx4=1223;} dx4=ddx4;
+				int ddx4 = 1246;
+				if(uu > 9) {
+					ddx4 = 1223;
+				}
+				dx4 = ddx4;
+
 				Jlabeld4.setVisible(false);
 				frame.remove(Jlabeld4);//FULL HOUSE
-				((JLabel) Jlabeld4).setText(""+String.valueOf(d4*ul));
+				((JLabel) Jlabeld4).setText(String.valueOf(d4*ul));
 				frame.add(Jlabeld4);
 				Jlabeld4.setBounds(dx4,L4,120,32);
 				Jlabeld4.setForeground(color3);
@@ -911,10 +900,18 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				((JComponent) Jlabeld4).setOpaque(false);
 				Jlabeld4.setVisible(true);
 
-				int ddx5=1269;if(uu>1) {ddx5=1246;} if(uu>14) {ddx5=1223;} dx5=ddx5;
+				int ddx5 = 1269;
+				if(uu > 1) {
+					ddx5 = 1246;
+				}
+				if(uu > 14) {
+					ddx5 = 1223;
+				}
+				dx5 = ddx5;
+
 				Jlabeld5.setVisible(false);
 				frame.remove(Jlabeld5);//FLUSH
-				((JLabel) Jlabeld5).setText(""+String.valueOf(d5*ul));
+				((JLabel) Jlabeld5).setText(String.valueOf(d5*ul));
 				frame.add(Jlabeld5);
 				Jlabeld5.setBounds(dx5,L5,120,32);
 				Jlabeld5.setForeground(color3);
@@ -922,10 +919,18 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				((JComponent) Jlabeld5).setOpaque(false);
 				Jlabeld5.setVisible(true);
 
-				int ddx6=1269;if(uu>1) {ddx6=1246;} if(uu>19) {ddx6=1223;} dx6=ddx6;
+				int ddx6 = 1269;
+				if(uu > 1) {
+					ddx6 = 1246;
+				}
+				if(uu > 19) {
+					ddx6 = 1223;
+				}
+				dx6 = ddx6;
+
 				Jlabeld6.setVisible(false);
 				frame.remove(Jlabeld6);//STREET
-				((JLabel) Jlabeld6).setText(""+String.valueOf(d6*ul));
+				((JLabel) Jlabeld6).setText(String.valueOf(d6*ul));
 				frame.add(Jlabeld6);
 				Jlabeld6.setBounds(dx6,L6,120,32);
 				Jlabeld6.setForeground(color3);
@@ -933,10 +938,18 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				((JComponent) Jlabeld6).setOpaque(false);
 				Jlabeld6.setVisible(true);
 
-				int ddx7=1269;if(uu>3) {ddx7=1246;} if(uu>33) {ddx7=1223;} dx7=ddx7;
+				int ddx7 = 1269;
+				if(uu > 3) {
+					ddx7 = 1246;
+				}
+				if( uu > 33) {
+					ddx7 = 1223;
+				}
+				dx7 = ddx7;
+
 				Jlabeld7.setVisible(false);
 				frame.remove(Jlabeld7);//THREE OF A KIND
-				((JLabel) Jlabeld7).setText(""+String.valueOf(d7*ul));
+				((JLabel) Jlabeld7).setText(String.valueOf(d7*ul));
 				frame.add(Jlabeld7);
 				Jlabeld7.setBounds(dx7,L7,120,32);
 				Jlabeld7.setForeground(color3);
@@ -944,10 +957,15 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				((JComponent) Jlabeld7).setOpaque(false);
 				Jlabeld7.setVisible(true);
 
-				int ddx8=1269;if(uu>4) {ddx8=1246;} dx8=ddx8;
+				int ddx8 = 1269;
+				if(uu > 4) {
+					ddx8 = 1246;
+				}
+				dx8 = ddx8;
+
 				Jlabeld8.setVisible(false);
 				frame.remove(Jlabeld8);//2 PAIRS
-				((JLabel) Jlabeld8).setText(""+String.valueOf(d8*ul));
+				((JLabel) Jlabeld8).setText(String.valueOf(d8*ul));
 				frame.add(Jlabeld8);
 				Jlabeld8.setBounds(dx8,L8,120,32);
 				Jlabeld8.setForeground(color3);
@@ -955,10 +973,15 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				((JComponent) Jlabeld8).setOpaque(false);
 				Jlabeld8.setVisible(true);
 
-				int ddx9=1269;if(uu>9) {ddx9=1246;} dx9=ddx9;
+				int ddx9 = 1269;
+				if(uu > 9) {
+					ddx9 = 1246;
+				}
+				dx9 = ddx9;
+
 				Jlabeld9.setVisible(false);
 				frame.remove(Jlabeld9);//HIGH PAIR
-				((JLabel) Jlabeld9).setText(""+String.valueOf(d9*ul));
+				((JLabel) Jlabeld9).setText(String.valueOf(d9*ul));
 				frame.add(Jlabeld9);
 				Jlabeld9.setBounds(dx9,L9,120,32);
 				Jlabeld9.setForeground(color3);
@@ -986,35 +1009,26 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				}
 				this.ulogSound.start();
 			}
-			
 			else {
-				
 				break;
 			}
-			
 			break;
 			
 		case 32 : // KEYPAD 'SPACE'
-			
-			if (cr>0&&prekid>9999&&blokada==0) {
-
+			if (cr > 0 && prekid > 9999 && blokada == 0) {
 				if (ah==1) {
-
-					int aha=ah--;
-					ah=aha;
+					int aha = ah--;
+					ah = aha;
 					Jlabelah.setVisible(false);
 					frame.remove(Jlabelah);
-					ah=0;
-
+					ah = 0;
 				}
-
 				else {
-
-					int aha=ah++;
-					ah=aha;
+					int aha = ah++;
+					ah = aha;
 					Jlabelah.setVisible(false);
 					frame.remove(Jlabelah);
-					ah=1;
+					ah = 1;
 					Jlabelah = new JLabel("AUTOHOLD");
 					frame.add(Jlabelah);
 					Jlabelah.setBounds(1620,292,500,40);
@@ -1022,7 +1036,6 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 					Jlabelah.setFont(font1);
 					((JComponent) Jlabelah).setOpaque(false);
 					Jlabelah.setVisible(true);
-
 				}
 
 				URL autohold = this.getClass().getClassLoader().getResource("resources/Autohold.wav");
@@ -1045,22 +1058,17 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				}
 				this.autoholdSound.start();
 			}
-
 			break;
 
-			case 35 : // KEYPAD 'END'
-
-				if (prekid>9999) {
-
+		case 35 : // KEYPAD 'END'
+			if (prekid > 9999) {
 				Jlabelcr.setVisible(false);
 				frame.remove(Jlabelcr);
-			
-			if (cr>0) {
 
+			if (cr > 0) {
 				Jlabelcr.setVisible(false);
 				frame.remove(Jlabelcr);
 				frame.removeKeyListener(this);
-
 				JlabelM1.setVisible(false);
 				JlabelM2.setVisible(false);
 				frame.remove(JlabelM1);
@@ -1071,80 +1079,54 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener {
 				JlabelR.setVisible(true);
 				JlabelL.setBounds(20,950,300,40);
 				JlabelR.setBounds(1580,950,300,40);
-				ch=1;
-				blokada=0;
+				ch = 1;
+				blokada = 0;
 
 				try {
 					new Countdown1();
 				} catch (InterruptedException ex) {
 					throw new RuntimeException(ex);
 				}
-
-				break;
-				
-				}
-			
+			}
 			else {
 				Jlabelcr.setVisible(true);
 				frame.add(Jlabelcr);
-
-				break;
-					}
 				}
+			}
+			break;
 
+		case 10 : // KEYPAD 'ENTER'
+			if (Dobitak.DOBITAK > 0) {
+				prekid = 9999;
+				this.kasaSound.stop();
+			}
+			else if (cr > 0 && blokada == 0) {
+				delj = 1;
+				prekid = 9999;
+				igra = 1;
+				break;
+			}
 			else {
 				break;
-					}
-			
-			case 10 : // KEYPAD 'ENTER'
-
-				if (Dobitak.DOBITAK>0) {
-
-					prekid=9999;
-					this.kasaSound.stop();
-
-				}
-
-				if (cr>0&&blokada==0) {
-
-					delj=1;
-					prekid=9999;
-					igra=1;
-
-					break;
-
-				}
-
-				else {
-
-					break;
-
-				}
-
+			}
 		}
 	}
 	@Override
 	public void keyTyped(KeyEvent e) {
-		
-}
+	}
 	@Override
 	public void keyReleased(KeyEvent e) {
-		
 	}
-
 	void ulog() {
-
-		((JLabel) Jlabeld0).setText(""+String.valueOf(d0*ul));
-		((JLabel) Jlabeld1).setText(""+String.valueOf(d1*ul));
-		((JLabel) Jlabeld2).setText(""+String.valueOf(d2*ul));
-		((JLabel) Jlabeld3).setText(""+String.valueOf(d3*ul));
-		((JLabel) Jlabeld4).setText(""+String.valueOf(d4*ul));
-		((JLabel) Jlabeld5).setText(""+String.valueOf(d5*ul));
-		((JLabel) Jlabeld6).setText(""+String.valueOf(d6*ul));
-		((JLabel) Jlabeld7).setText(""+String.valueOf(d7*ul));
-		((JLabel) Jlabeld8).setText(""+String.valueOf(d8*ul));
-		((JLabel) Jlabeld9).setText(""+String.valueOf(d9*ul));
-
+		((JLabel) Jlabeld0).setText(String.valueOf(d0*ul));
+		((JLabel) Jlabeld1).setText(String.valueOf(d1*ul));
+		((JLabel) Jlabeld2).setText(String.valueOf(d2*ul));
+		((JLabel) Jlabeld3).setText(String.valueOf(d3*ul));
+		((JLabel) Jlabeld4).setText(String.valueOf(d4*ul));
+		((JLabel) Jlabeld5).setText(String.valueOf(d5*ul));
+		((JLabel) Jlabeld6).setText(String.valueOf(d6*ul));
+		((JLabel) Jlabeld7).setText(String.valueOf(d7*ul));
+		((JLabel) Jlabeld8).setText(String.valueOf(d8*ul));
+		((JLabel) Jlabeld9).setText(String.valueOf(d9*ul));
 	}
-
 }

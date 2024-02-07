@@ -9,11 +9,8 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class Stop {
-
     Clip stopcard;
-
     Stop() throws InterruptedException {
-
         URL stop = this.getClass().getClassLoader().getResource("resources/Stop.wav");
         AudioInputStream audioStop;
         try {
@@ -35,5 +32,4 @@ public class Stop {
         this.stopcard.start();
         Thread.sleep(200);
     }
-
 }

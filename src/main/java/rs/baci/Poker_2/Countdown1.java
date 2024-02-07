@@ -11,26 +11,21 @@ import javax.swing.Timer;
 public class Countdown1 implements MainFrame, Brojevi {
 
 	public Component Jlabel13 = new JLabel(""+MyFrame.cr);
-
 	Timer timer1;
-
 	Countdown1() throws InterruptedException {
 
-		((JLabel) Jlabel13).setText(""+MyFrame.cr--);
+		((JLabel) Jlabel13).setText(""+ MyFrame.cr--);
 
 		timer1 = new Timer(50, e -> {
 
 			double x1 = MyFrame.cr;
 
-			if (x1==-1) {((JLabel) Jlabel13).setText(""+0);
+			if (x1 == -1) {((JLabel) Jlabel13).setText("" + 0);
 				try {
-
 					new Isplata2();
 					Thread.sleep(900);
-
 				} catch (UnsupportedAudioFileException | IOException | LineUnavailableException |
 						 InterruptedException e1) {
-
 					e1.printStackTrace();
 				}
 
@@ -41,38 +36,29 @@ public class Countdown1 implements MainFrame, Brojevi {
 				Jlabel13.setVisible(true);
 				frame.add(Jlabel13);
 
-				MyFrame.kr=0;MyFrame.cr=-1;MyFrame.delj=5;
+				MyFrame.kr = 0;
+				MyFrame.cr = -1;
+				MyFrame.delj = 5;
 			}
-			else if(((int)x1/100 != (x1/100)) && x1>0) {
-				((JLabel) Jlabel13).setText(""+MyFrame.cr--);
-
+			else if(((int)x1 / 100 != (x1 / 100)) && x1 > 0) {
+				((JLabel) Jlabel13).setText(""+ MyFrame.cr--);
 				try {
-
 					new Isplata1();
-
 				} catch (UnsupportedAudioFileException | IOException | LineUnavailableException | InterruptedException e1) {
-
 					e1.printStackTrace();
 				}
 			}
-
 			else  {
-
 				((Timer) (e.getSource())).stop();
 				Jlabel13.setVisible(false);
 				frame.remove(Jlabel13);
-
 				try {
-
 					new Countdown2();
-
 				} catch (InterruptedException e1) {
-
 					e1.printStackTrace();
 				}
 			}
 		});
-
 		frame.add(Jlabel13);
 
 		Jlabel13.setBounds(1670,64,500,50);

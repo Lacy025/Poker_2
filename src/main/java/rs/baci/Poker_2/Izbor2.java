@@ -8,18 +8,13 @@ import java.io.IOException;
 import java.net.URL;
 
 public class Izbor2 implements Brojevi, Dobici, MainFrame, KeyListener {
-
     Clip dobitakSound;
-
     JLabel dupliranje = new JLabel("            DUPLIRANJE");
     JLabel kasiranje = new JLabel("             KASIRANJE");
     public static JLabel pobeda = new JLabel("              POBEDIO !");
-
     public static int izbor;
     int pobedio;
-
     Izbor2() throws InterruptedException, UnsupportedAudioFileException, LineUnavailableException, IOException {
-
         dupliranje.setVisible(false);
         kasiranje.setVisible(false);
         pobeda.setVisible(false);
@@ -40,95 +35,60 @@ public class Izbor2 implements Brojevi, Dobici, MainFrame, KeyListener {
         dupliranje.setOpaque(true);
         kasiranje.setOpaque(true);
         pobeda.setOpaque(true);
-
-        if (Dobitak.DOBITAK>0&&MyFrame.ukupno<10000) {
-
+        if (Dobitak.DOBITAK > 0 && MyFrame.ukupno < 10000) {
             dobitnik();
-
             frame.addKeyListener(this);
-
-            izbor=1;
-
+            izbor = 1;
             while (izbor == 1) {
-
                 if (pobedio == 5000) {
-
                     dupliranje.setVisible(true);
                     kasiranje.setVisible(false);
                     Thread.sleep(500);
                     pobedio++;
-
                 }
-
                 if (pobedio == 10000) {
-
                     dupliranje.setVisible(false);
                     kasiranje.setVisible(true);
                     Thread.sleep(500);
                     pobedio++;
-
                 }
-
                 if (pobedio == 15000) {
-
                     dupliranje.setVisible(true);
                     kasiranje.setVisible(false);
                     Thread.sleep(500);
                     pobedio++;
-
                 }
-
                 if (pobedio == 20000) {
-
                     dupliranje.setVisible(false);
                     kasiranje.setVisible(true);
                     Thread.sleep(500);
                     pobedio = 0;
-
                 }
-
                 pobedio++;
-
             }
-
-            if (izbor==2) {
-
+            if (izbor == 2) {
                 dupliranje.setVisible(false);
                 kasiranje.setVisible(false);
                 frame.remove(dupliranje);
                 frame.remove(kasiranje);
-
                 new Kasiranje();
-
             }
-
         }
-
-        if (Dobitak.DOBITAK>0&&MyFrame.ukupno>9999) {
-
+        if (Dobitak.DOBITAK > 0 && MyFrame.ukupno > 9999) {
             dobitnik();
-
             dupliranje.setVisible(false);
             kasiranje.setVisible(false);
             frame.remove(dupliranje);
             frame.remove(kasiranje);
             frame.add(pobeda);
             pobeda.setVisible(true);
-
             Thread.sleep(2500);
-
             new Kasiranje();
-
         }
-
     }
-
-
     @Override
     public void keyTyped(KeyEvent e) {
-
     }
-
     @Override
     public void keyPressed(KeyEvent e) {
 
@@ -137,11 +97,8 @@ public class Izbor2 implements Brojevi, Dobici, MainFrame, KeyListener {
             case 32 : // KEYPAD 'SPACE' - KASIRANJE
 
                 frame.removeKeyListener(this);
-
                 dobitakSound.stop();
-
-                izbor=2;
-
+                izbor = 2;
                 break;
 
             case 10 : // KEYPAD 'ENTER' - DUPLIRANJE
@@ -156,28 +113,20 @@ public class Izbor2 implements Brojevi, Dobici, MainFrame, KeyListener {
                 frame.remove(Karta4.card4);
                 Karta5.card5.setVisible(false);
                 frame.remove(Karta5.card5);
-
                 dupliranje.setVisible(false);
                 kasiranje.setVisible(false);
                 frame.remove(dupliranje);
                 frame.remove(kasiranje);
-
                 frame.removeKeyListener(this);
                 dobitakSound.stop();
                 izbor = 3;
-
                 break;
-
         }
     }
-
     @Override
     public void keyReleased(KeyEvent e) {
-
     }
-
-    void dobitnik() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-
+    void dobitnik() {
         URL dobitak = this.getClass().getClassLoader().getResource("resources/Dobitak.wav");
         AudioInputStream audioDobitak;
         try {
@@ -197,7 +146,5 @@ public class Izbor2 implements Brojevi, Dobici, MainFrame, KeyListener {
             throw new RuntimeException(ex);
         }
         this.dobitakSound.start();
-
     }
-
 }

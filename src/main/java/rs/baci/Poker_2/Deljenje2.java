@@ -11,121 +11,93 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JComponent;
 
 public class Deljenje2 implements MainFrame {
-
     Clip karta1Sound;
     Clip karta2Sound;
     Clip karta3Sound;
     Clip karta4Sound;
     Clip karta5Sound;
-
     int karta;
     int dupla;
-
     Deljenje2() throws InterruptedException {
-
         karta = 0;
         dupla = 0;
 
-        if (Dobitak.stop1==0) {
-
+        if (Dobitak.stop1 == 0) {
             Random karta1 = new Random();
-
             MyFrame.n1 = karta1.nextInt(53);
-
-            while (MyFrame.n1==MyFrame.n2 ||
-                    MyFrame.n1==MyFrame.n3 ||
-                    MyFrame.n1==MyFrame.n4 ||
-                    MyFrame.n1==MyFrame.n5) {
+            while (MyFrame.n1 == MyFrame.n2 ||
+                    MyFrame.n1 == MyFrame.n3 ||
+                    MyFrame.n1 == MyFrame.n4 ||
+                    MyFrame.n1 == MyFrame.n5) {
 
                 MyFrame.n1 = karta1.nextInt(53);
                 dupla++;
             }
             new Karta1();
         }
-
-        if (Dobitak.stop2==0) {
-
+        if (Dobitak.stop2 == 0) {
             Random karta2 = new Random();
-
             MyFrame.n2 = karta2.nextInt(53);
-
-            while (MyFrame.n2==MyFrame.n1 ||
-                    MyFrame.n2==MyFrame.n3 ||
-                    MyFrame.n2==MyFrame.n4 ||
-                    MyFrame.n2==MyFrame.n5) {
+            while (MyFrame.n2 == MyFrame.n1 ||
+                    MyFrame.n2 == MyFrame.n3 ||
+                    MyFrame.n2 == MyFrame.n4 ||
+                    MyFrame.n2 == MyFrame.n5) {
 
                 MyFrame.n2 = karta2.nextInt(53);
                 dupla++;
             }
             new Karta2();
         }
-
-        if (Dobitak.stop3==0) {
-
+        if (Dobitak.stop3 == 0) {
             Random karta3 = new Random();
-
             MyFrame.n3 = karta3.nextInt(53);
-
-            while (MyFrame.n3==MyFrame.n1 ||
-                    MyFrame.n3==MyFrame.n2 ||
-                    MyFrame.n3==MyFrame.n4 ||
-                    MyFrame.n3==MyFrame.n5) {
+            while (MyFrame.n3 == MyFrame.n1 ||
+                    MyFrame.n3 == MyFrame.n2 ||
+                    MyFrame.n3 == MyFrame.n4 ||
+                    MyFrame.n3 == MyFrame.n5) {
 
                 MyFrame.n3 = karta3.nextInt(53);
                 dupla++;
             }
             new Karta3();
         }
-
-        if (Dobitak.stop4==0) {
-
+        if (Dobitak.stop4 == 0) {
             Random karta4 = new Random();
-
             MyFrame.n4 = karta4.nextInt(53);
-
-            while (MyFrame.n4==MyFrame.n1 ||
-                    MyFrame.n4==MyFrame.n3 ||
-                    MyFrame.n4==MyFrame.n2 ||
-                    MyFrame.n4==MyFrame.n5) {
+            while (MyFrame.n4 == MyFrame.n1 ||
+                    MyFrame.n4 == MyFrame.n3 ||
+                    MyFrame.n4 == MyFrame.n2 ||
+                    MyFrame.n4 == MyFrame.n5) {
 
                 MyFrame.n4 = karta4.nextInt(53);
                 dupla++;
             }
             new Karta4();
         }
-
-        if (Dobitak.stop5==0) {
-
+        if (Dobitak.stop5 == 0) {
             Random karta5 = new Random();
-
             MyFrame.n5 = karta5.nextInt(53);
-
-            while (MyFrame.n5==MyFrame.n1 ||
-                    MyFrame.n5==MyFrame.n2 ||
-                    MyFrame.n5==MyFrame.n3 ||
-                    MyFrame.n5==MyFrame.n4) {
+            while (MyFrame.n5 == MyFrame.n1 ||
+                    MyFrame.n5 == MyFrame.n2 ||
+                    MyFrame.n5 == MyFrame.n3 ||
+                    MyFrame.n5 == MyFrame.n4) {
 
                 MyFrame.n5 = karta5.nextInt(53);
                 dupla++;
             }
             new Karta5();
         }
-
-        Thread.sleep(50-(karta*5));
-
-        if (Dobitak.stop1==0) {
-
-            if (karta==0) {
-                Thread.sleep(100-(dupla*10));
+        Thread.sleep(50 - (karta * 5));
+        if (Dobitak.stop1 == 0) {
+            if (karta == 0) {
+                Thread.sleep(100 - (dupla * 10));
                 karta++;
             }
             else {
                 Thread.sleep(300);
             }
-
             MyFrame.JlabelK1.setVisible(false);
             frame.remove(MyFrame.JlabelK1);
-
             frame.add(Karta1.card1);
             Karta1.card1.setBounds(-8, 380, 400, 540);
             Karta1.card1.setVisible(true);
@@ -151,20 +123,16 @@ public class Deljenje2 implements MainFrame {
             }
             this.karta1Sound.start();
         }
-
-        if (Dobitak.stop2==0) {
-
-            if (karta==0) {
-                Thread.sleep(100-(dupla*10));
+        if (Dobitak.stop2 == 0) {
+            if (karta == 0) {
+                Thread.sleep(100 - (dupla * 10));
                 karta++;
             }
             else {
                 Thread.sleep(300);
             }
-
             MyFrame.JlabelK2.setVisible(false);
             frame.remove(MyFrame.JlabelK2);
-
             frame.add(Karta2.card2);
             Karta2.card2.setBounds(373, 380, 400, 540);
             Karta2.card2.setVisible(true);
@@ -190,20 +158,16 @@ public class Deljenje2 implements MainFrame {
             }
             this.karta2Sound.start();
         }
-
-        if (Dobitak.stop3==0) {
-
-            if (karta==0) {
-                Thread.sleep(100-(dupla*10));
+        if (Dobitak.stop3 == 0) {
+            if (karta == 0) {
+                Thread.sleep(100 - (dupla * 10));
                 karta++;
             }
             else {
                 Thread.sleep(300);
             }
-
             MyFrame.JlabelK3.setVisible(false);
             frame.remove(MyFrame.JlabelK3);
-
             frame.add(Karta3.card3);
             Karta3.card3.setBounds(753, 380, 400, 540);
             Karta3.card3.setVisible(true);
@@ -229,20 +193,16 @@ public class Deljenje2 implements MainFrame {
             }
             this.karta3Sound.start();
         }
-
-        if (Dobitak.stop4==0) {
-
-            if (karta==0) {
-                Thread.sleep(100-(dupla*10));
+        if (Dobitak.stop4 == 0) {
+            if (karta == 0) {
+                Thread.sleep(100 - (dupla * 10));
                 karta++;
             }
             else {
                 Thread.sleep(300);
             }
-
             MyFrame.JlabelK4.setVisible(false);
             frame.remove(MyFrame.JlabelK4);
-
             frame.add(Karta4.card4);
             Karta4.card4.setBounds(1133, 380, 400, 540);
             Karta4.card4.setVisible(true);
@@ -268,20 +228,16 @@ public class Deljenje2 implements MainFrame {
             }
             this.karta4Sound.start();
         }
-
-        if (Dobitak.stop5==0) {
-
-            if (karta==0) {
-                Thread.sleep(100-(dupla*10));
+        if (Dobitak.stop5 == 0) {
+            if (karta == 0) {
+                Thread.sleep(100 - (dupla * 10));
                 karta++;
             }
             else {
                 Thread.sleep(300);
             }
-
             MyFrame.JlabelK5.setVisible(false);
             frame.remove(MyFrame.JlabelK5);
-
             frame.add(Karta5.card5);
             Karta5.card5.setBounds(1512, 380, 400, 540);
             Karta5.card5.setVisible(true);

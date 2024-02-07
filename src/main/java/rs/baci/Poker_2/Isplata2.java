@@ -9,12 +9,8 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class Isplata2 {
-
 	Clip isplata2Sound;
-	
 public Isplata2() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-
-
 	URL isplata2 = this.getClass().getClassLoader().getResource("resources/Isplata2.wav");
 	AudioInputStream audioIsplata2;
 	try {
@@ -35,5 +31,4 @@ public Isplata2() throws UnsupportedAudioFileException, IOException, LineUnavail
 	}
 	isplata2Sound.start();
 	}
-	
 }

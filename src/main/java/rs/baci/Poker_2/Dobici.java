@@ -17,7 +17,6 @@ public interface Dobici {
 	JLabel label10=new JLabel("KREDIT");
 	JLabel label11=new JLabel("ULOG");
 	JLabel label12=new JLabel("DOBITAK");
-
 	JLabel labelT0 = new JLabel("FIVE OF A KIND");
 	JLabel labelT1 = new JLabel("ROYAL FLUSH");
 	JLabel labelT2 = new JLabel("STREET FLUSH");

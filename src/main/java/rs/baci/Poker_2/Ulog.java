@@ -1,11 +1,8 @@
 package rs.baci.Poker_2;
 
 public class Ulog {
-
     Ulog() {
-
-        if (MyFrame.ul==1) {
-
+        if (MyFrame.ul == 1) {
             MyFrame.dx0 = 1200;
             MyFrame.dx1 = 1223;
             MyFrame.dx2 = 1223;
@@ -16,11 +13,8 @@ public class Ulog {
             MyFrame.dx7 = 1269;
             MyFrame.dx8 = 1269;
             MyFrame.dx9 = 1269;
-
         }
-
-        if (MyFrame.ul==2) {
-
+        if (MyFrame.ul == 2) {
             MyFrame.dx0 = 1200;
             MyFrame.dx1 = 1200;
             MyFrame.dx2 = 1223;
@@ -31,11 +25,8 @@ public class Ulog {
             MyFrame.dx7 = 1269;
             MyFrame.dx8 = 1269;
             MyFrame.dx9 = 1269;
-
         }
-
-        if (MyFrame.ul==3) {
-
+        if (MyFrame.ul == 3) {
             MyFrame.dx0 = 1200;
             MyFrame.dx1 = 1200;
             MyFrame.dx2 = 1223;
@@ -46,11 +37,8 @@ public class Ulog {
             MyFrame.dx7 = 1269;
             MyFrame.dx8 = 1269;
             MyFrame.dx9 = 1269;
-
         }
-
-        if (MyFrame.ul==4) {
-
+        if (MyFrame.ul == 4) {
             MyFrame.dx0 = 1200;
             MyFrame.dx1 = 1200;
             MyFrame.dx2 = 1223;
@@ -61,11 +49,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1269;
             MyFrame.dx9 = 1269;
-
         }
-
-        if (MyFrame.ul==5) {
-
+        if (MyFrame.ul == 5) {
             MyFrame.dx0 = 1200;
             MyFrame.dx1 = 1200;
             MyFrame.dx2 = 1223;
@@ -76,11 +61,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1269;
-
         }
-
-        if (MyFrame.ul==6) {
-
+        if (MyFrame.ul == 6) {
             MyFrame.dx0 = 1200;
             MyFrame.dx1 = 1200;
             MyFrame.dx2 = 1223;
@@ -91,11 +73,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1269;
-
         }
-
-        if (MyFrame.ul==7) {
-
+        if (MyFrame.ul == 7) {
             MyFrame.dx0 = 1200;
             MyFrame.dx1 = 1200;
             MyFrame.dx2 = 1223;
@@ -106,11 +85,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1269;
-
         }
-
-        if (MyFrame.ul==8) {
-
+        if (MyFrame.ul == 8) {
             MyFrame.dx0 = 1200;
             MyFrame.dx1 = 1200;
             MyFrame.dx2 = 1223;
@@ -121,11 +97,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1269;
-
         }
-
-        if (MyFrame.ul==9) {
-
+        if (MyFrame.ul == 9) {
             MyFrame.dx0 = 1200;
             MyFrame.dx1 = 1200;
             MyFrame.dx2 = 1223;
@@ -136,11 +109,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1269;
-
         }
-
-        if (MyFrame.ul==10) {
-
+        if (MyFrame.ul == 10) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1200;
             MyFrame.dx2 = 1200;
@@ -151,11 +121,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==11) {
-
+        if (MyFrame.ul == 11) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1200;
             MyFrame.dx2 = 1200;
@@ -166,11 +133,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==12) {
-
+        if (MyFrame.ul == 12) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1200;
             MyFrame.dx2 = 1200;
@@ -181,11 +145,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==13) {
-
+        if (MyFrame.ul == 13) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1200;
             MyFrame.dx2 = 1200;
@@ -196,11 +157,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==14) {
-
+        if (MyFrame.ul == 14) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1200;
             MyFrame.dx2 = 1200;
@@ -211,11 +169,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==15) {
-
+        if (MyFrame.ul == 15) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1200;
             MyFrame.dx2 = 1200;
@@ -226,11 +181,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==16) {
-
+        if (MyFrame.ul == 16) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1200;
             MyFrame.dx2 = 1200;
@@ -241,11 +193,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==17) {
-
+        if (MyFrame.ul == 17) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1200;
             MyFrame.dx2 = 1200;
@@ -256,11 +205,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==18) {
-
+        if (MyFrame.ul == 18) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1200;
             MyFrame.dx2 = 1200;
@@ -271,11 +217,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==19) {
-
+        if (MyFrame.ul == 19) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1200;
             MyFrame.dx2 = 1200;
@@ -286,11 +229,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==20) {
-
+        if (MyFrame.ul == 20) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -301,11 +241,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==21) {
-
+        if (MyFrame.ul == 21) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -316,11 +253,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==22) {
-
+        if (MyFrame.ul == 22) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -331,11 +265,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==23) {
-
+        if (MyFrame.ul == 23) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -346,11 +277,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==24) {
-
+        if (MyFrame.ul == 24) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -361,11 +289,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==25) {
-
+        if (MyFrame.ul == 25) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -376,11 +301,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==26) {
-
+        if (MyFrame.ul == 26) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -391,11 +313,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==27) {
-
+        if (MyFrame.ul == 27) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -406,11 +325,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==28) {
-
+        if (MyFrame.ul == 28) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -421,11 +337,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==29) {
-
+        if (MyFrame.ul == 29) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -436,11 +349,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==30) {
-
+        if (MyFrame.ul == 30) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -451,11 +361,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==31) {
-
+        if (MyFrame.ul == 31) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -466,11 +373,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==32) {
-
+        if (MyFrame.ul == 32) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -481,11 +385,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==33) {
-
+        if (MyFrame.ul == 33) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -496,11 +397,8 @@ public class Ulog {
             MyFrame.dx7 = 1246;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==34) {
-
+        if (MyFrame.ul == 34) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -511,11 +409,8 @@ public class Ulog {
             MyFrame.dx7 = 1223;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==35) {
-
+        if (MyFrame.ul == 35) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -526,11 +421,8 @@ public class Ulog {
             MyFrame.dx7 = 1223;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==36) {
-
+        if (MyFrame.ul == 36) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -541,11 +433,8 @@ public class Ulog {
             MyFrame.dx7 = 1223;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==37) {
-
+        if (MyFrame.ul == 37) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -556,11 +445,8 @@ public class Ulog {
             MyFrame.dx7 = 1223;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==38) {
-
+        if (MyFrame.ul == 38) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -571,11 +457,8 @@ public class Ulog {
             MyFrame.dx7 = 1223;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==39) {
-
+        if (MyFrame.ul == 39) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -586,11 +469,8 @@ public class Ulog {
             MyFrame.dx7 = 1223;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
-        if (MyFrame.ul==40) {
-
+        if (MyFrame.ul == 40) {
             MyFrame.dx0 = 1177;
             MyFrame.dx1 = 1177;
             MyFrame.dx2 = 1200;
@@ -601,10 +481,7 @@ public class Ulog {
             MyFrame.dx7 = 1223;
             MyFrame.dx8 = 1246;
             MyFrame.dx9 = 1246;
-
         }
-
     }
-
 }
 

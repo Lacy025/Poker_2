@@ -3,12 +3,9 @@ package rs.baci.Poker_2;
 import javax.swing.*;
 import java.awt.Component;
 
-public class Karta1 {
-
+public class Karta1 extends JLabel {
 	public static Component card1 = new JLabel();
-
 	Karta1() {
-	
 	if (MyFrame.n1==0) {Karta1.card1=MyFrame.Jlabel0;MyFrame.karta1=0;MyFrame.boja1=0;}
 	if (MyFrame.n1==1) {Karta1.card1=MyFrame.Jlabel1;MyFrame.karta1=14;MyFrame.boja1=1;}
 	if (MyFrame.n1==2) {Karta1.card1=MyFrame.Jlabel2;MyFrame.karta1=2;MyFrame.boja1=1;}
@@ -62,6 +59,5 @@ public class Karta1 {
 	if (MyFrame.n1==50) {Karta1.card1=MyFrame.Jlabel50;MyFrame.karta1=11;MyFrame.boja1=4;}
 	if (MyFrame.n1==51) {Karta1.card1=MyFrame.Jlabel51;MyFrame.karta1=12;MyFrame.boja1=4;}
 	if (MyFrame.n1==52) {Karta1.card1=MyFrame.Jlabel52;MyFrame.karta1=13;MyFrame.boja1=4;}
-	
 	}
 }

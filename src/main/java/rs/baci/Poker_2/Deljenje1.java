@@ -1,6 +1,5 @@
 package rs.baci.Poker_2;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Random;
@@ -13,13 +12,9 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 
 public class Deljenje1 implements MainFrame, Brojevi {
-
 	Clip deljenje1Sound;
-
 	Clip karteSound;
-	
 	Deljenje1() throws InterruptedException {
-
 		MyFrame.JlabelR1.setVisible(false);
 		MyFrame.JlabelR2.setVisible(false);
 		MyFrame.JlabelL.setVisible(false);
@@ -46,7 +41,7 @@ public class Deljenje1 implements MainFrame, Brojevi {
 		MyFrame.Jlabelcr.setVisible(false);
 		frame.remove(MyFrame.Jlabelcr);
 		MyFrame.cr=MyFrame.cr-MyFrame.ul;
-		((JLabel) MyFrame.Jlabelcr).setText(""+String.valueOf(MyFrame.cr));
+		((JLabel) MyFrame.Jlabelcr).setText(String.valueOf(MyFrame.cr));
 		MyFrame.Jlabelcr.setBounds(1670,64,500,50);
 		MyFrame.Jlabelcr.setForeground(color3);
 		MyFrame.Jlabelcr.setFont(font1);
@@ -91,20 +86,18 @@ public class Deljenje1 implements MainFrame, Brojevi {
 		Random karta04 = new Random();
 		Random karta05 = new Random();
 
-		while (MyFrame.n1==MyFrame.n2 || MyFrame.n1==MyFrame.n3 ||
-				MyFrame.n1==MyFrame.n4 ||MyFrame.n1==MyFrame.n5 ||
-				MyFrame.n2==MyFrame.n3 || MyFrame.n2==MyFrame.n4 ||
-				MyFrame.n2==MyFrame.n5 || MyFrame.n3==MyFrame.n4 ||
-				MyFrame.n3==MyFrame.n5 || MyFrame.n4==MyFrame.n5) {
+		while (MyFrame.n1 == MyFrame.n2 || MyFrame.n1 == MyFrame.n3 ||
+				MyFrame.n1 == MyFrame.n4 ||MyFrame.n1 == MyFrame.n5 ||
+				MyFrame.n2 == MyFrame.n3 || MyFrame.n2 == MyFrame.n4 ||
+				MyFrame.n2 == MyFrame.n5 || MyFrame.n3 == MyFrame.n4 ||
+				MyFrame.n3 == MyFrame.n5 || MyFrame.n4 == MyFrame.n5) {
 
 			MyFrame.n1 = karta01.nextInt(53);
 			MyFrame.n2 = karta02.nextInt(53);
 			MyFrame.n3 = karta03.nextInt(53);
 			MyFrame.n4 = karta04.nextInt(53);
 			MyFrame.n5 = karta05.nextInt(53);
-
 		}
-
 		Thread.sleep(200);
 
 		URL karte = this.getClass().getClassLoader().getResource("resources/Karta-1-5.wav");
@@ -172,7 +165,5 @@ public class Deljenje1 implements MainFrame, Brojevi {
 		Karta5.card5.setVisible(true);
 		((JComponent) Karta5.card5).setOpaque(false);
 		Thread.sleep(100);
-
 	}
-
 }

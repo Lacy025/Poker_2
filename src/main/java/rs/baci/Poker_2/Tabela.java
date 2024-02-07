@@ -6,16 +6,13 @@ import java.awt.Color;
 import javax.swing.*;
 
 public class Tabela implements MainFrame, Dobici, Brojevi{
-
     Tabela() {
-
         tabela.setBackground(Color.red);
         tabela.setLayout(new BorderLayout(50,50));
         tabela.setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, Color.YELLOW));
         frame.add(tabela);
         tabela.setVisible(true);
         tabela.setBounds(20, 20, 1300, 340);
-
         label12.setHorizontalAlignment(JLabel.LEFT);
         label12.setVerticalAlignment(JLabel.BOTTOM);
         label12.setBounds(30,140,2200,200);
@@ -24,8 +21,6 @@ public class Tabela implements MainFrame, Dobici, Brojevi{
         label12.setForeground(color1);
         label12.setOpaque(false);
         tabela.add(label12);
-
     }
-
 }
 

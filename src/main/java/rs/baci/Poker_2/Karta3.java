@@ -6,9 +6,7 @@ import javax.swing.JLabel;
 
 public class Karta3 extends JLabel {
 	public static Component card3 = new JLabel();
-
 	Karta3() {
-	
 		if (MyFrame.n3==0) {Karta3.card3= MyFrame.Jlabel0;MyFrame.karta3=0;MyFrame.boja3=0;}
 		if (MyFrame.n3==1) {Karta3.card3= MyFrame.Jlabel1;MyFrame.karta3=14;MyFrame.boja3=1;}
 		if (MyFrame.n3==2) {Karta3.card3= MyFrame.Jlabel2;MyFrame.karta3=2;MyFrame.boja3=1;}
@@ -62,6 +60,5 @@ public class Karta3 extends JLabel {
 		if (MyFrame.n3==50) {Karta3.card3= MyFrame.Jlabel50;MyFrame.karta3=11;MyFrame.boja3=4;}
 		if (MyFrame.n3==51) {Karta3.card3= MyFrame.Jlabel51;MyFrame.karta3=12;MyFrame.boja3=4;}
 		if (MyFrame.n3==52) {Karta3.card3= MyFrame.Jlabel52;MyFrame.karta3=13;MyFrame.boja3=4;}
-	
 	}
 }

@@ -10,27 +10,19 @@ import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 
 public class Royalflush implements MainFrame, Brojevi, Dobici {
-
     Royalflush() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
-
-        if (MyFrame.delj==1) {
-
+        if (MyFrame.delj == 1) {
             rucno.setLayout(new BorderLayout(50,50));
             rucno.setBorder(BorderFactory.createMatteBorder(20, 20, 20, 20, Color.BLUE));
             frame.add(rucno);
             rucno.setBounds(0, L1+2, 1292, 32);
             rucno.setVisible(true);
             rucno.setOpaque(false);
-
             new Hold();
-
         }
-
         else {
-
             new Prostor();
             new Tabela();
-
             labelT1.setVerticalAlignment(JLabel.TOP);
             labelT1.setHorizontalAlignment(JLabel.LEFT);
             labelT1.setBounds(30,10,1200,120);
@@ -39,8 +31,7 @@ public class Royalflush implements MainFrame, Brojevi, Dobici {
             labelT1.setForeground(color1);
             labelT1.setOpaque(false);
             tabela.add(labelT1);
-
-            labelT10.setText("" + d1 * MyFrame.ul + " ");
+            labelT10.setText(d1 * MyFrame.ul + " ");
             labelT10.setHorizontalAlignment(JLabel.RIGHT);
             labelT10.setVerticalAlignment(JLabel.BOTTOM);
             tabela.add(labelT10);
@@ -48,10 +39,8 @@ public class Royalflush implements MainFrame, Brojevi, Dobici {
             labelT10.setFont(font2);
             labelT10.setForeground(color1);
             labelT10.setOpaque(false);
-
-            MyFrame.dobitak=d1*MyFrame.ul;
-            MyFrame.ukupno=d1*MyFrame.ul;
-
+            MyFrame.dobitak = d1 * MyFrame.ul;
+            MyFrame.ukupno = d1 * MyFrame.ul;
         }
     }
 }

@@ -10,27 +10,19 @@ import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 
 public class Streetflush implements MainFrame, Brojevi, Dobici {
-
     Streetflush() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
-
         if (MyFrame.delj==1) {
-
             rucno.setLayout(new BorderLayout(50,50));
             rucno.setBorder(BorderFactory.createMatteBorder(20, 20, 20, 20, Color.RED));
             frame.add(rucno);
             rucno.setBounds(0, L2+2, 1292, 32);
             rucno.setVisible(true);
             rucno.setOpaque(false);
-
             new Hold();
-
         }
-
         else {
-
             new Prostor();
             new Tabela();
-
             labelT2.setVerticalAlignment(JLabel.TOP);
             labelT2.setHorizontalAlignment(JLabel.LEFT);
             labelT2.setBounds(30,10,1200,120);
@@ -39,8 +31,7 @@ public class Streetflush implements MainFrame, Brojevi, Dobici {
             labelT2.setForeground(color1);
             labelT2.setOpaque(false);
             tabela.add(labelT2);
-
-            labelT10.setText("" + d2 * MyFrame.ul + " ");
+            labelT10.setText(d2 * MyFrame.ul + " ");
             labelT10.setHorizontalAlignment(JLabel.RIGHT);
             labelT10.setVerticalAlignment(JLabel.BOTTOM);
             tabela.add(labelT10);
@@ -48,10 +39,8 @@ public class Streetflush implements MainFrame, Brojevi, Dobici {
             labelT10.setFont(font2);
             labelT10.setForeground(color1);
             labelT10.setOpaque(false);
-
-            MyFrame.dobitak=d2*MyFrame.ul;
-            MyFrame.ukupno=d2*MyFrame.ul;
-
+            MyFrame.dobitak = d2 * MyFrame.ul;
+            MyFrame.ukupno = d2 * MyFrame.ul;
         }
     }
 }

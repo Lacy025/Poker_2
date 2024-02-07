@@ -3,7 +3,6 @@ package rs.baci.Poker_2;
 public class Clear1 implements Brojevi, Dobici, MainFrame {
 	
 	Clear1() {
-
 		Karta1.card1.setVisible(false);
 		frame.remove(Karta1.card1);
 		Karta2.card2.setVisible(false);
@@ -45,7 +44,5 @@ public class Clear1 implements Brojevi, Dobici, MainFrame {
 		tabela.remove(label12);
 		tabela.setVisible(false);
 		frame.remove(tabela);
-		
 	}
-
 }

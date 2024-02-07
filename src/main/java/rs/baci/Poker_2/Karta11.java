@@ -4,12 +4,9 @@ import java.awt.Component;
 
 import javax.swing.JLabel;
 
-public class Karta11 {
-
+public class Karta11 extends JLabel {
     public static Component card11 = new JLabel();
-
     Karta11() {
-
         if (MyFrame.k11==1) {Karta11.card11=MyFrame.Jlabel1;}
         if (MyFrame.k11==2) {Karta11.card11=MyFrame.Jlabel2;}
         if (MyFrame.k11==3) {Karta11.card11=MyFrame.Jlabel3;}
@@ -58,8 +55,6 @@ public class Karta11 {
         if (MyFrame.k11==46) {Karta11.card11=MyFrame.Jlabel50;}
         if (MyFrame.k11==47) {Karta11.card11=MyFrame.Jlabel51;}
         if (MyFrame.k11==48) {Karta11.card11=MyFrame.Jlabel52;}
-
     }
-
 }
 
