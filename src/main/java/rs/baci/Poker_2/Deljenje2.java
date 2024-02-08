@@ -96,8 +96,8 @@ public class Deljenje2 implements MainFrame {
             else {
                 Thread.sleep(300);
             }
-            MyFrame.JlabelK1.setVisible(false);
-            frame.remove(MyFrame.JlabelK1);
+            MyFrame.Card_1.setVisible(false);
+            frame.remove(MyFrame.Card_1);
             frame.add(Karta1.card1);
             Karta1.card1.setBounds(-8, 380, 400, 540);
             Karta1.card1.setVisible(true);
@@ -131,8 +131,8 @@ public class Deljenje2 implements MainFrame {
             else {
                 Thread.sleep(300);
             }
-            MyFrame.JlabelK2.setVisible(false);
-            frame.remove(MyFrame.JlabelK2);
+            MyFrame.Card_2.setVisible(false);
+            frame.remove(MyFrame.Card_2);
             frame.add(Karta2.card2);
             Karta2.card2.setBounds(373, 380, 400, 540);
             Karta2.card2.setVisible(true);
@@ -166,8 +166,8 @@ public class Deljenje2 implements MainFrame {
             else {
                 Thread.sleep(300);
             }
-            MyFrame.JlabelK3.setVisible(false);
-            frame.remove(MyFrame.JlabelK3);
+            MyFrame.Card_3.setVisible(false);
+            frame.remove(MyFrame.Card_3);
             frame.add(Karta3.card3);
             Karta3.card3.setBounds(753, 380, 400, 540);
             Karta3.card3.setVisible(true);
@@ -201,8 +201,8 @@ public class Deljenje2 implements MainFrame {
             else {
                 Thread.sleep(300);
             }
-            MyFrame.JlabelK4.setVisible(false);
-            frame.remove(MyFrame.JlabelK4);
+            MyFrame.Card_4.setVisible(false);
+            frame.remove(MyFrame.Card_4);
             frame.add(Karta4.card4);
             Karta4.card4.setBounds(1133, 380, 400, 540);
             Karta4.card4.setVisible(true);
@@ -236,8 +236,8 @@ public class Deljenje2 implements MainFrame {
             else {
                 Thread.sleep(300);
             }
-            MyFrame.JlabelK5.setVisible(false);
-            frame.remove(MyFrame.JlabelK5);
+            MyFrame.Card_5.setVisible(false);
+            frame.remove(MyFrame.Card_5);
             frame.add(Karta5.card5);
             Karta5.card5.setBounds(1512, 380, 400, 540);
             Karta5.card5.setVisible(true);

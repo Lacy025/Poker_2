@@ -10,8 +10,8 @@ public class Polovina extends Thread implements MainFrame, Dobici, Brojevi {
 	public void run() {
 		Dupliranje.pola = 0;
 		Dupliranje.karta = 0;
-		MyFrame.Jlabelcr.setVisible(false);
-		frame.remove(MyFrame.Jlabelcr);
+		MyFrame.Credit.setVisible(false);
+		frame.remove(MyFrame.Credit);
 		labelT10.setVisible(false);
 		tabela.remove(labelT10);
 		frame.add(Izbor2.pobeda);
@@ -20,11 +20,11 @@ public class Polovina extends Thread implements MainFrame, Dobici, Brojevi {
 			while (Dupliranje.x3 != Dupliranje.duplo) {
 				Dupliranje.duplo--;
 				MyFrame.cr++;
-				MyFrame.Jlabelcr.setVisible(false);
-				frame.remove(MyFrame.Jlabelcr);
-				((JLabel) MyFrame.Jlabelcr).setText(String.valueOf(MyFrame.cr));
-				frame.add(MyFrame.Jlabelcr);
-				MyFrame.Jlabelcr.setVisible(true);
+				MyFrame.Credit.setVisible(false);
+				frame.remove(MyFrame.Credit);
+				((JLabel) MyFrame.Credit).setText(String.valueOf(MyFrame.cr));
+				frame.add(MyFrame.Credit);
+				MyFrame.Credit.setVisible(true);
 				labelT10.setVisible(false);
 				labelT10.setText((int) Dupliranje.duplo + " ");
 				labelT10.setHorizontalAlignment(JLabel.RIGHT);
@@ -47,9 +47,9 @@ public class Polovina extends Thread implements MainFrame, Dobici, Brojevi {
 			labelT10.setText((int) Dupliranje.duplo + " ");
 			tabela.add(labelT10);
 			labelT10.setVisible(true);
-			((JLabel) MyFrame.Jlabelcr).setText(String.valueOf(MyFrame.cr));
-			frame.add(MyFrame.Jlabelcr);
-			MyFrame.Jlabelcr.setVisible(true);
+			((JLabel) MyFrame.Credit).setText(String.valueOf(MyFrame.cr));
+			frame.add(MyFrame.Credit);
+			MyFrame.Credit.setVisible(true);
 			Izbor2.pobeda.setVisible(true);
 			try {
 				new Isplata2();
@@ -66,9 +66,9 @@ public class Polovina extends Thread implements MainFrame, Dobici, Brojevi {
 		if (Dupliranje.duplo == 200) {
 			Dupliranje.duplo = Dupliranje.duplo - 100;
 			MyFrame.cr = MyFrame.cr + 100;
-			((JLabel) MyFrame.Jlabelcr).setText(String.valueOf(MyFrame.cr));
-			frame.add(MyFrame.Jlabelcr);
-			MyFrame.Jlabelcr.setVisible(true);
+			((JLabel) MyFrame.Credit).setText(String.valueOf(MyFrame.cr));
+			frame.add(MyFrame.Credit);
+			MyFrame.Credit.setVisible(true);
 			labelT10.setText((int) Dupliranje.duplo + " ");
 			labelT10.setHorizontalAlignment(JLabel.RIGHT);
 			labelT10.setVerticalAlignment(JLabel.BOTTOM);
@@ -108,9 +108,9 @@ public class Polovina extends Thread implements MainFrame, Dobici, Brojevi {
 			int x4=(int)Dupliranje.duplo - 100;
 			Dupliranje.duplo = Dupliranje.duplo - x4;
 			MyFrame.cr = MyFrame.cr + x4;
-			((JLabel) MyFrame.Jlabelcr).setText(String.valueOf(MyFrame.cr));
-			frame.add(MyFrame.Jlabelcr);
-			MyFrame.Jlabelcr.setVisible(true);
+			((JLabel) MyFrame.Credit).setText(String.valueOf(MyFrame.cr));
+			frame.add(MyFrame.Credit);
+			MyFrame.Credit.setVisible(true);
 			labelT10.setText((int) Dupliranje.duplo + " ");
 			labelT10.setHorizontalAlignment(JLabel.RIGHT);
 			labelT10.setVerticalAlignment(JLabel.BOTTOM);
@@ -132,11 +132,11 @@ public class Polovina extends Thread implements MainFrame, Dobici, Brojevi {
 			while (Dupliranje.x3 != Dupliranje.duplo) {
 				Dupliranje.duplo--;
 				MyFrame.cr++;
-				MyFrame.Jlabelcr.setVisible(false);
-				frame.remove(MyFrame.Jlabelcr);
-				((JLabel) MyFrame.Jlabelcr).setText(String.valueOf(MyFrame.cr));
-				frame.add(MyFrame.Jlabelcr);
-				MyFrame.Jlabelcr.setVisible(true);
+				MyFrame.Credit.setVisible(false);
+				frame.remove(MyFrame.Credit);
+				((JLabel) MyFrame.Credit).setText(String.valueOf(MyFrame.cr));
+				frame.add(MyFrame.Credit);
+				MyFrame.Credit.setVisible(true);
 				labelT10.setVisible(false);
 				labelT10.setText((int) Dupliranje.duplo + " ");
 				labelT10.setHorizontalAlignment(JLabel.RIGHT);
@@ -159,9 +159,9 @@ public class Polovina extends Thread implements MainFrame, Dobici, Brojevi {
 			labelT10.setText((int) Dupliranje.duplo + " ");
 			tabela.add(labelT10);
 			labelT10.setVisible(true);
-			((JLabel) MyFrame.Jlabelcr).setText(String.valueOf(MyFrame.cr));
-			frame.add(MyFrame.Jlabelcr);
-			MyFrame.Jlabelcr.setVisible(true);
+			((JLabel) MyFrame.Credit).setText(String.valueOf(MyFrame.cr));
+			frame.add(MyFrame.Credit);
+			MyFrame.Credit.setVisible(true);
 			Izbor2.pobeda.setVisible(true);
 			try {
 				new Isplata2();
@@ -182,9 +182,9 @@ public class Polovina extends Thread implements MainFrame, Dobici, Brojevi {
 					tabela.remove(labelT10);
 					Dupliranje.duplo = Dupliranje.duplo - 100;
 					MyFrame.cr = MyFrame.cr + 100;
-					((JLabel) MyFrame.Jlabelcr).setText(String.valueOf(MyFrame.cr));
-					frame.add(MyFrame.Jlabelcr);
-					MyFrame.Jlabelcr.setVisible(true);
+					((JLabel) MyFrame.Credit).setText(String.valueOf(MyFrame.cr));
+					frame.add(MyFrame.Credit);
+					MyFrame.Credit.setVisible(true);
 					labelT10.setText((int) Dupliranje.duplo + " ");
 					labelT10.setHorizontalAlignment(JLabel.RIGHT);
 					labelT10.setVerticalAlignment(JLabel.BOTTOM);
@@ -208,9 +208,9 @@ public class Polovina extends Thread implements MainFrame, Dobici, Brojevi {
 					labelT10.setText((int) Dupliranje.x3 + " ");
 					tabela.add(labelT10);
 					labelT10.setVisible(true);
-					((JLabel) MyFrame.Jlabelcr).setText(String.valueOf(MyFrame.cr));
-					frame.add(MyFrame.Jlabelcr);
-					MyFrame.Jlabelcr.setVisible(true);
+					((JLabel) MyFrame.Credit).setText(String.valueOf(MyFrame.cr));
+					frame.add(MyFrame.Credit);
+					MyFrame.Credit.setVisible(true);
 					Izbor2.pobeda.setVisible(true);
 					try {
 						new Isplata2();
@@ -224,9 +224,9 @@ public class Polovina extends Thread implements MainFrame, Dobici, Brojevi {
 				labelT10.setText((int) Dupliranje.x3 + " ");
 				tabela.add(labelT10);
 				labelT10.setVisible(true);
-				((JLabel) MyFrame.Jlabelcr).setText(String.valueOf(MyFrame.cr));
-				frame.add(MyFrame.Jlabelcr);
-				MyFrame.Jlabelcr.setVisible(true);
+				((JLabel) MyFrame.Credit).setText(String.valueOf(MyFrame.cr));
+				frame.add(MyFrame.Credit);
+				MyFrame.Credit.setVisible(true);
 				Izbor2.pobeda.setVisible(true);
 				try {
 					new Isplata2();
@@ -246,9 +246,9 @@ public class Polovina extends Thread implements MainFrame, Dobici, Brojevi {
 				int x5 = (int) (Dupliranje.duplo - (((int)Dupliranje.duplo / 100) * 100));
 				Dupliranje.duplo = Dupliranje.duplo - x5;
 				MyFrame.cr = MyFrame.cr + x5;
-				((JLabel) MyFrame.Jlabelcr).setText(String.valueOf(MyFrame.cr));
-				frame.add(MyFrame.Jlabelcr);
-				MyFrame.Jlabelcr.setVisible(true);
+				((JLabel) MyFrame.Credit).setText(String.valueOf(MyFrame.cr));
+				frame.add(MyFrame.Credit);
+				MyFrame.Credit.setVisible(true);
 				labelT10.setText((int) Dupliranje.duplo + " ");
 				labelT10.setHorizontalAlignment(JLabel.RIGHT);
 				labelT10.setVerticalAlignment(JLabel.BOTTOM);
@@ -268,9 +268,9 @@ public class Polovina extends Thread implements MainFrame, Dobici, Brojevi {
 					tabela.remove(labelT10);
 					Dupliranje.duplo = Dupliranje.duplo - 100;
 					MyFrame.cr=MyFrame.cr + 100;
-					((JLabel) MyFrame.Jlabelcr).setText(String.valueOf(MyFrame.cr));
-					frame.add(MyFrame.Jlabelcr);
-					MyFrame.Jlabelcr.setVisible(true);
+					((JLabel) MyFrame.Credit).setText(String.valueOf(MyFrame.cr));
+					frame.add(MyFrame.Credit);
+					MyFrame.Credit.setVisible(true);
 					labelT10.setText((int) Dupliranje.duplo + " ");
 					labelT10.setHorizontalAlignment(JLabel.RIGHT);
 					labelT10.setVerticalAlignment(JLabel.BOTTOM);
@@ -291,7 +291,7 @@ public class Polovina extends Thread implements MainFrame, Dobici, Brojevi {
 				MyFrame.cr = MyFrame.cr + ((int)Dupliranje.duplo - Dupliranje.x3);
 				Dupliranje.duplo = Dupliranje.x3;
 				labelT10.setText((int) Dupliranje.duplo + " ");
-				((JLabel) MyFrame.Jlabelcr).setText(String.valueOf(MyFrame.cr));
+				((JLabel) MyFrame.Credit).setText(String.valueOf(MyFrame.cr));
 				labelT10.setHorizontalAlignment(JLabel.RIGHT);
 				labelT10.setVerticalAlignment(JLabel.BOTTOM);
 				labelT10.setFont(font2);
@@ -299,8 +299,8 @@ public class Polovina extends Thread implements MainFrame, Dobici, Brojevi {
 				labelT10.setOpaque(false);
 				tabela.add(labelT10);
 				labelT10.setVisible(true);
-				frame.add(MyFrame.Jlabelcr);
-				MyFrame.Jlabelcr.setVisible(true);
+				frame.add(MyFrame.Credit);
+				MyFrame.Credit.setVisible(true);
 				try {
 					new Isplata2();
 					Thread.sleep(1000);

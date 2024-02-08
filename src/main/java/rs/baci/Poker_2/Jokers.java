@@ -2,11 +2,11 @@ package rs.baci.Poker_2;
 
 public class Jokers implements MainFrame {
 	Jokers() {
-		while (MyFrame.delj == 0) {
+		while (MyFrame.dealing == 0) {
 			if (MyFrame.jk == 5000) {
 				if (MyFrame.cr == 0 || MyFrame.ch == 1) {
-					MyFrame.JlabelL.setVisible(false);
-					MyFrame.JlabelR.setVisible(true);
+					MyFrame.Left_zero.setVisible(false);
+					MyFrame.Right_zero.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -15,8 +15,8 @@ public class Jokers implements MainFrame {
 					MyFrame.jk++;
 				}
 				if (MyFrame.cr > 0) {
-					MyFrame.JlabelM1.setVisible(false);
-					MyFrame.JlabelM2.setVisible(true);
+					MyFrame.Middle_1.setVisible(false);
+					MyFrame.Middle_2.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -26,17 +26,17 @@ public class Jokers implements MainFrame {
 				}
 			}
 			if (MyFrame.jk == 10000) {
-				if (MyFrame.blokada == 1) {
-					MyFrame.Jlabelcr.setVisible(false);
-					frame.remove(MyFrame.Jlabelcr);
+				if (MyFrame.blocked == 1) {
+					MyFrame.Credit.setVisible(false);
+					frame.remove(MyFrame.Credit);
 				}
-				MyFrame.JlabelR1.setVisible(false);
-				MyFrame.JlabelR2.setVisible(false);
-				MyFrame.JlabelK1.setVisible(false);
-				MyFrame.JlabelJ1.setVisible(true);
+				MyFrame.Joker.setVisible(false);
+				MyFrame.Card.setVisible(false);
+				MyFrame.Card_1.setVisible(false);
+				MyFrame.Joker_1.setVisible(true);
 				if (MyFrame.cr == 0 || MyFrame.ch == 1) {
-					MyFrame.JlabelL.setVisible(true);
-					MyFrame.JlabelR.setVisible(false);
+					MyFrame.Left_zero.setVisible(true);
+					MyFrame.Right_zero.setVisible(false);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -45,8 +45,8 @@ public class Jokers implements MainFrame {
 					MyFrame.jk++;
 				}
 				if (MyFrame.cr > 0) {
-					MyFrame.JlabelM1.setVisible(true);
-					MyFrame.JlabelM2.setVisible(false);
+					MyFrame.Middle_1.setVisible(true);
+					MyFrame.Middle_2.setVisible(false);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -57,8 +57,8 @@ public class Jokers implements MainFrame {
 			}
 			if (MyFrame.jk == 15000) {
 				if (MyFrame.cr == 0 || MyFrame.ch == 1) {
-					MyFrame.JlabelL.setVisible(false);
-					MyFrame.JlabelR.setVisible(true);
+					MyFrame.Left_zero.setVisible(false);
+					MyFrame.Right_zero.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -67,8 +67,8 @@ public class Jokers implements MainFrame {
 					MyFrame.jk++;
 				}
 				if (MyFrame.cr > 0) {
-					MyFrame.JlabelM1.setVisible(true);
-					MyFrame.JlabelM2.setVisible(false);
+					MyFrame.Middle_1.setVisible(true);
+					MyFrame.Middle_2.setVisible(false);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -78,17 +78,17 @@ public class Jokers implements MainFrame {
 				}
 			}
 			if (MyFrame.jk == 20000) {
-				if (MyFrame.blokada == 1) {
-					frame.add(MyFrame.Jlabelcr);
-					MyFrame.Jlabelcr.setVisible(true);
+				if (MyFrame.blocked == 1) {
+					frame.add(MyFrame.Credit);
+					MyFrame.Credit.setVisible(true);
 				}
-				MyFrame.JlabelJ1.setVisible(false);
-				MyFrame.JlabelK2.setVisible(false);
-				MyFrame.JlabelJ2.setVisible(true);
-				MyFrame.JlabelK1.setVisible(true);
+				MyFrame.Joker_1.setVisible(false);
+				MyFrame.Card_2.setVisible(false);
+				MyFrame.Joker_2.setVisible(true);
+				MyFrame.Card_1.setVisible(true);
 				if (MyFrame.cr == 0 || MyFrame.ch == 1) {
-					MyFrame.JlabelL.setVisible(true);
-					MyFrame.JlabelR.setVisible(false);
+					MyFrame.Left_zero.setVisible(true);
+					MyFrame.Right_zero.setVisible(false);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -97,8 +97,8 @@ public class Jokers implements MainFrame {
 					MyFrame.jk++;
 				}
 				if (MyFrame.cr > 0) {
-					MyFrame.JlabelM1.setVisible(false);
-					MyFrame.JlabelM2.setVisible(true);
+					MyFrame.Middle_1.setVisible(false);
+					MyFrame.Middle_2.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -109,8 +109,8 @@ public class Jokers implements MainFrame {
 			}
 			if (MyFrame.jk == 25000) {
 				if (MyFrame.cr ==0 || MyFrame.ch == 1) {
-					MyFrame.JlabelL.setVisible(false);
-					MyFrame.JlabelR.setVisible(true);
+					MyFrame.Left_zero.setVisible(false);
+					MyFrame.Right_zero.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -119,8 +119,8 @@ public class Jokers implements MainFrame {
 					MyFrame.jk++;
 				}
 				if (MyFrame.cr > 0) {
-					MyFrame.JlabelM1.setVisible(false);
-					MyFrame.JlabelM2.setVisible(true);
+					MyFrame.Middle_1.setVisible(false);
+					MyFrame.Middle_2.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -130,17 +130,17 @@ public class Jokers implements MainFrame {
 				}
 			}
 			if (MyFrame.jk == 30000) {
-				if (MyFrame.blokada == 1) {
-					MyFrame.Jlabelcr.setVisible(false);
-					frame.remove(MyFrame.Jlabelcr);
+				if (MyFrame.blocked == 1) {
+					MyFrame.Credit.setVisible(false);
+					frame.remove(MyFrame.Credit);
 				}
-				MyFrame.JlabelJ2.setVisible(false);
-				MyFrame.JlabelK3.setVisible(false);
-				MyFrame.JlabelJ3.setVisible(true);
-				MyFrame.JlabelK2.setVisible(true);
+				MyFrame.Joker_2.setVisible(false);
+				MyFrame.Card_3.setVisible(false);
+				MyFrame.Joker_3.setVisible(true);
+				MyFrame.Card_2.setVisible(true);
 				if (MyFrame.cr == 0 || MyFrame.ch == 1) {
-					MyFrame.JlabelL.setVisible(true);
-					MyFrame.JlabelR.setVisible(false);
+					MyFrame.Left_zero.setVisible(true);
+					MyFrame.Right_zero.setVisible(false);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -149,8 +149,8 @@ public class Jokers implements MainFrame {
 					MyFrame.jk++;
 				}
 				if (MyFrame.cr > 0) {
-					MyFrame.JlabelM1.setVisible(true);
-					MyFrame.JlabelM2.setVisible(false);
+					MyFrame.Middle_1.setVisible(true);
+					MyFrame.Middle_2.setVisible(false);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -161,8 +161,8 @@ public class Jokers implements MainFrame {
 			}
 			if (MyFrame.jk == 35000) {
 				if (MyFrame.cr == 0 || MyFrame.ch == 1) {
-					MyFrame.JlabelL.setVisible(false);
-					MyFrame.JlabelR.setVisible(true);
+					MyFrame.Left_zero.setVisible(false);
+					MyFrame.Right_zero.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -171,8 +171,8 @@ public class Jokers implements MainFrame {
 					MyFrame.jk++;
 				}
 				if (MyFrame.cr > 0) {
-					MyFrame.JlabelM1.setVisible(true);
-					MyFrame.JlabelM2.setVisible(false);
+					MyFrame.Middle_1.setVisible(true);
+					MyFrame.Middle_2.setVisible(false);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -182,17 +182,17 @@ public class Jokers implements MainFrame {
 				}
 			}
 			if (MyFrame.jk == 40000) {
-				if (MyFrame.blokada == 1) {
-					frame.add(MyFrame.Jlabelcr);
-					MyFrame.Jlabelcr.setVisible(true);
+				if (MyFrame.blocked == 1) {
+					frame.add(MyFrame.Credit);
+					MyFrame.Credit.setVisible(true);
 				}
-				MyFrame.JlabelJ3.setVisible(false);
-				MyFrame.JlabelK4.setVisible(false);
-				MyFrame.JlabelJ4.setVisible(true);
-				MyFrame.JlabelK3.setVisible(true);
+				MyFrame.Joker_3.setVisible(false);
+				MyFrame.Card_4.setVisible(false);
+				MyFrame.Joker_4.setVisible(true);
+				MyFrame.Card_3.setVisible(true);
 				if (MyFrame.cr == 0 || MyFrame.ch == 1) {
-					MyFrame.JlabelL.setVisible(true);
-					MyFrame.JlabelR.setVisible(false);
+					MyFrame.Left_zero.setVisible(true);
+					MyFrame.Right_zero.setVisible(false);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -201,8 +201,8 @@ public class Jokers implements MainFrame {
 					MyFrame.jk++;
 				}
 				if (MyFrame.cr > 0) {
-					MyFrame.JlabelM1.setVisible(false);
-					MyFrame.JlabelM2.setVisible(true);
+					MyFrame.Middle_1.setVisible(false);
+					MyFrame.Middle_2.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -213,8 +213,8 @@ public class Jokers implements MainFrame {
 			}
 			if (MyFrame.jk == 45000) {
 				if (MyFrame.cr == 0 || MyFrame.ch == 1) {
-					MyFrame.JlabelL.setVisible(false);
-					MyFrame.JlabelR.setVisible(true);
+					MyFrame.Left_zero.setVisible(false);
+					MyFrame.Right_zero.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -223,8 +223,8 @@ public class Jokers implements MainFrame {
 					MyFrame.jk++;
 				}
 				if (MyFrame.cr > 0) {
-					MyFrame.JlabelM1.setVisible(false);
-					MyFrame.JlabelM2.setVisible(true);
+					MyFrame.Middle_1.setVisible(false);
+					MyFrame.Middle_2.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -234,17 +234,17 @@ public class Jokers implements MainFrame {
 				}
 			}
 			if (MyFrame.jk == 50000) {
-				if (MyFrame.blokada == 1) {
-					MyFrame.Jlabelcr.setVisible(false);
-					frame.remove(MyFrame.Jlabelcr);
+				if (MyFrame.blocked == 1) {
+					MyFrame.Credit.setVisible(false);
+					frame.remove(MyFrame.Credit);
 				}
-				MyFrame.JlabelJ4.setVisible(false);
-				MyFrame.JlabelK5.setVisible(false);
-				MyFrame.JlabelJ5.setVisible(true);
-				MyFrame.JlabelK4.setVisible(true);
+				MyFrame.Joker_4.setVisible(false);
+				MyFrame.Card_5.setVisible(false);
+				MyFrame.Joker_5.setVisible(true);
+				MyFrame.Card_4.setVisible(true);
 				if (MyFrame.cr == 0 || MyFrame.ch == 1) {
-					MyFrame.JlabelL.setVisible(true);
-					MyFrame.JlabelR.setVisible(false);
+					MyFrame.Left_zero.setVisible(true);
+					MyFrame.Right_zero.setVisible(false);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -253,8 +253,8 @@ public class Jokers implements MainFrame {
 					MyFrame.jk++;
 				}
 				if (MyFrame.cr > 0) {
-					MyFrame.JlabelM1.setVisible(true);
-					MyFrame.JlabelM2.setVisible(false);
+					MyFrame.Middle_1.setVisible(true);
+					MyFrame.Middle_2.setVisible(false);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -265,8 +265,8 @@ public class Jokers implements MainFrame {
 			}
 			if (MyFrame.jk == 55000) {
 				if (MyFrame.cr == 0 || MyFrame.ch == 1) {
-					MyFrame.JlabelL.setVisible(false);
-					MyFrame.JlabelR.setVisible(true);
+					MyFrame.Left_zero.setVisible(false);
+					MyFrame.Right_zero.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -275,8 +275,8 @@ public class Jokers implements MainFrame {
 					MyFrame.jk++;
 				}
 				if (MyFrame.cr > 0) {
-					MyFrame.JlabelM1.setVisible(true);
-					MyFrame.JlabelM2.setVisible(false);
+					MyFrame.Middle_1.setVisible(true);
+					MyFrame.Middle_2.setVisible(false);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -286,26 +286,26 @@ public class Jokers implements MainFrame {
 				}
 			}
 			if (MyFrame.jk == 60000) {
-				if (MyFrame.blokada == 1) {
-					frame.add(MyFrame.Jlabelcr);
-					MyFrame.Jlabelcr.setVisible(true);
+				if (MyFrame.blocked == 1) {
+					frame.add(MyFrame.Credit);
+					MyFrame.Credit.setVisible(true);
 				}
-				MyFrame.JlabelK1.setVisible(false);
-				MyFrame.JlabelK2.setVisible(false);
-				MyFrame.JlabelK3.setVisible(false);
-				MyFrame.JlabelK4.setVisible(false);
-				MyFrame.JlabelK5.setVisible(false);
-				MyFrame.JlabelJ1.setVisible(false);
-				MyFrame.JlabelJ2.setVisible(false);
-				MyFrame.JlabelJ3.setVisible(false);
-				MyFrame.JlabelJ4.setVisible(false);
-				MyFrame.JlabelJ5.setVisible(false);
-				MyFrame.JlabelR1.setVisible(true);
-				MyFrame.JlabelR2.setVisible(true);
+				MyFrame.Card_1.setVisible(false);
+				MyFrame.Card_2.setVisible(false);
+				MyFrame.Card_3.setVisible(false);
+				MyFrame.Card_4.setVisible(false);
+				MyFrame.Card_5.setVisible(false);
+				MyFrame.Joker_1.setVisible(false);
+				MyFrame.Joker_2.setVisible(false);
+				MyFrame.Joker_3.setVisible(false);
+				MyFrame.Joker_4.setVisible(false);
+				MyFrame.Joker_5.setVisible(false);
+				MyFrame.Joker.setVisible(true);
+				MyFrame.Card.setVisible(true);
 
 				if (MyFrame.cr == 0 || MyFrame.ch == 1) {
-					MyFrame.JlabelL.setVisible(true);
-					MyFrame.JlabelR.setVisible(false);
+					MyFrame.Left_zero.setVisible(true);
+					MyFrame.Right_zero.setVisible(false);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -314,8 +314,8 @@ public class Jokers implements MainFrame {
 					MyFrame.jk++;
 				}
 				if (MyFrame.cr > 0) {
-					MyFrame.JlabelM1.setVisible(false);
-					MyFrame.JlabelM2.setVisible(true);
+					MyFrame.Middle_1.setVisible(false);
+					MyFrame.Middle_2.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -326,8 +326,8 @@ public class Jokers implements MainFrame {
 			}
 			if (MyFrame.jk == 65000) {
 				if (MyFrame.cr == 0 || MyFrame.ch == 1) {
-					MyFrame.JlabelL.setVisible(false);
-					MyFrame.JlabelR.setVisible(true);
+					MyFrame.Left_zero.setVisible(false);
+					MyFrame.Right_zero.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -336,8 +336,8 @@ public class Jokers implements MainFrame {
 					MyFrame.jk++;
 				}
 				if (MyFrame.cr > 0) {
-					MyFrame.JlabelM1.setVisible(false);
-					MyFrame.JlabelM2.setVisible(true);
+					MyFrame.Middle_1.setVisible(false);
+					MyFrame.Middle_2.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -347,13 +347,13 @@ public class Jokers implements MainFrame {
 				}
 			}
 			if (MyFrame.jk == 70000) {
-				if (MyFrame.blokada == 1) {
-					MyFrame.Jlabelcr.setVisible(false);
-					frame.remove(MyFrame.Jlabelcr);
+				if (MyFrame.blocked == 1) {
+					MyFrame.Credit.setVisible(false);
+					frame.remove(MyFrame.Credit);
 				}
 				if (MyFrame.cr == 0 || MyFrame.ch == 1) {
-					MyFrame.JlabelL.setVisible(true);
-					MyFrame.JlabelR.setVisible(false);
+					MyFrame.Left_zero.setVisible(true);
+					MyFrame.Right_zero.setVisible(false);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -362,8 +362,8 @@ public class Jokers implements MainFrame {
 					MyFrame.jk++;
 				}
 				if (MyFrame.cr > 0) {
-					MyFrame.JlabelM1.setVisible(true);
-					MyFrame.JlabelM2.setVisible(false);
+					MyFrame.Middle_1.setVisible(true);
+					MyFrame.Middle_2.setVisible(false);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -374,8 +374,8 @@ public class Jokers implements MainFrame {
 			}
 			if (MyFrame.jk == 75000) {
 				if (MyFrame.cr == 0 || MyFrame.ch == 1) {
-					MyFrame.JlabelL.setVisible(false);
-					MyFrame.JlabelR.setVisible(true);
+					MyFrame.Left_zero.setVisible(false);
+					MyFrame.Right_zero.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -384,8 +384,8 @@ public class Jokers implements MainFrame {
 					MyFrame.jk++;
 				}
 				if (MyFrame.cr > 0) {
-					MyFrame.JlabelM1.setVisible(true);
-					MyFrame.JlabelM2.setVisible(false);
+					MyFrame.Middle_1.setVisible(true);
+					MyFrame.Middle_2.setVisible(false);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -395,13 +395,13 @@ public class Jokers implements MainFrame {
 				}
 			}
 			if (MyFrame.jk == 80000) {
-				if (MyFrame.blokada == 1) {
-					frame.add(MyFrame.Jlabelcr);
-					MyFrame.Jlabelcr.setVisible(true);
+				if (MyFrame.blocked == 1) {
+					frame.add(MyFrame.Credit);
+					MyFrame.Credit.setVisible(true);
 				}
 				if (MyFrame.cr == 0 || MyFrame.ch == 1) {
-					MyFrame.JlabelL.setVisible(true);
-					MyFrame.JlabelR.setVisible(false);
+					MyFrame.Left_zero.setVisible(true);
+					MyFrame.Right_zero.setVisible(false);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -410,8 +410,8 @@ public class Jokers implements MainFrame {
 					MyFrame.jk++;
 				}
 				if (MyFrame.cr > 0) {
-					MyFrame.JlabelM1.setVisible(false);
-					MyFrame.JlabelM2.setVisible(true);
+					MyFrame.Middle_1.setVisible(false);
+					MyFrame.Middle_2.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -422,8 +422,8 @@ public class Jokers implements MainFrame {
 			}
 			if (MyFrame.jk == 85000) {
 				if (MyFrame.cr == 0 || MyFrame.ch == 1) {
-					MyFrame.JlabelL.setVisible(false);
-					MyFrame.JlabelR.setVisible(true);
+					MyFrame.Left_zero.setVisible(false);
+					MyFrame.Right_zero.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -432,8 +432,8 @@ public class Jokers implements MainFrame {
 					MyFrame.jk++;
 				}
 				if (MyFrame.cr > 0) {
-					MyFrame.JlabelM1.setVisible(false);
-					MyFrame.JlabelM2.setVisible(true);
+					MyFrame.Middle_1.setVisible(false);
+					MyFrame.Middle_2.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -443,13 +443,13 @@ public class Jokers implements MainFrame {
 				}
 			}
 			if (MyFrame.jk == 90000) {
-				if (MyFrame.blokada == 1) {
-					MyFrame.Jlabelcr.setVisible(false);
-					frame.remove(MyFrame.Jlabelcr);
+				if (MyFrame.blocked == 1) {
+					MyFrame.Credit.setVisible(false);
+					frame.remove(MyFrame.Credit);
 				}
 				if (MyFrame.cr == 0 || MyFrame.ch == 1) {
-					MyFrame.JlabelL.setVisible(true);
-					MyFrame.JlabelR.setVisible(false);
+					MyFrame.Left_zero.setVisible(true);
+					MyFrame.Right_zero.setVisible(false);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -458,8 +458,8 @@ public class Jokers implements MainFrame {
 					MyFrame.jk++;
 				}
 				if (MyFrame.cr > 0) {
-					MyFrame.JlabelM1.setVisible(true);
-					MyFrame.JlabelM2.setVisible(false);
+					MyFrame.Middle_1.setVisible(true);
+					MyFrame.Middle_2.setVisible(false);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -470,8 +470,8 @@ public class Jokers implements MainFrame {
 			}
 			if (MyFrame.jk == 95000) {
 				if (MyFrame.cr == 0 || MyFrame.ch == 1) {
-					MyFrame.JlabelL.setVisible(false);
-					MyFrame.JlabelR.setVisible(true);
+					MyFrame.Left_zero.setVisible(false);
+					MyFrame.Right_zero.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -480,8 +480,8 @@ public class Jokers implements MainFrame {
 					MyFrame.jk++;
 				}
 				if (MyFrame.cr > 0) {
-					MyFrame.JlabelM1.setVisible(true);
-					MyFrame.JlabelM2.setVisible(false);
+					MyFrame.Middle_1.setVisible(true);
+					MyFrame.Middle_2.setVisible(false);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -491,21 +491,21 @@ public class Jokers implements MainFrame {
 				}
 			}
 			if (MyFrame.jk == 100000) {
-				if (MyFrame.blokada == 1) {
-					frame.add(MyFrame.Jlabelcr);
-					MyFrame.Jlabelcr.setVisible(true);
+				if (MyFrame.blocked == 1) {
+					frame.add(MyFrame.Credit);
+					MyFrame.Credit.setVisible(true);
 				}
-				MyFrame.JlabelR1.setVisible(false);
-				MyFrame.JlabelR2.setVisible(false);
-				MyFrame.JlabelK1.setVisible(true);
-				MyFrame.JlabelK2.setVisible(true);
-				MyFrame.JlabelK3.setVisible(true);
-				MyFrame.JlabelK4.setVisible(true);
-				MyFrame.JlabelK5.setVisible(true);
+				MyFrame.Joker.setVisible(false);
+				MyFrame.Card.setVisible(false);
+				MyFrame.Card_1.setVisible(true);
+				MyFrame.Card_2.setVisible(true);
+				MyFrame.Card_3.setVisible(true);
+				MyFrame.Card_4.setVisible(true);
+				MyFrame.Card_5.setVisible(true);
 
 				if (MyFrame.cr == 0 || MyFrame.ch == 1) {
-					MyFrame.JlabelL.setVisible(true);
-					MyFrame.JlabelR.setVisible(false);
+					MyFrame.Left_zero.setVisible(true);
+					MyFrame.Right_zero.setVisible(false);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -514,8 +514,8 @@ public class Jokers implements MainFrame {
 					MyFrame.jk = 0;
 				}
 				if (MyFrame.cr > 0) {
-					MyFrame.JlabelM1.setVisible(false);
-					MyFrame.JlabelM2.setVisible(true);
+					MyFrame.Middle_1.setVisible(false);
+					MyFrame.Middle_2.setVisible(true);
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {

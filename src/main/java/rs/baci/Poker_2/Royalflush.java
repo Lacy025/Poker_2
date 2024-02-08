@@ -11,7 +11,7 @@ import javax.swing.JLabel;
 
 public class Royalflush implements MainFrame, Brojevi, Dobici {
     Royalflush() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
-        if (MyFrame.delj == 1) {
+        if (MyFrame.dealing == 1) {
             rucno.setLayout(new BorderLayout(50,50));
             rucno.setBorder(BorderFactory.createMatteBorder(20, 20, 20, 20, Color.BLUE));
             frame.add(rucno);
@@ -39,8 +39,8 @@ public class Royalflush implements MainFrame, Brojevi, Dobici {
             labelT10.setFont(font2);
             labelT10.setForeground(color1);
             labelT10.setOpaque(false);
-            MyFrame.dobitak = d1 * MyFrame.ul;
-            MyFrame.ukupno = d1 * MyFrame.ul;
+            MyFrame.win_value = d1 * MyFrame.ul;
+            MyFrame.final_value = d1 * MyFrame.ul;
         }
     }
 }

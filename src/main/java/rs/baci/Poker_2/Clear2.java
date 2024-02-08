@@ -32,22 +32,22 @@ public class Clear2 implements Brojevi, Dobici, MainFrame {
     	Dupliranje.MANJA.setVisible(false);
     	frame.remove(Dupliranje.MANJA);
     	
-    	MyFrame.n1=0;
-		MyFrame.n2=0;
-		MyFrame.n3=0;
-		MyFrame.n4=0;
-		MyFrame.n5=0;
+    	MyFrame.n1 = 0;
+		MyFrame.n2 = 0;
+		MyFrame.n3 = 0;
+		MyFrame.n4 = 0;
+		MyFrame.n5 = 0;
 		
-		if(MyFrame.ukupno > 0) {
+		if(MyFrame.final_value > 0) {
 			MyFrame.cr = MyFrame.cr - 100;
-			MyFrame.cr = MyFrame.cr + MyFrame.ukupno;
+			MyFrame.cr = MyFrame.cr + MyFrame.final_value;
 		}
-		 Dobitak.stop1=0;
-		 Dobitak.stop2=0;
-		 Dobitak.stop3=0;
-		 Dobitak.stop4=0;
-		 Dobitak.stop5=0;
+		 Dobitak.stop1 = 0;
+		 Dobitak.stop2 = 0;
+		 Dobitak.stop3 = 0;
+		 Dobitak.stop4 = 0;
+		 Dobitak.stop5 = 0;
 		
-		MyFrame.delj=0;
+		MyFrame.dealing = 0;
 	}
 }

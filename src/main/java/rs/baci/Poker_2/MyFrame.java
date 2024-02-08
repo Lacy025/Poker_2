@@ -20,27 +20,24 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import javax.swing.plaf.metal.MetalLookAndFeel;
 
-
 public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Serializable {
-	
 	@Serial
 	private static final long serialVersionUID = 1L;
 	Clip introSound;
-	Clip kreditSound;
-	Clip ulogSound;
-	Clip autoholdSound;
-	Clip kasaSound;
-	
+	Clip credit_sound;
+	Clip bet_sound;
+	Clip auto_hold_sound;
+	Clip cashing_sound;
 	static int kr;
 	static int cr;
 	static int ch;
 	public int uu = 1;
 	public static int ul = 1;
 	public static int ah = 1;
-	public static int blokada;
-	public static int dobitak;
-	public static int ukupno;
-	public static int igra;
+	public static int blocked;
+	public static int win_value;
+	public static int final_value;
+	public static int game;
 	public static int dx0 = 1200;
 	public static int dx1 = 1223;
 	public static int dx2 = 1223;
@@ -51,17 +48,14 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 	public static int dx7 = 1269;
 	public static int dx8 = 1269;
 	public static int dx9 = 1269;
-	
 	public static int jk = 60000;
-	public static int delj;
-	static int prekid;
-
+	public static int dealing;
+	static int breaking;
 	public static int n1;
 	public static int n2;
 	public static int n3;
 	public static int n4;
 	public static int n5;
-
 	public static int k01;
 	public static int k02;
 	public static int k03;
@@ -73,27 +67,25 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 	public static int k09;
 	public static int k10;
 	public static int k11;
-	
-	public static Component Jlabelah = new JLabel("AUTOHOLD");
-	public static Component Jlabelcr = new JLabel(""+cr);
-	public static Component Jlabelul = new JLabel(""+ul);
-	public static Component Jlabeld0 = new JLabel(""+d0*ul);
-	public static Component Jlabeld1 = new JLabel(""+d1*ul);
-	public static Component Jlabeld2 = new JLabel(""+d2*ul);
-	public static Component Jlabeld3 = new JLabel(""+d3*ul);
-	public static Component Jlabeld4 = new JLabel(""+d4*ul);
-	public static Component Jlabeld5 = new JLabel(""+d5*ul);
-	public static Component Jlabeld6 = new JLabel(""+d6*ul);
-	public static Component Jlabeld7 = new JLabel(""+d7*ul);
-	public static Component Jlabeld8 = new JLabel(""+d8*ul);
-	public static Component Jlabeld9 = new JLabel(""+d9*ul);
-	public static Component JlabelR1 = new JLabel("JOKER");
-	public static Component JlabelR2 = new JLabel("CARD");
-	public static Component JlabelL = new JLabel("  LACIKA BAČI");
-	public static Component JlabelR = new JLabel("  SRBIJA 2022");
-	public static Component JlabelM1 = new JLabel("                    BIRAJTE ULOG");
-	public static Component JlabelM2 = new JLabel("                 PRITISNITE DELJENJE");
-
+	public static Component Auto_hold = new JLabel("AUTOHOLD");
+	public static Component Credit = new JLabel("" + cr);
+	public static Component Bet = new JLabel("" + ul);
+	public static Component Value_0 = new JLabel("" + d0 * ul);
+	public static Component Value_1 = new JLabel("" + d1 * ul);
+	public static Component Value_2 = new JLabel("" + d2 * ul);
+	public static Component Value_3 = new JLabel("" + d3 * ul);
+	public static Component Value_4 = new JLabel("" + d4 * ul);
+	public static Component Value_5 = new JLabel("" + d5 * ul);
+	public static Component Value_6 = new JLabel("" + d6 * ul);
+	public static Component Value_7 = new JLabel("" + d7 * ul);
+	public static Component Value_8 = new JLabel("" + d8 * ul);
+	public static Component Value_9 = new JLabel("" + d9 * ul);
+	public static Component Joker = new JLabel("JOKER");
+	public static Component Card = new JLabel("CARD");
+	public static Component Left_zero = new JLabel("  LACIKA BAČI");
+	public static Component Right_zero = new JLabel("  SRBIJA 2022");
+	public static Component Middle_1 = new JLabel("                    BIRAJTE ULOG");
+	public static Component Middle_2 = new JLabel("                 PRITISNITE DELJENJE");
 	private static BufferedImage loadImage(String path) {
 		try {
 			return ImageIO.read(Objects.requireNonNull(MyFrame.class.getClassLoader().getResource(path)));
@@ -102,27 +94,26 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 			return null;
 		}
 	}
-
 	static ImageIcon iconK1 = new ImageIcon(Objects.requireNonNull(loadImage("resources/53.png")));
-	public static final Component JlabelK1 = new JLabel(iconK1);
+	public static final Component Card_1 = new JLabel(iconK1);
 	static ImageIcon iconK2 = new ImageIcon(Objects.requireNonNull(loadImage("resources/53.png")));
-	public static final Component JlabelK2 = new JLabel(iconK2);
+	public static final Component Card_2 = new JLabel(iconK2);
 	static ImageIcon iconK3 = new ImageIcon(Objects.requireNonNull(loadImage("resources/53.png")));
-	public static final Component JlabelK3 = new JLabel(iconK3);
+	public static final Component Card_3 = new JLabel(iconK3);
 	static ImageIcon iconK4 = new ImageIcon(Objects.requireNonNull(loadImage("resources/53.png")));
-	public static final Component JlabelK4 = new JLabel(iconK4);
+	public static final Component Card_4 = new JLabel(iconK4);
 	static ImageIcon iconK5 = new ImageIcon(Objects.requireNonNull(loadImage("resources/53.png")));
-	public static final Component JlabelK5 = new JLabel(iconK5);
+	public static final Component Card_5 = new JLabel(iconK5);
 	static ImageIcon iconJ1 = new ImageIcon(Objects.requireNonNull(loadImage("resources/0.png")));
-	static final Component JlabelJ1 = new JLabel(iconJ1);
+	static final Component Joker_1 = new JLabel(iconJ1);
 	static ImageIcon iconJ2 = new ImageIcon(Objects.requireNonNull(loadImage("resources/0.png")));
-	static final Component JlabelJ2 = new JLabel(iconJ2);
+	static final Component Joker_2 = new JLabel(iconJ2);
 	static ImageIcon iconJ3 = new ImageIcon(Objects.requireNonNull(loadImage("resources/0.png")));
-	static final Component JlabelJ3 = new JLabel(iconJ3);
+	static final Component Joker_3 = new JLabel(iconJ3);
 	static ImageIcon iconJ4 = new ImageIcon(Objects.requireNonNull(loadImage("resources/0.png")));
-	static final Component JlabelJ4 = new JLabel(iconJ4);
+	static final Component Joker_4 = new JLabel(iconJ4);
 	static ImageIcon iconJ5 = new ImageIcon(Objects.requireNonNull(loadImage("resources/0.png")));
-	static final Component JlabelJ5 = new JLabel(iconJ5);
+	static final Component Joker_5 = new JLabel(iconJ5);
 
 	static ImageIcon icon0 = new ImageIcon(Objects.requireNonNull(loadImage("resources/0.png")));
 	static ImageIcon icon1 = new ImageIcon(Objects.requireNonNull(loadImage("resources/1.png")));
@@ -178,17 +169,17 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 	static ImageIcon icon51 = new ImageIcon(Objects.requireNonNull(loadImage("resources/51.png")));
 	static ImageIcon icon52 = new ImageIcon(Objects.requireNonNull(loadImage("resources/52.png")));
 
-	public static Component Jlabel0 = new JLabel(icon0);
-	protected static Component Jlabel1 = new JLabel(icon1);
-	protected static Component Jlabel2 = new JLabel(icon2);
-	protected static Component Jlabel3 = new JLabel(icon3);
-	protected static Component Jlabel4 = new JLabel(icon4);
-	protected static Component Jlabel5 = new JLabel(icon5);
-	protected static Component Jlabel6 = new JLabel(icon6);
-	protected static Component Jlabel7 = new JLabel(icon7);
-	protected static Component Jlabel8 = new JLabel(icon8);
-	protected static Component Jlabel9 = new JLabel(icon9);
-	protected static Component Jlabel10 = new JLabel(icon10);
+	public static Component joker = new JLabel(icon0);
+	protected static Component Hearts_1 = new JLabel(icon1);
+	protected static Component Hearts_2 = new JLabel(icon2);
+	protected static Component Hearts_3 = new JLabel(icon3);
+	protected static Component Hearts_4 = new JLabel(icon4);
+	protected static Component Hearts_5 = new JLabel(icon5);
+	protected static Component Hearts_6 = new JLabel(icon6);
+	protected static Component Hearts_7 = new JLabel(icon7);
+	protected static Component Hearts_8 = new JLabel(icon8);
+	protected static Component Hearts_9 = new JLabel(icon9);
+	protected static Component Hearts_10 = new JLabel(icon10);
 	protected static Component Jlabel11 = new JLabel(icon11);
 	protected static Component Jlabel12 = new JLabel(icon12);
 	protected static Component Jlabel13 = new JLabel(icon13);
@@ -245,7 +236,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 	
 	MyFrame() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
-		if (Dobitak.DOBITAK>0) {
+		if (Dobitak.DOBITAK > 0) {
 			URL kasa = this.getClass().getClassLoader().getResource("resources/Kraj.wav");
 			AudioInputStream audioKasa;
 			try {
@@ -255,60 +246,60 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 				throw new RuntimeException(ex);
 			}
 			try {
-				this.kasaSound = AudioSystem.getClip();
+				this.cashing_sound = AudioSystem.getClip();
 			} catch (LineUnavailableException ex) {
 				throw new RuntimeException(ex);
 			}
 			try {
-				kasaSound.open(audioKasa);
+				cashing_sound.open(audioKasa);
 			} catch (LineUnavailableException | IOException ex) {
 				throw new RuntimeException(ex);
 			}
-			this.kasaSound.start();
+			this.cashing_sound.start();
 		}
 		if (cr < 10000) {
 			frame.addKeyListener(this);
-			prekid = 1;
+			breaking = 1;
 		}
 		if (cr > 0 && (Dupliranje.karta > 0 || Dobitak.DOBITAK > 0)) {
-			while (igra == 0 || prekid  <9999) {
-				if (prekid == 1000) {
+			while (game == 0 || breaking  <9999) {
+				if (breaking == 1000) {
 					Thread.sleep(400);
-					prekid++;
+					breaking++;
 				}
-				if (prekid == 2000) {
+				if (breaking == 2000) {
 					Thread.sleep(400);
-					prekid++;
+					breaking++;
 				}
-				if (prekid == 3000) {
+				if (breaking == 3000) {
 					Thread.sleep(400);
-					prekid++;
+					breaking++;
 				}
-				if (prekid == 4000) {
+				if (breaking == 4000) {
 					Thread.sleep(400);
-					prekid++;
+					breaking++;
 				}
-				if (prekid == 5000) {
+				if (breaking == 5000) {
 					Thread.sleep(400);
-					prekid++;
+					breaking++;
 				}
-				if (prekid == 6000) {
+				if (breaking == 6000) {
 					Thread.sleep(400);
-					prekid++;
+					breaking++;
 				}
-				if (prekid == 7000) {
+				if (breaking == 7000) {
 					Thread.sleep(400);
-					prekid++;
+					breaking++;
 				}
-				if (prekid == 8000) {
+				if (breaking == 8000) {
 					Thread.sleep(400);
-					prekid++;
+					breaking++;
 				}
-				if (prekid == 9000) {
+				if (breaking == 9000) {
 					Thread.sleep(400);
-					prekid++;
+					breaking++;
 				}
-				prekid++;
+				breaking++;
 			}
 		}
 		else {
@@ -317,9 +308,9 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 		Dobitak.DOBITAK = 0;
 		new Clear1();
 		new Clear2();
-		prekid = 10000;
+		breaking = 10000;
 
-		if (cr == 0 && igra == 0) {
+		if (cr == 0 && game == 0) {
 		frame.setTitle("POKER");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setBackground(new Color(0,0,0));
@@ -338,7 +329,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 
 			SwingUtilities.updateComponentTreeUI(frame);
 
-		Jlabelah.setVisible(true);
+		Auto_hold.setVisible(true);
 
 			URL intro = this.getClass().getClassLoader().getResource("resources/Intro.wav");
 			assert intro != null;
@@ -347,48 +338,48 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 			introSound.open(audioIntro);
 			introSound.start();
 
-			JlabelL.setVisible(false);
-			JlabelR.setVisible(false);
+			Left_zero.setVisible(false);
+			Right_zero.setVisible(false);
 
 			frame.setVisible(true);
 			frame.setResizable(false);
 
-			frame.add(JlabelL);
-			frame.add(JlabelR);
+			frame.add(Left_zero);
+			frame.add(Right_zero);
 
-			Jlabelah.setBounds(1620,292,500,40);
+			Auto_hold.setBounds(1620,292,500,40);
 
-			JlabelK1.setBounds(-5, 350, 400, 600);
-			JlabelK2.setBounds(375, 350, 400, 600);
-			JlabelK3.setBounds(755, 350, 400, 600);
-			JlabelK4.setBounds(1135, 350, 400, 600);
-			JlabelK5.setBounds(1515, 350, 400, 600);
-			JlabelL.setBounds(20,950,300,40);
-			JlabelR.setBounds(1580,950,300,40);
+			Card_1.setBounds(-5, 350, 400, 600);
+			Card_2.setBounds(375, 350, 400, 600);
+			Card_3.setBounds(755, 350, 400, 600);
+			Card_4.setBounds(1135, 350, 400, 600);
+			Card_5.setBounds(1515, 350, 400, 600);
+			Left_zero.setBounds(20,950,300,40);
+			Right_zero.setBounds(1580,950,300,40);
 
-			frame.add(Jlabelah);
+			frame.add(Auto_hold);
 		}
-		if (ukupno>0) {
-			cr = cr - ukupno;
+		if (final_value > 0) {
+			cr = cr - final_value;
 		}
-		ukupno=0;
+		final_value = 0;
 
 		if (ul > cr && cr > 0) {
 			ul = cr;
-			((JLabel) Jlabelul).setText(""+(ul));
+			((JLabel) Bet).setText(""+(ul));
 			ulog();
 			new Ulog();
 		}
 
-		if (cr == 0 & igra == 1) {
+		if (cr == 0 & game == 1) {
 			ul = 1;
 			jk = 60000;
-			frame.add(JlabelL);
-			frame.add(JlabelR);
-			JlabelL.setVisible(true);
-			JlabelR.setVisible(true);
-			JlabelL.setBounds(20,950,300,40);
-			JlabelR.setBounds(1580,950,300,40);
+			frame.add(Left_zero);
+			frame.add(Right_zero);
+			Left_zero.setVisible(true);
+			Right_zero.setVisible(true);
+			Left_zero.setBounds(20,950,300,40);
+			Right_zero.setBounds(1580,950,300,40);
 
 			ch = 1;
 
@@ -403,14 +394,14 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 			dx8 = 1269;
 			dx9 = 1269;
 
-			((JLabel) Jlabelul).setText(""+(ul));
+			((JLabel) Bet).setText(""+(ul));
 			ulog();
 		}
 
-		((JLabel) Jlabelcr).setText(""+(cr));
+		((JLabel) Credit).setText(""+(cr));
 
-		JlabelM1.setBounds(550,960,800,40);
-		JlabelM2.setBounds(550,960,800,40);
+		Middle_1.setBounds(550,960,800,40);
+		Middle_2.setBounds(550,960,800,40);
 
 		label0.setBounds(0,L0,1300,32);
 		label1.setBounds(0,L1,1300,32);
@@ -425,22 +416,22 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 		label10.setBounds(1640,32,500,40);
 		label11.setBounds(1660,160,500,40);
 
-		Jlabeld0.setBounds(dx0,L0,120,32);
-		Jlabeld1.setBounds(dx1,L1,120,32);
-		Jlabeld2.setBounds(dx2,L2,120,32);
-		Jlabeld3.setBounds(dx3,L3,120,32);
-		Jlabeld4.setBounds(dx4,L4,120,32);
-		Jlabeld5.setBounds(dx5,L5,120,32);
-		Jlabeld6.setBounds(dx6,L6,120,32);
-		Jlabeld7.setBounds(dx7,L7,120,32);
-		Jlabeld8.setBounds(dx8,L8,120,32);
-		Jlabeld9.setBounds(dx9,L9,120,32);
+		Value_0.setBounds(dx0,L0,120,32);
+		Value_1.setBounds(dx1,L1,120,32);
+		Value_2.setBounds(dx2,L2,120,32);
+		Value_3.setBounds(dx3,L3,120,32);
+		Value_4.setBounds(dx4,L4,120,32);
+		Value_5.setBounds(dx5,L5,120,32);
+		Value_6.setBounds(dx6,L6,120,32);
+		Value_7.setBounds(dx7,L7,120,32);
+		Value_8.setBounds(dx8,L8,120,32);
+		Value_9.setBounds(dx9,L9,120,32);
 
-		Jlabelcr.setBounds(1670,64,500,50);
-		Jlabelul.setBounds(1690,192,500,50);
+		Credit.setBounds(1670,64,500,50);
+		Bet.setBounds(1690,192,500,50);
 
-		frame.add(Jlabelcr);
-		frame.add(Jlabelul);
+		frame.add(Credit);
+		frame.add(Bet);
 		
 		frame.add(label0);
 		frame.add(label1);
@@ -455,29 +446,29 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 		frame.add(label10);
 		frame.add(label11);
 
-		frame.add(Jlabeld0);
-		frame.add(Jlabeld1);
-		frame.add(Jlabeld2);
-		frame.add(Jlabeld3);
-		frame.add(Jlabeld4);
-		frame.add(Jlabeld5);
-		frame.add(Jlabeld6);
-		frame.add(Jlabeld7);
-		frame.add(Jlabeld8);
-		frame.add(Jlabeld9);
-		frame.add(JlabelK1);
-		frame.add(JlabelK2);
-		frame.add(JlabelK3);
-		frame.add(JlabelK4);
-		frame.add(JlabelK5);
+		frame.add(Value_0);
+		frame.add(Value_1);
+		frame.add(Value_2);
+		frame.add(Value_3);
+		frame.add(Value_4);
+		frame.add(Value_5);
+		frame.add(Value_6);
+		frame.add(Value_7);
+		frame.add(Value_8);
+		frame.add(Value_9);
+		frame.add(Card_1);
+		frame.add(Card_2);
+		frame.add(Card_3);
+		frame.add(Card_4);
+		frame.add(Card_5);
 
-		frame.add(JlabelR1);
-		frame.add(JlabelR2);
-		frame.add(JlabelM1);
-		frame.add(JlabelM2);
+		frame.add(Joker);
+		frame.add(Card);
+		frame.add(Middle_1);
+		frame.add(Middle_2);
 
-		JlabelM1.setVisible(false);
-		JlabelM2.setVisible(false);
+		Middle_1.setVisible(false);
+		Middle_2.setVisible(false);
 
 		label0.setVisible(true);
 		label1.setVisible(true);
@@ -490,19 +481,19 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 		label8.setVisible(true);
 		label9.setVisible(true);
 
-		Jlabeld0.setVisible(true);
-		Jlabeld1.setVisible(true);
-		Jlabeld2.setVisible(true);
-		Jlabeld3.setVisible(true);
-		Jlabeld4.setVisible(true);
-		Jlabeld5.setVisible(true);
-		Jlabeld6.setVisible(true);
-		Jlabeld7.setVisible(true);
-		Jlabeld8.setVisible(true);
-		Jlabeld9.setVisible(true);
+		Value_0.setVisible(true);
+		Value_1.setVisible(true);
+		Value_2.setVisible(true);
+		Value_3.setVisible(true);
+		Value_4.setVisible(true);
+		Value_5.setVisible(true);
+		Value_6.setVisible(true);
+		Value_7.setVisible(true);
+		Value_8.setVisible(true);
+		Value_9.setVisible(true);
 
-		Jlabelcr.setVisible(true);
-		Jlabelul.setVisible(true);
+		Credit.setVisible(true);
+		Bet.setVisible(true);
 		
 		label0.setForeground(color1);
 		label1.setForeground(color2);
@@ -517,27 +508,27 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 		label10.setForeground(color2);
 		label11.setForeground(color1);
 
-		Jlabelah.setForeground(color4);
-		Jlabelcr.setForeground(color3);
-		Jlabelul.setForeground(color3);
-		Jlabeld0.setForeground(color1);
-		Jlabeld1.setForeground(color2);
-		Jlabeld2.setForeground(color3);
-		Jlabeld3.setForeground(color3);
-		Jlabeld4.setForeground(color3);
-		Jlabeld5.setForeground(color3);
-		Jlabeld6.setForeground(color3);
-		Jlabeld7.setForeground(color3);
-		Jlabeld8.setForeground(color3);
-		Jlabeld9.setForeground(color3);
-		JlabelL.setForeground(color1);
-		JlabelR.setForeground(color1);
-		JlabelL.setBackground(color2);
-		JlabelR.setBackground(color2);
-		JlabelM1.setForeground(color1);
-		JlabelM2.setForeground(color1);
-		JlabelM1.setBackground(color2);
-		JlabelM2.setBackground(color2);
+		Auto_hold.setForeground(color4);
+		Credit.setForeground(color3);
+		Bet.setForeground(color3);
+		Value_0.setForeground(color1);
+		Value_1.setForeground(color2);
+		Value_2.setForeground(color3);
+		Value_3.setForeground(color3);
+		Value_4.setForeground(color3);
+		Value_5.setForeground(color3);
+		Value_6.setForeground(color3);
+		Value_7.setForeground(color3);
+		Value_8.setForeground(color3);
+		Value_9.setForeground(color3);
+		Left_zero.setForeground(color1);
+		Right_zero.setForeground(color1);
+		Left_zero.setBackground(color2);
+		Right_zero.setBackground(color2);
+		Middle_1.setForeground(color1);
+		Middle_2.setForeground(color1);
+		Middle_1.setBackground(color2);
+		Middle_2.setBackground(color2);
 		
 		label0.setFont(font1);
 		label1.setFont(font1);
@@ -552,23 +543,23 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 		label10.setFont(font1);
 		label11.setFont(font1);
 		
-		Jlabelah.setFont(font1);
-		Jlabelcr.setFont(font1);
-		Jlabelul.setFont(font1);
-		Jlabeld0.setFont(font1);
-		Jlabeld1.setFont(font1);
-		Jlabeld2.setFont(font1);
-		Jlabeld3.setFont(font1);
-		Jlabeld4.setFont(font1);
-		Jlabeld5.setFont(font1);
-		Jlabeld6.setFont(font1);
-		Jlabeld7.setFont(font1);
-		Jlabeld8.setFont(font1);
-		Jlabeld9.setFont(font1);
-		JlabelL.setFont(font1);
-		JlabelR.setFont(font1);
-		JlabelM1.setFont(font1);
-		JlabelM2.setFont(font1);
+		Auto_hold.setFont(font1);
+		Credit.setFont(font1);
+		Bet.setFont(font1);
+		Value_0.setFont(font1);
+		Value_1.setFont(font1);
+		Value_2.setFont(font1);
+		Value_3.setFont(font1);
+		Value_4.setFont(font1);
+		Value_5.setFont(font1);
+		Value_6.setFont(font1);
+		Value_7.setFont(font1);
+		Value_8.setFont(font1);
+		Value_9.setFont(font1);
+		Left_zero.setFont(font1);
+		Right_zero.setFont(font1);
+		Middle_1.setFont(font1);
+		Middle_2.setFont(font1);
 		
 		label0.setOpaque(false);
 		label1.setOpaque(false);
@@ -583,145 +574,145 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 		label10.setOpaque(false);
 		label11.setOpaque(false);
 		
-		((JComponent) Jlabelah).setOpaque(false);
-		((JComponent) Jlabelcr).setOpaque(false);
-		((JComponent) Jlabelul).setOpaque(false);
-		((JComponent) Jlabeld0).setOpaque(false);
-		((JComponent) Jlabeld1).setOpaque(false);
-		((JComponent) Jlabeld2).setOpaque(false);
-		((JComponent) Jlabeld3).setOpaque(false);
-		((JComponent) Jlabeld4).setOpaque(false);
-		((JComponent) Jlabeld5).setOpaque(false);
-		((JComponent) Jlabeld6).setOpaque(false);
-		((JComponent) Jlabeld7).setOpaque(false);
-		((JComponent) Jlabeld8).setOpaque(false);
-		((JComponent) Jlabeld9).setOpaque(false);
-		((JComponent) JlabelK1).setOpaque(false);
-		((JComponent) JlabelK2).setOpaque(false);
-		((JComponent) JlabelK3).setOpaque(false);
-		((JComponent) JlabelK4).setOpaque(false);
-		((JComponent) JlabelK5).setOpaque(false);
-		((JComponent) JlabelR1).setOpaque(false);
-		((JComponent) JlabelR2).setOpaque(false);
-		((JComponent) JlabelL).setOpaque(true);
-		((JComponent) JlabelR).setOpaque(true);
-		((JComponent) JlabelM1).setOpaque(true);
-		((JComponent) JlabelM2).setOpaque(true);
+		((JComponent) Auto_hold).setOpaque(false);
+		((JComponent) Credit).setOpaque(false);
+		((JComponent) Bet).setOpaque(false);
+		((JComponent) Value_0).setOpaque(false);
+		((JComponent) Value_1).setOpaque(false);
+		((JComponent) Value_2).setOpaque(false);
+		((JComponent) Value_3).setOpaque(false);
+		((JComponent) Value_4).setOpaque(false);
+		((JComponent) Value_5).setOpaque(false);
+		((JComponent) Value_6).setOpaque(false);
+		((JComponent) Value_7).setOpaque(false);
+		((JComponent) Value_8).setOpaque(false);
+		((JComponent) Value_9).setOpaque(false);
+		((JComponent) Card_1).setOpaque(false);
+		((JComponent) Card_2).setOpaque(false);
+		((JComponent) Card_3).setOpaque(false);
+		((JComponent) Card_4).setOpaque(false);
+		((JComponent) Card_5).setOpaque(false);
+		((JComponent) Joker).setOpaque(false);
+		((JComponent) Card).setOpaque(false);
+		((JComponent) Left_zero).setOpaque(true);
+		((JComponent) Right_zero).setOpaque(true);
+		((JComponent) Middle_1).setOpaque(true);
+		((JComponent) Middle_2).setOpaque(true);
 
-		JlabelR1.setBounds(400, 180, 1000, 800);
-		JlabelR2.setBounds(700, 420, 800, 800);
-		JlabelR1.setForeground(color2);
-		JlabelR2.setForeground(color2);
-		JlabelR1.setFont(new Font("Algerian", Font.ITALIC, 272));
-		JlabelR2.setFont(new Font("Algerian", Font.ITALIC, 272));
-		JlabelR1.setVisible(false);
-		JlabelR2.setVisible(false);
+		Joker.setBounds(400, 180, 1000, 800);
+		Card.setBounds(700, 420, 800, 800);
+		Joker.setForeground(color2);
+		Card.setForeground(color2);
+		Joker.setFont(new Font("Algerian", Font.ITALIC, 272));
+		Card.setFont(new Font("Algerian", Font.ITALIC, 272));
+		Joker.setVisible(false);
+		Card.setVisible(false);
 
-		JlabelM1.setVisible(false);
-		JlabelM2.setVisible(false);
+		Middle_1.setVisible(false);
+		Middle_2.setVisible(false);
 		
-		frame.add(JlabelJ1);
-		JlabelJ1.setBounds(-5, 350, 400, 600);
-		((JComponent) JlabelJ1).setOpaque(false);
-		frame.add(JlabelJ2);
-		JlabelJ2.setBounds(375, 350, 400, 600);
-		((JComponent) JlabelJ2).setOpaque(false);
-		frame.add(JlabelJ3);
-		JlabelJ3.setBounds(755, 350, 400, 600);
-		((JComponent) JlabelJ3).setOpaque(false);
-		frame.add(JlabelJ4);
-		JlabelJ4.setBounds(1135, 350, 400, 600);
-		((JComponent) JlabelJ4).setOpaque(false);
-		frame.add(JlabelJ5);
-		JlabelJ5.setBounds(1515, 350, 400, 600);
-		((JComponent) JlabelJ5).setOpaque(false);
+		frame.add(Joker_1);
+		Joker_1.setBounds(-5, 350, 400, 600);
+		((JComponent) Joker_1).setOpaque(false);
+		frame.add(Joker_2);
+		Joker_2.setBounds(375, 350, 400, 600);
+		((JComponent) Joker_2).setOpaque(false);
+		frame.add(Joker_3);
+		Joker_3.setBounds(755, 350, 400, 600);
+		((JComponent) Joker_3).setOpaque(false);
+		frame.add(Joker_4);
+		Joker_4.setBounds(1135, 350, 400, 600);
+		((JComponent) Joker_4).setOpaque(false);
+		frame.add(Joker_5);
+		Joker_5.setBounds(1515, 350, 400, 600);
+		((JComponent) Joker_5).setOpaque(false);
 
 		if (cr > 9999) {
-			blokada = 1;
+			blocked = 1;
 			frame.addKeyListener(this);
 		}
-		if (delj != 1) {
+		if (dealing != 1) {
 			new Jokers();
 		}
-		if (delj == 3) {
-			jk=60000;
-			cr=0;
-			kr=0;
-			ul=1;
-			uu=1;
-			ah=1;
-			delj=0;
+		if (dealing == 3) {
+			jk = 60000;
+			cr = 0;
+			kr = 0;
+			ul = 1;
+			uu = 1;
+			ah = 1;
+			dealing = 0;
 
-			Jlabelah.setVisible(false);
-			frame.remove(Jlabelah);
-			Jlabelcr.setVisible(false);
-			frame.remove(Jlabelcr);
-			Jlabelul.setVisible(false);
-			frame.remove(Jlabelul);
-			Jlabeld0.setVisible(false);
-			frame.remove(Jlabeld0);
-			Jlabeld1.setVisible(false);
-			frame.remove(Jlabeld1);
-			Jlabeld2.setVisible(false);
-			frame.remove(Jlabeld2);
-			Jlabeld3.setVisible(false);
-			frame.remove(Jlabeld3);
-			Jlabeld4.setVisible(false);
-			frame.remove(Jlabeld4);
-			Jlabeld5.setVisible(false);
-			frame.remove(Jlabeld5);
-			Jlabeld6.setVisible(false);
-			frame.remove(Jlabeld6);
-			Jlabeld7.setVisible(false);
-			frame.remove(Jlabeld7);
-			Jlabeld8.setVisible(false);
-			frame.remove(Jlabeld8);
-			Jlabeld9.setVisible(false);
-			frame.remove(Jlabeld9);
-			JlabelL.setVisible(false);
-			frame.remove(JlabelL);
-			JlabelR.setVisible(false);
-			frame.remove(JlabelR);
-			JlabelM1.setVisible(false);
-			frame.remove(JlabelM1);
-			JlabelM2.setVisible(false);
-			frame.remove(JlabelM2);
-			JlabelR1.setVisible(false);
-			frame.remove(JlabelR1);
-			JlabelR2.setVisible(false);
-			frame.remove(JlabelR2);
-			JlabelK1.setVisible(false);
-			frame.remove(JlabelK1);
-			JlabelK2.setVisible(false);
-			frame.remove(JlabelK2);
-			JlabelK3.setVisible(false);
-			frame.remove(JlabelK3);
-			JlabelK4.setVisible(false);
-			frame.remove(JlabelK4);
-			JlabelK5.setVisible(false);
-			frame.remove(JlabelK5);
-			JlabelJ1.setVisible(false);
-			frame.remove(JlabelJ1);
-			JlabelJ2.setVisible(false);
-			frame.remove(JlabelJ2);
-			JlabelJ3.setVisible(false);
-			frame.remove(JlabelJ3);
-			JlabelJ4.setVisible(false);
-			frame.remove(JlabelJ4);
-			JlabelJ5.setVisible(false);
-			frame.remove(JlabelJ5);
+			Auto_hold.setVisible(false);
+			frame.remove(Auto_hold);
+			Credit.setVisible(false);
+			frame.remove(Credit);
+			Bet.setVisible(false);
+			frame.remove(Bet);
+			Value_0.setVisible(false);
+			frame.remove(Value_0);
+			Value_1.setVisible(false);
+			frame.remove(Value_1);
+			Value_2.setVisible(false);
+			frame.remove(Value_2);
+			Value_3.setVisible(false);
+			frame.remove(Value_3);
+			Value_4.setVisible(false);
+			frame.remove(Value_4);
+			Value_5.setVisible(false);
+			frame.remove(Value_5);
+			Value_6.setVisible(false);
+			frame.remove(Value_6);
+			Value_7.setVisible(false);
+			frame.remove(Value_7);
+			Value_8.setVisible(false);
+			frame.remove(Value_8);
+			Value_9.setVisible(false);
+			frame.remove(Value_9);
+			Left_zero.setVisible(false);
+			frame.remove(Left_zero);
+			Right_zero.setVisible(false);
+			frame.remove(Right_zero);
+			Middle_1.setVisible(false);
+			frame.remove(Middle_1);
+			Middle_2.setVisible(false);
+			frame.remove(Middle_2);
+			Joker.setVisible(false);
+			frame.remove(Joker);
+			Card.setVisible(false);
+			frame.remove(Card);
+			Card_1.setVisible(false);
+			frame.remove(Card_1);
+			Card_2.setVisible(false);
+			frame.remove(Card_2);
+			Card_3.setVisible(false);
+			frame.remove(Card_3);
+			Card_4.setVisible(false);
+			frame.remove(Card_4);
+			Card_5.setVisible(false);
+			frame.remove(Card_5);
+			Joker_1.setVisible(false);
+			frame.remove(Joker_1);
+			Joker_2.setVisible(false);
+			frame.remove(Joker_2);
+			Joker_3.setVisible(false);
+			frame.remove(Joker_3);
+			Joker_4.setVisible(false);
+			frame.remove(Joker_4);
+			Joker_5.setVisible(false);
+			frame.remove(Joker_5);
 
-			((JLabel) Jlabelul).setText(String.valueOf(1));
-			((JLabel) Jlabeld0).setText(String.valueOf(d0));
-			((JLabel) Jlabeld1).setText(String.valueOf(d1));
-			((JLabel) Jlabeld2).setText(String.valueOf(d2));
-			((JLabel) Jlabeld3).setText(String.valueOf(d3));
-			((JLabel) Jlabeld4).setText(String.valueOf(d4));
-			((JLabel) Jlabeld5).setText(String.valueOf(d5));
-			((JLabel) Jlabeld6).setText(String.valueOf(d6));
-			((JLabel) Jlabeld7).setText(String.valueOf(d7));
-			((JLabel) Jlabeld8).setText(String.valueOf(d8));
-			((JLabel) Jlabeld9).setText(String.valueOf(d9));
+			((JLabel) Bet).setText(String.valueOf(1));
+			((JLabel) Value_0).setText(String.valueOf(d0));
+			((JLabel) Value_1).setText(String.valueOf(d1));
+			((JLabel) Value_2).setText(String.valueOf(d2));
+			((JLabel) Value_3).setText(String.valueOf(d3));
+			((JLabel) Value_4).setText(String.valueOf(d4));
+			((JLabel) Value_5).setText(String.valueOf(d5));
+			((JLabel) Value_6).setText(String.valueOf(d6));
+			((JLabel) Value_7).setText(String.valueOf(d7));
+			((JLabel) Value_8).setText(String.valueOf(d8));
+			((JLabel) Value_9).setText(String.valueOf(d9));
 
 			dx0 = 1200;
 			dx1 = 1223;
@@ -734,7 +725,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 			dx8 = 1269;
 			dx9 = 1269;
 
-			igra=0;
+			game = 0;
 			frame.dispose();
 	}
 			frame.removeKeyListener(this);
@@ -746,8 +737,8 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 		switch(e.getKeyCode()) {
 		
 		case 81 : // KEYPAD 'Q'
-			if (prekid > 9999 && blokada == 0 && cr < 4901) {
-				if (cr < 1 && igra == 0) {
+			if (breaking > 9999 && blocked == 0 && cr < 4901) {
+				if (cr < 1 && game == 0) {
 					this.introSound.stop();
 				}
 				ch = 0;
@@ -761,39 +752,39 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 					throw new RuntimeException(ex);
 				}
 				try {
-					this.kreditSound = AudioSystem.getClip();
+					this.credit_sound = AudioSystem.getClip();
 				} catch (LineUnavailableException ex) {
 					throw new RuntimeException(ex);
 				}
 				try {
-					kreditSound.open(audioKredit);
+					credit_sound.open(audioKredit);
 				} catch (LineUnavailableException | IOException ex) {
 					throw new RuntimeException(ex);
 				}
-				this.kreditSound.start();
+				this.credit_sound.start();
 
-				Jlabelcr.setVisible(false);
-				frame.remove(Jlabelcr);
+				Credit.setVisible(false);
+				frame.remove(Credit);
 				cr = cr + 100;
-				((JLabel) Jlabelcr).setText(String.valueOf(cr));
-				Jlabelcr.setBounds(1670, 64, 500, 50);
-				Jlabelcr.setForeground(color3);
-				Jlabelcr.setFont(font1);
-				frame.add(Jlabelcr);
-				Jlabelcr.setVisible(true);
-				JlabelL.setVisible(false);
-				JlabelR.setVisible(false);
-				frame.remove(JlabelL);
-				frame.remove(JlabelR);
+				((JLabel) Credit).setText(String.valueOf(cr));
+				Credit.setBounds(1670, 64, 500, 50);
+				Credit.setForeground(color3);
+				Credit.setFont(font1);
+				frame.add(Credit);
+				Credit.setVisible(true);
+				Left_zero.setVisible(false);
+				Right_zero.setVisible(false);
+				frame.remove(Left_zero);
+				frame.remove(Right_zero);
 
             }
             break;
 
             case 53 : // KEYPAD '5'
 
-			if (cr > 0 && prekid > 9999 && blokada == 0) {
-				Jlabelul.setVisible(false);
-				frame.remove(Jlabelul);
+			if (cr > 0 && breaking > 9999 && blocked == 0) {
+				Bet.setVisible(false);
+				frame.remove(Bet);
 				int uu = ul + 1;
 
 				if (uu == 41) {
@@ -806,13 +797,13 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 				}
 				ul = uu;
 
-				((JLabel) Jlabelul).setText(String.valueOf(ul));
-				frame.add(Jlabelul);
-				Jlabelul.setBounds(1690,192,500,50);
-				Jlabelul.setForeground(color3);
-				Jlabelul.setFont(font1);
-				((JComponent) Jlabelul).setOpaque(false);
-				Jlabelul.setVisible(true);
+				((JLabel) Bet).setText(String.valueOf(ul));
+				frame.add(Bet);
+				Bet.setBounds(1690,192,500,50);
+				Bet.setForeground(color3);
+				Bet.setFont(font1);
+				((JComponent) Bet).setOpaque(false);
+				Bet.setVisible(true);
 
 				int ddx0 = 1200;
 				if(uu > 9) {
@@ -820,15 +811,15 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 				}
 				dx0 = ddx0;
 
-				Jlabeld0.setVisible(false);
-				frame.remove(Jlabeld0);//FIVE OF A KIND
-				((JLabel) Jlabeld0).setText(String.valueOf(d0 * ul));
-				frame.add(Jlabeld0);
-				Jlabeld0.setBounds(dx0,L0,120,32);
-				Jlabeld0.setForeground(color1);
-				Jlabeld0.setFont(font1);
-				((JComponent) Jlabeld0).setOpaque(false);
-				Jlabeld0.setVisible(true);
+				Value_0.setVisible(false);
+				frame.remove(Value_0);//FIVE OF A KIND
+				((JLabel) Value_0).setText(String.valueOf(d0 * ul));
+				frame.add(Value_0);
+				Value_0.setBounds(dx0,L0,120,32);
+				Value_0.setForeground(color1);
+				Value_0.setFont(font1);
+				((JComponent) Value_0).setOpaque(false);
+				Value_0.setVisible(true);
 
 				int ddx1 = 1223;
 				if(uu > 1) {
@@ -839,15 +830,15 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 				}
 				dx1 = ddx1;
 
-				Jlabeld1.setVisible(false);
-				frame.remove(Jlabeld1);//ROYAL FLUSH
-				((JLabel) Jlabeld1).setText(String.valueOf(d1*ul));
-				frame.add(Jlabeld1);
-				Jlabeld1.setBounds(dx1,L1,120,32);
-				Jlabeld1.setForeground(color2);
-				Jlabeld1.setFont(font1);
-				((JComponent) Jlabeld1).setOpaque(false);
-				Jlabeld1.setVisible(true);
+				Value_1.setVisible(false);
+				frame.remove(Value_1);//ROYAL FLUSH
+				((JLabel) Value_1).setText(String.valueOf(d1*ul));
+				frame.add(Value_1);
+				Value_1.setBounds(dx1,L1,120,32);
+				Value_1.setForeground(color2);
+				Value_1.setFont(font1);
+				((JComponent) Value_1).setOpaque(false);
+				Value_1.setVisible(true);
 
 				int ddx2 = 1223;
 				if(uu > 9) {
@@ -855,15 +846,15 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 				}
 				dx2 = ddx2;
 
-				Jlabeld2.setVisible(false);
-				frame.remove(Jlabeld2);//STREET FLUSH
-				((JLabel) Jlabeld2).setText(String.valueOf(d2*ul));
-				frame.add(Jlabeld2);
-				Jlabeld2.setBounds(dx2,L2,120,32);
-				Jlabeld2.setForeground(color3);
-				Jlabeld2.setFont(font1);
-				((JComponent) Jlabeld2).setOpaque(false);
-				Jlabeld2.setVisible(true);
+				Value_2.setVisible(false);
+				frame.remove(Value_2);//STREET FLUSH
+				((JLabel) Value_2).setText(String.valueOf(d2*ul));
+				frame.add(Value_2);
+				Value_2.setBounds(dx2,L2,120,32);
+				Value_2.setForeground(color3);
+				Value_2.setFont(font1);
+				((JComponent) Value_2).setOpaque(false);
+				Value_2.setVisible(true);
 
 				int ddx3 = 1246;
 				if(uu > 2) {
@@ -874,15 +865,15 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 				}
 				dx3 = ddx3;
 
-				Jlabeld3.setVisible(false);
-				frame.remove(Jlabeld3);//POKER
-				((JLabel) Jlabeld3).setText(String.valueOf(d3*ul));
-				frame.add(Jlabeld3);
-				Jlabeld3.setBounds(dx3,L3,120,32);
-				Jlabeld3.setForeground(color3);
-				Jlabeld3.setFont(font1);
-				((JComponent) Jlabeld3).setOpaque(false);
-				Jlabeld3.setVisible(true);
+				Value_3.setVisible(false);
+				frame.remove(Value_3);//POKER
+				((JLabel) Value_3).setText(String.valueOf(d3*ul));
+				frame.add(Value_3);
+				Value_3.setBounds(dx3,L3,120,32);
+				Value_3.setForeground(color3);
+				Value_3.setFont(font1);
+				((JComponent) Value_3).setOpaque(false);
+				Value_3.setVisible(true);
 
 				int ddx4 = 1246;
 				if(uu > 9) {
@@ -890,15 +881,15 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 				}
 				dx4 = ddx4;
 
-				Jlabeld4.setVisible(false);
-				frame.remove(Jlabeld4);//FULL HOUSE
-				((JLabel) Jlabeld4).setText(String.valueOf(d4*ul));
-				frame.add(Jlabeld4);
-				Jlabeld4.setBounds(dx4,L4,120,32);
-				Jlabeld4.setForeground(color3);
-				Jlabeld4.setFont(font1);
-				((JComponent) Jlabeld4).setOpaque(false);
-				Jlabeld4.setVisible(true);
+				Value_4.setVisible(false);
+				frame.remove(Value_4);//FULL HOUSE
+				((JLabel) Value_4).setText(String.valueOf(d4*ul));
+				frame.add(Value_4);
+				Value_4.setBounds(dx4,L4,120,32);
+				Value_4.setForeground(color3);
+				Value_4.setFont(font1);
+				((JComponent) Value_4).setOpaque(false);
+				Value_4.setVisible(true);
 
 				int ddx5 = 1269;
 				if(uu > 1) {
@@ -909,15 +900,15 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 				}
 				dx5 = ddx5;
 
-				Jlabeld5.setVisible(false);
-				frame.remove(Jlabeld5);//FLUSH
-				((JLabel) Jlabeld5).setText(String.valueOf(d5*ul));
-				frame.add(Jlabeld5);
-				Jlabeld5.setBounds(dx5,L5,120,32);
-				Jlabeld5.setForeground(color3);
-				Jlabeld5.setFont(font1);
-				((JComponent) Jlabeld5).setOpaque(false);
-				Jlabeld5.setVisible(true);
+				Value_5.setVisible(false);
+				frame.remove(Value_5);//FLUSH
+				((JLabel) Value_5).setText(String.valueOf(d5*ul));
+				frame.add(Value_5);
+				Value_5.setBounds(dx5,L5,120,32);
+				Value_5.setForeground(color3);
+				Value_5.setFont(font1);
+				((JComponent) Value_5).setOpaque(false);
+				Value_5.setVisible(true);
 
 				int ddx6 = 1269;
 				if(uu > 1) {
@@ -928,15 +919,15 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 				}
 				dx6 = ddx6;
 
-				Jlabeld6.setVisible(false);
-				frame.remove(Jlabeld6);//STREET
-				((JLabel) Jlabeld6).setText(String.valueOf(d6*ul));
-				frame.add(Jlabeld6);
-				Jlabeld6.setBounds(dx6,L6,120,32);
-				Jlabeld6.setForeground(color3);
-				Jlabeld6.setFont(font1);
-				((JComponent) Jlabeld6).setOpaque(false);
-				Jlabeld6.setVisible(true);
+				Value_6.setVisible(false);
+				frame.remove(Value_6);//STREET
+				((JLabel) Value_6).setText(String.valueOf(d6*ul));
+				frame.add(Value_6);
+				Value_6.setBounds(dx6,L6,120,32);
+				Value_6.setForeground(color3);
+				Value_6.setFont(font1);
+				((JComponent) Value_6).setOpaque(false);
+				Value_6.setVisible(true);
 
 				int ddx7 = 1269;
 				if(uu > 3) {
@@ -947,15 +938,15 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 				}
 				dx7 = ddx7;
 
-				Jlabeld7.setVisible(false);
-				frame.remove(Jlabeld7);//THREE OF A KIND
-				((JLabel) Jlabeld7).setText(String.valueOf(d7*ul));
-				frame.add(Jlabeld7);
-				Jlabeld7.setBounds(dx7,L7,120,32);
-				Jlabeld7.setForeground(color3);
-				Jlabeld7.setFont(font1);
-				((JComponent) Jlabeld7).setOpaque(false);
-				Jlabeld7.setVisible(true);
+				Value_7.setVisible(false);
+				frame.remove(Value_7);//THREE OF A KIND
+				((JLabel) Value_7).setText(String.valueOf(d7*ul));
+				frame.add(Value_7);
+				Value_7.setBounds(dx7,L7,120,32);
+				Value_7.setForeground(color3);
+				Value_7.setFont(font1);
+				((JComponent) Value_7).setOpaque(false);
+				Value_7.setVisible(true);
 
 				int ddx8 = 1269;
 				if(uu > 4) {
@@ -963,15 +954,15 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 				}
 				dx8 = ddx8;
 
-				Jlabeld8.setVisible(false);
-				frame.remove(Jlabeld8);//2 PAIRS
-				((JLabel) Jlabeld8).setText(String.valueOf(d8*ul));
-				frame.add(Jlabeld8);
-				Jlabeld8.setBounds(dx8,L8,120,32);
-				Jlabeld8.setForeground(color3);
-				Jlabeld8.setFont(font1);
-				((JComponent) Jlabeld8).setOpaque(false);
-				Jlabeld8.setVisible(true);
+				Value_8.setVisible(false);
+				frame.remove(Value_8);//2 PAIRS
+				((JLabel) Value_8).setText(String.valueOf(d8*ul));
+				frame.add(Value_8);
+				Value_8.setBounds(dx8,L8,120,32);
+				Value_8.setForeground(color3);
+				Value_8.setFont(font1);
+				((JComponent) Value_8).setOpaque(false);
+				Value_8.setVisible(true);
 
 				int ddx9 = 1269;
 				if(uu > 9) {
@@ -979,15 +970,15 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 				}
 				dx9 = ddx9;
 
-				Jlabeld9.setVisible(false);
-				frame.remove(Jlabeld9);//HIGH PAIR
-				((JLabel) Jlabeld9).setText(String.valueOf(d9*ul));
-				frame.add(Jlabeld9);
-				Jlabeld9.setBounds(dx9,L9,120,32);
-				Jlabeld9.setForeground(color3);
-				Jlabeld9.setFont(font1);
-				((JComponent) Jlabeld9).setOpaque(false);
-				Jlabeld9.setVisible(true);
+				Value_9.setVisible(false);
+				frame.remove(Value_9);//HIGH PAIR
+				((JLabel) Value_9).setText(String.valueOf(d9*ul));
+				frame.add(Value_9);
+				Value_9.setBounds(dx9,L9,120,32);
+				Value_9.setForeground(color3);
+				Value_9.setFont(font1);
+				((JComponent) Value_9).setOpaque(false);
+				Value_9.setVisible(true);
 
 				URL ulog = this.getClass().getClassLoader().getResource("resources/Ulog.wav");
 				AudioInputStream audioUlog;
@@ -998,16 +989,16 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 					throw new RuntimeException(ex);
 				}
 				try {
-					this.ulogSound = AudioSystem.getClip();
+					this.bet_sound = AudioSystem.getClip();
 				} catch (LineUnavailableException ex) {
 					throw new RuntimeException(ex);
 				}
 				try {
-					ulogSound.open(audioUlog);
+					bet_sound.open(audioUlog);
 				} catch (LineUnavailableException | IOException ex) {
 					throw new RuntimeException(ex);
 				}
-				this.ulogSound.start();
+				this.bet_sound.start();
 			}
 			else {
 				break;
@@ -1015,27 +1006,27 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 			break;
 			
 		case 32 : // KEYPAD 'SPACE'
-			if (cr > 0 && prekid > 9999 && blokada == 0) {
+			if (cr > 0 && breaking > 9999 && blocked == 0) {
 				if (ah==1) {
 					int aha = ah--;
 					ah = aha;
-					Jlabelah.setVisible(false);
-					frame.remove(Jlabelah);
+					Auto_hold.setVisible(false);
+					frame.remove(Auto_hold);
 					ah = 0;
 				}
 				else {
 					int aha = ah++;
 					ah = aha;
-					Jlabelah.setVisible(false);
-					frame.remove(Jlabelah);
+					Auto_hold.setVisible(false);
+					frame.remove(Auto_hold);
 					ah = 1;
-					Jlabelah = new JLabel("AUTOHOLD");
-					frame.add(Jlabelah);
-					Jlabelah.setBounds(1620,292,500,40);
-					Jlabelah.setForeground(color4);
-					Jlabelah.setFont(font1);
-					((JComponent) Jlabelah).setOpaque(false);
-					Jlabelah.setVisible(true);
+					Auto_hold = new JLabel("AUTOHOLD");
+					frame.add(Auto_hold);
+					Auto_hold.setBounds(1620,292,500,40);
+					Auto_hold.setForeground(color4);
+					Auto_hold.setFont(font1);
+					((JComponent) Auto_hold).setOpaque(false);
+					Auto_hold.setVisible(true);
 				}
 
 				URL autohold = this.getClass().getClassLoader().getResource("resources/Autohold.wav");
@@ -1047,40 +1038,40 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 					throw new RuntimeException(ex);
 				}
 				try {
-					this.autoholdSound = AudioSystem.getClip();
+					this.auto_hold_sound = AudioSystem.getClip();
 				} catch (LineUnavailableException ex) {
 					throw new RuntimeException(ex);
 				}
 				try {
-					autoholdSound.open(audioAutohold);
+					auto_hold_sound.open(audioAutohold);
 				} catch (LineUnavailableException | IOException ex) {
 					throw new RuntimeException(ex);
 				}
-				this.autoholdSound.start();
+				this.auto_hold_sound.start();
 			}
 			break;
 
 		case 35 : // KEYPAD 'END'
-			if (prekid > 9999) {
-				Jlabelcr.setVisible(false);
-				frame.remove(Jlabelcr);
+			if (breaking > 9999) {
+				Credit.setVisible(false);
+				frame.remove(Credit);
 
 			if (cr > 0) {
-				Jlabelcr.setVisible(false);
-				frame.remove(Jlabelcr);
+				Credit.setVisible(false);
+				frame.remove(Credit);
 				frame.removeKeyListener(this);
-				JlabelM1.setVisible(false);
-				JlabelM2.setVisible(false);
-				frame.remove(JlabelM1);
-				frame.remove(JlabelM2);
-				frame.add(JlabelL);
-				frame.add(JlabelR);
-				JlabelL.setVisible(true);
-				JlabelR.setVisible(true);
-				JlabelL.setBounds(20,950,300,40);
-				JlabelR.setBounds(1580,950,300,40);
+				Middle_1.setVisible(false);
+				Middle_2.setVisible(false);
+				frame.remove(Middle_1);
+				frame.remove(Middle_2);
+				frame.add(Left_zero);
+				frame.add(Right_zero);
+				Left_zero.setVisible(true);
+				Right_zero.setVisible(true);
+				Left_zero.setBounds(20,950,300,40);
+				Right_zero.setBounds(1580,950,300,40);
 				ch = 1;
-				blokada = 0;
+				blocked = 0;
 
 				try {
 					new Countdown1();
@@ -1089,21 +1080,21 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 				}
 			}
 			else {
-				Jlabelcr.setVisible(true);
-				frame.add(Jlabelcr);
+				Credit.setVisible(true);
+				frame.add(Credit);
 				}
 			}
 			break;
 
 		case 10 : // KEYPAD 'ENTER'
 			if (Dobitak.DOBITAK > 0) {
-				prekid = 9999;
-				this.kasaSound.stop();
+				breaking = 9999;
+				this.cashing_sound.stop();
 			}
-			else if (cr > 0 && blokada == 0) {
-				delj = 1;
-				prekid = 9999;
-				igra = 1;
+			else if (cr > 0 && blocked == 0) {
+				dealing = 1;
+				breaking = 9999;
+				game = 1;
 				break;
 			}
 			else {
@@ -1118,15 +1109,15 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 	public void keyReleased(KeyEvent e) {
 	}
 	void ulog() {
-		((JLabel) Jlabeld0).setText(String.valueOf(d0*ul));
-		((JLabel) Jlabeld1).setText(String.valueOf(d1*ul));
-		((JLabel) Jlabeld2).setText(String.valueOf(d2*ul));
-		((JLabel) Jlabeld3).setText(String.valueOf(d3*ul));
-		((JLabel) Jlabeld4).setText(String.valueOf(d4*ul));
-		((JLabel) Jlabeld5).setText(String.valueOf(d5*ul));
-		((JLabel) Jlabeld6).setText(String.valueOf(d6*ul));
-		((JLabel) Jlabeld7).setText(String.valueOf(d7*ul));
-		((JLabel) Jlabeld8).setText(String.valueOf(d8*ul));
-		((JLabel) Jlabeld9).setText(String.valueOf(d9*ul));
+		((JLabel) Value_0).setText(String.valueOf(d0*ul));
+		((JLabel) Value_1).setText(String.valueOf(d1*ul));
+		((JLabel) Value_2).setText(String.valueOf(d2*ul));
+		((JLabel) Value_3).setText(String.valueOf(d3*ul));
+		((JLabel) Value_4).setText(String.valueOf(d4*ul));
+		((JLabel) Value_5).setText(String.valueOf(d5*ul));
+		((JLabel) Value_6).setText(String.valueOf(d6*ul));
+		((JLabel) Value_7).setText(String.valueOf(d7*ul));
+		((JLabel) Value_8).setText(String.valueOf(d8*ul));
+		((JLabel) Value_9).setText(String.valueOf(d9*ul));
 	}
 }

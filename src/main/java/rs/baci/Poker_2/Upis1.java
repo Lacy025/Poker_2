@@ -10,13 +10,13 @@ import javax.swing.JLabel;
 import javax.swing.Timer;
 
 public class Upis1 implements MainFrame, Brojevi {
-    public Component Broj1 = new JLabel(MyFrame.dobitak*MyFrame.ul+" ");
-    public static Component Credit1 = new JLabel(""+MyFrame.cr);
+    public Component Broj1 = new JLabel(MyFrame.win_value * MyFrame.ul + " ");
+    public static Component Credit1 = new JLabel("" + MyFrame.cr);
     Timer timer2;
     Upis1() {
-        ((JLabel) Broj1).setText(MyFrame.dobitak-- + " ");
+        ((JLabel) Broj1).setText(MyFrame.win_value-- + " ");
         ((JLabel) Credit1).setText(""+ MyFrame.cr++);
-        timer2 = new Timer(50, e -> { double x2 = MyFrame.dobitak;
+        timer2 = new Timer(50, e -> { double x2 = MyFrame.win_value;
             if (x2 == -1) {
                 ((JLabel) Broj1).setText(0 + " ");
                 ((JLabel) Credit1).setText("" + 0);
@@ -35,7 +35,7 @@ public class Upis1 implements MainFrame, Brojevi {
             }
             else if(((int)x2 / 100 != (x2 / 100)) && x2 > 0) {
 
-                ((JLabel) Broj1).setText(MyFrame.dobitak-- + " ");
+                ((JLabel) Broj1).setText(MyFrame.win_value-- + " ");
                 ((JLabel) Credit1).setText(""+ MyFrame.cr++);
                 try {
                     new Isplata1();

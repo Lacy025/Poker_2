@@ -58,7 +58,7 @@ public class Dobitak {
 		// ROYAL FLUSH OR STREET
 
 
-		if (dobitak==0) {
+		if (dobitak == 0) {
 			int ROYAL = 0;
 			if (K1==0||K2==0||K3==0||K4==0||K5==0) {ROYAL++;}
 			if (K1==10||K2==10||K3==10||K4==10||K5==10) {ROYAL++;}

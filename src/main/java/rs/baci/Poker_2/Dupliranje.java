@@ -53,7 +53,7 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
         pola = 0;
         kockanje = 1;
 
-        duplo = MyFrame.ukupno;
+        duplo = MyFrame.final_value;
 
         XVECA = 600;
         XMANJA = 600;
@@ -776,7 +776,7 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
 
             if (karta == -3) {
                 frame.removeKeyListener(this);
-                MyFrame.dobitak=(int)duplo;
+                MyFrame.win_value = (int)duplo;
                 veca.setVisible(false);
                 frame.remove(veca);
                 manja.setVisible(false);
@@ -792,8 +792,8 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                 frame.remove(manja);
                 labelT10.setVisible(false);
                 tabela.remove(labelT10);
-                MyFrame.Jlabelcr.setVisible(false);
-                frame.remove(MyFrame.Jlabelcr);
+                MyFrame.Credit.setVisible(false);
+                frame.remove(MyFrame.Credit);
                 xkarta=karta;
                 frame.add(Izbor2.pobeda);
                 Izbor2.pobeda.setVisible(true);
@@ -930,7 +930,7 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
     }
     void clearing() {
         frame.removeKeyListener(this);
-        MyFrame.dobitak = MyFrame.dobitak - 100;
+        MyFrame.win_value = MyFrame.win_value - 100;
         MyFrame.cr = MyFrame.cr + 100;
     }
     void pogodak() throws InterruptedException {

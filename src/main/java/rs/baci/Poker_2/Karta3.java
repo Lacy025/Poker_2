@@ -7,17 +7,17 @@ import javax.swing.JLabel;
 public class Karta3 extends JLabel {
 	public static Component card3 = new JLabel();
 	Karta3() {
-		if (MyFrame.n3==0) {Karta3.card3= MyFrame.Jlabel0;MyFrame.karta3=0;MyFrame.boja3=0;}
-		if (MyFrame.n3==1) {Karta3.card3= MyFrame.Jlabel1;MyFrame.karta3=14;MyFrame.boja3=1;}
-		if (MyFrame.n3==2) {Karta3.card3= MyFrame.Jlabel2;MyFrame.karta3=2;MyFrame.boja3=1;}
-		if (MyFrame.n3==3) {Karta3.card3= MyFrame.Jlabel3;MyFrame.karta3=3;MyFrame.boja3=1;}
-		if (MyFrame.n3==4) {Karta3.card3= MyFrame.Jlabel4;MyFrame.karta3=4;MyFrame.boja3=1;}
-		if (MyFrame.n3==5) {Karta3.card3= MyFrame.Jlabel5;MyFrame.karta3=5;MyFrame.boja3=1;}
-		if (MyFrame.n3==6) {Karta3.card3= MyFrame.Jlabel6;MyFrame.karta3=6;MyFrame.boja3=1;}
-		if (MyFrame.n3==7) {Karta3.card3= MyFrame.Jlabel7;MyFrame.karta3=7;MyFrame.boja3=1;}
-		if (MyFrame.n3==8) {Karta3.card3= MyFrame.Jlabel8;MyFrame.karta3=8;MyFrame.boja3=1;}
-		if (MyFrame.n3==9) {Karta3.card3= MyFrame.Jlabel9;MyFrame.karta3=9;MyFrame.boja3=1;}
-		if (MyFrame.n3==10) {Karta3.card3= MyFrame.Jlabel10;MyFrame.karta3=10;MyFrame.boja3=1;}
+		if (MyFrame.n3==0) {Karta3.card3= MyFrame.joker;MyFrame.karta3=0;MyFrame.boja3=0;}
+		if (MyFrame.n3==1) {Karta3.card3= MyFrame.Hearts_1;MyFrame.karta3=14;MyFrame.boja3=1;}
+		if (MyFrame.n3==2) {Karta3.card3= MyFrame.Hearts_2;MyFrame.karta3=2;MyFrame.boja3=1;}
+		if (MyFrame.n3==3) {Karta3.card3= MyFrame.Hearts_3;MyFrame.karta3=3;MyFrame.boja3=1;}
+		if (MyFrame.n3==4) {Karta3.card3= MyFrame.Hearts_4;MyFrame.karta3=4;MyFrame.boja3=1;}
+		if (MyFrame.n3==5) {Karta3.card3= MyFrame.Hearts_5;MyFrame.karta3=5;MyFrame.boja3=1;}
+		if (MyFrame.n3==6) {Karta3.card3= MyFrame.Hearts_6;MyFrame.karta3=6;MyFrame.boja3=1;}
+		if (MyFrame.n3==7) {Karta3.card3= MyFrame.Hearts_7;MyFrame.karta3=7;MyFrame.boja3=1;}
+		if (MyFrame.n3==8) {Karta3.card3= MyFrame.Hearts_8;MyFrame.karta3=8;MyFrame.boja3=1;}
+		if (MyFrame.n3==9) {Karta3.card3= MyFrame.Hearts_9;MyFrame.karta3=9;MyFrame.boja3=1;}
+		if (MyFrame.n3==10) {Karta3.card3= MyFrame.Hearts_10;MyFrame.karta3=10;MyFrame.boja3=1;}
 		if (MyFrame.n3==11) {Karta3.card3= MyFrame.Jlabel11;MyFrame.karta3=11;MyFrame.boja3=1;}
 		if (MyFrame.n3==12) {Karta3.card3= MyFrame.Jlabel12;MyFrame.karta3=12;MyFrame.boja3=1;}
 		if (MyFrame.n3==13) {Karta3.card3= MyFrame.Jlabel13;MyFrame.karta3=13;MyFrame.boja3=1;}

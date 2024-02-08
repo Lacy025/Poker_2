@@ -10,20 +10,20 @@ public class Kasiranje implements Brojevi, Dobici, MainFrame {
 	Kasiranje() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 		labelT10.setVisible(false);
 		tabela.remove(labelT10);
-		MyFrame.Jlabelcr.setVisible(false);
-		frame.remove(MyFrame.Jlabelcr);
+		MyFrame.Credit.setVisible(false);
+		frame.remove(MyFrame.Credit);
 		kasa = 0;
 		frame.add(Izbor2.pobeda);
 		Izbor2.pobeda.setVisible(true);
 		kasa++;
 		new Upis1();
-		while (kasa > 0 && MyFrame.dobitak > -1) {
+		while (kasa > 0 && MyFrame.win_value > -1) {
 			if (kasa == 5000) {
 				Izbor2.pobeda.setVisible(true);
 				Thread.sleep(500);
 				kasa++;
 			}
-			if (kasa == 10000 && MyFrame.dobitak >- 1) {
+			if (kasa == 10000 && MyFrame.win_value >- 1) {
 				Izbor2.pobeda.setVisible(false);
 				Thread.sleep(500);
 				kasa = 1;

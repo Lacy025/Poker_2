@@ -35,7 +35,7 @@ public class Izbor2 implements Brojevi, Dobici, MainFrame, KeyListener {
         dupliranje.setOpaque(true);
         kasiranje.setOpaque(true);
         pobeda.setOpaque(true);
-        if (Dobitak.DOBITAK > 0 && MyFrame.ukupno < 10000) {
+        if (Dobitak.DOBITAK > 0 && MyFrame.final_value < 10000) {
             dobitnik();
             frame.addKeyListener(this);
             izbor = 1;
@@ -74,7 +74,7 @@ public class Izbor2 implements Brojevi, Dobici, MainFrame, KeyListener {
                 new Kasiranje();
             }
         }
-        if (Dobitak.DOBITAK > 0 && MyFrame.ukupno > 9999) {
+        if (Dobitak.DOBITAK > 0 && MyFrame.final_value > 9999) {
             dobitnik();
             dupliranje.setVisible(false);
             kasiranje.setVisible(false);

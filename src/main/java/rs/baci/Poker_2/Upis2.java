@@ -10,7 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.Timer;
 
 public class Upis2 implements Brojevi, MainFrame {
-    public Component Broj2 = new JLabel(MyFrame.dobitak+" ");
+    public Component Broj2 = new JLabel(MyFrame.win_value + " ");
     public Component Credit2 = new JLabel(""+MyFrame.cr);
     Timer timer2;
     Upis2 () throws InterruptedException {
@@ -22,17 +22,17 @@ public class Upis2 implements Brojevi, MainFrame {
             e3.printStackTrace();
         }
         timer2 = new Timer(1000, e -> {
-            if(MyFrame.dobitak == -1) {
+            if(MyFrame.win_value == -1) {
                 try {
                     new Isplata2();
                 } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e2) {
                     e2.printStackTrace();
                 }
             }
-            MyFrame.dobitak = MyFrame.dobitak - 100;
+            MyFrame.win_value = MyFrame.win_value - 100;
             MyFrame.cr = MyFrame.cr + 100;
-            if(MyFrame.dobitak > -1) {
-                ((JLabel) Broj2).setText(MyFrame.dobitak + " ");
+            if(MyFrame.win_value > -1) {
+                ((JLabel) Broj2).setText(MyFrame.win_value + " ");
                 ((JLabel) Credit2).setText(String.valueOf(MyFrame.cr));
                 try {
                     new Isplata2();

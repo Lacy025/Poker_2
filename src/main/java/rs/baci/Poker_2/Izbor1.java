@@ -48,7 +48,7 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
         ((JComponent) JlabelN2).setOpaque(true);
         ((JComponent) JlabelN3).setOpaque(true);
         frame.addKeyListener(this);
-        while (MyFrame.delj == 1) {
+        while (MyFrame.dealing == 1) {
             if (st == 40000) {
                 JlabelN1.setVisible(false);
                 JlabelN2.setVisible(true);
@@ -246,34 +246,34 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
                 if (Dobitak.stop1 == 0) {
                     Karta1.card1.setVisible(false);
                     frame.remove(Karta1.card1);
-                    frame.add(MyFrame.JlabelK1);
-                    MyFrame.JlabelK1.setVisible(true);
+                    frame.add(MyFrame.Card_1);
+                    MyFrame.Card_1.setVisible(true);
                 }
                 if (Dobitak.stop2 == 0) {
                     Karta2.card2.setVisible(false);
                     frame.remove(Karta2.card2);
-                    frame.add(MyFrame.JlabelK2);
-                    MyFrame.JlabelK2.setVisible(true);
+                    frame.add(MyFrame.Card_2);
+                    MyFrame.Card_2.setVisible(true);
                 }
                 if (Dobitak.stop3 == 0) {
                     Karta3.card3.setVisible(false);
                     frame.remove(Karta3.card3);
-                    frame.add(MyFrame.JlabelK3);
-                    MyFrame.JlabelK3.setVisible(true);
+                    frame.add(MyFrame.Card_3);
+                    MyFrame.Card_3.setVisible(true);
                 }
                 if (Dobitak.stop4 == 0) {
                     Karta4.card4.setVisible(false);
                     frame.remove(Karta4.card4);
-                    frame.add(MyFrame.JlabelK4);
-                    MyFrame.JlabelK4.setVisible(true);
+                    frame.add(MyFrame.Card_4);
+                    MyFrame.Card_4.setVisible(true);
                 }
                 if (Dobitak.stop5 == 0) {
                     Karta5.card5.setVisible(false);
                     frame.remove(Karta5.card5);
-                    frame.add(MyFrame.JlabelK5);
-                    MyFrame.JlabelK5.setVisible(true);
+                    frame.add(MyFrame.Card_5);
+                    MyFrame.Card_5.setVisible(true);
                 }
-                MyFrame.delj = 2;
+                MyFrame.dealing = 2;
                 frame.removeKeyListener(this);
 
                 URL deljenje2 = this.getClass().getClassLoader().getResource("resources/Deljenje2.wav");

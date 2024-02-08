@@ -11,7 +11,7 @@ import javax.swing.JLabel;
 
 public class Street implements MainFrame, Brojevi, Dobici {
     Street() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
-        if (MyFrame.delj == 1) {
+        if (MyFrame.dealing == 1) {
             rucno.setLayout(new BorderLayout(50,50));
             rucno.setBorder(BorderFactory.createMatteBorder(20, 20, 20, 20, Color.RED));
             frame.add(rucno);
@@ -39,8 +39,8 @@ public class Street implements MainFrame, Brojevi, Dobici {
             labelT10.setFont(font2);
             labelT10.setForeground(color1);
             labelT10.setOpaque(false);
-            MyFrame.dobitak = d6 * MyFrame.ul;
-            MyFrame.ukupno = d6 * MyFrame.ul;
+            MyFrame.win_value = d6 * MyFrame.ul;
+            MyFrame.final_value = d6 * MyFrame.ul;
         }
     }
 }

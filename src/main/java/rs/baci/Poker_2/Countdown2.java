@@ -28,7 +28,7 @@ public class Countdown2 implements MainFrame, Brojevi {
 					frame.remove(Jlabel13);
 	            	MyFrame.kr = 0;
                     MyFrame.cr = -1;
-                    MyFrame.delj = 3;
+                    MyFrame.dealing = 3;
 	            }
 		 		});
 		    	frame.add(Jlabel13);

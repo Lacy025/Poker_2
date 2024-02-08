@@ -13,7 +13,7 @@ public class Hold implements MainFrame, Brojevi {
 	static JLabel hold4 = new JLabel(" STOP");
 	static JLabel hold5 = new JLabel(" STOP");
 	Hold() throws UnsupportedAudioFileException, IOException, LineUnavailableException, InterruptedException {
-		if (MyFrame.delj == 1 && Dobitak.stop1 == 1 && MyFrame.ah == 1) {
+		if (MyFrame.dealing == 1 && Dobitak.stop1 == 1 && MyFrame.ah == 1) {
 			hold1.setBounds(120,914,130,40);
 			frame.add(hold1);
 			hold1.setForeground(color1);
@@ -23,7 +23,7 @@ public class Hold implements MainFrame, Brojevi {
 			hold1.setVisible(true);
 			new Stop();
 		}
-		if (MyFrame.delj == 1 && Dobitak.stop2 == 1 && MyFrame.ah == 1) {
+		if (MyFrame.dealing == 1 && Dobitak.stop2 == 1 && MyFrame.ah == 1) {
 			hold2.setBounds(500,914,130,40);
 			frame.add(hold2);
 			hold2.setForeground(color1);
@@ -33,7 +33,7 @@ public class Hold implements MainFrame, Brojevi {
 			hold2.setVisible(true);
 			new Stop();
 		}
-		if (MyFrame.delj == 1 && Dobitak.stop3 == 1 && MyFrame.ah == 1) {
+		if (MyFrame.dealing == 1 && Dobitak.stop3 == 1 && MyFrame.ah == 1) {
 			hold3.setBounds(890,914,130,40);
 			frame.add(hold3);
 			hold3.setForeground(color1);
@@ -43,7 +43,7 @@ public class Hold implements MainFrame, Brojevi {
 			hold3.setVisible(true);
 			new Stop();
 		}
-		if (MyFrame.delj == 1 && Dobitak.stop4 == 1 && MyFrame.ah == 1) {
+		if (MyFrame.dealing == 1 && Dobitak.stop4 == 1 && MyFrame.ah == 1) {
 			hold4.setBounds(1270,914,130,40);
 			frame.add(hold4);
 			hold4.setForeground(color1);
@@ -53,7 +53,7 @@ public class Hold implements MainFrame, Brojevi {
 			hold4.setVisible(true);
 			new Stop();
 		}
-		if (MyFrame.delj == 1 && Dobitak.stop5 == 1 && MyFrame.ah == 1) {
+		if (MyFrame.dealing == 1 && Dobitak.stop5 == 1 && MyFrame.ah == 1) {
 			hold5.setBounds(1650,914,130,40);
 			frame.add(hold5);
 			hold5.setForeground(color1);
