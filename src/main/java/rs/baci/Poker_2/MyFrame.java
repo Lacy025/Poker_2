@@ -170,16 +170,16 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 	static ImageIcon icon52 = new ImageIcon(Objects.requireNonNull(loadImage("resources/52.png")));
 
 	public static Component joker = new JLabel(icon0);
-	protected static Component Hearts_1 = new JLabel(icon1);
-	protected static Component Hearts_2 = new JLabel(icon2);
-	protected static Component Hearts_3 = new JLabel(icon3);
-	protected static Component Hearts_4 = new JLabel(icon4);
-	protected static Component Hearts_5 = new JLabel(icon5);
-	protected static Component Hearts_6 = new JLabel(icon6);
-	protected static Component Hearts_7 = new JLabel(icon7);
-	protected static Component Hearts_8 = new JLabel(icon8);
-	protected static Component Hearts_9 = new JLabel(icon9);
-	protected static Component Hearts_10 = new JLabel(icon10);
+	protected static Component hearts_1 = new JLabel(icon1);
+	protected static Component hearts_2 = new JLabel(icon2);
+	protected static Component hearts_3 = new JLabel(icon3);
+	protected static Component hearts_4 = new JLabel(icon4);
+	protected static Component hearts_5 = new JLabel(icon5);
+	protected static Component hearts_6 = new JLabel(icon6);
+	protected static Component hearts_7 = new JLabel(icon7);
+	protected static Component hearts_8 = new JLabel(icon8);
+	protected static Component hearts_9 = new JLabel(icon9);
+	protected static Component hearts_10 = new JLabel(icon10);
 	protected static Component Jlabel11 = new JLabel(icon11);
 	protected static Component Jlabel12 = new JLabel(icon12);
 	protected static Component Jlabel13 = new JLabel(icon13);

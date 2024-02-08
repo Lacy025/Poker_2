@@ -7,12 +7,12 @@ import javax.swing.JLabel;
 public class Karta02 extends JLabel {
     public static Component card02 = new JLabel();
     Karta02() {
-        if (MyFrame.k02==1) {Karta02.card02=MyFrame.Hearts_1;}
-        if (MyFrame.k02==2) {Karta02.card02=MyFrame.Hearts_2;}
-        if (MyFrame.k02==3) {Karta02.card02=MyFrame.Hearts_3;}
-        if (MyFrame.k02==4) {Karta02.card02=MyFrame.Hearts_4;}
-        if (MyFrame.k02==5) {Karta02.card02=MyFrame.Hearts_5;}
-        if (MyFrame.k02==6) {Karta02.card02=MyFrame.Hearts_6;}
+        if (MyFrame.k02==1) {Karta02.card02=MyFrame.hearts_1;}
+        if (MyFrame.k02==2) {Karta02.card02=MyFrame.hearts_2;}
+        if (MyFrame.k02==3) {Karta02.card02=MyFrame.hearts_3;}
+        if (MyFrame.k02==4) {Karta02.card02=MyFrame.hearts_4;}
+        if (MyFrame.k02==5) {Karta02.card02=MyFrame.hearts_5;}
+        if (MyFrame.k02==6) {Karta02.card02=MyFrame.hearts_6;}
         if (MyFrame.k02==7) {Karta02.card02=MyFrame.Jlabel14;}
         if (MyFrame.k02==8) {Karta02.card02=MyFrame.Jlabel15;}
         if (MyFrame.k02==9) {Karta02.card02=MyFrame.Jlabel16;}
@@ -31,9 +31,9 @@ public class Karta02 extends JLabel {
         if (MyFrame.k02==22) {Karta02.card02=MyFrame.Jlabel43;}
         if (MyFrame.k02==23) {Karta02.card02=MyFrame.Jlabel44;}
         if (MyFrame.k02==24) {Karta02.card02=MyFrame.Jlabel45;}
-        if (MyFrame.k02==25) {Karta02.card02=MyFrame.Hearts_8;}
-        if (MyFrame.k02==26) {Karta02.card02=MyFrame.Hearts_9;}
-        if (MyFrame.k02==27) {Karta02.card02=MyFrame.Hearts_10;}
+        if (MyFrame.k02==25) {Karta02.card02=MyFrame.hearts_8;}
+        if (MyFrame.k02==26) {Karta02.card02=MyFrame.hearts_9;}
+        if (MyFrame.k02==27) {Karta02.card02=MyFrame.hearts_10;}
         if (MyFrame.k02==28) {Karta02.card02=MyFrame.Jlabel11;}
         if (MyFrame.k02==29) {Karta02.card02=MyFrame.Jlabel12;}
         if (MyFrame.k02==30) {Karta02.card02=MyFrame.Jlabel13;}

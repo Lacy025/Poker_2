@@ -8,16 +8,16 @@ public class Karta4 extends JLabel {
 	public static Component card4 = new JLabel();
 	Karta4() {
 		if (MyFrame.n4==0) {Karta4.card4=MyFrame.joker;MyFrame.karta4=0;MyFrame.boja4=0;}
-		if (MyFrame.n4==1) {Karta4.card4=MyFrame.Hearts_1;MyFrame.karta4=14;MyFrame.boja4=1;}
-		if (MyFrame.n4==2) {Karta4.card4=MyFrame.Hearts_2;MyFrame.karta4=2;MyFrame.boja4=1;}
-		if (MyFrame.n4==3) {Karta4.card4=MyFrame.Hearts_3;MyFrame.karta4=3;MyFrame.boja4=1;}
-		if (MyFrame.n4==4) {Karta4.card4=MyFrame.Hearts_4;MyFrame.karta4=4;MyFrame.boja4=1;}
-		if (MyFrame.n4==5) {Karta4.card4=MyFrame.Hearts_5;MyFrame.karta4=5;MyFrame.boja4=1;}
-		if (MyFrame.n4==6) {Karta4.card4=MyFrame.Hearts_6;MyFrame.karta4=6;MyFrame.boja4=1;}
-		if (MyFrame.n4==7) {Karta4.card4=MyFrame.Hearts_7;MyFrame.karta4=7;MyFrame.boja4=1;}
-		if (MyFrame.n4==8) {Karta4.card4=MyFrame.Hearts_8;MyFrame.karta4=8;MyFrame.boja4=1;}
-		if (MyFrame.n4==9) {Karta4.card4=MyFrame.Hearts_9;MyFrame.karta4=9;MyFrame.boja4=1;}
-		if (MyFrame.n4==10) {Karta4.card4=MyFrame.Hearts_10;MyFrame.karta4=10;MyFrame.boja4=1;}
+		if (MyFrame.n4==1) {Karta4.card4=MyFrame.hearts_1;MyFrame.karta4=14;MyFrame.boja4=1;}
+		if (MyFrame.n4==2) {Karta4.card4=MyFrame.hearts_2;MyFrame.karta4=2;MyFrame.boja4=1;}
+		if (MyFrame.n4==3) {Karta4.card4=MyFrame.hearts_3;MyFrame.karta4=3;MyFrame.boja4=1;}
+		if (MyFrame.n4==4) {Karta4.card4=MyFrame.hearts_4;MyFrame.karta4=4;MyFrame.boja4=1;}
+		if (MyFrame.n4==5) {Karta4.card4=MyFrame.hearts_5;MyFrame.karta4=5;MyFrame.boja4=1;}
+		if (MyFrame.n4==6) {Karta4.card4=MyFrame.hearts_6;MyFrame.karta4=6;MyFrame.boja4=1;}
+		if (MyFrame.n4==7) {Karta4.card4=MyFrame.hearts_7;MyFrame.karta4=7;MyFrame.boja4=1;}
+		if (MyFrame.n4==8) {Karta4.card4=MyFrame.hearts_8;MyFrame.karta4=8;MyFrame.boja4=1;}
+		if (MyFrame.n4==9) {Karta4.card4=MyFrame.hearts_9;MyFrame.karta4=9;MyFrame.boja4=1;}
+		if (MyFrame.n4==10) {Karta4.card4=MyFrame.hearts_10;MyFrame.karta4=10;MyFrame.boja4=1;}
 		if (MyFrame.n4==11) {Karta4.card4=MyFrame.Jlabel11;MyFrame.karta4=11;MyFrame.boja4=1;}
 		if (MyFrame.n4==12) {Karta4.card4=MyFrame.Jlabel12;MyFrame.karta4=12;MyFrame.boja4=1;}
 		if (MyFrame.n4==13) {Karta4.card4=MyFrame.Jlabel13;MyFrame.karta4=13;MyFrame.boja4=1;}
