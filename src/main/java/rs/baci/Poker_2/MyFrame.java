@@ -223,16 +223,16 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 	protected static Component spade_queen = new JLabel(icon51);
 	protected static Component spade_king = new JLabel(icon52);
 
-	public static int karta1;
-	public static int karta2;
-	public static int karta3;
-	public static int karta4;
-	public static int karta5;
-	public static int boja1;
-	public static int boja2;
-	public static int boja3;
-	public static int boja4;
-	public static int boja5;
+	public static int card_1;
+	public static int card_2;
+	public static int card_3;
+	public static int card_4;
+	public static int card_5;
+	public static int color_1;
+	public static int color_2;
+	public static int color_3;
+	public static int color_4;
+	public static int color_5;
 	
 	MyFrame() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 

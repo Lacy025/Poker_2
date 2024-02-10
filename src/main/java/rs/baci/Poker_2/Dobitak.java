@@ -27,17 +27,17 @@ public class Dobitak {
 	public static int B5;
 	Dobitak() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
-		K1 = MyFrame.karta1;
-		K2 = MyFrame.karta2;
-		K3 = MyFrame.karta3;
-		K4 = MyFrame.karta4;
-		K5 = MyFrame.karta5;
+		K1 = MyFrame.card_1;
+		K2 = MyFrame.card_2;
+		K3 = MyFrame.card_3;
+		K4 = MyFrame.card_4;
+		K5 = MyFrame.card_5;
 
-		B1 = MyFrame.boja1;
-		B2 = MyFrame.boja2;
-		B3 = MyFrame.boja3;
-		B4 = MyFrame.boja4;
-		B5 = MyFrame.boja5;
+		B1 = MyFrame.color_1;
+		B2 = MyFrame.color_2;
+		B3 = MyFrame.color_3;
+		B4 = MyFrame.color_4;
+		B5 = MyFrame.color_5;
 
 		dveiste = 0;
 		cetiriboje = 0;
