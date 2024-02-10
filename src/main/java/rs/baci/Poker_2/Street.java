@@ -9,7 +9,7 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 
-public class Street implements MainFrame, Brojevi, Dobici {
+public class Street implements MainFrame, Numbers, Winnings {
     Street() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
         if (MyFrame.dealing == 1) {
             rucno.setLayout(new BorderLayout(50,50));
@@ -21,8 +21,8 @@ public class Street implements MainFrame, Brojevi, Dobici {
             new Hold();
         }
         else {
-            new Prostor();
-            new Tabela();
+            new Clear_3();
+            new Table();
             labelT6.setVerticalAlignment(JLabel.TOP);
             labelT6.setHorizontalAlignment(JLabel.LEFT);
             labelT6.setBounds(30,10,1200,120);

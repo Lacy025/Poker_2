@@ -1,8 +1,8 @@
 package rs.baci.Poker_2;
 
 
-public class Prostor implements MainFrame, Dobici {
-    Prostor() {
+public class Clear_3 implements MainFrame, Winnings {
+    Clear_3() {
         MyFrame.Value_9.setVisible(false);
         frame.remove(MyFrame.Value_9);
         label9.setVisible(false);

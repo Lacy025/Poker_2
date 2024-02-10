@@ -14,16 +14,16 @@ public class Main {
 		while (game > 0) {
 			new MyFrame();
 			if (MyFrame.dealing == 1) {
-				new Deljenje1();
-				new Dobitak();
-				new Izbor1();
+				new Deal_Cards_1();
+				new Win();
+				new Choice_1();
 			}
 			if (MyFrame.dealing == 2) {
-				new Deljenje2();
-				new Dobitak();
-				new Izbor2();
-				if (Izbor2.izbor == 3) {
-					new Dupliranje();
+				new Deal_Cards_2();
+				new Win();
+				new Choice_2();
+				if (Choice_2.choice == 3) {
+					new Doubling();
 				}
 			}
 			MyFrame.jk = 60000;

@@ -8,7 +8,7 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.Timer;
 
-public class Countdown2 implements MainFrame, Brojevi {
+public class Countdown2 implements MainFrame, Numbers {
 	
 	public Component Jlabel13 = new JLabel(""+ MyFrame.cr);
 	Timer timer;
@@ -18,7 +18,7 @@ public class Countdown2 implements MainFrame, Brojevi {
 					 ((JLabel) Jlabel13).setText("" + MyFrame.cr);
 					 MyFrame.cr = MyFrame.cr - 100;
 	            try {
-					new Isplata2();
+					new Cash_2();
 				} catch (UnsupportedAudioFileException | IOException | LineUnavailableException e1) {
 					e1.printStackTrace();
 				}

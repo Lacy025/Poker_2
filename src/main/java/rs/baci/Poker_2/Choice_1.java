@@ -13,60 +13,60 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 
-public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
-    Clip removestop;
-    Clip deljenje2Sound;
+public class Choice_1 implements MainFrame, Numbers, Winnings, KeyListener {
+    Clip remove_hold;
+    Clip deal_2_Sound;
     int st;
-    static JLabel hold1 = new JLabel(" STOP");
-    static JLabel hold2 = new JLabel(" STOP");
-    static JLabel hold3 = new JLabel(" STOP");
-    static JLabel hold4 = new JLabel(" STOP");
-    static JLabel hold5 = new JLabel(" STOP");
-    public Component JlabelN1 = new JLabel("                   PRITISNITE STOP");
-    public Component JlabelN2 = new JLabel("               PRITISNITE PONIŠTAVANJE");
-    public Component JlabelN3 = new JLabel("                 PRITISNITE DELJENJE");
-    Izbor1() throws InterruptedException {
-        JlabelN1.setVisible(true);
-        JlabelN2.setVisible(false);
-        JlabelN3.setVisible(false);
-        JlabelN1.setBounds(550,960,800,40);
-        JlabelN2.setBounds(550,960,800,40);
-        JlabelN3.setBounds(550,960,800,40);
-        frame.add(JlabelN1);
-        frame.add(JlabelN2);
-        frame.add(JlabelN3);
-        JlabelN1.setForeground(color1);
-        JlabelN2.setForeground(color1);
-        JlabelN3.setForeground(color1);
-        JlabelN1.setBackground(color2);
-        JlabelN2.setBackground(color2);
-        JlabelN3.setBackground(color2);
-        JlabelN1.setFont(font1);
-        JlabelN2.setFont(font1);
-        JlabelN3.setFont(font1);
-        ((JComponent) JlabelN1).setOpaque(true);
-        ((JComponent) JlabelN2).setOpaque(true);
-        ((JComponent) JlabelN3).setOpaque(true);
+    static JLabel hold1 = new JLabel(" HOLD");
+    static JLabel hold2 = new JLabel(" HOLD");
+    static JLabel hold3 = new JLabel(" HOLD");
+    static JLabel hold4 = new JLabel(" HOLD");
+    static JLabel hold5 = new JLabel(" HOLD");
+    public Component Middle_1 = new JLabel("                  PRESS HOLD CARDS");
+    public Component Middle_2 = new JLabel("                  PRESS CLEAR CARDS");
+    public Component Middle_3 = new JLabel("                  PRESS DEAL CARDS");
+    Choice_1() throws InterruptedException {
+        Middle_1.setVisible(true);
+        Middle_2.setVisible(false);
+        Middle_3.setVisible(false);
+        Middle_1.setBounds(550,960,800,40);
+        Middle_2.setBounds(550,960,800,40);
+        Middle_3.setBounds(550,960,800,40);
+        frame.add(Middle_1);
+        frame.add(Middle_2);
+        frame.add(Middle_3);
+        Middle_1.setForeground(color1);
+        Middle_2.setForeground(color1);
+        Middle_3.setForeground(color1);
+        Middle_1.setBackground(color2);
+        Middle_2.setBackground(color2);
+        Middle_3.setBackground(color2);
+        Middle_1.setFont(font1);
+        Middle_2.setFont(font1);
+        Middle_3.setFont(font1);
+        ((JComponent) Middle_1).setOpaque(true);
+        ((JComponent) Middle_2).setOpaque(true);
+        ((JComponent) Middle_3).setOpaque(true);
         frame.addKeyListener(this);
         while (MyFrame.dealing == 1) {
             if (st == 40000) {
-                JlabelN1.setVisible(false);
-                JlabelN2.setVisible(true);
-                JlabelN3.setVisible(false);
+                Middle_1.setVisible(false);
+                Middle_2.setVisible(true);
+                Middle_3.setVisible(false);
                 Thread.sleep(1000);
                 st++;
             }
             if (st == 80000) {
-                JlabelN1.setVisible(false);
-                JlabelN2.setVisible(false);
-                JlabelN3.setVisible(true);
+                Middle_1.setVisible(false);
+                Middle_2.setVisible(false);
+                Middle_3.setVisible(true);
                 Thread.sleep(1000);
                 st++;
             }
             if (st == 120000) {
-                JlabelN1.setVisible(true);
-                JlabelN2.setVisible(false);
-                JlabelN3.setVisible(false);
+                Middle_1.setVisible(true);
+                Middle_2.setVisible(false);
+                Middle_3.setVisible(false);
                 Thread.sleep(1000);
                 st = 0;
             }
@@ -78,35 +78,35 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
 
         switch(e.getKeyCode()) {
 
-            case 32 : // KEYPAD 'SPACE' - PONIŠTAVANJE
+            case 32 : // KEYPAD 'SPACE' - CLEAR CARDS
 
                 Hold.hold1.setVisible(false);
                 frame.remove(Hold.hold1);
                 hold1.setVisible(false);
                 frame.remove(hold1);
-                Dobitak.stop1 = 0;
+                Win.stop1 = 0;
                 Hold.hold2.setVisible(false);
                 frame.remove(Hold.hold2);
                 hold2.setVisible(false);
                 frame.remove(hold2);
-                Dobitak.stop2 = 0;
+                Win.stop2 = 0;
                 Hold.hold3.setVisible(false);
                 frame.remove(Hold.hold3);
                 hold3.setVisible(false);
                 frame.remove(hold3);
-                Dobitak.stop3 = 0;
+                Win.stop3 = 0;
                 Hold.hold4.setVisible(false);
                 frame.remove(Hold.hold4);
                 hold4.setVisible(false);
                 frame.remove(hold4);
-                Dobitak.stop4 = 0;
+                Win.stop4 = 0;
                 Hold.hold5.setVisible(false);
                 frame.remove(Hold.hold5);
                 hold5.setVisible(false);
                 frame.remove(hold5);
-                Dobitak.stop5 = 0;
+                Win.stop5 = 0;
 
-                URL space = this.getClass().getClassLoader().getResource("resources/Ponistavanje.wav");
+                URL space = this.getClass().getClassLoader().getResource("resources/Clear.wav");
                 AudioInputStream audioSpace;
                 try {
                     assert space != null;
@@ -115,16 +115,16 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
                     throw new RuntimeException(ex);
                 }
                 try {
-                    this.removestop = AudioSystem.getClip();
+                    this.remove_hold = AudioSystem.getClip();
                 } catch (LineUnavailableException ex) {
                     throw new RuntimeException(ex);
                 }
                 try {
-                    this.removestop.open(audioSpace);
+                    this.remove_hold.open(audioSpace);
                 } catch (LineUnavailableException | IOException ex) {
                     throw new RuntimeException(ex);
                 }
-                this.removestop.start();
+                this.remove_hold.start();
                 break;
 
             case 49 : // KEYPAD '1' - CARD 1 HOLD
@@ -136,7 +136,7 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
                 hold1.setFont(font1);
                 hold1.setOpaque(true);
                 hold1.setVisible(true);
-                Dobitak.stop1 = 1;
+                Win.stop1 = 1;
                 try {
                     new Stop();
                 } catch (InterruptedException ex) {
@@ -153,7 +153,7 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
                 hold2.setFont(font1);
                 hold2.setOpaque(true);
                 hold2.setVisible(true);
-                Dobitak.stop2 = 1;
+                Win.stop2 = 1;
                 try {
                     new Stop();
                 } catch (InterruptedException ex) {
@@ -170,7 +170,7 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
                 hold3.setFont(font1);
                 hold3.setOpaque(true);
                 hold3.setVisible(true);
-                Dobitak.stop3 = 1;
+                Win.stop3 = 1;
                 try {
                     new Stop();
                 } catch (InterruptedException ex) {
@@ -187,7 +187,7 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
                 hold4.setFont(font1);
                 hold4.setOpaque(true);
                 hold4.setVisible(true);
-                Dobitak.stop4 = 1;
+                Win.stop4 = 1;
                 try {
                     new Stop();
                 } catch (InterruptedException ex) {
@@ -204,7 +204,7 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
                 hold5.setFont(font1);
                 hold5.setOpaque(true);
                 hold5.setVisible(true);
-                Dobitak.stop5 = 1;
+                Win.stop5 = 1;
                 try {
                     new Stop();
                 } catch (InterruptedException ex) {
@@ -212,7 +212,7 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
                 }
                 break;
 
-            case 10 : // KEYPAD 'ENTER' - DELJENJE 2
+            case 10 : // KEYPAD 'ENTER' - DEAL CARDS 2
 
                 hold1.setVisible(false);
                 hold2.setVisible(false);
@@ -224,9 +224,9 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
                 Hold.hold3.setVisible(false);
                 Hold.hold4.setVisible(false);
                 Hold.hold5.setVisible(false);
-                JlabelN1.setVisible(false);
-                JlabelN2.setVisible(false);
-                JlabelN3.setVisible(false);
+                Middle_1.setVisible(false);
+                Middle_2.setVisible(false);
+                Middle_3.setVisible(false);
                 frame.remove(hold1);
                 frame.remove(hold2);
                 frame.remove(hold3);
@@ -237,37 +237,37 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
                 frame.remove(Hold.hold3);
                 frame.remove(Hold.hold4);
                 frame.remove(Hold.hold5);
-                frame.remove(JlabelN1);
-                frame.remove(JlabelN2);
-                frame.remove(JlabelN3);
+                frame.remove(Middle_1);
+                frame.remove(Middle_2);
+                frame.remove(Middle_3);
                 rucno.setVisible(false);
                 frame.remove(rucno);
 
-                if (Dobitak.stop1 == 0) {
+                if (Win.stop1 == 0) {
                     Karta1.card1.setVisible(false);
                     frame.remove(Karta1.card1);
                     frame.add(MyFrame.Card_1);
                     MyFrame.Card_1.setVisible(true);
                 }
-                if (Dobitak.stop2 == 0) {
+                if (Win.stop2 == 0) {
                     Karta2.card2.setVisible(false);
                     frame.remove(Karta2.card2);
                     frame.add(MyFrame.Card_2);
                     MyFrame.Card_2.setVisible(true);
                 }
-                if (Dobitak.stop3 == 0) {
+                if (Win.stop3 == 0) {
                     Karta3.card3.setVisible(false);
                     frame.remove(Karta3.card3);
                     frame.add(MyFrame.Card_3);
                     MyFrame.Card_3.setVisible(true);
                 }
-                if (Dobitak.stop4 == 0) {
+                if (Win.stop4 == 0) {
                     Karta4.card4.setVisible(false);
                     frame.remove(Karta4.card4);
                     frame.add(MyFrame.Card_4);
                     MyFrame.Card_4.setVisible(true);
                 }
-                if (Dobitak.stop5 == 0) {
+                if (Win.stop5 == 0) {
                     Karta5.card5.setVisible(false);
                     frame.remove(Karta5.card5);
                     frame.add(MyFrame.Card_5);
@@ -276,25 +276,25 @@ public class Izbor1 implements MainFrame, Brojevi, Dobici, KeyListener {
                 MyFrame.dealing = 2;
                 frame.removeKeyListener(this);
 
-                URL deljenje2 = this.getClass().getClassLoader().getResource("resources/Deljenje2.wav");
-                AudioInputStream audioDeljenje2;
+                URL deal_2 = this.getClass().getClassLoader().getResource("resources/Deal_2.wav");
+                AudioInputStream audio_Deal_2;
                 try {
-                    assert deljenje2 != null;
-                    audioDeljenje2 = AudioSystem.getAudioInputStream(deljenje2);
+                    assert deal_2 != null;
+                    audio_Deal_2 = AudioSystem.getAudioInputStream(deal_2);
                 } catch (UnsupportedAudioFileException | IOException ex) {
                     throw new RuntimeException(ex);
                 }
                 try {
-                    this.deljenje2Sound = AudioSystem.getClip();
+                    this.deal_2_Sound = AudioSystem.getClip();
                 } catch (LineUnavailableException ex) {
                     throw new RuntimeException(ex);
                 }
                 try {
-                    deljenje2Sound.open(audioDeljenje2);
+                    deal_2_Sound.open(audio_Deal_2);
                 } catch (LineUnavailableException | IOException ex) {
                     throw new RuntimeException(ex);
                 }
-                this.deljenje2Sound.start();
+                this.deal_2_Sound.start();
                 break;
         }
     }

@@ -20,7 +20,7 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import javax.swing.plaf.metal.MetalLookAndFeel;
 
-public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Serializable {
+public class MyFrame implements Numbers, Winnings, MainFrame, KeyListener, Serializable {
 	@Serial
 	private static final long serialVersionUID = 1L;
 	Clip introSound;
@@ -83,9 +83,9 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 	public static Component Joker = new JLabel("JOKER");
 	public static Component Card = new JLabel("CARD");
 	public static Component Left_zero = new JLabel("  LACIKA BAČI");
-	public static Component Right_zero = new JLabel("  SRBIJA 2022");
-	public static Component Middle_1 = new JLabel("                    BIRAJTE ULOG");
-	public static Component Middle_2 = new JLabel("                 PRITISNITE DELJENJE");
+	public static Component Right_zero = new JLabel("  SERBIA 2022");
+	public static Component Middle_1 = new JLabel("                      CHOOSE BET");
+	public static Component Middle_2 = new JLabel("                 PRESS DEAL CARDS");
 	private static BufferedImage loadImage(String path) {
 		try {
 			return ImageIO.read(Objects.requireNonNull(MyFrame.class.getClassLoader().getResource(path)));
@@ -236,12 +236,12 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 	
 	MyFrame() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
-		if (Dobitak.DOBITAK > 0) {
-			URL kasa = this.getClass().getClassLoader().getResource("resources/Kraj.wav");
-			AudioInputStream audioKasa;
+		if (Win.winner > 0) {
+			URL counted = this.getClass().getClassLoader().getResource("resources/End.wav");
+			AudioInputStream audioCounted;
 			try {
-				assert kasa != null;
-				audioKasa = AudioSystem.getAudioInputStream(kasa);
+				assert counted != null;
+				audioCounted = AudioSystem.getAudioInputStream(counted);
 			} catch (UnsupportedAudioFileException | IOException ex) {
 				throw new RuntimeException(ex);
 			}
@@ -251,7 +251,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 				throw new RuntimeException(ex);
 			}
 			try {
-				cashing_sound.open(audioKasa);
+				cashing_sound.open(audioCounted);
 			} catch (LineUnavailableException | IOException ex) {
 				throw new RuntimeException(ex);
 			}
@@ -261,7 +261,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 			frame.addKeyListener(this);
 			breaking = 1;
 		}
-		if (cr > 0 && (Dupliranje.karta > 0 || Dobitak.DOBITAK > 0)) {
+		if (cr > 0 && (Doubling.karta > 0 || Win.winner > 0)) {
 			while (game == 0 || breaking  <9999) {
 				if (breaking == 1000) {
 					Thread.sleep(400);
@@ -305,13 +305,13 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 		else {
 			Thread.sleep(500);
 		}
-		Dobitak.DOBITAK = 0;
-		new Clear1();
-		new Clear2();
+		Win.winner = 0;
+		new Clear_1();
+		new Clear_2();
 		breaking = 10000;
 
 		if (cr == 0 && game == 0) {
-		frame.setTitle("POKER");
+		frame.setTitle("Joker Card");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setBackground(new Color(0,0,0));
 		frame.setLayout(null);
@@ -367,8 +367,8 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 		if (ul > cr && cr > 0) {
 			ul = cr;
 			((JLabel) Bet).setText(""+(ul));
-			ulog();
-			new Ulog();
+			Bet();
+			new Bet();
 		}
 
 		if (cr == 0 & game == 1) {
@@ -395,7 +395,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 			dx9 = 1269;
 
 			((JLabel) Bet).setText(""+(ul));
-			ulog();
+			Bet();
 		}
 
 		((JLabel) Credit).setText(""+(cr));
@@ -414,7 +414,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 		label8.setBounds(0,L8,1300,32);
 		label9.setBounds(0,L9,1300,32);
 		label10.setBounds(1640,32,500,40);
-		label11.setBounds(1660,160,500,40);
+		label11.setBounds(1676,160,500,40);
 
 		Value_0.setBounds(dx0,L0,120,32);
 		Value_1.setBounds(dx1,L1,120,32);
@@ -743,11 +743,11 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 				}
 				ch = 0;
 
-				URL kredit = this.getClass().getClassLoader().getResource("resources/Kredit.wav");
-				AudioInputStream audioKredit;
+				URL credit = this.getClass().getClassLoader().getResource("resources/Credit.wav");
+				AudioInputStream audioCredit;
 				try {
-					assert kredit != null;
-					audioKredit = AudioSystem.getAudioInputStream(kredit);
+					assert credit != null;
+					audioCredit = AudioSystem.getAudioInputStream(credit);
 				} catch (UnsupportedAudioFileException | IOException ex) {
 					throw new RuntimeException(ex);
 				}
@@ -757,7 +757,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 					throw new RuntimeException(ex);
 				}
 				try {
-					credit_sound.open(audioKredit);
+					credit_sound.open(audioCredit);
 				} catch (LineUnavailableException | IOException ex) {
 					throw new RuntimeException(ex);
 				}
@@ -980,11 +980,11 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 				((JComponent) Value_9).setOpaque(false);
 				Value_9.setVisible(true);
 
-				URL ulog = this.getClass().getClassLoader().getResource("resources/Ulog.wav");
-				AudioInputStream audioUlog;
+				URL bet = this.getClass().getClassLoader().getResource("resources/Bet.wav");
+				AudioInputStream audioBet;
 				try {
-					assert ulog != null;
-					audioUlog = AudioSystem.getAudioInputStream(ulog);
+					assert bet != null;
+					audioBet = AudioSystem.getAudioInputStream(bet);
 				} catch (UnsupportedAudioFileException | IOException ex) {
 					throw new RuntimeException(ex);
 				}
@@ -994,7 +994,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 					throw new RuntimeException(ex);
 				}
 				try {
-					bet_sound.open(audioUlog);
+					bet_sound.open(audioBet);
 				} catch (LineUnavailableException | IOException ex) {
 					throw new RuntimeException(ex);
 				}
@@ -1087,7 +1087,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 			break;
 
 		case 10 : // KEYPAD 'ENTER'
-			if (Dobitak.DOBITAK > 0) {
+			if (Win.winner > 0) {
 				breaking = 9999;
 				this.cashing_sound.stop();
 			}
@@ -1108,7 +1108,7 @@ public class MyFrame implements Brojevi, Dobici, MainFrame, KeyListener, Seriali
 	@Override
 	public void keyReleased(KeyEvent e) {
 	}
-	void ulog() {
+	void Bet() {
 		((JLabel) Value_0).setText(String.valueOf(d0*ul));
 		((JLabel) Value_1).setText(String.valueOf(d1*ul));
 		((JLabel) Value_2).setText(String.valueOf(d2*ul));

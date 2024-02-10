@@ -9,7 +9,7 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 
-public class Poker implements MainFrame, Brojevi, Dobici {
+public class Poker implements MainFrame, Numbers, Winnings {
     Poker() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
         if (MyFrame.dealing == 1) {
             rucno.setLayout(new BorderLayout(50,50));
@@ -21,8 +21,8 @@ public class Poker implements MainFrame, Brojevi, Dobici {
             new Hold();
         }
         else {
-            new Prostor();
-            new Tabela();
+            new Clear_3();
+            new Table();
             labelT3.setVerticalAlignment(JLabel.TOP);
             labelT3.setHorizontalAlignment(JLabel.LEFT);
             labelT3.setBounds(30,10,1200,120);

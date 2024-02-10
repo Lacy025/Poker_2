@@ -1,8 +1,8 @@
 package rs.baci.Poker_2;
 
-public class Clear1 implements Brojevi, Dobici, MainFrame {
+public class Clear_1 implements Numbers, Winnings, MainFrame {
 	
-	Clear1() {
+	Clear_1() {
 		Karta1.card1.setVisible(false);
 		frame.remove(Karta1.card1);
 		Karta2.card2.setVisible(false);
@@ -13,8 +13,8 @@ public class Clear1 implements Brojevi, Dobici, MainFrame {
 		frame.remove(Karta4.card4);
 		Karta5.card5.setVisible(false);
 		frame.remove(Karta5.card5);
-		Izbor2.pobeda.setVisible(false);
-		frame.remove(Izbor2.pobeda);
+		Choice_2.you_win.setVisible(false);
+		frame.remove(Choice_2.you_win);
 		
 		labelT9.setVisible(false);
 		frame.remove(labelT9);

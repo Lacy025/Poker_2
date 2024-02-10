@@ -9,7 +9,7 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 
-public class Royalflush implements MainFrame, Brojevi, Dobici {
+public class Royalflush implements MainFrame, Numbers, Winnings {
     Royalflush() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
         if (MyFrame.dealing == 1) {
             rucno.setLayout(new BorderLayout(50,50));
@@ -21,8 +21,8 @@ public class Royalflush implements MainFrame, Brojevi, Dobici {
             new Hold();
         }
         else {
-            new Prostor();
-            new Tabela();
+            new Clear_3();
+            new Table();
             labelT1.setVerticalAlignment(JLabel.TOP);
             labelT1.setHorizontalAlignment(JLabel.LEFT);
             labelT1.setBounds(30,10,1200,120);

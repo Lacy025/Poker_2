@@ -19,7 +19,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 
-public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
+public class Doubling implements MainFrame, KeyListener, Winnings, Numbers {
     JLabel veca = new JLabel("8, 9, 10, J, Q, K = VEĆA");
     JLabel manja = new JLabel(" A, 2, 3, 4, 5, 6 = MANJA");
     public static JLabel VECA = new JLabel("VEĆA");
@@ -47,9 +47,9 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
     Clip VecaSound;
     Clip ManjaSound;
     Clip PogodioSound;
-    Dupliranje() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
+    Doubling() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
 
-        Izbor2.izbor = 0;
+        Choice_2.choice = 0;
         pola = 0;
         kockanje = 1;
 
@@ -782,7 +782,7 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                 manja.setVisible(false);
                 frame.remove(manja);
                 kockanje = 0;
-                new Kasiranje();
+                new Cashing();
             }
             if (pola == 1) {
                 frame.removeKeyListener(this);
@@ -795,11 +795,11 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
                 MyFrame.Credit.setVisible(false);
                 frame.remove(MyFrame.Credit);
                 xkarta=karta;
-                frame.add(Izbor2.pobeda);
-                Izbor2.pobeda.setVisible(true);
-                x3 = ((int)Dupliranje.duplo) / 2;
-                Polovina polovina = new Polovina();
-                Pobednik pobednik = new Pobednik();
+                frame.add(Choice_2.you_win);
+                Choice_2.you_win.setVisible(true);
+                x3 = ((int) Doubling.duplo) / 2;
+                Half polovina = new Half();
+                Winner pobednik = new Winner();
                 Thread Pobednik = new Thread(pobednik);
                 polovina.start();
                 Pobednik.start();
@@ -934,8 +934,8 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
         MyFrame.cr = MyFrame.cr + 100;
     }
     void pogodak() throws InterruptedException {
-        frame.add(Izbor2.pobeda);
-        Izbor2.pobeda.setVisible(true);
+        frame.add(Choice_2.you_win);
+        Choice_2.you_win.setVisible(true);
         karta++;
         vecamanja = 1;
         labelT10.setVisible(false);
@@ -945,8 +945,8 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
         tabela.add(labelT10);
         labelT10.setVisible(true);
         Thread.sleep(1400);
-        Izbor2.pobeda.setVisible(false);
-        frame.remove(Izbor2.pobeda);
+        Choice_2.you_win.setVisible(false);
+        frame.remove(Choice_2.you_win);
     }
     void promasaj() {
         labelT10.setVisible(false);
@@ -956,8 +956,8 @@ public class Dupliranje implements MainFrame, KeyListener, Dobici, Brojevi {
         labelT10.setVisible(true);
         kockanje = 0;
         clearing();
-        Dobitak.DOBITAK = 0;
-        Izbor2.izbor = 0;
+        Win.winner = 0;
+        Choice_2.choice = 0;
     }
     void provera() {
         if (duplo > 9999) {

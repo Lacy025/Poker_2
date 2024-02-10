@@ -10,7 +10,7 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JComponent;
 
-public class Deljenje2 implements MainFrame {
+public class Deal_Cards_2 implements MainFrame {
     Clip karta1Sound;
     Clip karta2Sound;
     Clip karta3Sound;
@@ -18,11 +18,11 @@ public class Deljenje2 implements MainFrame {
     Clip karta5Sound;
     int karta;
     int dupla;
-    Deljenje2() throws InterruptedException {
+    Deal_Cards_2() throws InterruptedException {
         karta = 0;
         dupla = 0;
 
-        if (Dobitak.stop1 == 0) {
+        if (Win.stop1 == 0) {
             Random karta1 = new Random();
             MyFrame.n1 = karta1.nextInt(53);
             while (MyFrame.n1 == MyFrame.n2 ||
@@ -35,7 +35,7 @@ public class Deljenje2 implements MainFrame {
             }
             new Karta1();
         }
-        if (Dobitak.stop2 == 0) {
+        if (Win.stop2 == 0) {
             Random karta2 = new Random();
             MyFrame.n2 = karta2.nextInt(53);
             while (MyFrame.n2 == MyFrame.n1 ||
@@ -48,7 +48,7 @@ public class Deljenje2 implements MainFrame {
             }
             new Karta2();
         }
-        if (Dobitak.stop3 == 0) {
+        if (Win.stop3 == 0) {
             Random karta3 = new Random();
             MyFrame.n3 = karta3.nextInt(53);
             while (MyFrame.n3 == MyFrame.n1 ||
@@ -61,7 +61,7 @@ public class Deljenje2 implements MainFrame {
             }
             new Karta3();
         }
-        if (Dobitak.stop4 == 0) {
+        if (Win.stop4 == 0) {
             Random karta4 = new Random();
             MyFrame.n4 = karta4.nextInt(53);
             while (MyFrame.n4 == MyFrame.n1 ||
@@ -74,7 +74,7 @@ public class Deljenje2 implements MainFrame {
             }
             new Karta4();
         }
-        if (Dobitak.stop5 == 0) {
+        if (Win.stop5 == 0) {
             Random karta5 = new Random();
             MyFrame.n5 = karta5.nextInt(53);
             while (MyFrame.n5 == MyFrame.n1 ||
@@ -88,7 +88,7 @@ public class Deljenje2 implements MainFrame {
             new Karta5();
         }
         Thread.sleep(50 - (karta * 5));
-        if (Dobitak.stop1 == 0) {
+        if (Win.stop1 == 0) {
             if (karta == 0) {
                 Thread.sleep(100 - (dupla * 10));
                 karta++;
@@ -123,7 +123,7 @@ public class Deljenje2 implements MainFrame {
             }
             this.karta1Sound.start();
         }
-        if (Dobitak.stop2 == 0) {
+        if (Win.stop2 == 0) {
             if (karta == 0) {
                 Thread.sleep(100 - (dupla * 10));
                 karta++;
@@ -158,7 +158,7 @@ public class Deljenje2 implements MainFrame {
             }
             this.karta2Sound.start();
         }
-        if (Dobitak.stop3 == 0) {
+        if (Win.stop3 == 0) {
             if (karta == 0) {
                 Thread.sleep(100 - (dupla * 10));
                 karta++;
@@ -193,7 +193,7 @@ public class Deljenje2 implements MainFrame {
             }
             this.karta3Sound.start();
         }
-        if (Dobitak.stop4 == 0) {
+        if (Win.stop4 == 0) {
             if (karta == 0) {
                 Thread.sleep(100 - (dupla * 10));
                 karta++;
@@ -228,7 +228,7 @@ public class Deljenje2 implements MainFrame {
             }
             this.karta4Sound.start();
         }
-        if (Dobitak.stop5 == 0) {
+        if (Win.stop5 == 0) {
             if (karta == 0) {
                 Thread.sleep(100 - (dupla * 10));
                 karta++;

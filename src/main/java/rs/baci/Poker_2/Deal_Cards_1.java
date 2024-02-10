@@ -11,10 +11,10 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 
-public class Deljenje1 implements MainFrame, Brojevi {
+public class Deal_Cards_1 implements MainFrame, Numbers {
 	Clip deljenje1Sound;
 	Clip karteSound;
-	Deljenje1() throws InterruptedException {
+	Deal_Cards_1() throws InterruptedException {
 		MyFrame.Joker.setVisible(false);
 		MyFrame.Card.setVisible(false);
 		MyFrame.Left_zero.setVisible(false);

@@ -9,7 +9,7 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 
-public class Fullhouse implements MainFrame, Brojevi, Dobici {
+public class Fullhouse implements MainFrame, Numbers, Winnings {
     Fullhouse() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
         if (MyFrame.dealing == 1) {
             rucno.setLayout(new BorderLayout(50,50));
@@ -21,8 +21,8 @@ public class Fullhouse implements MainFrame, Brojevi, Dobici {
             new Hold();
         }
         else {
-            new Prostor();
-            new Tabela();
+            new Clear_3();
+            new Table();
             labelT4.setVerticalAlignment(JLabel.TOP);
             labelT4.setHorizontalAlignment(JLabel.LEFT);
             labelT4.setBounds(30,10,1200,120);

@@ -1,15 +1,15 @@
 package rs.baci.Poker_2;
 
-public class Pobednik implements Runnable, MainFrame {
+public class Winner implements Runnable, MainFrame {
 	public void run() {
-		while (Dupliranje.x3 != Dupliranje.duplo) {
-			Izbor2.pobeda.setVisible(false);
+		while (Doubling.x3 != Doubling.duplo) {
+			Choice_2.you_win.setVisible(false);
 			try {
 				Thread.sleep(400);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			Izbor2.pobeda.setVisible(true);
+			Choice_2.you_win.setVisible(true);
 				try {
 					Thread.sleep(400);
 				} catch (InterruptedException e) {

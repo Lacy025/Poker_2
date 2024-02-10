@@ -1,9 +1,9 @@
 package rs.baci.Poker_2;
 
-public class Clear2 implements Brojevi, Dobici, MainFrame {
-	Clear2() {
-		Dupliranje.PRAZNA.setVisible(false);
-		frame.remove(Dupliranje.PRAZNA);
+public class Clear_2 implements Numbers, Winnings, MainFrame {
+	Clear_2() {
+		Doubling.PRAZNA.setVisible(false);
+		frame.remove(Doubling.PRAZNA);
 		Karta01.card01.setVisible(false);
 		frame.remove(Karta01.card01);
 		Karta02.card02.setVisible(false);
@@ -27,10 +27,10 @@ public class Clear2 implements Brojevi, Dobici, MainFrame {
 		Karta11.card11.setVisible(false);
 		frame.remove(Karta11.card11);
 		
-		Dupliranje.VECA.setVisible(false);
-    	frame.remove(Dupliranje.VECA);
-    	Dupliranje.MANJA.setVisible(false);
-    	frame.remove(Dupliranje.MANJA);
+		Doubling.VECA.setVisible(false);
+    	frame.remove(Doubling.VECA);
+    	Doubling.MANJA.setVisible(false);
+    	frame.remove(Doubling.MANJA);
     	
     	MyFrame.n1 = 0;
 		MyFrame.n2 = 0;
@@ -42,11 +42,11 @@ public class Clear2 implements Brojevi, Dobici, MainFrame {
 			MyFrame.cr = MyFrame.cr - 100;
 			MyFrame.cr = MyFrame.cr + MyFrame.final_value;
 		}
-		 Dobitak.stop1 = 0;
-		 Dobitak.stop2 = 0;
-		 Dobitak.stop3 = 0;
-		 Dobitak.stop4 = 0;
-		 Dobitak.stop5 = 0;
+		 Win.stop1 = 0;
+		 Win.stop2 = 0;
+		 Win.stop3 = 0;
+		 Win.stop4 = 0;
+		 Win.stop5 = 0;
 		
 		MyFrame.dealing = 0;
 	}

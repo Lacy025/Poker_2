@@ -9,22 +9,22 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.Timer;
 
-public class Upis2 implements Brojevi, MainFrame {
+public class Take_2 implements Numbers, MainFrame {
     public Component Broj2 = new JLabel(MyFrame.win_value + " ");
     public Component Credit2 = new JLabel(""+MyFrame.cr);
     Timer timer2;
-    Upis2 () throws InterruptedException {
-        Upis1.Credit1.setVisible(false);
-        frame.remove(Upis1.Credit1);
+    Take_2() throws InterruptedException {
+        Take_1.Credit1.setVisible(false);
+        frame.remove(Take_1.Credit1);
         try {
-            new Isplata2();
+            new Cash_2();
         } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e3) {
             e3.printStackTrace();
         }
         timer2 = new Timer(1000, e -> {
             if(MyFrame.win_value == -1) {
                 try {
-                    new Isplata2();
+                    new Cash_2();
                 } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e2) {
                     e2.printStackTrace();
                 }
@@ -35,7 +35,7 @@ public class Upis2 implements Brojevi, MainFrame {
                 ((JLabel) Broj2).setText(MyFrame.win_value + " ");
                 ((JLabel) Credit2).setText(String.valueOf(MyFrame.cr));
                 try {
-                    new Isplata2();
+                    new Cash_2();
                 } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e1) {
                     e1.printStackTrace();
                 }

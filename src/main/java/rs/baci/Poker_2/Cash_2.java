@@ -8,27 +8,27 @@ import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
-public class Isplata2 {
-	Clip isplata2Sound;
-public Isplata2() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
-	URL isplata2 = this.getClass().getClassLoader().getResource("resources/Isplata2.wav");
-	AudioInputStream audioIsplata2;
+public class Cash_2 {
+	Clip cash_2_Sound;
+public Cash_2() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+	URL cash_2 = this.getClass().getClassLoader().getResource("resources/Cash_2.wav");
+	AudioInputStream audio_Cash_2;
 	try {
-		assert isplata2 != null;
-		audioIsplata2 = AudioSystem.getAudioInputStream(isplata2);
+		assert cash_2 != null;
+		audio_Cash_2 = AudioSystem.getAudioInputStream(cash_2);
 	} catch (UnsupportedAudioFileException | IOException ex) {
 		throw new RuntimeException(ex);
 	}
 	try {
-		isplata2Sound = AudioSystem.getClip();
+		cash_2_Sound = AudioSystem.getClip();
 	} catch (LineUnavailableException ex) {
 		throw new RuntimeException(ex);
 	}
 	try {
-		isplata2Sound.open(audioIsplata2);
+		cash_2_Sound.open(audio_Cash_2);
 	} catch (LineUnavailableException | IOException ex) {
 		throw new RuntimeException(ex);
 	}
-	isplata2Sound.start();
+	cash_2_Sound.start();
 	}
 }

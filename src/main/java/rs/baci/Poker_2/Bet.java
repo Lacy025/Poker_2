@@ -1,7 +1,7 @@
 package rs.baci.Poker_2;
 
-public class Ulog {
-    Ulog() {
+public class Bet {
+    Bet() {
         if (MyFrame.ul == 1) {
             MyFrame.dx0 = 1200;
             MyFrame.dx1 = 1223;

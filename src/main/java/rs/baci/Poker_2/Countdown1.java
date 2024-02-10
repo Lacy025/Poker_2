@@ -8,7 +8,7 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.Timer;
 
-public class Countdown1 implements MainFrame, Brojevi {
+public class Countdown1 implements MainFrame, Numbers {
 
 	public Component Jlabel13 = new JLabel(""+MyFrame.cr);
 	Timer timer1;
@@ -22,7 +22,7 @@ public class Countdown1 implements MainFrame, Brojevi {
 
 			if (x1 == -1) {((JLabel) Jlabel13).setText("" + 0);
 				try {
-					new Isplata2();
+					new Cash_2();
 					Thread.sleep(900);
 				} catch (UnsupportedAudioFileException | IOException | LineUnavailableException |
 						 InterruptedException e1) {
@@ -43,7 +43,7 @@ public class Countdown1 implements MainFrame, Brojevi {
 			else if(((int)x1 / 100 != (x1 / 100)) && x1 > 0) {
 				((JLabel) Jlabel13).setText(""+ MyFrame.cr--);
 				try {
-					new Isplata1();
+					new Cash_1();
 				} catch (UnsupportedAudioFileException | IOException | LineUnavailableException | InterruptedException e1) {
 					e1.printStackTrace();
 				}
