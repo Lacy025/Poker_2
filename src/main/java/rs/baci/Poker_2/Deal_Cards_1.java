@@ -12,8 +12,8 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 
 public class Deal_Cards_1 implements MainFrame, Numbers {
-	Clip deljenje1Sound;
-	Clip karteSound;
+	Clip deal_1_Sound;
+	Clip cards_Sound;
 	Deal_Cards_1() throws InterruptedException {
 		MyFrame.Joker.setVisible(false);
 		MyFrame.Card.setVisible(false);
@@ -49,25 +49,25 @@ public class Deal_Cards_1 implements MainFrame, Numbers {
 		frame.add(MyFrame.Credit);
 		MyFrame.Credit.setVisible(true);
 
-		URL deljenje1 = this.getClass().getClassLoader().getResource("resources/Deljenje1.wav");
-		AudioInputStream audioDeljenje1;
+		URL deal_1 = this.getClass().getClassLoader().getResource("resources/Deal_1.wav");
+		AudioInputStream audio_Deal_1;
 		try {
-			assert deljenje1 != null;
-			audioDeljenje1 = AudioSystem.getAudioInputStream(deljenje1);
+			assert deal_1 != null;
+			audio_Deal_1 = AudioSystem.getAudioInputStream(deal_1);
 		} catch (UnsupportedAudioFileException | IOException ex) {
 			throw new RuntimeException(ex);
 		}
 		try {
-			this.deljenje1Sound = AudioSystem.getClip();
+			this.deal_1_Sound = AudioSystem.getClip();
 		} catch (LineUnavailableException ex) {
 			throw new RuntimeException(ex);
 		}
 		try {
-			deljenje1Sound.open(audioDeljenje1);
+			deal_1_Sound.open(audio_Deal_1);
 		} catch (LineUnavailableException | IOException ex) {
 			throw new RuntimeException(ex);
 		}
-		this.deljenje1Sound.start();
+		this.deal_1_Sound.start();
 
 		frame.add(MyFrame.Card_1);
 		frame.add(MyFrame.Card_2);
@@ -80,11 +80,11 @@ public class Deal_Cards_1 implements MainFrame, Numbers {
 		MyFrame.Card_4.setVisible(true);
 		MyFrame.Card_5.setVisible(true);
 		
-		Random karta01 = new Random();
-		Random karta02 = new Random();
-		Random karta03 = new Random();
-		Random karta04 = new Random();
-		Random karta05 = new Random();
+		Random card_01 = new Random();
+		Random card_02 = new Random();
+		Random card_03 = new Random();
+		Random card_04 = new Random();
+		Random card_05 = new Random();
 
 		while (MyFrame.n1 == MyFrame.n2 || MyFrame.n1 == MyFrame.n3 ||
 				MyFrame.n1 == MyFrame.n4 ||MyFrame.n1 == MyFrame.n5 ||
@@ -92,78 +92,78 @@ public class Deal_Cards_1 implements MainFrame, Numbers {
 				MyFrame.n2 == MyFrame.n5 || MyFrame.n3 == MyFrame.n4 ||
 				MyFrame.n3 == MyFrame.n5 || MyFrame.n4 == MyFrame.n5) {
 
-			MyFrame.n1 = karta01.nextInt(53);
-			MyFrame.n2 = karta02.nextInt(53);
-			MyFrame.n3 = karta03.nextInt(53);
-			MyFrame.n4 = karta04.nextInt(53);
-			MyFrame.n5 = karta05.nextInt(53);
+			MyFrame.n1 = card_01.nextInt(53);
+			MyFrame.n2 = card_02.nextInt(53);
+			MyFrame.n3 = card_03.nextInt(53);
+			MyFrame.n4 = card_04.nextInt(53);
+			MyFrame.n5 = card_05.nextInt(53);
 		}
 		Thread.sleep(200);
 
-		URL karte = this.getClass().getClassLoader().getResource("resources/Karta-1-5.wav");
-		AudioInputStream audioKarte;
+		URL cards = this.getClass().getClassLoader().getResource("resources/Cards.wav");
+		AudioInputStream audio_Cards;
 		try {
-			assert karte != null;
-			audioKarte = AudioSystem.getAudioInputStream(karte);
+			assert cards != null;
+			audio_Cards = AudioSystem.getAudioInputStream(cards);
 		} catch (UnsupportedAudioFileException | IOException ex) {
 			throw new RuntimeException(ex);
 		}
 		try {
-			this.karteSound = AudioSystem.getClip();
+			this.cards_Sound = AudioSystem.getClip();
 		} catch (LineUnavailableException ex) {
 			throw new RuntimeException(ex);
 		}
 		try {
-			karteSound.open(audioKarte);
+			cards_Sound.open(audio_Cards);
 		} catch (LineUnavailableException | IOException ex) {
 			throw new RuntimeException(ex);
 		}
-		this.karteSound.start();
+		this.cards_Sound.start();
 
 		Thread.sleep(80);
 		MyFrame.Card_1.setVisible(false);
 		frame.remove(MyFrame.Card_1);
-		new Karta1();
-		frame.add(Karta1.card1);
-		Karta1.card1.setBounds(-8, 380, 400, 540);
-		Karta1.card1.setVisible(true);
-		((JComponent) Karta1.card1).setOpaque(false);
+		new Card_1();
+		frame.add(Card_1.card1);
+		Card_1.card1.setBounds(-8, 380, 400, 540);
+		Card_1.card1.setVisible(true);
+		((JComponent) Card_1.card1).setOpaque(false);
 
 		Thread.sleep(80);
 		MyFrame.Card_2.setVisible(false);
 		frame.remove(MyFrame.Card_2);
-		new Karta2();
-		frame.add(Karta2.card2);
-		Karta2.card2.setBounds(373, 380, 400, 540);
-		Karta2.card2.setVisible(true);
-		((JComponent) Karta2.card2).setOpaque(false);
+		new Card_2();
+		frame.add(Card_2.card2);
+		Card_2.card2.setBounds(373, 380, 400, 540);
+		Card_2.card2.setVisible(true);
+		((JComponent) Card_2.card2).setOpaque(false);
 
 		Thread.sleep(80);
 		MyFrame.Card_3.setVisible(false);
 		frame.remove(MyFrame.Card_3);
-		new Karta3();
-		frame.add(Karta3.card3);
-		Karta3.card3.setBounds(753, 380, 400, 540);
-		Karta3.card3.setVisible(true);
-		((JComponent) Karta3.card3).setOpaque(false);
+		new Card_3();
+		frame.add(Card_3.card3);
+		Card_3.card3.setBounds(753, 380, 400, 540);
+		Card_3.card3.setVisible(true);
+		((JComponent) Card_3.card3).setOpaque(false);
 
 		Thread.sleep(80);
 		MyFrame.Card_4.setVisible(false);
 		frame.remove(MyFrame.Card_4);
-		new Karta4();
-		frame.add(Karta4.card4);
-		Karta4.card4.setBounds(1133, 380, 400, 540);
-		Karta4.card4.setVisible(true);
-		((JComponent) Karta4.card4).setOpaque(false);
+		new Card_4();
+		frame.add(Card_4.card4);
+		Card_4.card4.setBounds(1133, 380, 400, 540);
+		Card_4.card4.setVisible(true);
+		((JComponent) Card_4.card4).setOpaque(false);
 
 		Thread.sleep(80);
 		MyFrame.Card_5.setVisible(false);
 		frame.remove(MyFrame.Card_5);
-		new Karta5();
-		frame.add(Karta5.card5);
-		Karta5.card5.setBounds(1512, 380, 400, 540);
-		Karta5.card5.setVisible(true);
-		((JComponent) Karta5.card5).setOpaque(false);
+		new Card_5();
+		frame.add(Card_5.card5);
+		Card_5.card5.setBounds(1512, 380, 400, 540);
+		Card_5.card5.setVisible(true);
+		((JComponent) Card_5.card5).setOpaque(false);
 		Thread.sleep(100);
 	}
 }

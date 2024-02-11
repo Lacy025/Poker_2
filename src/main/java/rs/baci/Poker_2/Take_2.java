@@ -42,14 +42,14 @@ public class Take_2 implements Numbers, MainFrame {
             }
             else  {
                 ((Timer) (e.getSource())).stop();
-                tabela.remove(Broj2);
+                table.remove(Broj2);
                 frame.remove(Credit2);
             }});
-        tabela.add(Broj2);
+        table.add(Broj2);
         frame.add(Credit2);
         ((JLabel) Broj2).setHorizontalAlignment(JLabel.RIGHT);
         ((JLabel) Broj2).setVerticalAlignment(JLabel.BOTTOM);
-        tabela.add(Broj2);
+        table.add(Broj2);
         Broj2.setFont(font2);
         Broj2.setForeground(color1);
         ((JComponent) Broj2).setOpaque(false);

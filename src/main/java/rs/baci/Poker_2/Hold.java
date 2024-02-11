@@ -7,11 +7,11 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JLabel;
 
 public class Hold implements MainFrame, Numbers {
-	static JLabel hold1 = new JLabel(" STOP");
-	static JLabel hold2 = new JLabel(" STOP");
-	static JLabel hold3 = new JLabel(" STOP");
-	static JLabel hold4 = new JLabel(" STOP");
-	static JLabel hold5 = new JLabel(" STOP");
+	static JLabel hold1 = new JLabel(" HOLD");
+	static JLabel hold2 = new JLabel(" HOLD");
+	static JLabel hold3 = new JLabel(" HOLD");
+	static JLabel hold4 = new JLabel(" HOLD");
+	static JLabel hold5 = new JLabel(" HOLD");
 	Hold() throws UnsupportedAudioFileException, IOException, LineUnavailableException, InterruptedException {
 		if (MyFrame.dealing == 1 && Win.stop1 == 1 && MyFrame.ah == 1) {
 			hold1.setBounds(120,914,130,40);

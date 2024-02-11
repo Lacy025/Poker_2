@@ -103,16 +103,16 @@ public class Choice_2 implements Numbers, Winnings, MainFrame, KeyListener {
 
             case 10 : // KEYPAD 'ENTER' - DOUBLING
 
-                Karta1.card1.setVisible(false);
-                frame.remove(Karta1.card1);
-                Karta2.card2.setVisible(false);
-                frame.remove(Karta2.card2);
-                Karta3.card3.setVisible(false);
-                frame.remove(Karta3.card3);
-                Karta4.card4.setVisible(false);
-                frame.remove(Karta4.card4);
-                Karta5.card5.setVisible(false);
-                frame.remove(Karta5.card5);
+                Card_1.card1.setVisible(false);
+                frame.remove(Card_1.card1);
+                Card_2.card2.setVisible(false);
+                frame.remove(Card_2.card2);
+                Card_3.card3.setVisible(false);
+                frame.remove(Card_3.card3);
+                Card_4.card4.setVisible(false);
+                frame.remove(Card_4.card4);
+                Card_5.card5.setVisible(false);
+                frame.remove(Card_5.card5);
                 doubling.setVisible(false);
                 cashing.setVisible(false);
                 frame.remove(doubling);

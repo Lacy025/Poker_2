@@ -12,12 +12,12 @@ import javax.swing.JLabel;
 public class Poker implements MainFrame, Numbers, Winnings {
     Poker() throws InterruptedException, UnsupportedAudioFileException, IOException, LineUnavailableException {
         if (MyFrame.dealing == 1) {
-            rucno.setLayout(new BorderLayout(50,50));
-            rucno.setBorder(BorderFactory.createMatteBorder(20, 20, 20, 20, Color.RED));
-            frame.add(rucno);
-            rucno.setBounds(0, L3+2, 1292, 32);
-            rucno.setVisible(true);
-            rucno.setOpaque(false);
+            hand.setLayout(new BorderLayout(50,50));
+            hand.setBorder(BorderFactory.createMatteBorder(20, 20, 20, 20, Color.RED));
+            frame.add(hand);
+            hand.setBounds(0, L3+2, 1292, 32);
+            hand.setVisible(true);
+            hand.setOpaque(false);
             new Hold();
         }
         else {
@@ -30,11 +30,11 @@ public class Poker implements MainFrame, Numbers, Winnings {
             labelT3.setFont(font2);
             labelT3.setForeground(color1);
             labelT3.setOpaque(false);
-            tabela.add(labelT3);
+            table.add(labelT3);
             labelT10.setText(d3 * MyFrame.ul + " ");
             labelT10.setHorizontalAlignment(JLabel.RIGHT);
             labelT10.setVerticalAlignment(JLabel.BOTTOM);
-            tabela.add(labelT10);
+            table.add(labelT10);
             labelT10.setVisible(true);
             labelT10.setFont(font2);
             labelT10.setForeground(color1);

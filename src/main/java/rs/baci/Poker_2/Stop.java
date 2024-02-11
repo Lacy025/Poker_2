@@ -9,7 +9,7 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
 public class Stop {
-    Clip stopcard;
+    Clip stop_card;
     Stop() throws InterruptedException {
         URL stop = this.getClass().getClassLoader().getResource("resources/Stop.wav");
         AudioInputStream audioStop;
@@ -20,16 +20,16 @@ public class Stop {
             throw new RuntimeException(ex);
         }
         try {
-            this.stopcard = AudioSystem.getClip();
+            this.stop_card = AudioSystem.getClip();
         } catch (LineUnavailableException ex) {
             throw new RuntimeException(ex);
         }
         try {
-            stopcard.open(audioStop);
+            stop_card.open(audioStop);
         } catch (LineUnavailableException | IOException ex) {
             throw new RuntimeException(ex);
         }
-        this.stopcard.start();
+        this.stop_card.start();
         Thread.sleep(200);
     }
 }

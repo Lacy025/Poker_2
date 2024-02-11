@@ -22,7 +22,7 @@ public class Take_1 implements MainFrame, Numbers {
                 ((JLabel) Credit1).setText("" + 0);
                 ((JLabel) Number_1).setHorizontalAlignment(JLabel.RIGHT);
                 ((JLabel) Number_1).setVerticalAlignment(JLabel.BOTTOM);
-                tabela.add(Number_1);
+                table.add(Number_1);
                 Number_1.setFont(font2);
                 Number_1.setForeground(color1);
                 ((JComponent) Number_1).setOpaque(false);
@@ -46,7 +46,7 @@ public class Take_1 implements MainFrame, Numbers {
             else  {
                 ((Timer) (e.getSource())).stop();
                 Number_1.setVisible(false);
-                tabela.remove(Number_1);
+                table.remove(Number_1);
                 try {
                     Cash_1.cash_1_Sound.stop();
                     new Take_2();
@@ -57,7 +57,7 @@ public class Take_1 implements MainFrame, Numbers {
         });
         ((JLabel) Number_1).setHorizontalAlignment(JLabel.RIGHT);
         ((JLabel) Number_1).setVerticalAlignment(JLabel.BOTTOM);
-        tabela.add(Number_1);
+        table.add(Number_1);
         Number_1.setFont(font2);
         Number_1.setForeground(color1);
         ((JComponent) Number_1).setOpaque(false);

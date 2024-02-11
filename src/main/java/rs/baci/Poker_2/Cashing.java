@@ -4,7 +4,7 @@ public class Cashing implements Numbers, Winnings, MainFrame {
 	public static int money;
 	Cashing() throws InterruptedException {
 		labelT10.setVisible(false);
-		tabela.remove(labelT10);
+		table.remove(labelT10);
 		MyFrame.Credit.setVisible(false);
 		frame.remove(MyFrame.Credit);
 		money = 0;

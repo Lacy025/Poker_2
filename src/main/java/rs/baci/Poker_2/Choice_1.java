@@ -240,36 +240,36 @@ public class Choice_1 implements MainFrame, Numbers, Winnings, KeyListener {
                 frame.remove(Middle_1);
                 frame.remove(Middle_2);
                 frame.remove(Middle_3);
-                rucno.setVisible(false);
-                frame.remove(rucno);
+                hand.setVisible(false);
+                frame.remove(hand);
 
                 if (Win.stop1 == 0) {
-                    Karta1.card1.setVisible(false);
-                    frame.remove(Karta1.card1);
+                    Card_1.card1.setVisible(false);
+                    frame.remove(Card_1.card1);
                     frame.add(MyFrame.Card_1);
                     MyFrame.Card_1.setVisible(true);
                 }
                 if (Win.stop2 == 0) {
-                    Karta2.card2.setVisible(false);
-                    frame.remove(Karta2.card2);
+                    Card_2.card2.setVisible(false);
+                    frame.remove(Card_2.card2);
                     frame.add(MyFrame.Card_2);
                     MyFrame.Card_2.setVisible(true);
                 }
                 if (Win.stop3 == 0) {
-                    Karta3.card3.setVisible(false);
-                    frame.remove(Karta3.card3);
+                    Card_3.card3.setVisible(false);
+                    frame.remove(Card_3.card3);
                     frame.add(MyFrame.Card_3);
                     MyFrame.Card_3.setVisible(true);
                 }
                 if (Win.stop4 == 0) {
-                    Karta4.card4.setVisible(false);
-                    frame.remove(Karta4.card4);
+                    Card_4.card4.setVisible(false);
+                    frame.remove(Card_4.card4);
                     frame.add(MyFrame.Card_4);
                     MyFrame.Card_4.setVisible(true);
                 }
                 if (Win.stop5 == 0) {
-                    Karta5.card5.setVisible(false);
-                    frame.remove(Karta5.card5);
+                    Card_5.card5.setVisible(false);
+                    frame.remove(Card_5.card5);
                     frame.add(MyFrame.Card_5);
                     MyFrame.Card_5.setVisible(true);
                 }

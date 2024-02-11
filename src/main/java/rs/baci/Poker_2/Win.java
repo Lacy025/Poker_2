@@ -52,7 +52,7 @@ public class Win {
 
 			StopAllCards();
 			win++;
-			new Fiveofakind();
+			new Five_of_a_kind();
 		}
 
 		// ROYAL FLUSH OR STREET
@@ -297,7 +297,7 @@ public class Win {
 
 				StopAllCards();
 				win++;
-				new Fullhouse();
+				new Full_house();
 			}
 		}
 
@@ -424,7 +424,7 @@ public class Win {
 				stop1 = 1;stop2 = 1;stop3 = 0;stop4 = 0;stop5 = 0;
 				if (K1 > 10) {
 					win++;
-					new Highpair();
+					new High_pair();
 				}
 				else {
 					two = 1;
@@ -435,7 +435,7 @@ public class Win {
 				stop1 = 1;stop2 = 0;stop3 = 1;stop4 = 0;stop5 = 0;
 				if (K1 > 10) {
 					win++;
-					new Highpair();
+					new High_pair();
 				}
 				else {
 					two = 1;
@@ -446,7 +446,7 @@ public class Win {
 				stop1 = 1;stop2 = 0;stop3 = 0;stop4 = 1;stop5 = 0;
 				if (K1 > 10) {
 					win++;
-					new Highpair();
+					new High_pair();
 				}
 				else {
 					two = 1;
@@ -457,7 +457,7 @@ public class Win {
 				stop1 = 1;stop2 = 0;stop3 = 0;stop4 = 0;stop5 = 1;
 				if (K1 > 10) {
 					win++;
-					new Highpair();
+					new High_pair();
 				}
 				else {
 					two = 1;
@@ -468,7 +468,7 @@ public class Win {
 				stop1 = 0;stop2 = 1;stop3 = 1;stop4 = 0;stop5 = 0;
 				if (K2 > 10) {
 					win++;
-					new Highpair();
+					new High_pair();
 				}
 				else {
 					two = 1;
@@ -479,7 +479,7 @@ public class Win {
 				stop1 = 0;stop2 = 1;stop3 = 0;stop4 = 1;stop5 = 0;
 				if (K2 > 10) {
 					win++;
-					new Highpair();
+					new High_pair();
 				}
 				else {
 					two = 1;
@@ -490,7 +490,7 @@ public class Win {
 				stop1 = 0;stop2 = 1;stop3 = 0;stop4 = 0;stop5 = 1;
 				if (K2 > 10) {
 					win++;
-					new Highpair();
+					new High_pair();
 				}
 				else {
 					two = 1;
@@ -501,7 +501,7 @@ public class Win {
 				stop1 = 0;stop2 = 0;stop3 = 1;stop4 = 1;stop5 = 0;
 				if (K3 > 10) {
 					win++;
-					new Highpair();
+					new High_pair();
 				}
 				else {
 					two = 1;
@@ -512,7 +512,7 @@ public class Win {
 				stop1 = 0;stop2 = 0;stop3 = 1;stop4 = 0;stop5 = 1;
 				if (K3 > 10) {
 					win++;
-					new Highpair();
+					new High_pair();
 				}
 				else {
 					two = 1;
@@ -523,7 +523,7 @@ public class Win {
 				stop1 = 0;stop2 = 0;stop3 = 0;stop4 = 1;stop5 = 1;
 				if (K4 > 10) {
 					win++;
-					new Highpair();
+					new High_pair();
 				}
 				else {
 					two = 1;
@@ -540,27 +540,27 @@ public class Win {
 				if (K2 > 10) {
 					stop2 = 1;stop3 = 0;stop4 = 0;stop5 = 0;
 					win++;
-					new Highpair();
+					new High_pair();
 				}
 				if (win == 0) {
 					if (K3 > 10) {
 						stop2 = 0;stop3 = 1;stop4 = 0;stop5 = 0;
 						win++;
-						new Highpair();
+						new High_pair();
 					}
 				}
 				if (win == 0) {
 					if (K4 > 10) {
 						stop2 = 0;stop3 = 0;stop4 = 1;stop5 = 0;
 						win++;
-						new Highpair();
+						new High_pair();
 					}
 				}
 				if (win == 0) {
 					if (K5 > 10) {
 						stop2 = 0;stop3 = 0;stop4 = 0;stop5 = 1;
 						win++;
-						new Highpair();
+						new High_pair();
 					}
 				}
 			}
@@ -571,27 +571,27 @@ public class Win {
 				if (K1 > 10) {
 					stop1 = 1;stop3 = 0;stop4 = 0;stop5 = 0;
 					win++;
-					new Highpair();
+					new High_pair();
 				}
 				if (win == 0) {
 					if (K3 > 10) {
 						stop1 = 0;stop3 = 1;stop4 = 0;stop5 = 0;
 						win++;
-						new Highpair();
+						new High_pair();
 					}
 				}
 				if (win == 0) {
 					if (K4 > 10) {
 						stop1 = 0;stop3 = 0;stop4 = 1;stop5 = 0;
 						win++;
-						new Highpair();
+						new High_pair();
 					}
 				}
 				if (win == 0) {
 					if (K5 > 10) {
 						stop1 = 0;stop3 = 0;stop4 = 0;stop5 = 1;
 						win++;
-						new Highpair();
+						new High_pair();
 					}
 				}
 			}
@@ -602,27 +602,27 @@ public class Win {
 				if (K1 > 10) {
 					stop1 = 1;stop2 = 0;stop4 = 0;stop5 = 0;
 					win++;
-					new Highpair();
+					new High_pair();
 				}
 				if (win == 0) {
 					if (K2 > 10) {
 						stop1 = 0;stop2 = 1;stop4 = 0;stop5 = 0;
 						win++;
-						new Highpair();
+						new High_pair();
 					}
 				}
 				if (win == 0) {
 					if (K4 > 10) {
 						stop1 = 0;stop2 = 0;stop4 = 1;stop5 = 0;
 						win++;
-						new Highpair();
+						new High_pair();
 					}
 				}
 				if (win == 0) {
 					if (K5 > 10) {
 						stop2 = 1;stop2 = 0;stop4 = 0;stop5 = 1;
 						win++;
-						new Highpair();
+						new High_pair();
 					}
 				}
 			}
@@ -633,27 +633,27 @@ public class Win {
 				if (K1 > 10) {
 					stop1 = 1;stop2 = 0;stop3 = 0;stop5 = 0;
 					win++;
-					new Highpair();
+					new High_pair();
 				}
 				if (win == 0) {
 					if (K2 > 10) {
 						stop1 = 0;stop2 = 1;stop3 = 0;stop5 = 0;
 						win++;
-						new Highpair();
+						new High_pair();
 					}
 				}
 				if (win == 0) {
 					if (K3 > 10) {
 						stop1 = 0;stop2 = 0;stop3 = 1;stop5 = 0;
 						win++;
-						new Highpair();
+						new High_pair();
 					}
 				}
 				if (win == 0) {
 					if (K5 > 10) {
 						stop1 = 0;stop2 = 0;stop3 = 0;stop5 = 1;
 						win++;
-						new Highpair();
+						new High_pair();
 					}
 				}
 			}
@@ -664,27 +664,27 @@ public class Win {
 				if (K1 > 10) {
 					stop1 = 1;stop2 = 0;stop3 = 0;stop4 = 0;
 					win++;
-					new Highpair();
+					new High_pair();
 				}
 				if (win == 0) {
 					if (K2 > 10) {
 						stop1 = 0;stop2 = 1;stop3 = 0;stop4 = 0;
 						win++;
-						new Highpair();
+						new High_pair();
 					}
 				}
 				if (win == 0) {
 					if (K3 > 10) {
 						stop1 = 0;stop2 = 0;stop3 = 1;stop4 = 0;
 						win++;
-						new Highpair();
+						new High_pair();
 					}
 				}
 				if (win == 0) {
 					if (K4 > 10) {
 						stop1 = 0;stop2 = 0;stop3 = 0;stop4 = 1;
 						win++;
-						new Highpair();
+						new High_pair();
 					}
 				}
 			}
@@ -778,7 +778,7 @@ public class Win {
 
 			StopAllCards();
 			win++;
-			new Royalflush();
+			new Royal_flush();
 		}
 		else {
 			StopAllCards();
@@ -796,7 +796,7 @@ public class Win {
 
 			StopAllCards();
 			win++;
-			new Streetflush();
+			new Street_flush();
 		}
 		else {
 			StopAllCards();

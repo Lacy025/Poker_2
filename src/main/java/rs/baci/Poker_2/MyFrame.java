@@ -261,7 +261,7 @@ public class MyFrame implements Numbers, Winnings, MainFrame, KeyListener, Seria
 			frame.addKeyListener(this);
 			breaking = 1;
 		}
-		if (cr > 0 && (Doubling.karta > 0 || Win.winner > 0)) {
+		if (cr > 0 && (Doubling.double_card > 0 || Win.winner > 0)) {
 			while (game == 0 || breaking  <9999) {
 				if (breaking == 1000) {
 					Thread.sleep(400);

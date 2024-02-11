@@ -4,52 +4,80 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="840edd46-d39a-4597-9bd9-becf4fec8351" name="Changes" comment="2.8.1">
+    <list default="true" id="840edd46-d39a-4597-9bd9-becf4fec8351" name="Changes" comment="2.8.2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Card_01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Card_02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Card_03.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Card_04.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Card_05.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Card_06.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Card_07.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Card_08.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Card_09.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Card_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Card_10.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Card_11.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Card_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Card_3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Card_4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Card_5.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Brojevi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Numbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Clear1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Clear_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Clear2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Clear_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Cashing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Cashing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Choice_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Choice_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Choice_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Choice_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Clear_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Clear_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Clear_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Clear_2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Countdown1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Countdown1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Countdown2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Countdown2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Deljenje1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Deal_Cards_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Deljenje2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Deal_Cards_2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Dobici.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Winnings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Dobitak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Win.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Dupliranje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Doubling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Fiveofakind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Fiveofakind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Deal_Cards_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Deal_Cards_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Deal_Cards_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Deal_Cards_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Doubling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Doubling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Fiveofakind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Five_of_a_kind.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Flush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Flush.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Fullhouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Fullhouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Highpair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Highpair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Fullhouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Full_house.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Half.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Half.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Highpair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/High_pair.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Hold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Hold.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Isplata1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Cash_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Isplata2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Cash_2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Izbor1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Choice_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Izbor2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Choice_2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Kasiranje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Cashing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta03.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta04.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta05.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta06.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta07.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta08.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta09.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta10.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta11.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Karta5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/MyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/MyFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Pobednik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Winner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Poker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Poker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Polovina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Half.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Prostor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Clear_3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Royalflush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Royalflush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Royalflush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Royal_flush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Stop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Stop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Street.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Street.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Streetflush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Streetflush.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Tabela.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Streetflush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Street_flush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Take_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Take_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Take_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Take_2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Threeofakind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Threeofakind.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Twopairs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Twopairs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Ulog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Bet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Upis1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Take_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Upis2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Take_2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Deljenje2.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Deal_2.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Dobitak.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Win.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Isplata1.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Cash_1.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Isplata2.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Cash_2.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Kraj.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/End.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Kredit.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Credit.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Ponistavanje.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Clear.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Ulog.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Bet.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Win.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Win.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Winner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rs/baci/Poker_2/Winner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Deljenje1.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Deal_1.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Hoch.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/High.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Karta-1-5.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Cards.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Karta1.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Card_1.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Karta2.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Card_2.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Karta3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Card_3.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Karta4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Card_4.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Karta5.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Card_5.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Pogodak.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Bingo.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Tief.wav" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Low.wav" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -483,14 +511,6 @@
       <option name="project" value="LOCAL" />
       <updated>1672871292190</updated>
     </task>
-    <task id="LOCAL-00046" summary="2.8.0">
-      <option name="closed" value="true" />
-      <created>1707347548743</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1707347548743</updated>
-    </task>
     <task id="LOCAL-00047" summary="2.8.0">
       <option name="closed" value="true" />
       <created>1707432631408</created>
@@ -515,7 +535,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707593305346</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="2.8.2">
+      <option name="closed" value="true" />
+      <created>1707607148979</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1707607148980</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -530,7 +558,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="2.4.4" />
     <MESSAGE value="2.4.5" />
     <MESSAGE value="2.4.6" />
     <MESSAGE value="2.4.7" />
@@ -555,7 +582,8 @@
     <MESSAGE value="2.7.8" />
     <MESSAGE value="2.8.0" />
     <MESSAGE value="2.8.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.8.1" />
+    <MESSAGE value="2.8.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.8.2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

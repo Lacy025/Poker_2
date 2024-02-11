@@ -11,257 +11,257 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.JComponent;
 
 public class Deal_Cards_2 implements MainFrame {
-    Clip karta1Sound;
-    Clip karta2Sound;
-    Clip karta3Sound;
-    Clip karta4Sound;
-    Clip karta5Sound;
-    int karta;
-    int dupla;
+    Clip card_1_Sound;
+    Clip card_2_Sound;
+    Clip card_3_Sound;
+    Clip card_4_Sound;
+    Clip card_5_Sound;
+    int card;
+    int retry;
     Deal_Cards_2() throws InterruptedException {
-        karta = 0;
-        dupla = 0;
+        card = 0;
+        retry = 0;
 
         if (Win.stop1 == 0) {
-            Random karta1 = new Random();
-            MyFrame.n1 = karta1.nextInt(53);
+            Random Card_1 = new Random();
+            MyFrame.n1 = Card_1.nextInt(53);
             while (MyFrame.n1 == MyFrame.n2 ||
                     MyFrame.n1 == MyFrame.n3 ||
                     MyFrame.n1 == MyFrame.n4 ||
                     MyFrame.n1 == MyFrame.n5) {
 
-                MyFrame.n1 = karta1.nextInt(53);
-                dupla++;
+                MyFrame.n1 = Card_1.nextInt(53);
+                retry++;
             }
-            new Karta1();
+            new Card_1();
         }
         if (Win.stop2 == 0) {
-            Random karta2 = new Random();
-            MyFrame.n2 = karta2.nextInt(53);
+            Random Card_2 = new Random();
+            MyFrame.n2 = Card_2.nextInt(53);
             while (MyFrame.n2 == MyFrame.n1 ||
                     MyFrame.n2 == MyFrame.n3 ||
                     MyFrame.n2 == MyFrame.n4 ||
                     MyFrame.n2 == MyFrame.n5) {
 
-                MyFrame.n2 = karta2.nextInt(53);
-                dupla++;
+                MyFrame.n2 = Card_2.nextInt(53);
+                retry++;
             }
-            new Karta2();
+            new Card_2();
         }
         if (Win.stop3 == 0) {
-            Random karta3 = new Random();
-            MyFrame.n3 = karta3.nextInt(53);
+            Random Card_3 = new Random();
+            MyFrame.n3 = Card_3.nextInt(53);
             while (MyFrame.n3 == MyFrame.n1 ||
                     MyFrame.n3 == MyFrame.n2 ||
                     MyFrame.n3 == MyFrame.n4 ||
                     MyFrame.n3 == MyFrame.n5) {
 
-                MyFrame.n3 = karta3.nextInt(53);
-                dupla++;
+                MyFrame.n3 = Card_3.nextInt(53);
+                retry++;
             }
-            new Karta3();
+            new Card_3();
         }
         if (Win.stop4 == 0) {
-            Random karta4 = new Random();
-            MyFrame.n4 = karta4.nextInt(53);
+            Random Card_4 = new Random();
+            MyFrame.n4 = Card_4.nextInt(53);
             while (MyFrame.n4 == MyFrame.n1 ||
                     MyFrame.n4 == MyFrame.n3 ||
                     MyFrame.n4 == MyFrame.n2 ||
                     MyFrame.n4 == MyFrame.n5) {
 
-                MyFrame.n4 = karta4.nextInt(53);
-                dupla++;
+                MyFrame.n4 = Card_4.nextInt(53);
+                retry++;
             }
-            new Karta4();
+            new Card_4();
         }
         if (Win.stop5 == 0) {
-            Random karta5 = new Random();
-            MyFrame.n5 = karta5.nextInt(53);
+            Random Card_5 = new Random();
+            MyFrame.n5 = Card_5.nextInt(53);
             while (MyFrame.n5 == MyFrame.n1 ||
                     MyFrame.n5 == MyFrame.n2 ||
                     MyFrame.n5 == MyFrame.n3 ||
                     MyFrame.n5 == MyFrame.n4) {
 
-                MyFrame.n5 = karta5.nextInt(53);
-                dupla++;
+                MyFrame.n5 = Card_5.nextInt(53);
+                retry++;
             }
-            new Karta5();
+            new Card_5();
         }
-        Thread.sleep(50 - (karta * 5));
+        Thread.sleep(50 - (card * 5));
         if (Win.stop1 == 0) {
-            if (karta == 0) {
-                Thread.sleep(100 - (dupla * 10));
-                karta++;
+            if (card == 0) {
+                Thread.sleep(100 - (retry * 10));
+                card++;
             }
             else {
                 Thread.sleep(300);
             }
             MyFrame.Card_1.setVisible(false);
             frame.remove(MyFrame.Card_1);
-            frame.add(Karta1.card1);
-            Karta1.card1.setBounds(-8, 380, 400, 540);
-            Karta1.card1.setVisible(true);
-            ((JComponent) Karta1.card1).setOpaque(false);
+            frame.add(Card_1.card1);
+            Card_1.card1.setBounds(-8, 380, 400, 540);
+            Card_1.card1.setVisible(true);
+            ((JComponent) Card_1.card1).setOpaque(false);
 
-            URL karta1 = this.getClass().getClassLoader().getResource("resources/Karta1.wav");
-            AudioInputStream audioKarta1;
+            URL card_1 = this.getClass().getClassLoader().getResource("resources/Card_1.wav");
+            AudioInputStream audio_Card_1;
             try {
-                assert karta1 != null;
-                audioKarta1 = AudioSystem.getAudioInputStream(karta1);
+                assert card_1 != null;
+                audio_Card_1 = AudioSystem.getAudioInputStream(card_1);
             } catch (UnsupportedAudioFileException | IOException ex) {
                 throw new RuntimeException(ex);
             }
             try {
-                this.karta1Sound = AudioSystem.getClip();
+                this.card_1_Sound = AudioSystem.getClip();
             } catch (LineUnavailableException ex) {
                 throw new RuntimeException(ex);
             }
             try {
-                karta1Sound.open(audioKarta1);
+                card_1_Sound.open(audio_Card_1);
             } catch (LineUnavailableException | IOException ex) {
                 throw new RuntimeException(ex);
             }
-            this.karta1Sound.start();
+            this.card_1_Sound.start();
         }
         if (Win.stop2 == 0) {
-            if (karta == 0) {
-                Thread.sleep(100 - (dupla * 10));
-                karta++;
+            if (card == 0) {
+                Thread.sleep(100 - (retry * 10));
+                card++;
             }
             else {
                 Thread.sleep(300);
             }
             MyFrame.Card_2.setVisible(false);
             frame.remove(MyFrame.Card_2);
-            frame.add(Karta2.card2);
-            Karta2.card2.setBounds(373, 380, 400, 540);
-            Karta2.card2.setVisible(true);
-            ((JComponent) Karta2.card2).setOpaque(false);
+            frame.add(Card_2.card2);
+            Card_2.card2.setBounds(373, 380, 400, 540);
+            Card_2.card2.setVisible(true);
+            ((JComponent) Card_2.card2).setOpaque(false);
 
-            URL karta2 = this.getClass().getClassLoader().getResource("resources/Karta2.wav");
-            AudioInputStream audioKarta2;
+            URL card_2 = this.getClass().getClassLoader().getResource("resources/Card_2.wav");
+            AudioInputStream audio_Card_2;
             try {
-                assert karta2 != null;
-                audioKarta2 = AudioSystem.getAudioInputStream(karta2);
+                assert card_2 != null;
+                audio_Card_2 = AudioSystem.getAudioInputStream(card_2);
             } catch (UnsupportedAudioFileException | IOException ex) {
                 throw new RuntimeException(ex);
             }
             try {
-                this.karta2Sound = AudioSystem.getClip();
+                this.card_2_Sound = AudioSystem.getClip();
             } catch (LineUnavailableException ex) {
                 throw new RuntimeException(ex);
             }
             try {
-                karta2Sound.open(audioKarta2);
+                card_2_Sound.open(audio_Card_2);
             } catch (LineUnavailableException | IOException ex) {
                 throw new RuntimeException(ex);
             }
-            this.karta2Sound.start();
+            this.card_2_Sound.start();
         }
         if (Win.stop3 == 0) {
-            if (karta == 0) {
-                Thread.sleep(100 - (dupla * 10));
-                karta++;
+            if (card == 0) {
+                Thread.sleep(100 - (retry * 10));
+                card++;
             }
             else {
                 Thread.sleep(300);
             }
             MyFrame.Card_3.setVisible(false);
             frame.remove(MyFrame.Card_3);
-            frame.add(Karta3.card3);
-            Karta3.card3.setBounds(753, 380, 400, 540);
-            Karta3.card3.setVisible(true);
-            ((JComponent) Karta3.card3).setOpaque(false);
+            frame.add(Card_3.card3);
+            Card_3.card3.setBounds(753, 380, 400, 540);
+            Card_3.card3.setVisible(true);
+            ((JComponent) Card_3.card3).setOpaque(false);
 
-            URL karta3 = this.getClass().getClassLoader().getResource("resources/Karta3.wav");
-            AudioInputStream audioKarta3;
+            URL card_3 = this.getClass().getClassLoader().getResource("resources/Card_3.wav");
+            AudioInputStream audio_Card_3;
             try {
-                assert karta3 != null;
-                audioKarta3 = AudioSystem.getAudioInputStream(karta3);
+                assert card_3 != null;
+                audio_Card_3 = AudioSystem.getAudioInputStream(card_3);
             } catch (UnsupportedAudioFileException | IOException ex) {
                 throw new RuntimeException(ex);
             }
             try {
-                this.karta3Sound = AudioSystem.getClip();
+                this.card_3_Sound = AudioSystem.getClip();
             } catch (LineUnavailableException ex) {
                 throw new RuntimeException(ex);
             }
             try {
-                karta3Sound.open(audioKarta3);
+                card_3_Sound.open(audio_Card_3);
             } catch (LineUnavailableException | IOException ex) {
                 throw new RuntimeException(ex);
             }
-            this.karta3Sound.start();
+            this.card_3_Sound.start();
         }
         if (Win.stop4 == 0) {
-            if (karta == 0) {
-                Thread.sleep(100 - (dupla * 10));
-                karta++;
+            if (card == 0) {
+                Thread.sleep(100 - (retry * 10));
+                card++;
             }
             else {
                 Thread.sleep(300);
             }
             MyFrame.Card_4.setVisible(false);
             frame.remove(MyFrame.Card_4);
-            frame.add(Karta4.card4);
-            Karta4.card4.setBounds(1133, 380, 400, 540);
-            Karta4.card4.setVisible(true);
-            ((JComponent) Karta4.card4).setOpaque(false);
+            frame.add(Card_4.card4);
+            Card_4.card4.setBounds(1133, 380, 400, 540);
+            Card_4.card4.setVisible(true);
+            ((JComponent) Card_4.card4).setOpaque(false);
 
-            URL karta4 = this.getClass().getClassLoader().getResource("resources/Karta4.wav");
-            AudioInputStream audioKarta4;
+            URL card_4 = this.getClass().getClassLoader().getResource("resources/Card_4.wav");
+            AudioInputStream audio_Card_4;
             try {
-                assert karta4 != null;
-                audioKarta4 = AudioSystem.getAudioInputStream(karta4);
+                assert card_4 != null;
+                audio_Card_4 = AudioSystem.getAudioInputStream(card_4);
             } catch (UnsupportedAudioFileException | IOException ex) {
                 throw new RuntimeException(ex);
             }
             try {
-                this.karta4Sound = AudioSystem.getClip();
+                this.card_4_Sound = AudioSystem.getClip();
             } catch (LineUnavailableException ex) {
                 throw new RuntimeException(ex);
             }
             try {
-                karta4Sound.open(audioKarta4);
+                card_4_Sound.open(audio_Card_4);
             } catch (LineUnavailableException | IOException ex) {
                 throw new RuntimeException(ex);
             }
-            this.karta4Sound.start();
+            this.card_4_Sound.start();
         }
         if (Win.stop5 == 0) {
-            if (karta == 0) {
-                Thread.sleep(100 - (dupla * 10));
-                karta++;
+            if (card == 0) {
+                Thread.sleep(100 - (retry * 10));
+                card++;
             }
             else {
                 Thread.sleep(300);
             }
             MyFrame.Card_5.setVisible(false);
             frame.remove(MyFrame.Card_5);
-            frame.add(Karta5.card5);
-            Karta5.card5.setBounds(1512, 380, 400, 540);
-            Karta5.card5.setVisible(true);
-            ((JComponent) Karta5.card5).setOpaque(false);
+            frame.add(Card_5.card5);
+            Card_5.card5.setBounds(1512, 380, 400, 540);
+            Card_5.card5.setVisible(true);
+            ((JComponent) Card_5.card5).setOpaque(false);
 
-            URL karta5 = this.getClass().getClassLoader().getResource("resources/Karta5.wav");
-            AudioInputStream audioKarta5;
+            URL card_5 = this.getClass().getClassLoader().getResource("resources/Card_5.wav");
+            AudioInputStream audio_Card_5;
             try {
-                assert karta5 != null;
-                audioKarta5 = AudioSystem.getAudioInputStream(karta5);
+                assert card_5 != null;
+                audio_Card_5 = AudioSystem.getAudioInputStream(card_5);
             } catch (UnsupportedAudioFileException | IOException ex) {
                 throw new RuntimeException(ex);
             }
             try {
-                this.karta5Sound = AudioSystem.getClip();
+                this.card_5_Sound = AudioSystem.getClip();
             } catch (LineUnavailableException ex) {
                 throw new RuntimeException(ex);
             }
             try {
-                karta5Sound.open(audioKarta5);
+                card_5_Sound.open(audio_Card_5);
             } catch (LineUnavailableException | IOException ex) {
                 throw new RuntimeException(ex);
             }
-            this.karta5Sound.start();
+            this.card_5_Sound.start();
         }
         Thread.sleep(100);
     }

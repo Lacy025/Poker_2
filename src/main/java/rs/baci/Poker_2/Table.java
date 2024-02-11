@@ -7,12 +7,12 @@ import javax.swing.*;
 
 public class Table implements MainFrame, Winnings, Numbers {
     Table() {
-        tabela.setBackground(Color.red);
-        tabela.setLayout(new BorderLayout(50,50));
-        tabela.setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, Color.YELLOW));
-        frame.add(tabela);
-        tabela.setVisible(true);
-        tabela.setBounds(20, 20, 1300, 340);
+        table.setBackground(Color.red);
+        table.setLayout(new BorderLayout(50,50));
+        table.setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, Color.YELLOW));
+        frame.add(table);
+        table.setVisible(true);
+        table.setBounds(20, 20, 1300, 340);
         label12.setHorizontalAlignment(JLabel.LEFT);
         label12.setVerticalAlignment(JLabel.BOTTOM);
         label12.setBounds(30,140,2200,200);
@@ -20,7 +20,7 @@ public class Table implements MainFrame, Winnings, Numbers {
         label12.setFont(font2);
         label12.setForeground(color1);
         label12.setOpaque(false);
-        tabela.add(label12);
+        table.add(label12);
     }
 }
 
